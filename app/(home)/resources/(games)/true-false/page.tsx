@@ -2,7 +2,6 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   CheckCircle2,
   XCircle,
@@ -230,21 +229,11 @@ export default function TrueFalsePreview() {
   /* ---------------- UI ---------------- */
 
   return (
-    <motion.div
-      className="min-h-screen flex items-center justify-center bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-8 px-4 sm:px-6"
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
-    >
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-8 px-4 sm:px-6">
       <div className="w-full max-w-5xl mx-auto">
         {/* Global header */}
         <BackPrev />
-        <motion.div
-          className="text-center mb-8 flex flex-col items-center gap-3"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-        >
+        <div className="text-center mb-8 flex flex-col items-center gap-3">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/80 border border-slate-200 px-4 py-1 shadow-sm">
             <Sparkles className="w-4 h-4 text-indigo-500" />
             <span className="text-xs sm:text-sm font-semibold text-slate-700">
@@ -259,22 +248,13 @@ export default function TrueFalsePreview() {
             "To‘g‘ri" yoki "Noto‘g‘ri" deb javob berishadi. Har raund uchun{" "}
             {ROUND_TIME} soniya vaqt beriladi.
           </p>
-        </motion.div>
+        </div>
 
         {!gameStarted ? (
           /* ---------- TEACHER SETUP MODE ---------- */
-          <motion.div
-            className="grid lg:grid-cols-2 gap-6 items-start"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
+          <div className="grid lg:grid-cols-2 gap-6 items-start">
             {/* Left: intro */}
-            <motion.div
-              className="bg-white/90 backdrop-blur rounded-3xl shadow-xl border border-white/50 p-6 sm:p-7 space-y-5"
-              initial={{ opacity: 0, scale: 0.97 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ type: "spring", stiffness: 220, damping: 18 }}
-            >
+            <div className="bg-white/90 backdrop-blur rounded-3xl shadow-xl border border-white/50 p-6 sm:p-7 space-y-5">
               <div className="flex items-center gap-2 mb-2">
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-indigo-100 text-indigo-700 text-sm font-bold">
                   1
@@ -317,20 +297,10 @@ export default function TrueFalsePreview() {
                   ko‘rsatadi va keyingi savolga o‘tadi.
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right: question builder */}
-            <motion.div
-              className="bg-white/90 backdrop-blur rounded-3xl shadow-xl border border-white/50 p-6 sm:p-7 space-y-5"
-              initial={{ opacity: 0, scale: 0.97 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 220,
-                damping: 18,
-                delay: 0.05,
-              }}
-            >
+            <div className="bg-white/90 backdrop-blur rounded-3xl shadow-xl border border-white/50 p-6 sm:p-7 space-y-5">
               <div className="flex items-center gap-2 mb-2">
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-700 text-sm font-bold">
                   2
@@ -455,16 +425,11 @@ export default function TrueFalsePreview() {
                 <Play className="w-5 h-5" />
                 O‘yinni boshlash
               </button>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         ) : (
           /* ---------- GAME MODE ---------- */
-          <motion.div
-            className="w-full max-w-xl mx-auto bg-white/85 backdrop-blur rounded-3xl shadow-xl p-6 sm:p-7 space-y-6 border border-white/50"
-            initial={{ opacity: 0, scale: 0.97, y: 12 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ type: "spring", stiffness: 220, damping: 18 }}
-          >
+          <div className="w-full max-w-xl mx-auto bg-white/85 backdrop-blur rounded-3xl shadow-xl p-6 sm:p-7 space-y-6 border border-white/50">
             {/* Header chip + timer + progress */}
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-2">
@@ -485,22 +450,16 @@ export default function TrueFalsePreview() {
                 </div>
 
                 <div className="w-28 h-1.5 rounded-full bg-slate-200 overflow-hidden">
-                  <motion.div
+                  <div
                     className={`h-full rounded-full ${
                       time <= 5 && !gameFinished
                         ? "bg-rose-500"
                         : "bg-emerald-500"
                     }`}
-                    initial={{ width: "0%" }}
-                    animate={{
+                    style={{
                       width: gameFinished
                         ? "100%"
                         : `${(time / ROUND_TIME) * 100}%`,
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 140,
-                      damping: 16,
                     }}
                   />
                 </div>
@@ -517,52 +476,36 @@ export default function TrueFalsePreview() {
             </div>
 
             {/* Question card */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={q?.id ?? "no-question"}
-                className={`
-                  rounded-2xl px-4 py-10 sm:px-6 sm:py-10 text-center border
-                  ${
-                    status === "correct"
-                      ? "bg-emerald-50 border-emerald-200"
-                      : status === "wrong"
-                      ? "bg-rose-50 border-rose-200"
-                      : "bg-slate-50 border-slate-200"
-                  }
-                `}
-                initial={{ opacity: 0, y: 10, scale: 0.97 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -8, scale: 0.97 }}
-                transition={{ type: "spring", stiffness: 220, damping: 20 }}
+            <div
+              className={`
+                rounded-2xl px-4 py-10 sm:px-6 sm:py-10 text-center border
+                ${
+                  status === "correct"
+                    ? "bg-emerald-50 border-emerald-200"
+                    : status === "wrong"
+                    ? "bg-rose-50 border-rose-200"
+                    : "bg-slate-50 border-slate-200"
+                }
+              `}
+            >
+              <p
+                className={`text-2xl sm:text-3xl font-bold leading-relaxed ${
+                  status === "correct"
+                    ? "text-emerald-700"
+                    : status === "wrong"
+                    ? "text-rose-700"
+                    : "text-slate-900"
+                }`}
               >
-                <motion.p
-                  className="text-2xl sm:text-3xl font-bold text-slate-900 leading-relaxed"
-                  animate={
-                    status === "correct"
-                      ? {
-                          scale: [1, 1.06, 1],
-                          color: ["#0f172a", "#047857", "#0f172a"],
-                        }
-                      : status === "wrong"
-                      ? {
-                          x: [0, -6, 6, -4, 4, 0],
-                          color: ["#0f172a", "#b91c1c", "#0f172a"],
-                        }
-                      : {}
-                  }
-                  transition={{ duration: 0.4 }}
-                >
-                  {q?.text}
-                </motion.p>
-              </motion.div>
-            </AnimatePresence>
+                {q?.text}
+              </p>
+            </div>
 
             {/* Buttons */}
             <div className="grid grid-cols-2 gap-4">
-              <motion.button
+              <button
                 type="button"
                 onClick={() => handleAnswer(true)}
-                whileTap={!gameFinished ? { scale: 0.97 } : {}}
                 className={`
                   h-14 rounded-xl text-white font-semibold text-lg flex items-center justify-center gap-2
                   shadow-md transition-all focus:outline-none
@@ -578,12 +521,11 @@ export default function TrueFalsePreview() {
               >
                 <CheckCircle2 className="w-5 h-5" />
                 To‘g‘ri
-              </motion.button>
+              </button>
 
-              <motion.button
+              <button
                 type="button"
                 onClick={() => handleAnswer(false)}
-                whileTap={!gameFinished ? { scale: 0.97 } : {}}
                 className={`
                   h-14 rounded-xl text-white font-semibold text-lg flex items-center justify-center gap-2
                   shadow-md transition-all focus:outline-none
@@ -599,7 +541,7 @@ export default function TrueFalsePreview() {
               >
                 <XCircle className="w-5 h-5" />
                 Noto‘g‘ri
-              </motion.button>
+              </button>
             </div>
 
             <div className="flex flex-col gap-1 pt-2 text-xs sm:text-sm text-slate-500">
@@ -624,9 +566,9 @@ export default function TrueFalsePreview() {
                 </button>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
-    </motion.div>
+    </div>
   );
 }

@@ -1,13 +1,62 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { RefreshCw, Trophy, Plus, Trash2, Play, Sparkles } from "lucide-react";
 import BackPrev from "@/components/back-prev";
+
+const motion = {
+  div: ({
+    children,
+    ...rest
+  }: React.HTMLAttributes<HTMLDivElement> & Record<string, unknown>) => {
+    const clean = { ...rest };
+    [
+      "initial",
+      "animate",
+      "exit",
+      "transition",
+      "variants",
+      "whileHover",
+      "whileTap",
+      "layout",
+    ].forEach((key) => delete (clean as Record<string, unknown>)[key]);
+    return <div {...clean}>{children}</div>;
+  },
+  button: ({
+    children,
+    ...rest
+  }: React.ButtonHTMLAttributes<HTMLButtonElement> &
+    Record<string, unknown>) => {
+    const clean = { ...rest };
+    ["whileHover", "whileTap", "initial", "animate", "transition", "exit"].forEach(
+      (key) => delete (clean as Record<string, unknown>)[key]
+    );
+    return <button {...clean}>{children}</button>;
+  },
+  span: ({
+    children,
+    ...rest
+  }: React.HTMLAttributes<HTMLSpanElement> & Record<string, unknown>) => {
+    const clean = { ...rest };
+    [
+      "whileHover",
+      "whileTap",
+      "initial",
+      "animate",
+      "transition",
+      "exit",
+    ].forEach((key) => delete (clean as Record<string, unknown>)[key]);
+    return <span {...clean}>{children}</span>;
+  },
+};
+
+const AnimatePresence = ({
+  children,
+}: { children: React.ReactNode } & Record<string, unknown>) => <>{children}</>;
 
 type CellCoord = {
   row: number;

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+
 import { Download, Eye, FolderOpen, FileArchive, Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,6 +13,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import BackPrev from "@/components/back-prev";
+import ClientSideOnly from "@/components/ClientSideOnly";
 
 type RangliConturAlbum = {
   id: string;
@@ -25,38 +26,38 @@ type RangliConturAlbum = {
 
 const ALBUMS: RangliConturAlbum[] = [
   {
-    id: "cute-fox",
-    title: "Aqlli tulki",
+    id: "woody",
+    title: "Toy Story - Woody",
     description:
       "Ko‘zoynakli, bo‘yinbog‘li quvnoq tulki – kichik yoshdagi bolalar uchun mos.",
-    combinedImage: "/demo/rangli-contur/cute-fox-album.png",
+    combinedImage: "/images/colored/toy1.png",
     pagesCount: 1,
-    level: "Easy",
+    level: "Medium",
   },
   {
-    id: "dino-friends",
-    title: "Dino do‘stlar",
+    id: "buzz-ligthyear",
+    title: "Toy Story - Buzz",
     description:
       "Rangli namunalar va kontur sahifalar bilan dinozorlar mavzusidagi albom.",
-    combinedImage: "/images/test.png",
+    combinedImage: "/images/colored/toy2.png",
     pagesCount: 3,
     level: "Medium",
   },
   {
-    id: "space-cat",
-    title: "Kosmonavt mushukcha",
+    id: "jessie",
+    title: "Toy Story - Jessie",
     description:
       "Koinot fonida chizilgan mushukcha – tasavvur va ijodni rivojlantiradi.",
-    combinedImage: "/images/test.png",
+    combinedImage: "/images/colored/toy3.png",
     pagesCount: 2,
     level: "Medium",
   },
   {
-    id: "farm-pack",
-    title: "Fermadagi hayvonlar",
+    id: "forky",
+    title: "Toy Story - Forky",
     description:
       "Sigir, qo‘y, ot va boshqa hayvonlar bilan tanishish uchun bo‘yash albomi.",
-    combinedImage: "/images/test.png",
+    combinedImage: "/images/colored/toy4.png",
     pagesCount: 4,
     level: "Easy",
   },
@@ -93,16 +94,12 @@ export default function RangliConturPage() {
   };
 
   return (
-    <>
+    <ClientSideOnly>
       <div className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 px-4 py-8 text-slate-900">
-        <div className="max-w-6xl mx-auto space-y-8">
+        <div className="max-w-6xl mx-auto space-y-8 animate-fade-in">
           <BackPrev />
           {/* HEADER */}
-          <motion.header
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
-          >
+          <header className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 animate-fade-down">
             <div className="space-y-2">
               <div className="inline-flex items-center gap-2 rounded-2xl bg-white/70 px-3 py-1 border border-white/80 shadow-sm">
                 <Palette className="w-4 h-4 text-indigo-500" />
@@ -131,10 +128,10 @@ export default function RangliConturPage() {
                 Barcha albomlarni ZIP yuklash
               </Button>
             </div>
-          </motion.header>
+          </header>
 
           {/* ALBUM LIST TITLE */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 animate-fade-up" style={{ animationDelay: "120ms" }}>
             <FolderOpen className="w-5 h-5 text-indigo-500" />
             <h2 className="text-lg sm:text-xl font-semibold">
               Albomlar ro‘yxati
@@ -145,16 +142,15 @@ export default function RangliConturPage() {
           </div>
 
           {/* ALBUM GRID — 2 ta card bir qatorda */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {ALBUMS.map((album) => (
-              <motion.article
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {ALBUMS.map((album, idx) => (
+              <article
                 key={album.id}
-                whileHover={{ y: -4, scale: 1.01 }}
-                transition={{ type: "spring", stiffness: 220, damping: 18 }}
-                className="bg-white/90 border border-white/70 rounded-3xl shadow-lg overflow-hidden flex flex-col h-full"
+                className="bg-white/90 border border-white/70 rounded-3xl shadow-lg overflow-hidden flex flex-col h-full hover:shadow-xl transition-all duration-300 animate-fade-up"
+                style={{ animationDelay: `${80 * idx}ms` }}
               >
                 {/* ALBUM IMAGE (16:9) */}
-                <div className="relative w-full aspect-video bg-slate-100">
+                <div className="relative w-full aspect-10/9 bg-slate-100">
                   <Image
                     src={album.combinedImage}
                     alt={album.title}
@@ -165,32 +161,24 @@ export default function RangliConturPage() {
 
                 {/* CONTENT */}
                 <div className="p-4 sm:p-5 flex flex-col gap-3 flex-1">
-                  <div className="space-y-1">
+                  <div className="space-y-1 flex items-center justify-between">
                     <h3 className="text-base sm:text-lg font-semibold text-slate-900">
                       {album.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-500">
-                      {album.description}
-                    </p>
-                  </div>
-
-                  {/* META */}
-                  <div className="flex items-center justify-between text-[11px] sm:text-xs text-slate-500">
-                    <span className="px-2 py-1 rounded-xl bg-slate-50 border border-slate-100">
-                      Sahifalar: {album.pagesCount}
-                    </span>
-                    <span
-                      className={
-                        "px-2 py-1 rounded-xl border " +
-                        (album.level === "Easy"
-                          ? "bg-emerald-50 border-emerald-100 text-emerald-600"
-                          : album.level === "Medium"
-                          ? "bg-amber-50 border-amber-100 text-amber-600"
-                          : "bg-rose-50 border-rose-100 text-rose-600")
-                      }
-                    >
-                      Daraja: {album.level}
-                    </span>
+                    <div className="flex items-center justify-between text-[11px] sm:text-xs text-slate-500">
+                      <span
+                        className={
+                          "px-2 py-1 rounded-xl border " +
+                          (album.level === "Easy"
+                            ? "bg-emerald-50 border-emerald-100 text-emerald-600"
+                            : album.level === "Medium"
+                            ? "bg-amber-50 border-amber-100 text-amber-600"
+                            : "bg-rose-50 border-rose-100 text-rose-600")
+                        }
+                      >
+                        Daraja: {album.level}
+                      </span>
+                    </div>
                   </div>
 
                   {/* BUTTONS */}
@@ -214,7 +202,7 @@ export default function RangliConturPage() {
                     </div>
                   </div>
                 </div>
-              </motion.article>
+              </article>
             ))}
           </div>
         </div>
@@ -243,7 +231,7 @@ export default function RangliConturPage() {
                     src={activeAlbum.combinedImage}
                     alt={activeAlbum.title}
                     fill
-                    className="object-cover rounded-2xl shadow-md bg-white"
+                    className="object-contain scale-110 rounded-2xl shadow-md bg-white"
                   />
                 </div>
               </div>
@@ -270,6 +258,6 @@ export default function RangliConturPage() {
           )}
         </DialogContent>
       </Dialog>
-    </>
+    </ClientSideOnly>
   );
 }

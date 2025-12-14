@@ -27,7 +27,7 @@ const HowWorks = () => {
   return (
     <section id="how-it-works" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 space-y-4 animate-fade-in">
+        <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
             Platforma qanday ishlaydi
           </h2>
@@ -38,11 +38,7 @@ const HowWorks = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {data.map((step, index) => (
-            <div
-              key={index}
-              className="relative animate-scale-in"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
+            <div key={index} className="relative">
               <div className="text-center space-y-4">
                 <div className="relative inline-block">
                   <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">

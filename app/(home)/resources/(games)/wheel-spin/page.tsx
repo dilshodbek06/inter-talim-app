@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Volume2, VolumeX, Plus, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import BackPrev from "@/components/back-prev";
 
 type WinnerHistory = string[];
@@ -312,20 +311,11 @@ export default function RandomNamePicker() {
   };
 
   return (
-    <motion.div
-      className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-8"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-    >
+    <div className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-8">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <BackPrev />
         {/* Header */}
-        <motion.div
-          className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8"
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
           <div className="flex items-center gap-3 mb-2 md:mb-0">
             <div>
               <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -341,10 +331,9 @@ export default function RandomNamePicker() {
             </div>
           </div>
 
-          <motion.button
+          <button
             onClick={() => setSoundEnabled((prev) => !prev)}
             className="inline-flex items-center gap-2 self-start md:self-auto px-4 py-2 rounded-full bg-white/80 border border-slate-200 shadow-sm hover:bg-slate-50 transition-colors text-sm font-medium text-slate-700"
-            whileTap={{ scale: 0.95 }}
           >
             {soundEnabled ? (
               <>
@@ -357,19 +346,13 @@ export default function RandomNamePicker() {
                 Ovoz o‘chirilgan
               </>
             )}
-          </motion.button>
-        </motion.div>
+          </button>
+        </div>
 
         {/* Main layout: baraban LEFT, form RIGHT on large screens */}
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1.2fr)] gap-8 items-start">
           {/* LEFT: Wheel */}
-          <motion.div
-            className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl border border-slate-100 p-4 md:p-6 flex flex-col"
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.55, ease: "easeOut" }}
-            whileHover={{ y: -1 }}
-          >
+          <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl border border-slate-100 p-4 md:p-6 flex flex-col">
             <div className="flex flex-col items-center mb-4">
               <canvas
                 ref={canvasRef}
@@ -381,61 +364,43 @@ export default function RandomNamePicker() {
             </div>
 
             {selectedName && !isSpinning && (
-              <motion.div
-                key={selectedName}
-                className="mt-10 mb-4 px-4 py-3 bg-emerald-50 border border-emerald-200 rounded-2xl text-center"
-                initial={{ scale: 0.9, opacity: 0, y: 10 }}
-                animate={{ scale: 1, opacity: 1, y: 0 }}
-                transition={{ type: "spring", stiffness: 260, damping: 18 }}
-              >
+              <div className="mt-10 mb-4 px-4 py-3 bg-emerald-50 border border-emerald-200 rounded-2xl text-center">
                 <p className="text-lg md:text-xl font-bold text-emerald-700">
                   🎉 Tanlangan o‘quvchi: {selectedName}! 🎉
                 </p>
-              </motion.div>
+              </div>
             )}
 
             <div className="mt-2 flex flex-wrap gap-3 justify-center">
-              <motion.button
+              <button
                 onClick={resetNames}
                 className="px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-semibold shadow-md hover:bg-slate-800 transition-colors"
-                whileTap={{ scale: 0.96 }}
               >
                 Asl ro‘yxatni tiklash
-              </motion.button>
+              </button>
             </div>
 
             {history.length > 0 && (
-              <motion.div
-                className="mt-6 bg-slate-50 border border-slate-100 rounded-2xl p-4"
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-              >
+              <div className="mt-6 bg-slate-50 border border-slate-100 rounded-2xl p-4">
                 <h3 className="text-sm font-semibold text-slate-700 mb-2">
                   Oxirgi tanlanganlar
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {history.map((name, idx) => (
-                    <motion.span
+                    <span
                       key={`${name}-${idx}`}
                       className="px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-xs font-medium"
-                      layout
-                      whileHover={{ y: -2 }}
                     >
                       {idx + 1}. {name}
-                    </motion.span>
+                    </span>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             )}
-          </motion.div>
+          </div>
 
           {/* RIGHT: Manage names */}
-          <motion.div
-            className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-xl border border-slate-100 p-5 md:p-6"
-            initial={{ y: 24, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.05 }}
-          >
+          <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-xl border border-slate-100 p-5 md:p-6">
             <div className="flex items-start justify-between gap-3 mb-4">
               <div>
                 <h2 className="text-xl md:text-2xl font-bold text-slate-900">
@@ -463,23 +428,19 @@ export default function RandomNamePicker() {
                 className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-white text-sm font-semibold transition-all"
                 asChild={false}
               >
-                <motion.span whileTap={{ scale: 0.96 }}>
-                  <span className="inline-flex items-center gap-2">
-                    <Plus size={18} />
-                    Qo‘shish
-                  </span>
-                </motion.span>
+                <span className="inline-flex items-center gap-2">
+                  <Plus size={18} />
+                  Qo‘shish
+                </span>
               </Button>
             </div>
 
             {/* Names list */}
             <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-2 max-h-[340px] overflow-y-auto pr-1">
               {names.map((name) => (
-                <motion.div
+                <div
                   key={name}
                   className="flex items-center justify-between gap-2 px-3 py-2 rounded-xl bg-linear-to-r from-indigo-50 via-sky-50 to-emerald-50 border border-slate-100 hover:shadow-sm transition-shadow"
-                  layout
-                  whileHover={{ y: -2 }}
                 >
                   <span className="text-sm font-medium text-slate-800 truncate">
                     {name}
@@ -491,7 +452,7 @@ export default function RandomNamePicker() {
                   >
                     <Trash2 size={16} />
                   </button>
-                </motion.div>
+                </div>
               ))}
               {names.length === 0 && (
                 <div className="col-span-full text-sm text-slate-500 text-center py-6">
@@ -499,9 +460,9 @@ export default function RandomNamePicker() {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

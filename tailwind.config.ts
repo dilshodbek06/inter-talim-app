@@ -101,6 +101,25 @@ export default {
           from: { opacity: "0", transform: "scale(0.9)" },
           to: { opacity: "1", transform: "scale(1)" },
         },
+
+        // --- YANGI ANIMATSIYALAR (Framer Motiondan o'tkazilgan) ---
+        marquee: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        "light-move-1": {
+          "0%, 100%": { transform: "translate(0, 0)" },
+          "50%": { transform: "translate(8px, -12px)" },
+        },
+        "light-move-2": {
+          "0%, 100%": { transform: "translate(0, 0)" },
+          "50%": { transform: "translate(-10px, 10px)" },
+        },
+        "light-pulse": {
+          "0%, 100%": { transform: "translate(-50%, -50%) scale(1)" },
+          "50%": { transform: "translate(-50%, -50%) scale(1.05)" },
+        },
+        // --------------------------------------------------------
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -109,9 +128,16 @@ export default {
         "float-slow": "float-slow 4s ease-in-out infinite",
         "slide-up": "slide-up 0.6s ease-out",
         "scale-in": "scale-in 0.4s ease-out",
+
+        // --- YANGI ANIMATSIYALAR (Framer Motiondan o'tkazilgan) ---
+        "marquee-slow": "marquee 18s linear infinite",
+        "light-move-1": "light-move-1 9s ease-in-out infinite alternate",
+        "light-move-2": "light-move-2 12s ease-in-out infinite alternate",
+        "light-pulse": "light-pulse 10s ease-in-out infinite alternate",
+        // --------------------------------------------------------
       },
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwindcss-motion")],
 } satisfies Config;

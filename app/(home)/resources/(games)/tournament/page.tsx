@@ -4,7 +4,6 @@
 "use client";
 
 import { JSX, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Trophy, Shuffle, RotateCcw, FolderTree, Sparkles } from "lucide-react";
 import BackPrev from "@/components/back-prev";
 
@@ -153,11 +152,7 @@ const TournamentBracket = () => {
   if (!started) {
     return (
       <div className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-1 px-2 sm:p-10 flex flex-col items-center justify-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="max-w-5xl w-full bg-white/90 rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white flex flex-col sm:flex-row gap-6"
-        >
+        <div className="max-w-5xl w-full bg-white/90 rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white flex flex-col sm:flex-row gap-6">
           <BackPrev />
           {/* LEFT SIDE - INTRO */}
           <div className="sm:w-1/2 flex flex-col justify-center gap-4">
@@ -233,27 +228,22 @@ const TournamentBracket = () => {
             </div>
 
             <div className="max-h-48 overflow-y-auto border border-dashed border-slate-200 rounded-2xl p-3 bg-slate-50/60">
-              <AnimatePresence>
-                {players.map((player, index) => (
-                  <motion.div
-                    key={player + index}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 10 }}
-                    className="flex items-center justify-between bg-white rounded-xl px-3 py-2 mb-2 shadow-sm"
+              {players.map((player, index) => (
+                <div
+                  key={player + index}
+                  className="flex items-center justify-between bg-white rounded-xl px-3 py-2 mb-2 shadow-sm"
+                >
+                  <span className="text-sm text-slate-700">
+                    {index + 1}. {player}
+                  </span>
+                  <button
+                    onClick={() => removePlayer(index)}
+                    className="text-xs text-rose-500 hover:text-rose-600 font-semibold"
                   >
-                    <span className="text-sm text-slate-700">
-                      {index + 1}. {player}
-                    </span>
-                    <button
-                      onClick={() => removePlayer(index)}
-                      className="text-xs text-rose-500 hover:text-rose-600 font-semibold"
-                    >
-                      O'chirish
-                    </button>
-                  </motion.div>
-                ))}
-              </AnimatePresence>
+                    O'chirish
+                  </button>
+                </div>
+              ))}
               {players.length === 0 && (
                 <p className="text-xs text-slate-400 text-center mt-4">
                   Hozircha o'quvchi qo'shilmagan.
@@ -270,7 +260,7 @@ const TournamentBracket = () => {
               Turnirni boshlash
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     );
   }
@@ -482,31 +472,24 @@ const TournamentBracket = () => {
       </div>
 
       {/* Champion Banner */}
-      <AnimatePresence>
-        {showChampionBanner && championName && (
-          <motion.div
-            initial={{ opacity: 0, y: -50, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 50 }}
-            className="max-w-7xl mx-auto mb-6"
-          >
-            <div className="bg-linear-to-r from-amber-400 via-yellow-400 to-amber-500 rounded-2xl p-6 shadow-2xl border-4 border-amber-600">
-              <div className="flex items-center justify-center gap-4">
-                <Sparkles className="w-8 h-8 text-white animate-pulse" />
-                <div className="text-center">
-                  <h2 className="text-2xl sm:text-3xl font-black text-white mb-1">
-                    🏆 G'olib: {championName}
-                  </h2>
-                  <p className="text-sm text-amber-900 font-semibold">
-                    Tabriklaymiz! Turnir g'olibi!
-                  </p>
-                </div>
-                <Sparkles className="w-8 h-8 text-white animate-pulse" />
+      {showChampionBanner && championName && (
+        <div className="max-w-7xl mx-auto mb-6">
+          <div className="bg-linear-to-r from-amber-400 via-yellow-400 to-amber-500 rounded-2xl p-6 shadow-2xl border-4 border-amber-600">
+            <div className="flex items-center justify-center gap-4">
+              <Sparkles className="w-8 h-8 text-white animate-pulse" />
+              <div className="text-center">
+                <h2 className="text-2xl sm:text-3xl font-black text-white mb-1">
+                  🏆 G'olib: {championName}
+                </h2>
+                <p className="text-sm text-amber-900 font-semibold">
+                  Tabriklaymiz! Turnir g'olibi!
+                </p>
               </div>
+              <Sparkles className="w-8 h-8 text-white animate-pulse" />
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      )}
 
       {/* BRACKET */}
       <div className="max-w-7xl mx-auto flex items-stretch justify-center gap-0 py-6">
@@ -514,25 +497,16 @@ const TournamentBracket = () => {
 
         {/* CENTER - Trophy & Final */}
         <div className="flex flex-col items-center justify-center gap-6 relative px-8">
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="h-20 w-20 sm:h-24 sm:w-24 rounded-full border-4 border-amber-500 bg-linear-to-br from-amber-100 to-amber-200 flex items-center justify-center shadow-xl">
               <Trophy className="w-10 h-10 sm:w-12 sm:h-12 text-amber-600" />
             </div>
             {championName && (
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                className="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-lg"
-              >
+              <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-lg">
                 ✓
-              </motion.div>
+              </div>
             )}
-          </motion.div>
+          </div>
 
           {finalMatch && (
             <div className="flex flex-col gap-1">

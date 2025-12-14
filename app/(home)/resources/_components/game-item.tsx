@@ -11,7 +11,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { Game } from "@/types";
 import { useRouter } from "next/navigation";
 
@@ -23,14 +22,10 @@ const GameItem = ({ game }: GameItemProps) => {
   const router = useRouter();
 
   return (
-    <motion.div
+    <div
       onClick={() => router.push(game.webUrl)}
       key={game.id}
-      variants={{
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0 },
-      }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      suppressHydrationWarning={true}
     >
       <Card className="group cursor-pointer border border-white/70 bg-white/80 backdrop-blur-md shadow-lg hover:shadow-[0_18px_40px_rgba(15,23,42,0.18)] transition-all duration-300 transform hover:-translate-y-2 rounded-2xl overflow-hidden relative">
         {/* Top accent bar */}
@@ -94,7 +89,7 @@ const GameItem = ({ game }: GameItemProps) => {
           </Button>
         </CardFooter>
       </Card>
-    </motion.div>
+    </div>
   );
 };
 

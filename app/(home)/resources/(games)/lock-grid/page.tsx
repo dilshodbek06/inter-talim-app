@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Lock, LockOpen, Sparkles, Trash2 } from "lucide-react";
 import {
   Dialog,
@@ -192,12 +191,7 @@ export default function UnlockLocksGame() {
   };
 
   return (
-    <motion.div
-      className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-10"
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.35 }}
-    >
+    <div className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-10">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <FallConfetti ref={confettiRef} />
         {/* Header */}
@@ -225,12 +219,7 @@ export default function UnlockLocksGame() {
         {!gameStarted ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 items-start">
             {/* Left: Introduction */}
-            <motion.div
-              initial={{ opacity: 0, x: -8 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.35 }}
-              className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100"
-            >
+            <div className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100">
               <h2 className="text-xl font-bold mb-3">O‘yin haqida (Intro)</h2>
               <p className="text-slate-700 leading-relaxed mb-4">
                 Bu o‘yin o‘quvchilar uchun mo‘ljallangan: har bir qulf ortida
@@ -255,15 +244,10 @@ export default function UnlockLocksGame() {
                   O‘yinni boshlash ▶
                 </Button>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right: Teacher form */}
-            <motion.div
-              initial={{ opacity: 0, x: 8 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.35 }}
-              className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100"
-            >
+            <div className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100">
               <h3 className="text-lg font-semibold mb-3">
                 O‘qituvchi — Savol qo‘shish
               </h3>
@@ -321,7 +305,7 @@ export default function UnlockLocksGame() {
                 Eslatma: o‘yin boshlangach, siz (o‘qituvchi) har bir savol uchun
                 To‘g‘ri/Noto‘g‘ri ni belgilaysiz.
               </p>
-            </motion.div>
+            </div>
           </div>
         ) : (
           /* Game view (locks grid) */
@@ -336,96 +320,46 @@ export default function UnlockLocksGame() {
               </div>
             </div>
 
-            <AnimatePresence initial={false}>
-              <motion.div
-                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6"
-                layout
-                initial="hidden"
-                animate="visible"
-                variants={{
-                  hidden: {},
-                  visible: {
-                    transition: { staggerChildren: 0.06 },
-                  },
-                }}
-              >
-                {questions.map((q) => {
-                  const isOpened = openedLocks[q.id] === true;
-                  return (
-                    <motion.div
-                      key={q.id}
-                      layout
-                      variants={{
-                        hidden: { opacity: 0, scale: 0.8, y: 12 },
-                        visible: {
-                          opacity: 1,
-                          scale: 1,
-                          y: 0,
-                          transition: {
-                            type: "spring",
-                            stiffness: 220,
-                            damping: 20,
-                          },
-                        },
-                      }}
-                      className="relative aspect-square flex items-center justify-center"
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
+              {questions.map((q) => {
+                const isOpened = openedLocks[q.id] === true;
+                return (
+                  <div
+                    key={q.id}
+                    className="relative aspect-square flex items-center justify-center"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => handleLockClick(q.id)}
+                      disabled={isOpened}
+                      className="group relative flex flex-col items-center justify-center focus:outline-none"
                     >
-                      <motion.button
-                        type="button"
-                        onClick={() => handleLockClick(q.id)}
-                        disabled={isOpened}
-                        whileHover={!isOpened ? { scale: 1.06, y: -2 } : {}}
-                        whileTap={{ scale: 0.97 }}
-                        className="group relative flex flex-col items-center justify-center focus:outline-none"
-                      >
-                        <motion.div
-                          animate={
-                            isOpened
-                              ? {
-                                  scale: [1, 1.12, 1],
-                                  rotate: [0, -6, 0],
-                                  y: [0, -4, 0],
-                                }
-                              : { scale: 1, rotate: 0, y: 0 }
-                          }
-                          transition={
-                            isOpened
-                              ? { duration: 0.45, ease: "easeOut" }
-                              : { type: "spring", stiffness: 260, damping: 18 }
-                          }
-                          className="flex flex-col items-center gap-2"
-                        >
-                          <div className="relative">
-                            {isOpened && (
-                              <motion.div
-                                className="absolute inset-0 rounded-3xl bg-emerald-300/60 blur-xl"
-                                initial={{ opacity: 0, scale: 0.2 }}
-                                animate={{ opacity: 1, scale: 1.4 }}
-                                transition={{ duration: 0.4 }}
-                              />
-                            )}
+                      <div className="flex flex-col items-center gap-2">
+                        <div className="relative">
+                          {isOpened && (
+                            <div className="absolute inset-0 rounded-3xl bg-emerald-300/60 blur-xl" />
+                          )}
 
-                            <div
-                              className={`relative flex items-center justify-center w-32 h-32 md:w-44 md:h-44 rounded-3xl border-2 shadow-md ${
-                                isOpened
-                                  ? "bg-emerald-100 border-emerald-400 text-emerald-700"
-                                  : "bg-indigo-50 border-edu-blue text-edu-blue group-hover:border-edu-blue"
-                              }`}
-                            >
-                              {isOpened ? (
-                                <LockOpen className="size-24 sm:size-32" />
-                              ) : (
-                                <Lock className="size-24 sm:size-32" />
-                              )}
-                            </div>
+                          <div
+                            className={`relative flex items-center justify-center w-32 h-32 md:w-44 md:h-44 rounded-3xl border-2 shadow-md ${
+                              isOpened
+                                ? "bg-emerald-100 border-emerald-400 text-emerald-700"
+                                : "bg-indigo-50 border-edu-blue text-edu-blue group-hover:border-edu-blue"
+                            }`}
+                          >
+                            {isOpened ? (
+                              <LockOpen className="size-24 sm:size-32" />
+                            ) : (
+                              <Lock className="size-24 sm:size-32" />
+                            )}
                           </div>
-                        </motion.div>
-                      </motion.button>
-                    </motion.div>
-                  );
-                })}
-              </motion.div>
-            </AnimatePresence>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         )}
 
@@ -441,99 +375,70 @@ export default function UnlockLocksGame() {
           }}
         >
           <DialogContent className="max-w-md">
-            <AnimatePresence mode="wait">
-              {isDialogOpen && currentQuestion && (
-                <motion.div
-                  key={currentQuestion.id}
-                  initial={{ opacity: 0, scale: 0.6, y: 10 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.6, y: 8 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 24 }}
-                  className="space-y-4"
-                >
-                  <DialogHeader>
-                    <DialogTitle className="flex items-center gap-2 text-2xl">
-                      <motion.span
-                        className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-indigo-100 text-indigo-700 text-base font-bold"
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
+            {isDialogOpen && currentQuestion && (
+              <div className="space-y-4">
+                <DialogHeader>
+                  <DialogTitle className="flex items-center gap-2 text-2xl">
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-indigo-100 text-indigo-700 text-base font-bold">
+                      {questions.findIndex((q) => q.id === currentQuestion.id) +
+                        1}
+                    </span>
+                    Qulf savoli
+                  </DialogTitle>
+                  <DialogDescription className="mt-2 text-slate-700" />
+                </DialogHeader>
+
+                <div className="text-2xl p-3 rounded-xl bg-slate-50 border border-slate-100">
+                  <p className="text-slate-900 font-semibold leading-relaxed">
+                    {currentQuestion?.text}
+                  </p>
+                </div>
+
+                {answerError && (
+                  <div className="mt-1 px-3 py-2 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 text-sm">
+                    {answerError}
+                  </div>
+                )}
+
+                <DialogFooter className="mt-2 flex flex-col gap-3">
+                  <div className="grid grid-cols-2 gap-3 w-full">
+                    <div>
+                      <Button
+                        variant="outline"
+                        className="w-full border-emerald-500 text-emerald-700 hover:bg-emerald-500 hover:text-white"
+                        onClick={() => handleTeacherMark(true)}
                       >
-                        {currentQuestion
-                          ? questions.findIndex(
-                              (q) => q.id === currentQuestion.id
-                            ) + 1
-                          : "?"}
-                      </motion.span>
-                      Qulf savoli
-                    </DialogTitle>
-                    <DialogDescription className="mt-2 text-slate-700" />
-                  </DialogHeader>
-
-                  <motion.div
-                    className="text-2xl p-3 rounded-xl bg-slate-50 border border-slate-100"
-                    initial={{ opacity: 0, y: 4 }}
-                    animate={{ opacity: 1, y: 0 }}
-                  >
-                    <p className="text-slate-900 font-semibold leading-relaxed">
-                      {currentQuestion?.text}
-                    </p>
-                  </motion.div>
-
-                  <AnimatePresence initial={false}>
-                    {answerError && (
-                      <motion.div
-                        key={answerError}
-                        initial={{ opacity: 0, y: -6 }}
-                        animate={{ opacity: 1, y: 0, x: [0, -4, 4, -4, 4, 0] }}
-                        exit={{ opacity: 0, y: -6 }}
-                        transition={{ duration: 0.4 }}
-                        className="mt-1 px-3 py-2 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 text-sm"
-                      >
-                        {answerError}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-
-                  <DialogFooter className="mt-2 flex flex-col gap-3">
-                    <div className="grid grid-cols-2 gap-3 w-full">
-                      <motion.div whileTap={{ scale: 0.97 }}>
-                        <Button
-                          variant="outline"
-                          className="w-full border-emerald-500 text-emerald-700 hover:bg-emerald-500 hover:text-white"
-                          onClick={() => handleTeacherMark(true)}
-                        >
-                          ✅ To‘g‘ri
-                        </Button>
-                      </motion.div>
-                      <motion.div whileTap={{ scale: 0.97 }}>
-                        <Button
-                          variant="outline"
-                          className="w-full border-rose-500 text-rose-700 hover:bg-rose-500 hover:text-white"
-                          onClick={() => handleTeacherMark(false)}
-                        >
-                          ❌ Noto‘g‘ri
-                        </Button>
-                      </motion.div>
+                        ✅ To‘g‘ri
+                      </Button>
                     </div>
+                    <div>
+                      <Button
+                        variant="outline"
+                        className="w-full border-rose-500 text-rose-700 hover:bg-rose-500 hover:text-white"
+                        onClick={() => handleTeacherMark(false)}
+                      >
+                        ❌ Noto‘g‘ri
+                      </Button>
+                    </div>
+                  </div>
 
-                    <Button
-                      variant="ghost"
-                      className="text-slate-500 hover:text-slate-700 hover:bg-slate-100"
-                      onClick={() => {
-                        setIsDialogOpen(false);
-                        setAnswerError(null);
-                        setActiveQuestionId(null);
-                      }}
-                    >
-                      Bekor qilish
-                    </Button>
-                  </DialogFooter>
-                </motion.div>
-              )}
-            </AnimatePresence>
+                  <Button
+                    variant="ghost"
+                    className="text-slate-500 hover:text-slate-700 hover:bg-slate-100"
+                    onClick={() => {
+                      setIsDialogOpen(false);
+                      setAnswerError(null);
+                      setActiveQuestionId(null);
+                    }}
+                  >
+                    Bekor qilish
+                  </Button>
+                </DialogFooter>
+              </div>
+            )}
           </DialogContent>
         </Dialog>
       </div>
-    </motion.div>
+    </div>
   );
 }

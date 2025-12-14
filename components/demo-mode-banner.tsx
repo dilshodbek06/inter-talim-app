@@ -1,19 +1,29 @@
 "use client";
 
 import { Megaphone } from "lucide-react";
-import { motion } from "framer-motion";
 
 export default function DemoModeBanner() {
   return (
-    <div className="w-full bg-yellow-400 text-black py-2 overflow-hidden shadow-md border-b border-yellow-500">
-      <motion.div
-        className="flex items-center gap-2 whitespace-nowrap text-sm font-medium"
-        animate={{ x: ["100%", "-100%"] }}
-        transition={{ repeat: Infinity, duration: 18, ease: "linear" }}
-      >
+    <div className="w-full bg-yellow-400 text-black py-2 shadow-md border-b border-yellow-500">
+      <style>{`
+        @keyframes scroll-left {
+          from { transform: translateX(100%); }
+          to { transform: translateX(-100%); }
+        }
+        .scroll-banner {
+          animation: scroll-left 18s linear infinite;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          white-space: nowrap;
+          font-size: 0.875rem;
+          font-weight: 500;
+        }
+      `}</style>
+      <div className="scroll-banner">
         <Megaphone className="h-4 w-4" />
         Sayt hozirda test rejimida ishlayapdi.
-      </motion.div>
+      </div>
     </div>
   );
 }

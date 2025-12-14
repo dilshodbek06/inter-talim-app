@@ -29,7 +29,7 @@ const TopGames = () => {
       <div className="pointer-events-none absolute top-1/3 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-edu-coral/14 blur-3xl" />
 
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 space-y-4 animate-fade-in">
+        <div className="text-center mb-16 space-y-4">
           <div className="inline-block px-4 py-2 bg-secondary/20 dark:bg-secondary/10 rounded-full backdrop-blur-sm">
             <span className="text-sm font-semibold text-foreground">
               ⭐ O‘qituvchilarning tanlovlari
@@ -43,11 +43,14 @@ const TopGames = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {filtered.map((game) => (
-            <GameItem game={game} key={game.id} />
+            <GameItem
+              game={game}
+              key={game.id}
+            />
           ))}
         </div>
 
-        <div className="text-center mt-12 animate-fade-in">
+        <div className="text-center mt-12">
           <Link href={`/resources`}>
             <Button variant="outline" size="lg" className="group">
               Barchasini ko‘rish

@@ -57,11 +57,11 @@ const Testimonials = () => {
       id="testimonials"
       className="py-20 bg-linear-to-r from-edu-blue/10 via-edu-yellow/10 to-edu-coral/10 dark:from-edu-blue/5 dark:via-edu-yellow/5 dark:to-edu-coral/5 relative"
     >
-      <div className="absolute top-10 left-10 w-20 h-20 bg-edu-yellow/20 rounded-full blur-xl animate-float" />
-      <div className="absolute bottom-10 right-10 w-24 h-24 bg-edu-coral/20 rounded-full blur-xl animate-float-slow" />
-      <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-edu-blue/20 rounded-full blur-xl animate-float" />
+      <div className="absolute top-10 left-10 w-20 h-20 bg-edu-yellow/20 rounded-full blur-xl" />
+      <div className="absolute bottom-10 right-10 w-24 h-24 bg-edu-coral/20 rounded-full blur-xl" />
+      <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-edu-blue/20 rounded-full blur-xl" />
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 space-y-4 animate-fade-in">
+        <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:mx-auto md:max-w-4xl md:text-5xl font-bold">
             Ustoz va o‘quvchilarning sevimli platformasi
           </h2>

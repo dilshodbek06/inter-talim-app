@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@plugin "tailwindcss-motion";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -156,6 +158,21 @@
   .animate-scale-in {
     animation: scale-in 0.4s ease-out;
   }
+
+  .animate-fade-in {
+    opacity: 0;
+    animation: fade-in 0.5s ease-out forwards;
+  }
+
+  .animate-fade-up {
+    opacity: 0;
+    animation: fade-up 0.6s ease-out forwards;
+  }
+
+  .animate-fade-down {
+    opacity: 0;
+    animation: fade-down 0.6s ease-out forwards;
+  }
 }
 
 @keyframes accordion-down {
@@ -215,6 +232,37 @@
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

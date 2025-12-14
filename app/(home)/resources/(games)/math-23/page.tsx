@@ -4,7 +4,6 @@
 import { useState, useRef } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import BackPrev from "@/components/back-prev";
 
 export default function WorksheetGenerator() {
@@ -148,11 +147,7 @@ export default function WorksheetGenerator() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-3 px-2">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="max-w-6xl mx-auto"
-      >
+      <div className="max-w-6xl mx-auto">
         <BackPrev />
         <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-8 items-start">
           {/* LEFT – SETTINGS CARD */}
@@ -275,7 +270,7 @@ export default function WorksheetGenerator() {
             )}
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

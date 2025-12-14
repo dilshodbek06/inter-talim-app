@@ -36,7 +36,7 @@ const Features = () => {
   return (
     <section id="features" className="py-20 bg-muted/50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 space-y-4 animate-fade-in">
+        <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
             Platforma xususiyatlari
           </h2>
@@ -51,8 +51,7 @@ const Features = () => {
           {data.map((feature, index) => (
             <Card
               key={index}
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border hover:border-primary/50 bg-card animate-fade-in shadow-sm"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border hover:border-primary/50 bg-card shadow-sm"
             >
               <CardContent className="p-6 space-y-4">
                 <div
