@@ -28,6 +28,7 @@ export default function RandomNamePicker() {
   const [soundEnabled, setSoundEnabled] = useState<boolean>(true);
   const [newName, setNewName] = useState<string>("");
   const [history, setHistory] = useState<WinnerHistory>([]);
+  const [isResultModalOpen, setIsResultModalOpen] = useState<boolean>(false);
 
   const audioContextRef = useRef<AudioContext | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -237,6 +238,7 @@ export default function RandomNamePicker() {
 
     setIsSpinning(true);
     setSelectedName("");
+    setIsResultModalOpen(false);
 
     const spinDuration = 4000;
     const extraSpins = 5 + Math.random() * 3;
@@ -278,6 +280,7 @@ export default function RandomNamePicker() {
         setIsSpinning(false);
         playWinSound();
         setHistory((prev) => [winner, ...prev].slice(0, 10));
+        setIsResultModalOpen(true);
       }
     };
 
@@ -301,6 +304,16 @@ export default function RandomNamePicker() {
     setSelectedName("");
     setRotation(0);
     setHistory([]);
+    setIsResultModalOpen(false);
+  };
+
+  const closeResultModal = () => setIsResultModalOpen(false);
+
+  const removeSelectedName = () => {
+    if (!selectedName) return;
+    removeName(selectedName);
+    setIsResultModalOpen(false);
+    setSelectedName("");
   };
 
   const onInputKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (e) => {
@@ -463,6 +476,38 @@ export default function RandomNamePicker() {
           </div>
         </div>
       </div>
+
+      {isResultModalOpen && selectedName && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 backdrop-blur-sm px-4">
+          <div className="relative w-full max-w-md overflow-hidden rounded-3xl border border-white/60 bg-white/95 shadow-2xl">
+            <div className="absolute inset-x-6 top-0 h-1 rounded-b-full bg-linear-to-r from-emerald-400 via-indigo-400 to-sky-400" />
+            <div className="px-6 pt-6 pb-5 text-center">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 shadow-inner">
+                🎉
+              </div>
+              <p className="mt-1 text-6xl font-bold text-slate-900">
+                {selectedName}
+              </p>
+              <p className="mt-3 text-xs text-slate-500">Tasodifiy tanlandi.</p>
+            </div>
+            <div className="grid grid-cols-1 gap-2 border-t border-slate-100 bg-slate-50/80 p-4 sm:grid-cols-2">
+              <button
+                onClick={removeSelectedName}
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-red-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-red-600"
+              >
+                <Trash2 size={16} />
+                Barabandan o‘chirish
+              </button>
+              <button
+                onClick={closeResultModal}
+                className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-slate-300 hover:bg-slate-100"
+              >
+                Yopish
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
