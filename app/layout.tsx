@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ToastProvider } from "@/providers/toast-provider";
+import { defaultMetadata, defaultViewport } from "@/lib/seo";
+import { StructuredData } from "./_components/structured-data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,10 +15,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Ta'lim jarayonini qiziqarli va interaktiv qiling",
-  description: "Ta'lim jarayonini qiziqarli va interaktiv qiling",
-};
+export const metadata: Metadata = defaultMetadata;
+export const viewport = defaultViewport;
 
 export default function RootLayout({
   children,
@@ -24,10 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="">
+    <html lang="uz" className="">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <StructuredData />
         <ToastProvider />
         {children}
       </body>

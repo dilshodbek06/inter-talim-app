@@ -7,7 +7,10 @@ const HeroSection = () => {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 md:pt-10 pb-4 animate-fade-in">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-        <div className="space-y-4 animate-fade-up" style={{ animationDelay: "40ms" }}>
+        <div
+          className="space-y-4 animate-fade-up"
+          style={{ animationDelay: "40ms" }}
+        >
           <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-3 py-1 text-xs font-semibold text-sky-700 shadow-sm backdrop-blur">
             <span className="h-2 w-2 rounded-full bg-linear-to-r from-sky-400 to-indigo-500" />
             Bizning interaktiv metodlar
@@ -27,7 +30,10 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 md:gap-4 min-w-[260px] animate-fade-up" style={{ animationDelay: "120ms" }}>
+        <div
+          className="grid grid-cols-2 gap-3 md:gap-4 min-w-[260px] animate-fade-up"
+          style={{ animationDelay: "120ms" }}
+        >
           {/* 1-Stat karta */}
           <div className="rounded-2xl bg-white/80 px-4 py-3 shadow-md backdrop-blur border border-white/60">
             <div className="flex items-center gap-2">
@@ -39,7 +45,7 @@ const HeroSection = () => {
                   Metodlar
                 </p>
                 <p className="text-sm font-semibold text-slate-900">
-                  {eduGames.length}+
+                  {eduGames.length - 1}+
                 </p>
               </div>
             </div>

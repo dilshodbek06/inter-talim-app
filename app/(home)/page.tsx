@@ -7,6 +7,15 @@ import Testimonials from "../_components/testimonials";
 import Cta from "../_components/cta";
 import Footer from "@/components/Footer";
 import DemoModeBanner from "@/components/demo-mode-banner";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Interaktiv-ta'lim — qiziqarli darslar va o'quv o'yinlari",
+  description:
+    "O'qituvchilar uchun interaktiv o'yinlar, viktorinalar va kreativ metodlar. Ta'lim jarayonini qiziqarli va samarali qiling.",
+  path: "/",
+  keywords: ["ta'lim platformasi", "interaktiv o'yinlar", "o'qituvchilar uchun"],
+});
 
 export default function Home() {
   return (
