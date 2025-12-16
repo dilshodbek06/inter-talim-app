@@ -39,15 +39,17 @@ const Hero = () => {
       {/* Floating Educational Icons */}
       <GradientItems />
       <div className="container z-2 relative mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-slide-up">
+        <div className="max-w-4xl mx-auto text-center space-y-6 animate-slide-up">
           <div className="inline-block px-4 py-2 bg-secondary/20 dark:bg-secondary/10 rounded-full backdrop-blur-sm">
             <span className="text-sm font-semibold text-foreground">
               🎉 500+ O‘qituvchilar safiga qo‘shiling
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            Ta&apos;lim jarayoni biz bilan{" "}
-            <span className="text-primary">
+          <div className="flex flex-col">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              Ta&apos;lim jarayoni biz bilan{" "}
+            </h1>
+            <h1 className="text-primary text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               <TextLoop>
                 {["Qiziqarli", "Interaktiv", "Raqamli"].map((text) => (
                   <span key={text} className="block text-left">
@@ -55,8 +57,8 @@ const Hero = () => {
                   </span>
                 ))}
               </TextLoop>
-            </span>
-          </h1>
+            </h1>
+          </div>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Interaktiv o‘yinlar, viktorinalar va o‘qitish vositalari — hammasi

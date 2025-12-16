@@ -15,7 +15,6 @@ export function TextLoop({
   onIndexChange,
 }: TextLoopProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [height, setHeight] = useState<number | "auto">("auto");
   const containerRef = useRef<HTMLDivElement>(null);
   const items = Children.toArray(children);
 
@@ -32,18 +31,10 @@ export function TextLoop({
     return () => clearInterval(timer);
   }, [items.length, interval, onIndexChange]);
 
-  useEffect(() => {
-    if (containerRef.current) {
-      const newHeight = containerRef.current.scrollHeight;
-      setHeight(newHeight);
-    }
-  }, [currentIndex]);
-
   return (
     <div
       ref={containerRef}
       className={`relative inline-block overflow-hidden ${className}`}
-      style={{ minHeight: height }}
     >
       <style>{`
         @keyframes fadeInUp {

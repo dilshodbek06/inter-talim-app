@@ -232,14 +232,13 @@ export default function LinearEquationGenerator() {
           <div className="w-full">
             {equations.length === 0 ? (
               <div className="h-full flex items-center justify-center rounded-3xl border border-dashed border-slate-300 bg-white/70 p-6 text-sm text-slate-500 text-center">
-                Chap tomondan diapazon va sonini tanlang,
-                <span className="font-semibold mx-1">generatsiya qilish</span>
+                Misollar darajasini va sonini tanlang va generatsiya qilish
                 tugmasini bosing.
               </div>
             ) : (
               <div
                 ref={printRef}
-                className="bg-white rounded-3xl shadow-2xl p-8 md:p-10"
+                className="bg-white rounded-3xl shadow-2xl px-4 py-5  md:p-10"
               >
                 <h1 className="text-center text-3xl font-bold mb-6 text-slate-800">
                   Chiziqli tenglamalar (x ni toping)
@@ -249,7 +248,7 @@ export default function LinearEquationGenerator() {
                   {equations.map((eq, i) => (
                     <div
                       key={`${eq.text}-${i}`}
-                      className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 bg-slate-50 border border-slate-200 rounded-2xl p-4"
+                      className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 bg-slate-50 border border-slate-200 rounded-2xl p-3"
                     >
                       <span className="text-xs text-slate-500 md:w-12">
                         {i + 1}){" "}

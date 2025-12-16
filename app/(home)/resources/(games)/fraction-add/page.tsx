@@ -281,8 +281,7 @@ export default function FractionWorksheet() {
           <div className="w-full">
             {exercises.length === 0 ? (
               <div className="h-full flex items-center justify-center rounded-3xl border border-dashed border-slate-300 bg-white/70 p-6 text-sm text-slate-500 text-center">
-                Chap tomondan maxraj uzunligini tanlang va
-                <span className="font-semibold mx-1">generatsiya qilish</span>
+                Chap tomondan maxraj uzunligini tanlang va generatsiya qilish
                 tugmasini bosing.
               </div>
             ) : (
