@@ -7,7 +7,6 @@ import Testimonials from "../_components/testimonials";
 import Cta from "../_components/cta";
 import Footer from "@/components/Footer";
 import DemoModeBanner from "@/components/demo-mode-banner";
-import ClientSideOnly from "@/components/ClientSideOnly";
 
 export default function Home() {
   return (
@@ -19,33 +18,21 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
       {/* Features Grid */}
-      <ClientSideOnly>
-        <Features />
-      </ClientSideOnly>
+      <Features />
       {/* Statistics Section */}
 
       {/* Top Games */}
-      <ClientSideOnly>
-        <TopGames />
-      </ClientSideOnly>
+      <TopGames />
       {/* How It Works */}
-      <ClientSideOnly>
-        <HowWorks />
-      </ClientSideOnly>
+      <HowWorks />
       {/* Testimonials */}
-      <ClientSideOnly>
-        <Testimonials />
-      </ClientSideOnly>
+      <Testimonials />
       {/* Pricing Section */}
       {/* <Pricing /> */}
       {/* CTA Banner */}
-      <ClientSideOnly>
-        <Cta />
-      </ClientSideOnly>
+      <Cta />
       {/* Footer */}
-      <ClientSideOnly>
-        <Footer />
-      </ClientSideOnly>
+      <Footer />
     </div>
   );
 }

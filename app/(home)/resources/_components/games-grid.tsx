@@ -24,12 +24,8 @@ const GamesGrid = () => {
             <p className="text-gray-500 text-lg">Ma&apos;lumot topilmadi.</p>
           </div>
         ) : (
-          filteredGames.map((game, index) => (
-            <div
-              key={game.id}
-              className="animate-fade-up"
-              style={{ animationDelay: `${index * 70}ms` }}
-            >
+          filteredGames.map((game) => (
+            <div key={game.id}>
               <GameItem game={game} />
             </div>
           ))

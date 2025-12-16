@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import { Download, Eye, FolderOpen, FileArchive, Palette } from "lucide-react";
+import { Download, Eye, FolderOpen, Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -13,7 +13,6 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import BackPrev from "@/components/back-prev";
-import ClientSideOnly from "@/components/ClientSideOnly";
 
 type RangliConturAlbum = {
   id: string;
@@ -64,14 +63,14 @@ const ALBUMS: RangliConturAlbum[] = [
 ];
 
 // Barcha albomlar ZIP
-const downloadAllZip = () => {
-  const link = document.createElement("a");
-  link.href = "/api/rangli-contur/all-albums.zip";
-  link.download = "rangli-contur-all-albums.zip";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
+// const downloadAllZip = () => {
+//   const link = document.createElement("a");
+//   link.href = "/api/rangli-contur/all-albums.zip";
+//   link.download = "rangli-contur-all-albums.zip";
+//   document.body.appendChild(link);
+//   link.click();
+//   document.body.removeChild(link);
+// };
 
 export default function RangliConturPage() {
   const [previewOpen, setPreviewOpen] = useState(false);
@@ -94,15 +93,15 @@ export default function RangliConturPage() {
   };
 
   return (
-    <ClientSideOnly>
-      <div className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 px-4 py-8 text-slate-900">
+    <div>
+      <div className="min-h-screen bg-linear-to-br from-sky-50 via-blue-50 to-emerald-50 px-4 py-8 text-slate-900">
         <div className="max-w-6xl mx-auto space-y-8 animate-fade-in">
           <BackPrev />
           {/* HEADER */}
           <header className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 animate-fade-down">
             <div className="space-y-2">
               <div className="inline-flex items-center gap-2 rounded-2xl bg-white/70 px-3 py-1 border border-white/80 shadow-sm">
-                <Palette className="w-4 h-4 text-indigo-500" />
+                <Palette className="w-4 h-4 text-blue-500" />
                 <span className="text-xs font-medium text-slate-700">
                   Rangli-Contur vositasi
                 </span>
@@ -119,24 +118,27 @@ export default function RangliConturPage() {
             </div>
 
             <div className="flex flex-wrap gap-2 justify-start md:justify-end">
-              <Button
+              {/* <Button
                 variant="outline"
                 className="rounded-xl text-xs sm:text-sm flex items-center gap-2"
                 onClick={downloadAllZip}
               >
                 <FileArchive className="w-4 h-4" />
                 Barcha albomlarni ZIP yuklash
-              </Button>
+              </Button> */}
             </div>
           </header>
 
           {/* ALBUM LIST TITLE */}
-          <div className="flex items-center gap-2 animate-fade-up" style={{ animationDelay: "120ms" }}>
-            <FolderOpen className="w-5 h-5 text-indigo-500" />
+          <div
+            className="flex items-center gap-2 animate-fade-up"
+            style={{ animationDelay: "120ms" }}
+          >
+            <FolderOpen className="w-5 h-5 text-blue-500" />
             <h2 className="text-lg sm:text-xl font-semibold">
               Albomlar ro‘yxati
             </h2>
-            <span className="text-xs px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100">
+            <span className="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100">
               {ALBUMS.length} ta albom
             </span>
           </div>
@@ -193,7 +195,7 @@ export default function RangliConturPage() {
                         Ko&apos;rish
                       </Button>
                       <Button
-                        className="flex-1 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white"
+                        className="flex-1 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white"
                         onClick={() => downloadPng(album)}
                       >
                         <Download className="w-4 h-4" />
@@ -215,7 +217,7 @@ export default function RangliConturPage() {
             <>
               <DialogHeader className="px-5 pt-4 pb-3 border-b border-slate-100 bg-white/90 backdrop-blur-sm">
                 <DialogTitle className="flex items-center gap-2">
-                  <Eye className="w-4 h-4 text-indigo-500" />
+                  <Eye className="w-4 h-4 text-blue-500" />
                   {activeAlbum.title}
                 </DialogTitle>
                 <DialogDescription className="text-xs sm:text-sm text-slate-500">
@@ -258,6 +260,6 @@ export default function RangliConturPage() {
           )}
         </DialogContent>
       </Dialog>
-    </ClientSideOnly>
+    </div>
   );
 }
