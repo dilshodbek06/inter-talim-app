@@ -25,7 +25,12 @@ const HowWorks = () => {
     },
   ];
   return (
-    <section id="how-it-works" className="py-20 bg-muted/30">
+    <section
+      id="how-it-works"
+      className="py-20 bg-muted/30"
+      data-aos="fade-up"
+      data-aos-offset="140"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
@@ -38,7 +43,12 @@ const HowWorks = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {data.map((step, index) => (
-            <div key={index} className="relative">
+            <div
+              key={index}
+              className="relative"
+              data-aos="zoom-in"
+              data-aos-delay={100 + index * 100}
+            >
               <div className="text-center space-y-4">
                 <div className="relative inline-block">
                   <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">

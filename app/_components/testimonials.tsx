@@ -56,6 +56,8 @@ const Testimonials = () => {
     <section
       id="testimonials"
       className="py-20 bg-linear-to-r from-edu-blue/10 via-edu-yellow/10 to-edu-coral/10 dark:from-edu-blue/5 dark:via-edu-yellow/5 dark:to-edu-coral/5 relative"
+      data-aos="fade-up"
+      data-aos-offset="120"
     >
       <div className="absolute top-10 left-10 w-20 h-20 bg-edu-yellow/20 rounded-full blur-xl" />
       <div className="absolute bottom-10 right-10 w-24 h-24 bg-edu-coral/20 rounded-full blur-xl" />
@@ -80,7 +82,12 @@ const Testimonials = () => {
           >
             <CarouselContent className="mb-16">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem
+                  key={index}
+                  className="md:basis-1/2 lg:basis-1/3"
+                  data-aos="fade-up"
+                  data-aos-delay={80 + index * 70}
+                >
                   <div className="p-1">
                     <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                       <CardContent className="p-6 space-y-4 h-full flex flex-col">

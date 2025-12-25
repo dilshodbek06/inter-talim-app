@@ -8,6 +8,7 @@ import Cta from "../_components/cta";
 import Footer from "@/components/Footer";
 import DemoModeBanner from "@/components/demo-mode-banner";
 import { buildMetadata } from "@/lib/seo";
+import { AosProvider } from "@/providers/aos-provider";
 
 export const metadata = buildMetadata({
   title: "Interaktiv-ta'lim — qiziqarli darslar va o'quv o'yinlari",
@@ -19,29 +20,31 @@ export const metadata = buildMetadata({
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Top alert banner */}
-      <DemoModeBanner />
-      {/* Navigation */}
-      <Header />
-      {/* Hero Section */}
-      <Hero />
-      {/* Features Grid */}
-      <Features />
-      {/* Statistics Section */}
+    <AosProvider>
+      <div className="min-h-screen bg-background">
+        {/* Top alert banner */}
+        <DemoModeBanner />
+        {/* Navigation */}
+        <Header />
+        {/* Hero Section */}
+        <Hero />
+        {/* Features Grid */}
+        <Features />
+        {/* Statistics Section */}
 
-      {/* Top Games */}
-      <TopGames />
-      {/* How It Works */}
-      <HowWorks />
-      {/* Testimonials */}
-      <Testimonials />
-      {/* Pricing Section */}
-      {/* <Pricing /> */}
-      {/* CTA Banner */}
-      <Cta />
-      {/* Footer */}
-      <Footer />
-    </div>
+        {/* Top Games */}
+        <TopGames />
+        {/* How It Works */}
+        <HowWorks />
+        {/* Testimonials */}
+        <Testimonials />
+        {/* Pricing Section */}
+        {/* <Pricing /> */}
+        {/* CTA Banner */}
+        <Cta />
+        {/* Footer */}
+        <Footer />
+      </div>
+    </AosProvider>
   );
 }

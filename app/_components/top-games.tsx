@@ -19,7 +19,11 @@ const TopGames = () => {
   const filtered = eduGames.filter((g) => wantedIds.includes(g.id));
 
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section
+      className="relative py-20 overflow-hidden"
+      data-aos="fade-up"
+      data-aos-offset="180"
+    >
       {/* Soft overall gradient background */}
       <div className="pointer-events-none absolute inset-0 -z-10 bg-linear-to-b from-edu-light/80 via-background to-edu-light/80 dark:from-background dark:via-background dark:to-background" />
 
@@ -42,11 +46,15 @@ const TopGames = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {filtered.map((game) => (
-            <GameItem
-              game={game}
+          {filtered.map((game, index) => (
+            <div
               key={game.id}
-            />
+              data-aos="fade-up"
+              data-aos-delay={80 + index * 60}
+              data-aos-duration="750"
+            >
+              <GameItem game={game} />
+            </div>
           ))}
         </div>
 

@@ -7,7 +7,11 @@ import { ArrowRight } from "lucide-react";
 
 const Cta = () => {
   return (
-    <section className="py-20 bg-accent text-accent-foreground">
+    <section
+      className="py-20 bg-accent text-accent-foreground"
+      data-aos="fade-up"
+      data-aos-offset="100"
+    >
       <div className="container mx-auto px-4 text-center space-y-8">
         <div className="max-w-3xl mx-auto space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">

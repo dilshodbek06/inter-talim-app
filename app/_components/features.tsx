@@ -34,7 +34,12 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-muted/50">
+    <section
+      id="features"
+      className="py-20 bg-muted/50"
+      data-aos="fade-up"
+      data-aos-offset="140"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
@@ -52,6 +57,8 @@ const Features = () => {
             <Card
               key={index}
               className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border hover:border-primary/50 bg-card shadow-sm"
+              data-aos="fade-up"
+              data-aos-delay={(index + 1) * 80}
             >
               <CardContent className="p-6 space-y-4">
                 <div
