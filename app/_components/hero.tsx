@@ -64,22 +64,28 @@ const Hero = () => {
             Interaktiv o‘yinlar, viktorinalar va o‘qitish vositalari — hammasi
             bir joyda. O‘rganish va o‘qitish usulingizni boyiting.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex gap-2 sm:gap-4 justify-center w-full">
             <Button
               onClick={handleClick}
               variant="hero"
               size="xl"
-              className="group"
+              className="group px-1 sm:px-8 flex-1 sm:flex-none min-w-0 justify-center"
             >
               Hozir boshlash
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-1 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Link href={"/resources"}>
-              <Button variant="hero-outline" size="xl">
+
+            <Link href="/resources" className="flex-1 sm:flex-none min-w-0">
+              <Button
+                variant="hero-outline"
+                size="xl"
+                className="w-full justify-center"
+              >
                 O‘yinlarni ko‘rish
               </Button>
             </Link>
           </div>
+
           <div className="flex items-center gap-8 justify-center pt-4">
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5 fill-secondary text-secondary" />
