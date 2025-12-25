@@ -137,7 +137,7 @@ export default function Game({ playerName: initialPlayerName }: GameProps) {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4 py-6">
       {showConfetti && <Confetti buttonRect={buttonRect} />}
 
       <WinModal
@@ -147,57 +147,68 @@ export default function Game({ playerName: initialPlayerName }: GameProps) {
         message={playerName}
       />
 
-      <div className="max-w-2xl w-full bg-white rounded-3xl shadow-2xl p-8">
+      <div className="max-w-4xl w-full bg-white rounded-3xl shadow-2xl p-5 sm:p-8">
         {/* Header and UI */}
-        <div className="flex justify-between items-center mb-8">
-          <div>
-            <p className="text-sm text-gray-500 mb-1">Ishtirokchi</p>
-            <p className="font-bold text-gray-800 text-lg">{playerName}</p>
-          </div>
+        <div className="flex flex-col gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div>
+              <p className="text-sm text-gray-500 mb-1">Ishtirokchi</p>
+              <p className="font-bold text-gray-800 text-lg sm:text-xl">
+                {playerName}
+              </p>
+            </div>
 
-          <div className="flex items-center gap-2 bg-yellow-100 px-4 py-2 rounded-full">
-            <Trophy className="w-5 h-5 text-yellow-600" />
-            <span className="font-bold text-yellow-700">Ball: {score}</span>
-          </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full sm:w-auto">
+              <div className="flex items-center justify-center gap-2 bg-yellow-100 px-3 sm:px-4 py-2 rounded-full">
+                <Trophy className="w-5 h-5 text-yellow-600" />
+                <span className="font-bold text-yellow-700 text-sm sm:text-base">
+                  Ball: {score}
+                </span>
+              </div>
 
-          <div className="flex items-center gap-2 bg-red-100 px-4 py-2 rounded-full">
-            <span className="font-bold text-red-700">
-              Xatolar: {mistakes}/5
-            </span>
-          </div>
+              <div className="flex items-center justify-center gap-2 bg-red-100 px-3 sm:px-4 py-2 rounded-full">
+                <span className="font-bold text-red-700 text-sm sm:text-base">
+                  Xatolar: {mistakes}/5
+                </span>
+              </div>
 
-          <div className="flex items-center gap-2 bg-blue-100 px-4 py-2 rounded-full">
-            <Timer className="w-5 h-5 text-blue-600" />
-            <span className="font-bold text-blue-700">{timeLeft}s</span>
-          </div>
+              <div className="flex items-center justify-center gap-2 bg-blue-100 px-3 sm:px-4 py-2 rounded-full">
+                <Timer className="w-5 h-5 text-blue-600" />
+                <span className="font-bold text-blue-700 text-sm sm:text-base">
+                  {timeLeft}s
+                </span>
+              </div>
 
-          <button
-            onClick={handleRestart}
-            className="bg-gray-100 hover:bg-gray-200 text-gray-700 p-2 rounded-lg transition-colors"
-            title="Restart game"
-          >
-            <RotateCcw className="w-5 h-5" />
-          </button>
+              <button
+                onClick={handleRestart}
+                className="flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 sm:px-4 py-2 rounded-lg transition-colors text-sm sm:text-base"
+                title="Restart game"
+              >
+                <RotateCcw className="w-5 h-5" />
+                <span className="hidden sm:inline font-semibold">Qayta</span>
+              </button>
+            </div>
+          </div>
         </div>
 
-        <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8 text-gray-800">
           Bu qaysi davlat bayrog&apos;i?
         </h1>
 
-        <div className="flex justify-center mb-12">
-          <div className="text-9xl drop-shadow-lg scale-125">
+        <div className="flex justify-center mb-10 sm:mb-12">
+          <div className="text-7xl sm:text-8xl md:text-9xl drop-shadow-lg scale-110 sm:scale-125">
             {question?.correctCountry.flag}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
           {question?.options.map((country) => (
             <button
               key={country.code}
               onClick={(e) => handleAnswer(country.name, e)}
               disabled={selectedAnswer !== null}
               className={`${getButtonStyle(country.name)}
-                py-4 px-6 rounded-xl font-semibold text-lg
+                py-3 sm:py-4 px-4 sm:px-6 rounded-xl font-semibold text-base sm:text-lg
                 transition-all duration-300 transform hover:scale-105
                 disabled:hover:scale-100 disabled:cursor-not-allowed`}
             >
