@@ -1,9 +1,9 @@
-/* eslint-disable react-hooks/static-components */
+/* eslint-disable react-hooks/purity */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import { JSX, useState } from "react";
+import { JSX, useEffect, useMemo, useState } from "react";
 import { Trophy, Shuffle, RotateCcw, FolderTree, Sparkles } from "lucide-react";
 import BackPrev from "@/components/back-prev";
 
@@ -29,6 +29,34 @@ const TournamentBracket = () => {
 
   const [championName, setChampionName] = useState<string | null>(null);
   const [showChampionBanner, setShowChampionBanner] = useState<boolean>(false);
+  const [showConfetti, setShowConfetti] = useState<boolean>(false);
+
+  const confettiPieces = useMemo(
+    () =>
+      Array.from({ length: 320 }, (_, i) => ({
+        id: i,
+        left: Math.random() * 100,
+        delay: Math.random() * 0.4,
+        duration: 4 + Math.random() * 2,
+        size: 6 + Math.random() * 8,
+        rotateStart: Math.random() * 360,
+        rotateEnd: 540 + Math.random() * 360,
+        color: ["#f59e0b", "#10b981", "#3b82f6", "#a855f7", "#ef4444"][
+          Math.floor(Math.random() * 5)
+        ],
+      })),
+    []
+  );
+
+  useEffect(() => {
+    if (!showChampionBanner) {
+      setShowConfetti(false);
+      return;
+    }
+    setShowConfetti(true);
+    const timer = setTimeout(() => setShowConfetti(false), 4500);
+    return () => clearTimeout(timer);
+  }, [showChampionBanner]);
 
   const shuffleArray = (array: string[]): string[] => {
     const newArray = [...array];
@@ -124,6 +152,65 @@ const TournamentBracket = () => {
     setBracket(newBracket);
   };
 
+  const clearWinner = (matchKey: string) => {
+    if (!bracket) return;
+    const match = bracket.matches[matchKey];
+    if (!match?.winner) return;
+
+    const removedWinner = match.winner;
+    const newBracket: Bracket = {
+      ...bracket,
+      matches: { ...bracket.matches },
+    };
+
+    newBracket.matches[matchKey] = {
+      ...match,
+      winner: null,
+    };
+
+    if (championName === removedWinner) {
+      setChampionName(null);
+      setShowChampionBanner(false);
+    }
+
+    let currentRound = match.round;
+    let currentMatchIndex = match.matchIndex;
+    let shouldContinue = true;
+
+    while (shouldContinue && currentRound < bracket.rounds - 1) {
+      const nextRound = currentRound + 1;
+      const nextMatchIndex = Math.floor(currentMatchIndex / 2);
+      const nextMatchKey = `round-${nextRound}-match-${nextMatchIndex}`;
+      const nextMatch = newBracket.matches[nextMatchKey];
+      if (!nextMatch) break;
+
+      const updatedNextMatch = { ...nextMatch };
+      const comesFromLeft = currentMatchIndex % 2 === 0;
+
+      if (comesFromLeft && updatedNextMatch.player1 === removedWinner) {
+        updatedNextMatch.player1 = null;
+      } else if (!comesFromLeft && updatedNextMatch.player2 === removedWinner) {
+        updatedNextMatch.player2 = null;
+      }
+
+      const removedWasWinner = updatedNextMatch.winner === removedWinner;
+      if (removedWasWinner) {
+        updatedNextMatch.winner = null;
+      }
+
+      newBracket.matches[nextMatchKey] = updatedNextMatch;
+
+      if (removedWasWinner) {
+        currentRound = nextRound;
+        currentMatchIndex = nextMatchIndex;
+      } else {
+        shouldContinue = false;
+      }
+    }
+
+    setBracket(newBracket);
+  };
+
   const reset = () => {
     setPlayers([]);
     setBracket(null);
@@ -131,6 +218,7 @@ const TournamentBracket = () => {
     setInputName("");
     setChampionName(null);
     setShowChampionBanner(false);
+    setShowConfetti(false);
   };
 
   const getMatchesForRound = (round: number) => {
@@ -291,31 +379,88 @@ const TournamentBracket = () => {
     player: string | null;
     align: "left" | "right";
   }) => {
-    const isWinner = match.winner === player;
-    const isClickable = !!player && !match.winner;
+    const isWinner = !!match.winner && match.winner === player;
+    const isClickable = !!player && (!match.winner || isWinner);
 
     return (
-      <button
-        disabled={!isClickable}
-        onClick={() =>
-          player && !match.winner && selectWinner(match.key, player)
-        }
-        className={`min-w-[140px] sm:min-w-40 text-xs sm:text-sm leading-tight px-2 py-1.5 rounded border-2 transition-all
-          ${align === "right" ? "text-right" : "text-left"}
-          ${
-            !player
-              ? "opacity-40 cursor-default border-slate-200 bg-slate-50"
-              : ""
+      <div className="relative inline-block">
+        <button
+          disabled={!isClickable}
+          onClick={() =>
+            player &&
+            (!match.winner
+              ? selectWinner(match.key, player)
+              : isWinner && clearWinner(match.key))
           }
-          ${
-            isWinner
-              ? "bg-amber-100 border-amber-500 font-semibold shadow-md"
-              : "border-slate-300 bg-white hover:bg-slate-50"
+          className={`min-w-[140px] sm:min-w-40 text-xs sm:text-sm leading-tight px-2 py-1.5 rounded border-2 transition-all
+            ${align === "right" ? "text-right" : "text-left"}
+            ${
+              !player
+                ? "opacity-40 cursor-default border-slate-200 bg-slate-50"
+                : ""
+            }
+            ${
+              isWinner
+                ? "bg-amber-100 border-amber-500 font-semibold shadow-md"
+                : "border-slate-300 bg-white hover:bg-slate-50"
+            }
+            ${isClickable ? "cursor-pointer" : "cursor-default"}`}
+        >
+          {player || "Kutilmoqda..."}
+        </button>
+        {isWinner && (
+          <button
+            aria-label="Tanlovni bekor qilish"
+            onClick={() => clearWinner(match.key)}
+            className="absolute -top-2 -right-2 h-5 w-5 rounded-full bg-white border border-rose-300 text-[10px] font-black text-rose-600 shadow-sm hover:bg-rose-50 active:scale-95 transition-all"
+          >
+            ×
+          </button>
+        )}
+      </div>
+    );
+  };
+
+  const ConfettiOverlay = ({ show }: { show: boolean }) => {
+    if (!show) return null;
+
+    return (
+      <>
+        <style jsx global>{`
+          @keyframes confetti-fall {
+            0% {
+              transform: translate3d(0, -10%, 0) rotate(var(--rotate-start));
+              opacity: 0;
+            }
+            10% {
+              opacity: 1;
+            }
+            100% {
+              transform: translate3d(0, 110vh, 0) rotate(var(--rotate-end));
+              opacity: 0;
+            }
           }
-          ${isClickable ? "cursor-pointer" : "cursor-default"}`}
-      >
-        {player || "Kutilmoqda..."}
-      </button>
+        `}</style>
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 bg-linear-to-b from-amber-200/20 via-transparent to-transparent blur-3xl" />
+          {confettiPieces.map((piece) => (
+            <span
+              key={piece.id}
+              className="absolute block rounded-sm shadow-sm"
+              style={{
+                left: `${piece.left}%`,
+                top: "-10%",
+                width: piece.size,
+                height: piece.size * 0.4,
+                backgroundColor: piece.color,
+                animation: `confetti-fall ${piece.duration}s ease-out ${piece.delay}s`,
+                ["--rotate-start" as string]: `${piece.rotateStart}deg`,
+                ["--rotate-end" as string]: `${piece.rotateEnd}deg`,
+              }}
+            />
+          ))}
+        </div>
+      </>
     );
   };
 
@@ -432,7 +577,8 @@ const TournamentBracket = () => {
   );
 
   return (
-    <div className="min-h-screen bg-slate-50 p-4 sm:p-6 overflow-x-auto">
+    <div className="min-h-screen bg-slate-50 p-4 sm:p-6 overflow-x-auto relative">
+      <ConfettiOverlay show={showConfetti} />
       <div className="max-w-7xl mx-auto mb-4 sm:mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 rounded-full border-2 border-slate-900 flex items-center justify-center bg-white">
