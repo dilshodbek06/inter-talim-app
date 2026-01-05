@@ -4,6 +4,7 @@ import "./globals.css";
 import { ToastProvider } from "@/providers/toast-provider";
 import { defaultMetadata, defaultViewport } from "@/lib/seo";
 import { StructuredData } from "./_components/structured-data";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +25,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uz" className="">
+    <html lang="uz">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-984MWDKE0F"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4" strategy="afterInteractive">
+          {`
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-984MWDKE0F');
+          `}
+        </Script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
