@@ -15,7 +15,11 @@ export const metadata = buildMetadata({
   description:
     "O'qituvchilar uchun interaktiv o'yinlar, viktorinalar va kreativ metodlar. Ta'lim jarayonini qiziqarli va samarali qiling.",
   path: "/",
-  keywords: ["ta'lim platformasi", "interaktiv o'yinlar", "o'qituvchilar uchun"],
+  keywords: [
+    "ta'lim platformasi",
+    "interaktiv o'yinlar",
+    "o'qituvchilar uchun",
+  ],
 });
 
 export default function Home() {

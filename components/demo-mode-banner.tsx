@@ -22,7 +22,7 @@ export default function DemoModeBanner() {
       `}</style>
       <div className="scroll-banner">
         <Megaphone className="h-4 w-4" />
-        Sayt hozirda test rejimida ishlayapdi.
+        Platforma hozirda test rejimida ishlayapdi.
       </div>
     </div>
   );

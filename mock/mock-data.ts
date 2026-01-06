@@ -144,7 +144,7 @@ export const eduGames: Game[] = [
   {
     id: "e3678b4d-89e3-4f88-b1d6-6e40753af48b",
     title: "Millioner o'yini",
-    description: "Viktorina ko'rinishidagi yutuqli savol-javob o'yini",
+    description: "Viktorina ko'rinishidagi mashhur yutuqli savol-javob o'yini",
     icon: Clock,
     categoryId: "b71a93bb-9560-4b3f-bd6e-8d8bb3edf05d",
     players: "1.1k+",

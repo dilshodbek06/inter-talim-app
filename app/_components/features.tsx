@@ -56,7 +56,7 @@ const Features = () => {
           {data.map((feature, index) => (
             <Card
               key={index}
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border hover:border-primary/50 bg-card shadow-sm"
+              className="group hover:shadow-xl transition-all! duration-300 hover:-translate-y-2 border hover:border-primary/50 bg-card shadow-sm"
               data-aos="fade-up"
               data-aos-delay={(index + 1) * 80}
             >

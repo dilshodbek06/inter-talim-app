@@ -7,7 +7,7 @@ const HowWorks = () => {
       icon: Users,
       title: "Ro‘yhatdan o‘ting",
       description:
-        "Platforma imkoniyatlaridan to‘liq foydalanishingiz uchun ro‘yhatdan o‘ting.",
+        "Platforma hozir test rejimida — sinab ko‘rish uchun ro‘yxatdan o‘tish shart emas",
     },
     {
       number: "02",
@@ -49,6 +49,34 @@ const HowWorks = () => {
               data-aos="zoom-in"
               data-aos-delay={100 + index * 100}
             >
+              {index === 0 && (
+                <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
+                  <svg
+                    viewBox="0 0 120 120"
+                    className="h-[130%] w-[130%] text-rose-500/25"
+                    aria-hidden="true"
+                  >
+                    <line
+                      x1="10"
+                      y1="10"
+                      x2="110"
+                      y2="110"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      strokeLinecap="round"
+                    />
+                    <line
+                      x1="110"
+                      y1="10"
+                      x2="10"
+                      y2="110"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </div>
+              )}
               <div className="text-center space-y-4">
                 <div className="relative inline-block">
                   <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
