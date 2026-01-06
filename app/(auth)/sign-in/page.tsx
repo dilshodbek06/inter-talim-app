@@ -32,9 +32,10 @@ const signInSchema = z.object({
   email: z
     .string()
     .trim()
-    .email({ message: "Invalid email address" })
-    .max(255, { message: "Email must be less than 255 characters" }),
-  password: z.string().min(1, { message: "Password is required" }),
+    .email({ message: "Email manzil noto‘g‘ri kiritilgan" })
+    .max(255, { message: "Email manzil 255 ta belgidan oshmasligi kerak" }),
+
+  password: z.string().min(1, { message: "Parol kiritish majburiy" }),
 });
 
 type SignInFormData = z.infer<typeof signInSchema>;

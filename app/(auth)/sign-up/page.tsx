@@ -32,17 +32,21 @@ const signUpSchema = z.object({
   fullName: z
     .string()
     .trim()
-    .min(2, { message: "Full name must be at least 2 characters" })
-    .max(100, { message: "Full name must be less than 100 characters" }),
+    .min(2, {
+      message: "Ism-familiya kamida 2 ta belgidan iborat bo‘lishi kerak",
+    })
+    .max(100, { message: "Ism-familiya 100 ta belgidan oshmasligi kerak" }),
+
   email: z
     .string()
     .trim()
-    .email({ message: "Invalid email address" })
-    .max(255, { message: "Email must be less than 255 characters" }),
+    .email({ message: "Email manzil noto‘g‘ri kiritilgan" })
+    .max(255, { message: "Email manzil 255 ta belgidan oshmasligi kerak" }),
+
   password: z
     .string()
-    .min(6, { message: "Password must be at least 6 characters" })
-    .max(100, { message: "Password must be less than 100 characters" }),
+    .min(6, { message: "Parol kamida 6 ta belgidan iborat bo‘lishi kerak" })
+    .max(100, { message: "Parol 100 ta belgidan oshmasligi kerak" }),
 });
 
 type SignUpFormData = z.infer<typeof signUpSchema>;
