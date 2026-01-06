@@ -176,8 +176,7 @@ export default function WordScrambleGame() {
           <div className="w-full">
             {words.length === 0 ? (
               <div className="h-full flex items-center justify-center rounded-3xl border border-dashed border-slate-300 bg-white/70 p-6 text-sm text-slate-500 text-center">
-                So'zlarni chap tomonga kiriting va{" "}
-                <span className="font-semibold mx-1">"Generatsiya qilish"</span>{" "}
+                So'zlarni har yangi qatorda kiriting va generatsiya qilish
                 tugmasini bosing.
               </div>
             ) : (

@@ -324,6 +324,48 @@ const WordSearchGame: React.FC = () => {
     checkSelectedWord();
   };
 
+  const getCellFromPoint = (
+    clientX: number,
+    clientY: number
+  ): CellCoord | null => {
+    const el = document.elementFromPoint(clientX, clientY) as HTMLElement | null;
+    if (!el) return null;
+
+    const row = el.getAttribute("data-row");
+    const col = el.getAttribute("data-col");
+    if (row === null || col === null) return null;
+
+    return { row: Number(row), col: Number(col) };
+  };
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    const touch = e.touches[0];
+    if (!touch) return;
+
+    const cell = getCellFromPoint(touch.clientX, touch.clientY);
+    if (!cell) return;
+
+    e.preventDefault();
+    handleMouseDown(cell.row, cell.col);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!isSelecting) return;
+    const touch = e.touches[0];
+    if (!touch) return;
+
+    const cell = getCellFromPoint(touch.clientX, touch.clientY);
+    if (!cell) return;
+
+    e.preventDefault();
+    handleMouseEnter(cell.row, cell.col);
+  };
+
+  const handleTouchEnd = () => {
+    if (!isSelecting) return;
+    handleMouseUp();
+  };
+
   const isCellSelected = (row: number, col: number): boolean => {
     return selectedCells.some((cell) => cell.row === row && cell.col === col);
   };
@@ -555,13 +597,17 @@ const WordSearchGame: React.FC = () => {
               </CardHeader>
               <CardContent className="p-4 sm:p-6">
                 <motion.div
-                  className="inline-block rounded-2xl bg-slate-50 p-3 sm:p-4 border border-slate-200 shadow-inner"
+                  className="inline-block rounded-2xl bg-slate-50 p-3 sm:p-4 border border-slate-200 shadow-inner touch-none"
                   onMouseLeave={() => {
                     if (isSelecting) {
                       handleMouseUp();
                     }
                   }}
                   onMouseUp={handleMouseUp}
+                  onTouchStart={handleTouchStart}
+                  onTouchMove={handleTouchMove}
+                  onTouchEnd={handleTouchEnd}
+                  onTouchCancel={handleTouchEnd}
                   initial={{ opacity: 0, scale: 0.97 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ type: "spring", stiffness: 220, damping: 20 }}
@@ -581,6 +627,8 @@ const WordSearchGame: React.FC = () => {
                           <motion.button
                             key={`${rowIdx}-${colIdx}`}
                             type="button"
+                            data-row={rowIdx}
+                            data-col={colIdx}
                             className={`
                               w-7 h-7 sm:w-9 sm:h-9 flex items-center justify-center
                               text-xs sm:text-sm md:text-base font-bold rounded-md

@@ -95,12 +95,41 @@ const SignUp = () => {
     }
   };
 
-  const handleGoogleSignUp = () => {
-    // toast({
-    //   title: "Google Sign-Up",
-    //   description: "Enable Cloud to activate Google authentication.",
-    //   variant: "default",
-    // });
+  const handleGoogleSignUp = async () => {
+    try {
+      await authClient.signIn.social(
+        {
+          provider: "google",
+          callbackURL: "/resources",
+          newUserCallbackURL: "/resources",
+          errorCallbackURL: "/sign-up",
+          requestSignUp: true,
+        },
+        {
+          onRequest: () => {
+            setIsLoading(true);
+          },
+          onSuccess: (ctx) => {
+            const { url, redirect } = ctx.data ?? {};
+            if (redirect && url && typeof window !== "undefined") {
+              window.location.href = url;
+              return;
+            }
+            router.push("/resources");
+            setIsLoading(false);
+          },
+          onError: (ctx) => {
+            console.log(ctx.error);
+            toast.error(ctx.error.message);
+            setIsLoading(false);
+          },
+        }
+      );
+    } catch (e: unknown) {
+      console.log(e);
+      toast.error("Google orqali ro‘yhatdan o‘tishda xatolik yuz berdi.");
+      setIsLoading(false);
+    }
   };
 
   return (

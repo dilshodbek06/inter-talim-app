@@ -46,6 +46,9 @@ export const defaultMetadata: Metadata = {
     default: "Ta'lim jarayonini qiziqarli va interaktiv qiling",
     template: "%s | Interaktiv-ta'lim",
   },
+  icons: {
+    icon: [{ url: "/favicon.ico" }],
+  },
   description: siteConfig.description,
   applicationName: siteConfig.name,
   generator: "Next.js",

@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
+import toast from "react-hot-toast";
 
 const motion = {
   div: ({
@@ -39,9 +40,14 @@ const motion = {
   }: React.ButtonHTMLAttributes<HTMLButtonElement> &
     Record<string, unknown>) => {
     const clean = { ...rest };
-    ["whileHover", "whileTap", "initial", "animate", "transition", "exit"].forEach(
-      (key) => delete (clean as Record<string, unknown>)[key]
-    );
+    [
+      "whileHover",
+      "whileTap",
+      "initial",
+      "animate",
+      "transition",
+      "exit",
+    ].forEach((key) => delete (clean as Record<string, unknown>)[key]);
     return <button {...clean}>{children}</button>;
   },
   span: ({
@@ -62,8 +68,7 @@ const motion = {
   p: ({
     children,
     ...rest
-  }: React.HTMLAttributes<HTMLParagraphElement> &
-    Record<string, unknown>) => {
+  }: React.HTMLAttributes<HTMLParagraphElement> & Record<string, unknown>) => {
     const clean = { ...rest };
     [
       "whileHover",
@@ -91,33 +96,68 @@ type Question = {
 const DEFAULT_QUESTIONS: Question[] = [
   {
     id: 1,
-    text: "2 × 8 = ?",
-    options: ["10", "14", "16", "18"],
+    text: "Dunyoning eng katta okeani qaysi?",
+    options: ["Atlantika", "Hind", "Tinch", "Shimoliy Muz"],
     correctIndex: 2,
   },
   {
     id: 2,
-    text: "O'zbekiston poytaxti qaysi shahar?",
-    options: ["Samarqand", "Toshkent", "Buxoro", "Andijon"],
-    correctIndex: 1,
+    text: "O'zbekiston davlat bayrog'ida nechta rang bor?",
+    options: ["2", "3", "4", "5"],
+    correctIndex: 2,
   },
   {
     id: 3,
-    text: "5 + 7 × 2 = ?",
-    options: ["19", "24", "21", "17"],
-    correctIndex: 0,
+    text: "O'zbekiston qaysi qit'ada joylashgan?",
+    options: ["Yevropa", "Osiyo", "Afrika", "Avstraliya"],
+    correctIndex: 1,
   },
   {
     id: 4,
-    text: "Quyidagi so‘zlardan qaysi biri sifat?",
-    options: ["Yugurdi", "Katta", "Kitob", "O‘qidi"],
+    text: "Quyidagilardan qaysi biri meva?",
+    options: ["Sabzi", "Olma", "Kartoshka", "Piyoz"],
     correctIndex: 1,
   },
   {
     id: 5,
-    text: "Suvning kimyoviy formulasi to'g'ri ko'rsatilgan qator:",
-    options: ["CO₂", "H₂O", "O₂", "NaCl"],
+    text: "Yer yuzidagi eng baland tog‘ cho‘qqisi qaysi?",
+    options: ["Everest", "Kilimanjaro", "Elbrus", "Monblan"],
+    correctIndex: 0,
+  },
+  {
+    id: 6,
+    text: "Nil daryosi asosan qaysi qit'ada oqadi?",
+    options: ["Janubiy Amerika", "Afrika", "Yevropa", "Osiyo"],
     correctIndex: 1,
+  },
+  {
+    id: 7,
+    text: "Quyidagi gaplarda qaysi birida ot bor?",
+    options: ["U yugurdi", "Men kitob o‘qidim", "U tez keldi", "Biz sevinamiz"],
+    correctIndex: 1,
+  },
+  {
+    id: 8,
+    text: "Ekvator chizig‘i qaysi mamlakat hududidan o‘tadi?",
+    options: ["Kanada", "Keniya", "Italiya", "Marokash"],
+    correctIndex: 1,
+  },
+  {
+    id: 9,
+    text: "Quyidagi elementlardan qaysi biri metall hisoblanadi?",
+    options: ["Kislorod", "Temir", "Uglerod", "Azot"],
+    correctIndex: 1,
+  },
+  {
+    id: 10,
+    text: "Qaysi dengiz Yevropa va Afrika qit'alari orasida joylashgan?",
+    options: [
+      "Qora dengiz",
+      "Qizil dengiz",
+      "O‘rta yer dengizi",
+      "Kaspiy dengizi",
+    ],
+    correctIndex: 2,
   },
 ];
 
@@ -182,9 +222,7 @@ export default function MillionerLivePreview(): JSX.Element {
     tick.loop = true;
     tickRef.current = tick;
 
-    const success = new Audio(
-      "https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"
-    );
+    const success = new Audio("/sounds/success.wav");
     success.volume = 0.8;
     successRef.current = success;
 
@@ -407,7 +445,7 @@ export default function MillionerLivePreview(): JSX.Element {
   const handleStartGame = (e: React.FormEvent) => {
     e.preventDefault();
     if (!playerName.trim()) {
-      alert("Ishtirokchi ismini kiriting");
+      toast.error("Ishtirokchi ismini kiriting");
       return;
     }
     setPhase("game");

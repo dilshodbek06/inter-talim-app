@@ -239,9 +239,8 @@ export default function WorksheetGenerator() {
           <div className="w-full">
             {exercises.length === 0 ? (
               <div className="h-full flex items-center justify-center rounded-3xl border border-dashed border-slate-300 bg-white/70 p-6 text-sm text-slate-500 text-center">
-                Chap tomondan parametrlarni tanlab,
-                <span className="font-semibold mx-1">generatsiya qilish</span>
-                tugmasini bosing.
+                Chap tomondan parametrlarni tanlab, generatsiya qilish tugmasini
+                bosing.
               </div>
             ) : (
               <div

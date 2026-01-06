@@ -24,6 +24,9 @@ import {
   Rocket,
 } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { authClient } from "@/lib/auth-client";
+import toast from "react-hot-toast";
 
 const signInSchema = z.object({
   email: z
@@ -38,6 +41,7 @@ type SignInFormData = z.infer<typeof signInSchema>;
 
 const SignIn = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   const form = useForm<SignInFormData>({
     resolver: zodResolver(signInSchema),
@@ -48,18 +52,69 @@ const SignIn = () => {
   });
 
   const onSubmit = async (data: SignInFormData) => {
-    setIsLoading(true);
-
-    setIsLoading(false);
-    form.reset();
+    try {
+      await authClient.signIn.email(
+        {
+          email: data.email,
+          password: data.password,
+          callbackURL: "/resources",
+        },
+        {
+          onRequest: () => {
+            setIsLoading(true);
+          },
+          onSuccess: () => {
+            router.push("/resources");
+            setIsLoading(false);
+            form.reset();
+          },
+          onError: (ctx) => {
+            console.log(ctx.error);
+            toast.error(ctx.error.message);
+            setIsLoading(false);
+          },
+        }
+      );
+    } catch (e: unknown) {
+      console.log(e);
+      toast.error("Kirishda xatolik yuz berdi.");
+      setIsLoading(false);
+    }
   };
 
-  const handleGoogleSignIn = () => {
-    // toast({
-    //   title: "Google Sign-In",
-    //   description: "Enable Cloud to activate Google authentication.",
-    //   variant: "default",
-    // });
+  const handleGoogleSignIn = async () => {
+    try {
+      await authClient.signIn.social(
+        {
+          provider: "google",
+          callbackURL: "/resources",
+          errorCallbackURL: "/sign-in",
+        },
+        {
+          onRequest: () => {
+            setIsLoading(true);
+          },
+          onSuccess: (ctx) => {
+            const { url, redirect } = ctx.data ?? {};
+            if (redirect && url && typeof window !== "undefined") {
+              window.location.href = url;
+              return;
+            }
+            router.push("/resources");
+            setIsLoading(false);
+          },
+          onError: (ctx) => {
+            console.log(ctx.error);
+            toast.error(ctx.error.message);
+            setIsLoading(false);
+          },
+        }
+      );
+    } catch (e: unknown) {
+      console.log(e);
+      toast.error("Google orqali kirishda xatolik yuz berdi.");
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -84,7 +139,7 @@ const SignIn = () => {
               Xush kelibsiz!
             </h1>
             <p className="text-muted-foreground">
-              Sign in to continue your learning journey
+              Davom etish uchun profilingizga kiring
             </p>
           </div>
 

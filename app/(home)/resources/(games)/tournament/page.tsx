@@ -241,7 +241,9 @@ const TournamentBracket = () => {
     return (
       <div className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-1 px-2 sm:p-10 flex flex-col items-center justify-center">
         <div className="max-w-5xl w-full bg-white/90 rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white flex flex-col sm:flex-row gap-6">
-          <BackPrev />
+          <div className="">
+            <BackPrev />
+          </div>
           {/* LEFT SIDE - INTRO */}
           <div className="sm:w-1/2 flex flex-col justify-center gap-4">
             <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900">

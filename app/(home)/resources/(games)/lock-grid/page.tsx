@@ -220,7 +220,9 @@ export default function UnlockLocksGame() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 items-start">
             {/* Left: Introduction */}
             <div className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100">
-              <h2 className="text-xl font-bold mb-3">O‘yin haqida (Intro)</h2>
+              <h2 className="text-xl text-center font-bold mb-3">
+                O‘yin haqida
+              </h2>
               <p className="text-slate-700 leading-relaxed mb-4">
                 Bu o‘yin o‘quvchilar uchun mo‘ljallangan: har bir qulf ortida
                 bitta savol yashiringan. O‘qituvchi savollarning matnini shu
@@ -313,9 +315,9 @@ export default function UnlockLocksGame() {
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-lg font-semibold">O‘yin — Savollar</h2>
               <div className="flex items-center gap-2">
-                <Button variant="outline" onClick={() => setGameStarted(false)}>
+                {/* <Button variant="outline" onClick={() => setGameStarted(false)}>
                   O‘yinni to‘xtatish
-                </Button>
+                </Button> */}
                 <Button onClick={resetGame}>Boshidan boshlash</Button>
               </div>
             </div>

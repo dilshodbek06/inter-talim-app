@@ -167,7 +167,7 @@ export default function LinearEquationGenerator() {
         <BackPrev />
         <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-8 items-start">
           <Card className="p-6 shadow-xl rounded-3xl bg-white/90 border border-white">
-            <CardHeader className="px-0 pt-0 pb-4">
+            <CardHeader className="px-0 pt-5 sm:pt-1 pb-4">
               <CardTitle className="text-2xl font-bold text-slate-800">
                 ✖️ Chiziqli tenglama generatori
               </CardTitle>
