@@ -32,9 +32,14 @@ const motion = {
   }: React.ButtonHTMLAttributes<HTMLButtonElement> &
     Record<string, unknown>) => {
     const clean = { ...rest };
-    ["whileHover", "whileTap", "initial", "animate", "transition", "exit"].forEach(
-      (key) => delete (clean as Record<string, unknown>)[key]
-    );
+    [
+      "whileHover",
+      "whileTap",
+      "initial",
+      "animate",
+      "transition",
+      "exit",
+    ].forEach((key) => delete (clean as Record<string, unknown>)[key]);
     return <button {...clean}>{children}</button>;
   },
   span: ({
@@ -328,7 +333,10 @@ const WordSearchGame: React.FC = () => {
     clientX: number,
     clientY: number
   ): CellCoord | null => {
-    const el = document.elementFromPoint(clientX, clientY) as HTMLElement | null;
+    const el = document.elementFromPoint(
+      clientX,
+      clientY
+    ) as HTMLElement | null;
     if (!el) return null;
 
     const row = el.getAttribute("data-row");
@@ -380,7 +388,7 @@ const WordSearchGame: React.FC = () => {
 
   return (
     <motion.div
-      className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-8 px-4 sm:px-6"
+      className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-8 px-0 sm:px-6"
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
@@ -595,7 +603,7 @@ const WordSearchGame: React.FC = () => {
                   Harflar maydoni
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-4 sm:p-6">
+              <CardContent className="p-1.5 sm:p-6">
                 <motion.div
                   className="inline-block rounded-2xl bg-slate-50 p-3 sm:p-4 border border-slate-200 shadow-inner touch-none"
                   onMouseLeave={() => {

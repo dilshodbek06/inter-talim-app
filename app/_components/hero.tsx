@@ -50,7 +50,7 @@ const Hero = () => {
         >
           <div className="inline-block px-4 py-2 bg-secondary/20 dark:bg-secondary/10 rounded-full backdrop-blur-sm">
             <span className="text-sm font-semibold text-foreground">
-              🎉 500+ O‘qituvchilar safiga qo‘shiling
+              🎉 10+ O‘qituvchilar safiga qo‘shiling
             </span>
           </div>
           <div className="flex flex-col">

@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { LogOut, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import Logo from "./logo";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import UserMenu, { UserMenuSkeleton } from "./user-menu";
 
 const navLinks = [
   { href: "/#features", label: "Xususiyatlar" },
@@ -15,12 +17,29 @@ const navLinks = [
   { href: "/contact", label: "Aloqa" },
 ];
 
+// const languages = [
+//   { code: "uz", label: "O'zbekcha", short: "UZ", flag: "🇺🇿" },
+//   { code: "ru", label: "Русский", short: "RU", flag: "🇷🇺" },
+//   { code: "en", label: "English", short: "EN", flag: "🇬🇧" },
+// ];
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen((s) => !s);
 
-  const { data: user } = authClient.useSession();
+  const { data: session, isPending } = authClient.useSession();
+  const user = session?.user;
   const router = useRouter();
+
+  const displayName =
+    user?.name || user?.email?.split("@")[0] || "Foydalanuvchi";
+  const displayEmail = user?.email || "";
+  const userInitials = displayName
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase())
+    .join("");
 
   const handleSignOut = async () => {
     try {
@@ -50,10 +69,20 @@ const Header = () => {
             </Link>
           ))}
 
-          {user ? (
-            <Button variant="default" size="sm" onClick={handleSignOut}>
-              <LogOut /> Chiqish
-            </Button>
+          {/* <LanguageDropdown
+            languages={languages}
+            language={language}
+            onChange={setLanguage}
+          /> */}
+
+          {isPending ? (
+            <UserMenuSkeleton />
+          ) : user ? (
+            <UserMenu
+              user={user}
+              onNavigateResources={() => router.push("/resources")}
+              onSignOut={handleSignOut}
+            />
           ) : (
             <Button variant="default" size="sm" asChild>
               <Link href="/sign-up">Bepul qo‘shilish</Link>
@@ -85,13 +114,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile menu without Framer Motion (CSS Transition/Conditional rendering) */}
-      {/* Bu yerda 'AnimatePresence' o'rniga oddiy shartli renderlash ishlatiladi.
-        Menyu ko'rinishini 'max-h' va 'opacity' yordamida taqlid qilamiz.
-        Eslatma: 'max-h' asosidagi tranzitsiya silliqligi framer motion kabi ideal bo'lmaydi.
-        Agar 'tailwindcss-motion' plaginida 'motion-slide-down' kabi animatsiyalar mavjud bo'lsa,
-        undan foydalanish mumkin, ammo bu yechim umumiydir.
-      */}
       <div
         className={`md:hidden bg-background border-t border-border overflow-hidden transition-all duration-300 ease-out 
           ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
@@ -111,9 +133,45 @@ const Header = () => {
             </div>
           ))}
 
+          {/* <div className="w-full">
+            <LanguageDropdown
+              languages={languages}
+              language={language}
+              onChange={setLanguage}
+              align="start"
+            />
+          </div> */}
+
           {/* Auth controls */}
-          {user ? (
+          {isPending ? (
             <div className="w-full">
+              <div className="mb-3 flex items-center gap-3 rounded-xl border border-border bg-background/80 px-3 py-2 shadow-sm">
+                <div className="h-10 w-10 rounded-full bg-muted/70 animate-pulse" />
+                <div className="flex-1 space-y-2">
+                  <div className="h-3 w-1/2 rounded bg-muted/70 animate-pulse" />
+                  <div className="h-2.5 w-2/3 rounded bg-muted/70 animate-pulse" />
+                </div>
+              </div>
+              <div className="h-9 w-full rounded-md bg-muted/70 animate-pulse" />
+            </div>
+          ) : user ? (
+            <div className="w-full">
+              <div className="mb-3 flex items-center gap-3 rounded-xl border border-border bg-background/80 px-3 py-2 shadow-sm">
+                <Avatar className="h-10 w-10">
+                  <AvatarImage src={user?.image || ""} alt={displayName} />
+                  <AvatarFallback className="bg-primary/10 text-primary font-semibold">
+                    {userInitials || "U"}
+                  </AvatarFallback>
+                </Avatar>
+                <div className="min-w-0">
+                  <p className="truncate text-sm font-semibold text-foreground">
+                    {displayName}
+                  </p>
+                  <p className="truncate text-xs text-muted-foreground">
+                    {displayEmail}
+                  </p>
+                </div>
+              </div>
               <Button
                 variant="default"
                 size="sm"

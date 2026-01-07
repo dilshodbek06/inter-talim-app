@@ -1,38 +1,5 @@
 import { Country } from "@/types";
 
-// export const countries: Country[] = [
-//   { name: "United States", flag: "🇺🇸", code: "US" },
-//   { name: "United Kingdom", flag: "🇬🇧", code: "GB" },
-//   { name: "France", flag: "🇫🇷", code: "FR" },
-//   { name: "Germany", flag: "🇩🇪", code: "DE" },
-//   { name: "Italy", flag: "🇮🇹", code: "IT" },
-//   { name: "Spain", flag: "🇪🇸", code: "ES" },
-//   { name: "Canada", flag: "🇨🇦", code: "CA" },
-//   { name: "Japan", flag: "🇯🇵", code: "JP" },
-//   { name: "China", flag: "🇨🇳", code: "CN" },
-//   { name: "Brazil", flag: "🇧🇷", code: "BR" },
-//   { name: "Mexico", flag: "🇲🇽", code: "MX" },
-//   { name: "Australia", flag: "🇦🇺", code: "AU" },
-//   { name: "India", flag: "🇮🇳", code: "IN" },
-//   { name: "Russia", flag: "🇷🇺", code: "RU" },
-//   { name: "South Korea", flag: "🇰🇷", code: "KR" },
-//   { name: "Argentina", flag: "🇦🇷", code: "AR" },
-//   { name: "Turkey", flag: "🇹🇷", code: "TR" },
-//   { name: "Netherlands", flag: "🇳🇱", code: "NL" },
-//   { name: "Sweden", flag: "🇸🇪", code: "SE" },
-//   { name: "Norway", flag: "🇳🇴", code: "NO" },
-//   { name: "Poland", flag: "🇵🇱", code: "PL" },
-//   { name: "Switzerland", flag: "🇨🇭", code: "CH" },
-//   { name: "South Africa", flag: "🇿🇦", code: "ZA" },
-//   { name: "Egypt", flag: "🇪🇬", code: "EG" },
-//   { name: "Greece", flag: "🇬🇷", code: "GR" },
-//   { name: "Portugal", flag: "🇵🇹", code: "PT" },
-//   { name: "Belgium", flag: "🇧🇪", code: "BE" },
-//   { name: "Denmark", flag: "🇩🇰", code: "DK" },
-//   { name: "Finland", flag: "🇫🇮", code: "FI" },
-//   { name: "Austria", flag: "🇦🇹", code: "AT" },
-// ];
-
 export const countries: Country[] = [
   { name: "O'zbekiston", flag: "🇺🇿", code: "UZ" },
   { name: "Afg'oniston", flag: "🇦🇫", code: "AF" },
@@ -61,7 +28,6 @@ export const countries: Country[] = [
   { name: "Bolgariya", flag: "🇧🇬", code: "BG" },
   { name: "Burkina-Faso", flag: "🇧🇫", code: "BF" },
   { name: "Burundi", flag: "🇧🇮", code: "BI" },
-
   { name: "Kambodja", flag: "🇰🇭", code: "KH" },
   { name: "Kamerun", flag: "🇨🇲", code: "CM" },
   { name: "Kanada", flag: "🇨🇦", code: "CA" },
