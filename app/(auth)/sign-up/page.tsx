@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
@@ -24,7 +24,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 import toast from "react-hot-toast";
 
@@ -54,6 +54,27 @@ type SignUpFormData = z.infer<typeof signUpSchema>;
 const SignUp = () => {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const oauthError = searchParams.get("error");
+
+  useEffect(() => {
+    if (!oauthError) return;
+
+    const normalizedError = oauthError.toLowerCase();
+    const isExistingAccount =
+      normalizedError.includes("already_exists") ||
+      normalizedError.includes("account_not_linked");
+
+    if (isExistingAccount) {
+      toast.error(
+        "Bu akkaunt allaqachon ro‘yxatdan o‘tgan. Iltimos, profilingizga kiring."
+      );
+      router.replace("/sign-in");
+      return;
+    }
+
+    toast.error("Google orqali ro‘yxatdan o‘tishda xatolik yuz berdi.");
+  }, [oauthError, router]);
 
   const form = useForm<SignUpFormData>({
     resolver: zodResolver(signUpSchema),
@@ -107,7 +128,6 @@ const SignUp = () => {
           callbackURL: "/resources",
           newUserCallbackURL: "/resources",
           errorCallbackURL: "/sign-up",
-          requestSignUp: true,
         },
         {
           onRequest: () => {
