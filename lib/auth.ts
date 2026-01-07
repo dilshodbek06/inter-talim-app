@@ -22,6 +22,11 @@ export const auth = betterAuth({
       // Agar boshqa fieldlar bo'lsa, ularni ham shu yerga qo'shing
     },
   },
+  trustedOrigins: [
+    "http://localhost:3000",
+    "https://intertalim.uz",
+    "https://www.intertalim.uz",
+  ],
   socialProviders: {
     google: {
       clientId: process.env.GOOGLE_CLIENT_ID as string,
