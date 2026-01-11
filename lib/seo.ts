@@ -47,7 +47,7 @@ export const defaultMetadata: Metadata = {
     template: "%s | Interaktiv-ta'lim",
   },
   icons: {
-    icon: [{ url: "/favicon.ico" }],
+    icon: [{ url: "/icon.svg" }],
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,

@@ -52,7 +52,7 @@ const Header = () => {
 
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between animate-fade-down">
+      <div className="container mx-auto px-4 py-0 flex items-center justify-between animate-fade-down">
         {/* Logo */}
         <Logo />
 
