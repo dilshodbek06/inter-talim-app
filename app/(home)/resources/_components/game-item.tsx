@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { Star, Users, ChevronRight } from "lucide-react";
 import {
@@ -12,21 +10,15 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Game } from "@/types";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface GameItemProps {
   game: Game;
 }
 
 const GameItem = ({ game }: GameItemProps) => {
-  const router = useRouter();
-
   return (
-    <div
-      onClick={() => router.push(game.webUrl)}
-      key={game.id}
-      suppressHydrationWarning={true}
-    >
+    <Link href={game.webUrl} className="block h-full">
       <Card className="group cursor-pointer border border-white/70 bg-white/80 backdrop-blur-md shadow-lg hover:shadow-[0_18px_40px_rgba(15,23,42,0.18)] transition-all duration-300 transform hover:-translate-y-2 rounded-2xl overflow-hidden relative">
         {/* Top accent bar */}
         <div className={`h-1.5 bg-linear-to-r ${game.color}`}></div>
@@ -82,14 +74,17 @@ const GameItem = ({ game }: GameItemProps) => {
 
         <CardFooter>
           <Button
+            asChild
             className={`w-full bg-linear-to-r ${game.color} hover:brightness-105 hover:shadow-md transition-all duration-300 group rounded-xl cursor-pointer`}
           >
-            <span className="text-sm font-semibold">Foydalanish</span>
-            <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            <span>
+              <span className="text-sm font-semibold">Foydalanish</span>
+              <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            </span>
           </Button>
         </CardFooter>
       </Card>
-    </div>
+    </Link>
   );
 };
 
