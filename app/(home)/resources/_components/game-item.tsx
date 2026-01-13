@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Star, Users, ChevronRight } from "lucide-react";
+import Link from "next/link";
 import {
   Card,
   CardContent,
@@ -9,37 +8,27 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Star, Users, ChevronRight } from "lucide-react";
 import { Game } from "@/types";
-import Link from "next/link";
+import ImageLoading from "./image-loading";
 
 interface GameItemProps {
   game: Game;
 }
 
-const GameItem = ({ game }: GameItemProps) => {
+export default function GameItem({ game }: GameItemProps) {
   return (
     <Link href={game.webUrl} className="block h-full">
       <Card className="group cursor-pointer border border-white/70 bg-white/80 backdrop-blur-md shadow-lg hover:shadow-[0_18px_40px_rgba(15,23,42,0.18)] transition-all duration-300 transform hover:-translate-y-2 rounded-2xl overflow-hidden relative">
-        {/* Top accent bar */}
-        <div className={`h-1.5 bg-linear-to-r ${game.color}`}></div>
-
-        {/* Glow on hover */}
-        <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div
-            className={`absolute -top-10 right-0 h-24 w-24 rounded-full bg-linear-to-br ${game.color} blur-3xl opacity-50`}
-          />
-        </div>
+        <div className={`h-1.5 bg-linear-to-r ${game.color}`} />
 
         <CardHeader className="pb-3">
-          {/* Kichik rasm (metod preview) */}
           <div className="mb-3">
             <div className="relative h-24 w-full overflow-hidden rounded-xl bg-slate-100">
-              <Image
+              <ImageLoading
                 src={game.image}
                 alt={game.title}
-                fill
-                sizes="(min-width: 1280px) 260px, (min-width: 768px) 40vw, 100vw"
-                className="object-contain scale-[1.2]"
+                colorClass={game.color}
               />
             </div>
           </div>
@@ -53,7 +42,6 @@ const GameItem = ({ game }: GameItemProps) => {
         </CardHeader>
 
         <CardContent className="pb-4">
-          {/* Vaqt yo'q – faqat players + level */}
           <div className="grid grid-cols-2 gap-2 text-xs">
             <div className="flex flex-col items-center p-2 bg-slate-50/80 rounded-xl border border-slate-100">
               <Users className="w-4 h-4 text-slate-600 mb-1" />
@@ -86,6 +74,4 @@ const GameItem = ({ game }: GameItemProps) => {
       </Card>
     </Link>
   );
-};
-
-export default GameItem;
+}

@@ -119,6 +119,10 @@ export default {
           "0%, 100%": { transform: "translate(-50%, -50%) scale(1)" },
           "50%": { transform: "translate(-50%, -50%) scale(1.05)" },
         },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
         // --------------------------------------------------------
       },
       animation: {
@@ -134,6 +138,7 @@ export default {
         "light-move-1": "light-move-1 9s ease-in-out infinite alternate",
         "light-move-2": "light-move-2 12s ease-in-out infinite alternate",
         "light-pulse": "light-pulse 10s ease-in-out infinite alternate",
+        shimmer: "shimmer 1.4s ease-in-out infinite",
         // --------------------------------------------------------
       },
     },
