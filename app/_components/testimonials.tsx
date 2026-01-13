@@ -82,12 +82,7 @@ const Testimonials = () => {
           >
             <CarouselContent className="mb-16">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem
-                  key={index}
-                  className="md:basis-1/2 lg:basis-1/3"
-                  data-aos="fade-up"
-                  data-aos-delay={80 + index * 70}
-                >
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
                     <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                       <CardContent className="p-6 space-y-4 h-full flex flex-col">
