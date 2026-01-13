@@ -131,7 +131,7 @@ export const eduGames: Game[] = [
   {
     id: "b5e3b87e-6d3f-4a1e-8b49-8f3e1a38183d",
     title: "Kasrli misollar",
-    description: "1-2 xonali maxrajli kasrlarni qo'shish uchun 50 ta mashq",
+    description: "1-3 xonali maxrajli kasrlarni qo'shish uchun misollar ",
     icon: Calculator,
     categoryId: "f52bd8e2-8d04-4f21-a854-6fbbf8306be9",
     players: "250+",
