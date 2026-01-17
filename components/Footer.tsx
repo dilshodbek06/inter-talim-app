@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaInstagram, FaLinkedin, FaTelegram } from "react-icons/fa";
+import { FaInstagram, FaTelegram } from "react-icons/fa";
 import Logo from "./logo";
 
 const Footer = () => {
@@ -98,32 +98,24 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-sm">
-            © 2025 Interaktiv-ta&apos;lim. Barcha huquqlar himoyalangan.
+            © 2026 Interaktiv-ta&apos;lim. Barcha huquqlar himoyalangan.
           </p>
           <div className="flex gap-4">
             <Link
               target="_blank"
-              href="https://t.me/dilshod_ziyodulloyev"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              href="https://t.me/intertalim_uz"
+              className="text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300"
               aria-label="Telegram"
             >
-              <FaTelegram className="size-5" />
+              <FaTelegram className="size-6 text-sky-500" />
             </Link>
             <Link
               target="_blank"
-              href="https://www.instagram.com/d1lshod_ziyodullayev"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              href="https://www.instagram.com/interaktiv_talim"
+              className="text-muted-foreground hover:scale-110 transition-all duration-300 hover:text-primary "
               aria-label="Instagram"
             >
-              <FaInstagram className="size-5" />
-            </Link>
-            <Link
-              target="_blank"
-              href="https://www.linkedin.com/in/dilshodbek-ziyodulloyev"
-              className="text-muted-foreground hover:text-primary transition-colors"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin className="size-5" />
+              <FaInstagram className="size-6  text-pink-500" />
             </Link>
           </div>
         </div>

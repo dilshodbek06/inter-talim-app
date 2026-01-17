@@ -1,0 +1,1005 @@
+/* eslint-disable react-hooks/refs */
+/* eslint-disable react/no-unescaped-entities */
+"use client";
+
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
+import { Home, Maximize2, Play, Plus, Trash2 } from "lucide-react";
+import FallConfetti, { ConfettiHandle } from "@/components/fall-confetti";
+import { WinModal } from "@/components/win-modal";
+import { Button } from "@/components/ui/button";
+
+type TeamKey = "left" | "right";
+
+type Question = {
+  id: number;
+  question: string;
+  answer: string;
+};
+
+const DEFAULT_QUESTIONS: Question[] = [
+  { id: 1, question: "1 + 1 = ?", answer: "2" },
+  { id: 2, question: "6 - 2 = ?", answer: "4" },
+  { id: 3, question: "3 + 5 = ?", answer: "8" },
+  { id: 4, question: "8 + 4 = ?", answer: "12" },
+  { id: 5, question: "10 - 3 = ?", answer: "7" },
+  { id: 6, question: "7 + 6 = ?", answer: "13" },
+  { id: 7, question: "14 - 5 = ?", answer: "9" },
+  { id: 8, question: "9 + 8 = ?", answer: "17" },
+  { id: 9, question: "12 - 4 = ?", answer: "8" },
+  { id: 10, question: "5 + 9 = ?", answer: "14" },
+  { id: 11, question: "16 - 7 = ?", answer: "9" },
+  { id: 12, question: "11 + 3 = ?", answer: "14" },
+  { id: 13, question: "18 - 9 = ?", answer: "9" },
+  { id: 14, question: "4 + 7 = ?", answer: "11" },
+  { id: 15, question: "20 - 8 = ?", answer: "12" },
+  { id: 16, question: "13 + 6 = ?", answer: "19" },
+  { id: 17, question: "15 - 6 = ?", answer: "9" },
+  { id: 18, question: "2 + 9 = ?", answer: "11" },
+  { id: 19, question: "17 - 5 = ?", answer: "12" },
+  { id: 20, question: "6 + 8 = ?", answer: "14" },
+  { id: 21, question: "22 - 10 = ?", answer: "12" },
+  { id: 22, question: "9 + 4 = ?", answer: "13" },
+  { id: 23, question: "24 - 6 = ?", answer: "18" },
+  { id: 24, question: "7 + 5 = ?", answer: "12" },
+  { id: 25, question: "19 - 11 = ?", answer: "8" },
+  { id: 26, question: "8 + 7 = ?", answer: "15" },
+  { id: 27, question: "30 - 12 = ?", answer: "18" },
+  { id: 28, question: "21 + 3 = ?", answer: "24" },
+  { id: 29, question: "25 - 7 = ?", answer: "18" },
+  { id: 30, question: "14 + 5 = ?", answer: "19" },
+  { id: 31, question: "27 - 9 = ?", answer: "18" },
+  { id: 32, question: "16 + 4 = ?", answer: "20" },
+  { id: 33, question: "28 - 13 = ?", answer: "15" },
+  { id: 34, question: "18 + 2 = ?", answer: "20" },
+  { id: 35, question: "32 - 14 = ?", answer: "18" },
+  { id: 36, question: "12 + 9 = ?", answer: "21" },
+  { id: 37, question: "26 - 8 = ?", answer: "18" },
+  { id: 38, question: "23 + 5 = ?", answer: "28" },
+  { id: 39, question: "29 - 11 = ?", answer: "18" },
+  { id: 40, question: "17 + 7 = ?", answer: "24" },
+  { id: 41, question: "34 - 16 = ?", answer: "18" },
+  { id: 42, question: "15 + 8 = ?", answer: "23" },
+  { id: 43, question: "36 - 15 = ?", answer: "21" },
+  { id: 44, question: "22 + 6 = ?", answer: "28" },
+  { id: 45, question: "40 - 19 = ?", answer: "21" },
+  { id: 46, question: "24 + 7 = ?", answer: "31" },
+  { id: 47, question: "42 - 18 = ?", answer: "24" },
+  { id: 48, question: "27 + 9 = ?", answer: "36" },
+  { id: 49, question: "45 - 20 = ?", answer: "25" },
+  { id: 50, question: "30 + 8 = ?", answer: "38" },
+];
+
+const PANEL_THEME = {
+  left: {
+    header: "from-[#1a2f8f] via-[#142262] to-[#0d1343]",
+    score: "bg-[#1a2f8f] text-white",
+  },
+  right: {
+    header: "from-[#c11d1d] via-[#a01414] to-[#7b0c0c]",
+    score: "bg-[#c11d1d] text-white",
+  },
+};
+
+const SHIFT_STEP = 14;
+const MIN_SHIFT_STEPS = 8;
+
+const keypadLayout = [
+  ["1", "2", "3"],
+  ["4", "5", "6"],
+  ["7", "8", "9"],
+  ["clear", "0", "submit"],
+];
+
+const isMathQuestion = (value: string) => {
+  const normalized = value.trim();
+  if (!normalized) return false;
+  return /[0-9]/.test(normalized) && /^[0-9+\-*/().=?\s]+$/.test(normalized);
+};
+
+const isMathAnswer = (value: string) => {
+  const normalized = value.trim();
+  if (!normalized) return false;
+  return /[0-9]/.test(normalized) && /^[0-9+\-*/().\s]+$/.test(normalized);
+};
+
+export default function RopeGamePage() {
+  const [setupMode, setSetupMode] = useState(true);
+  const [teamNames, setTeamNames] = useState({
+    left: "1-Jamoa",
+    right: "2-Jamoa",
+  });
+  const [questions, setQuestions] = useState<Question[]>(DEFAULT_QUESTIONS);
+  const [currentQuestionIds, setCurrentQuestionIds] = useState<{
+    left: number | null;
+    right: number | null;
+  }>({
+    left: null,
+    right: null,
+  });
+  const [inputs, setInputs] = useState({ left: "", right: "" });
+  const [scores, setScores] = useState({ left: 0, right: 0 });
+  const [ropeShift, setRopeShift] = useState(0);
+  const [winner, setWinner] = useState<TeamKey | null>(null);
+  const [showWinModal, setShowWinModal] = useState(false);
+  const [countdown, setCountdown] = useState<number | null>(null);
+  const [answerFeedback, setAnswerFeedback] = useState<{
+    left: "correct" | "wrong" | null;
+    right: "correct" | "wrong" | null;
+  }>({
+    left: null,
+    right: null,
+  });
+  const [newQuestion, setNewQuestion] = useState({ question: "", answer: "" });
+  const [formError, setFormError] = useState<string | null>(null);
+  const [arenaSize, setArenaSize] = useState({ width: 0, height: 0 });
+  const [imageAspect, setImageAspect] = useState<number | null>(null);
+
+  const arenaRef = useRef<HTMLDivElement | null>(null);
+  const confettiRef = useRef<ConfettiHandle | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  // Locks/timers (fix: double scoring, pending timeouts, cleanup)
+  const submitLockRef = useRef<{ left: boolean; right: boolean }>({
+    left: false,
+    right: false,
+  });
+  const advanceLockRef = useRef<{ left: boolean; right: boolean }>({
+    left: false,
+    right: false,
+  });
+  const feedbackTimersRef = useRef<{ left?: number; right?: number }>({});
+  const advanceTimersRef = useRef<{ left?: number; right?: number }>({});
+  const lockReleaseTimersRef = useRef<{ left?: number; right?: number }>({});
+  const imageAspectSetRef = useRef(false);
+
+  const isInteractionBlocked = !!winner || countdown !== null;
+
+  const stopAudio = useCallback(() => {
+    if (!audioRef.current) return;
+    audioRef.current.pause();
+    audioRef.current.currentTime = 0;
+  }, []);
+
+  const clearTeamTimeout = useCallback((team: TeamKey) => {
+    if (feedbackTimersRef.current[team]) {
+      window.clearTimeout(feedbackTimersRef.current[team]);
+      feedbackTimersRef.current[team] = undefined;
+    }
+    if (advanceTimersRef.current[team]) {
+      window.clearTimeout(advanceTimersRef.current[team]);
+      advanceTimersRef.current[team] = undefined;
+    }
+    if (lockReleaseTimersRef.current[team]) {
+      window.clearTimeout(lockReleaseTimersRef.current[team]);
+      lockReleaseTimersRef.current[team] = undefined;
+    }
+  }, []);
+
+  const clearAllTimeouts = useCallback(() => {
+    clearTeamTimeout("left");
+    clearTeamTimeout("right");
+  }, [clearTeamTimeout]);
+
+  const resetLocks = useCallback(() => {
+    submitLockRef.current = { left: false, right: false };
+    advanceLockRef.current = { left: false, right: false };
+  }, []);
+
+  const getRandomQuestionId = useCallback(
+    (excludeId?: number | null) => {
+      if (questions.length === 0) return null;
+      if (questions.length === 1) return questions[0].id;
+
+      let nextId = questions[Math.floor(Math.random() * questions.length)].id;
+
+      if (excludeId !== undefined && excludeId !== null) {
+        let guard = 0;
+        while (nextId === excludeId && guard < 25) {
+          nextId = questions[Math.floor(Math.random() * questions.length)].id;
+          guard += 1;
+        }
+      }
+      return nextId;
+    },
+    [questions],
+  );
+
+  const currentLeftQuestion = useMemo(
+    () => questions.find((item) => item.id === currentQuestionIds.left),
+    [questions, currentQuestionIds.left],
+  );
+  const currentRightQuestion = useMemo(
+    () => questions.find((item) => item.id === currentQuestionIds.right),
+    [questions, currentQuestionIds.right],
+  );
+
+  const ropeOffset = useMemo(() => ropeShift * SHIFT_STEP, [ropeShift]);
+
+  const displayedWidth = useMemo(() => {
+    if (!imageAspect || !arenaSize.width || !arenaSize.height) return 0;
+    return arenaSize.width / arenaSize.height > imageAspect
+      ? arenaSize.height * imageAspect
+      : arenaSize.width;
+  }, [imageAspect, arenaSize.height, arenaSize.width]);
+
+  const effectiveWidth = displayedWidth || arenaSize.width;
+  const winThreshold = effectiveWidth ? effectiveWidth / 2 : 0;
+
+  const maxShiftSteps = useMemo(() => {
+    if (!winThreshold) return MIN_SHIFT_STEPS;
+    return Math.max(MIN_SHIFT_STEPS, Math.ceil(winThreshold / SHIFT_STEP));
+  }, [winThreshold]);
+
+  // Fix: if screen resizes and maxShiftSteps shrinks, clamp current ropeShift
+  useEffect(() => {
+    if (setupMode) return;
+    setRopeShift((prev) =>
+      Math.max(-maxShiftSteps, Math.min(maxShiftSteps, prev)),
+    );
+  }, [maxShiftSteps, setupMode]);
+
+  // Fix: keep current ids valid and (when possible) distinct
+  useEffect(() => {
+    if (questions.length === 0) {
+      setCurrentQuestionIds({ left: null, right: null });
+      return;
+    }
+
+    setCurrentQuestionIds((prev) => {
+      const leftExists =
+        prev.left !== null && questions.some((q) => q.id === prev.left);
+      const rightExists =
+        prev.right !== null && questions.some((q) => q.id === prev.right);
+
+      const nextLeft = leftExists ? prev.left : getRandomQuestionId();
+      const nextRight = rightExists
+        ? prev.right
+        : getRandomQuestionId(nextLeft);
+
+      // If both exist but equal (possible if questions changed), try to separate
+      if (
+        nextLeft !== null &&
+        nextRight !== null &&
+        nextLeft === nextRight &&
+        questions.length > 1
+      ) {
+        return { left: nextLeft, right: getRandomQuestionId(nextLeft) };
+      }
+
+      return { left: nextLeft, right: nextRight };
+    });
+  }, [questions, getRandomQuestionId]);
+
+  // Countdown
+  useEffect(() => {
+    if (countdown === null) return;
+
+    if (countdown === 1 && audioRef.current) {
+      audioRef.current.currentTime = 0;
+      audioRef.current.play().catch(() => {});
+    }
+
+    if (countdown <= 1) {
+      const doneTimer = window.setTimeout(() => setCountdown(null), 800);
+      return () => window.clearTimeout(doneTimer);
+    }
+
+    const timer = window.setTimeout(() => {
+      setCountdown((prev) => (prev !== null ? prev - 1 : prev));
+    }, 900);
+
+    return () => window.clearTimeout(timer);
+  }, [countdown]);
+
+  // Audio init + cleanup (single effect)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    audioRef.current = new Audio("/sounds/rope-sound.m4a");
+    audioRef.current.load();
+    return () => {
+      stopAudio();
+      audioRef.current = null;
+    };
+  }, [stopAudio]);
+
+  // Resize observer
+  useEffect(() => {
+    if (setupMode) return;
+    const node = arenaRef.current;
+    if (!node) return;
+
+    const updateSize = () => {
+      const rect = node.getBoundingClientRect();
+      setArenaSize({ width: rect.width, height: rect.height });
+    };
+
+    updateSize();
+
+    if (typeof ResizeObserver === "undefined") return;
+    const observer = new ResizeObserver(updateSize);
+    observer.observe(node);
+
+    return () => observer.disconnect();
+  }, [setupMode]);
+
+  // Win detection (fix: clear pending timeouts/locks when win happens)
+  useEffect(() => {
+    if (setupMode || winner || winThreshold === 0) return;
+
+    if (ropeOffset <= -winThreshold) {
+      setWinner("left");
+      setShowWinModal(true);
+      stopAudio();
+      clearAllTimeouts();
+      resetLocks();
+      confettiRef.current?.start(220, {
+        colors: ["#1a2f8f", "#3b8cff", "#facc15", "#22c55e", "#0f172a"],
+      });
+      return;
+    }
+
+    if (ropeOffset >= winThreshold) {
+      setWinner("right");
+      setShowWinModal(true);
+      stopAudio();
+      clearAllTimeouts();
+      resetLocks();
+      confettiRef.current?.start(220, {
+        colors: ["#c11d1d", "#ef4444", "#f97316", "#facc15", "#7c2d12"],
+      });
+    }
+  }, [
+    ropeOffset,
+    setupMode,
+    winThreshold,
+    winner,
+    stopAudio,
+    clearAllTimeouts,
+    resetLocks,
+  ]);
+
+  // Safety cleanup on unmount
+  useEffect(() => {
+    return () => {
+      clearAllTimeouts();
+      stopAudio();
+    };
+  }, [clearAllTimeouts, stopAudio]);
+
+  const resetRoundState = useCallback(() => {
+    setInputs({ left: "", right: "" });
+    setAnswerFeedback({ left: null, right: null });
+  }, []);
+
+  const startGame = useCallback(() => {
+    clearAllTimeouts();
+    resetLocks();
+
+    const leftId = getRandomQuestionId();
+    const rightId = getRandomQuestionId(leftId);
+
+    setSetupMode(false);
+    setCurrentQuestionIds({ left: leftId, right: rightId });
+    setScores({ left: 0, right: 0 });
+    setRopeShift(0);
+    setWinner(null);
+    setShowWinModal(false);
+    setCountdown(3);
+    resetRoundState();
+  }, [clearAllTimeouts, resetLocks, getRandomQuestionId, resetRoundState]);
+
+  const resetToSetup = useCallback(() => {
+    clearAllTimeouts();
+    resetLocks();
+    stopAudio();
+
+    setSetupMode(true);
+    setCurrentQuestionIds({ left: null, right: null });
+    setScores({ left: 0, right: 0 });
+    setRopeShift(0);
+    setWinner(null);
+    setShowWinModal(false);
+    setCountdown(null);
+    resetRoundState();
+  }, [clearAllTimeouts, resetLocks, stopAudio, resetRoundState]);
+
+  const updateScore = useCallback(
+    (team: TeamKey) => {
+      setScores((prev) => ({ ...prev, [team]: prev[team] + 1 }));
+      setRopeShift((prev) => {
+        const delta = team === "left" ? -1 : 1;
+        const next = prev + delta;
+        return Math.max(-maxShiftSteps, Math.min(maxShiftSteps, next));
+      });
+    },
+    [maxShiftSteps],
+  );
+
+  const advanceTeamRound = useCallback(
+    (team: TeamKey) => {
+      if (advanceLockRef.current[team] || questions.length === 0) return;
+      advanceLockRef.current[team] = true;
+
+      setInputs((prev) => ({ ...prev, [team]: "" }));
+      setCurrentQuestionIds((prev) => ({
+        ...prev,
+        [team]: getRandomQuestionId(prev[team]),
+      }));
+
+      // release lock (store timer for cleanup)
+      clearTeamTimeout(team);
+      lockReleaseTimersRef.current[team] = window.setTimeout(() => {
+        advanceLockRef.current[team] = false;
+      }, 250);
+    },
+    [questions.length, getRandomQuestionId, clearTeamTimeout],
+  );
+
+  const triggerFeedback = useCallback(
+    (team: TeamKey, type: "correct" | "wrong") => {
+      setAnswerFeedback((prev) => ({ ...prev, [team]: type }));
+
+      if (feedbackTimersRef.current[team]) {
+        window.clearTimeout(feedbackTimersRef.current[team]);
+      }
+
+      feedbackTimersRef.current[team] = window.setTimeout(() => {
+        setAnswerFeedback((prev) => ({ ...prev, [team]: null }));
+      }, 650);
+    },
+    [],
+  );
+
+  const submitAnswer = useCallback(
+    (team: TeamKey) => {
+      if (isInteractionBlocked) return;
+      if (submitLockRef.current[team]) return; // Fix: prevent double scoring
+
+      const currentQuestion =
+        team === "left" ? currentLeftQuestion : currentRightQuestion;
+      if (!currentQuestion) return;
+
+      const attempt = inputs[team].trim().toLowerCase();
+      const answer = currentQuestion.answer.trim().toLowerCase();
+
+      const isCorrect = attempt.length > 0 && attempt === answer;
+
+      if (isCorrect) {
+        submitLockRef.current[team] = true; // lock immediately
+        triggerFeedback(team, "correct");
+        setInputs((prev) => ({ ...prev, [team]: "" })); // clear immediately
+        updateScore(team);
+
+        // schedule advance (store timer for cleanup)
+        if (advanceTimersRef.current[team])
+          window.clearTimeout(advanceTimersRef.current[team]);
+        advanceTimersRef.current[team] = window.setTimeout(() => {
+          // If a win happened during the delay, don't advance
+          if (!winner) advanceTeamRound(team);
+          submitLockRef.current[team] = false;
+        }, 420);
+
+        return;
+      }
+
+      triggerFeedback(team, "wrong");
+      setInputs((prev) => ({ ...prev, [team]: "" }));
+    },
+    [
+      isInteractionBlocked,
+      currentLeftQuestion,
+      currentRightQuestion,
+      inputs,
+      triggerFeedback,
+      updateScore,
+      winner,
+      advanceTeamRound,
+    ],
+  );
+
+  const handleKeypadInput = useCallback(
+    (team: TeamKey, value: string) => {
+      if (isInteractionBlocked) return;
+      if (submitLockRef.current[team]) return;
+
+      if (value === "clear") {
+        setInputs((prev) => ({ ...prev, [team]: "" }));
+        return;
+      }
+      if (value === "submit") {
+        submitAnswer(team);
+        return;
+      }
+      setInputs((prev) => ({ ...prev, [team]: `${prev[team]}${value}` }));
+    },
+    [isInteractionBlocked, submitAnswer],
+  );
+
+  const handleInputChange = useCallback(
+    (team: TeamKey, value: string) => {
+      if (isInteractionBlocked) return;
+      if (submitLockRef.current[team]) return;
+      setInputs((prev) => ({ ...prev, [team]: value }));
+    },
+    [isInteractionBlocked],
+  );
+
+  const addQuestion = useCallback(() => {
+    const question = newQuestion.question.trim();
+    const answer = newQuestion.answer.trim();
+
+    if (!question || !answer) {
+      setFormError("Savol va javobni to'ldiring.");
+      return;
+    }
+
+    if (!isMathQuestion(question) || !isMathAnswer(answer)) {
+      setFormError("Faqat matematik belgilar va raqamlar kiritilishi kerak.");
+      return;
+    }
+
+    setQuestions((prev) => [
+      ...prev,
+      {
+        id: Date.now(),
+        question,
+        answer,
+      },
+    ]);
+
+    setNewQuestion({ question: "", answer: "" });
+    setFormError(null);
+  }, [newQuestion]);
+
+  const removeQuestion = useCallback((id: number) => {
+    setQuestions((prev) => prev.filter((q) => q.id !== id));
+  }, []);
+
+  const toggleFullscreen = useCallback(() => {
+    if (typeof document === "undefined") return;
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen?.().catch(() => {});
+      return;
+    }
+    document.exitFullscreen?.().catch(() => {});
+  }, []);
+
+  const handleExitGame = useCallback(() => {
+    if (setupMode) {
+      resetToSetup();
+      return;
+    }
+    const ok = window.confirm("Haqiqatdan ham o'yindan chiqmoqchimisiz?");
+    if (!ok) return;
+    resetToSetup();
+  }, [setupMode, resetToSetup]);
+
+  const renderKeypadButton = (team: TeamKey, key: string) => {
+    if (key === "clear") {
+      return (
+        <button
+          key={`${team}-clear`}
+          type="button"
+          onClick={() => handleKeypadInput(team, "clear")}
+          disabled={isInteractionBlocked || submitLockRef.current[team]}
+          className="rounded-2xl bg-[#ff5b57] py-3 text-lg font-semibold text-white shadow-[0_8px_16px_rgba(255,91,87,0.35)] transition hover:brightness-95 disabled:opacity-60"
+        >
+          C
+        </button>
+      );
+    }
+    if (key === "submit") {
+      return (
+        <button
+          key={`${team}-submit`}
+          type="button"
+          onClick={() => handleKeypadInput(team, "submit")}
+          disabled={isInteractionBlocked || submitLockRef.current[team]}
+          className="rounded-2xl bg-[#3b8cff] py-3 text-lg font-semibold text-white shadow-[0_8px_16px_rgba(59,140,255,0.35)] transition hover:brightness-95 disabled:opacity-60"
+        >
+          Go
+        </button>
+      );
+    }
+    return (
+      <button
+        key={`${team}-${key}`}
+        type="button"
+        onClick={() => handleKeypadInput(team, key)}
+        disabled={isInteractionBlocked || submitLockRef.current[team]}
+        className="rounded-2xl bg-white py-3 text-lg font-semibold text-slate-600 shadow-[0_6px_12px_rgba(15,23,42,0.12)] transition hover:-translate-y-0.5 hover:shadow-[0_10px_16px_rgba(15,23,42,0.16)] disabled:opacity-60"
+      >
+        {key}
+      </button>
+    );
+  };
+
+  const winnerName = winner ? teamNames[winner] : "";
+
+  // Warn before close during game
+  useEffect(() => {
+    if (setupMode) return;
+    const handler = (event: BeforeUnloadEvent) => {
+      event.preventDefault();
+      event.returnValue = "";
+    };
+    window.addEventListener("beforeunload", handler);
+    return () => window.removeEventListener("beforeunload", handler);
+  }, [setupMode]);
+
+  // Stop audio when page hidden
+  useEffect(() => {
+    const handler = () => stopAudio();
+    window.addEventListener("pagehide", handler);
+    return () => window.removeEventListener("pagehide", handler);
+  }, [stopAudio]);
+
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-slate-100 via-slate-50 to-sky-100 text-slate-900">
+      <FallConfetti ref={confettiRef} />
+
+      <WinModal
+        isOpen={showWinModal}
+        onClose={resetToSetup}
+        score={winner ? scores[winner] : undefined}
+        message={winnerName ? `${winnerName} g'olib!` : "G'olib aniqlandi!"}
+      />
+
+      {countdown !== null && countdown > 0 && (
+        <div className="fixed inset-0 z-40 flex items-center justify-center bg-white/40 backdrop-blur-sm">
+          <div className="countdown-pop text-9xl font-black text-slate-700 sm:text-8xl">
+            {countdown}
+          </div>
+        </div>
+      )}
+
+      <div className="relative z-10 w-full max-w-[1440px] px-4 py-10">
+        {setupMode ? (
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1.2fr]">
+            <section className="rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-sm">
+              <div
+                className="animate-fade-up"
+                style={{ animationDelay: "0.05s" }}
+              >
+                <div className="flex flex-wrap items-center gap-3">
+                  <h2 className="text-xl font-bold text-slate-800">
+                    O‘yin haqida
+                  </h2>
+                  <span className="rounded-full bg-slate-900 px-3 py-1 text-xs font-semibold text-white">
+                    {questions.length} ta demo savol
+                  </span>
+                </div>
+
+                <p className="mt-3 text-sm text-slate-600">
+                  O'qituvchi umumiy savollarni kiritadi, o'yin paytida har bir
+                  jamoaga savollar tasodifiy tarzda chiqadi. Har bir tog'ri
+                  javob arqonni sizning tomonga siljitadi.
+                </p>
+
+                <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                  <li>1. Jamoa nomlarini kiriting.</li>
+                  <li>2. Umumiy savollar va javoblarni qo'shing.</li>
+                  <li>3. "Boshlash" tugmasini bosing.</li>
+                </ul>
+
+                <div className="mt-5 rounded-2xl border border-slate-200 bg-linear-to-br from-slate-50 via-white to-slate-100 px-4 py-3">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                    Tayyor savollar
+                  </p>
+                  <p className="mt-2 text-3xl font-bold text-slate-800">
+                    {questions.length}
+                  </p>
+                  <p className="text-xs text-slate-500">
+                    O'yin uchun tayyor namuna savollar
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="mt-6 animate-fade-up rounded-2xl border border-slate-200 bg-slate-50 p-4"
+                style={{ animationDelay: "0.1s" }}
+              >
+                <h3 className="text-sm font-semibold text-slate-700">
+                  Jamoa nomlari
+                </h3>
+                <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  <input
+                    value={teamNames.left}
+                    onChange={(event) =>
+                      setTeamNames((prev) => ({
+                        ...prev,
+                        left: event.target.value,
+                      }))
+                    }
+                    className="rounded-xl border border-slate-200 px-3 py-2 text-sm focus:border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-100"
+                    placeholder="1-Jamoa"
+                  />
+                  <input
+                    value={teamNames.right}
+                    onChange={(event) =>
+                      setTeamNames((prev) => ({
+                        ...prev,
+                        right: event.target.value,
+                      }))
+                    }
+                    className="rounded-xl border border-slate-200 px-3 py-2 text-sm focus:border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-100"
+                    placeholder="2-Jamoa"
+                  />
+                </div>
+              </div>
+
+              <Button
+                type="button"
+                onClick={startGame}
+                disabled={questions.length === 0}
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:scale-[1.03] disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                <Play className="h-4 w-4" />
+                Boshlash
+              </Button>
+            </section>
+
+            <section className="rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-sm">
+              <div className="flex items-center justify-between">
+                <h2 className="text-lg font-semibold text-slate-800">
+                  Savol qo'shish
+                </h2>
+                <span className="text-xs font-semibold text-slate-400">
+                  {questions.length} ta savol
+                </span>
+              </div>
+
+              <div className="mt-4 space-y-3">
+                <input
+                  value={newQuestion.question}
+                  onChange={(event) => {
+                    setFormError(null);
+                    setNewQuestion((prev) => ({
+                      ...prev,
+                      question: event.target.value,
+                    }));
+                  }}
+                  className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm focus:border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-100"
+                  placeholder="Savol (10-4=?)"
+                />
+                <input
+                  value={newQuestion.answer}
+                  onChange={(event) => {
+                    setFormError(null);
+                    setNewQuestion((prev) => ({
+                      ...prev,
+                      answer: event.target.value,
+                    }));
+                  }}
+                  className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm focus:border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-100"
+                  placeholder="Javob (6)"
+                />
+                {formError && (
+                  <p className="text-xs font-semibold text-rose-500">
+                    {formError}
+                  </p>
+                )}
+              </div>
+
+              <button
+                type="button"
+                onClick={addQuestion}
+                className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-slate-100 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-200"
+              >
+                <Plus className="h-4 w-4" />
+                Savol qo'shish
+              </button>
+
+              <div className="mt-6 max-h-80 space-y-3 overflow-y-auto pr-2">
+                {questions.length === 0 ? (
+                  <div className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 p-6 text-center text-sm text-slate-400">
+                    Savollar hali yo'q. Yuqorida savol qo'shing.
+                  </div>
+                ) : (
+                  questions.map((question, index) => (
+                    <div
+                      key={question.id}
+                      className="rounded-2xl border border-slate-200 bg-white p-4"
+                    >
+                      <div className="flex items-center justify-between text-xs font-semibold text-slate-400">
+                        <span>Savol {index + 1}</span>
+                        <button
+                          type="button"
+                          onClick={() => removeQuestion(question.id)}
+                          className="inline-flex items-center gap-1 text-rose-500 hover:text-rose-600"
+                        >
+                          <Trash2 className="h-3 w-3" />
+                          O'chirish
+                        </button>
+                      </div>
+                      <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm">
+                        <p className="text-slate-700">{question.question}</p>
+                        <p className="mt-1 text-xs text-slate-400">
+                          Javob: {question.answer}
+                        </p>
+                      </div>
+                    </div>
+                  ))
+                )}
+              </div>
+            </section>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[320px_1fr_320px]">
+            <section className="relative z-10 rounded-3xl border border-white/80 bg-white/90 p-5 shadow-[0_20px_40px_rgba(15,23,42,0.15)]">
+              <div
+                className={`rounded-3xl bg-linear-to-b px-4 py-4 text-center text-2xl font-bold text-white shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)] ${PANEL_THEME.left.header}`}
+              >
+                {currentLeftQuestion?.question ?? "Savol"}
+              </div>
+
+              <input
+                value={inputs.left}
+                onChange={(event) =>
+                  handleInputChange("left", event.target.value)
+                }
+                onKeyDown={(event) => {
+                  if (event.key === "Enter") submitAnswer("left");
+                }}
+                inputMode="numeric"
+                pattern="[0-9]*"
+                disabled={
+                  !currentLeftQuestion ||
+                  isInteractionBlocked ||
+                  submitLockRef.current.left
+                }
+                className={`answer-flash mt-4 w-full rounded-[22px] bg-white px-4 py-3 text-center text-xl font-semibold text-slate-600 shadow-inner focus:outline-none ${
+                  answerFeedback.left === "correct"
+                    ? "answer-flash-good"
+                    : answerFeedback.left === "wrong"
+                      ? "answer-flash-bad"
+                      : ""
+                }`}
+              />
+
+              <div className="mt-4 grid grid-cols-3 gap-3">
+                {keypadLayout.flatMap((row) =>
+                  row.map((key) => renderKeypadButton("left", key)),
+                )}
+              </div>
+            </section>
+
+            <section className="flex flex-col items-center gap-4 text-center">
+              <h2 className="text-2xl font-bold text-slate-600 sm:text-3xl">
+                Jamoaviy musobaqa
+              </h2>
+
+              <div className="flex items-center gap-3 text-sm font-semibold">
+                <span
+                  className={`rounded-full px-3 py-1 shadow-sm ${PANEL_THEME.left.score}`}
+                >
+                  {teamNames.left}: {scores.left} ball
+                </span>
+                <span className="text-slate-400">|</span>
+                <span
+                  className={`rounded-full px-3 py-1 shadow-sm ${PANEL_THEME.right.score}`}
+                >
+                  {teamNames.right}: {scores.right} ball
+                </span>
+              </div>
+
+              <div className="relative w-full max-w-[520px] overflow-hidden rounded-3xl bg-linear-to-br from-slate-50 via-white to-slate-100 p-4 shadow-[0_20px_40px_rgba(15,23,42,0.12)]">
+                <div className="absolute left-1/2 top-4 h-[calc(100%-2rem)] w-px -translate-x-1/2 border-l-2 border-dashed border-slate-400/70" />
+
+                <div ref={arenaRef} className="relative h-[190px] sm:h-[230px]">
+                  <div
+                    className="pointer-events-none absolute inset-0 z-20 transition-transform duration-300"
+                    style={{ transform: `translateX(${ropeOffset}px)` }}
+                  >
+                    <Image
+                      src="/images/characters.png"
+                      alt="Arqon tortish jamoalari"
+                      fill
+                      onLoadingComplete={(img) => {
+                        // Fix: avoid repeated sets in StrictMode
+                        if (!imageAspectSetRef.current && img.naturalHeight) {
+                          imageAspectSetRef.current = true;
+                          setImageAspect(img.naturalWidth / img.naturalHeight);
+                        }
+                      }}
+                      className="object-contain"
+                      sizes="(min-width: 1024px) 520px, 90vw"
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-sm text-slate-500">
+                Arqonni tortish uchun savollarga to‘g‘ri javob bering!
+              </p>
+            </section>
+
+            <section className="relative z-10 rounded-3xl border border-white/80 bg-white/90 p-5 shadow-[0_20px_40px_rgba(15,23,42,0.15)]">
+              <div
+                className={`rounded-3xl bg-linear-to-b px-4 py-4 text-center text-2xl font-bold text-white shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)] ${PANEL_THEME.right.header}`}
+              >
+                {currentRightQuestion?.question ?? "Savol"}
+              </div>
+
+              <input
+                value={inputs.right}
+                onChange={(event) =>
+                  handleInputChange("right", event.target.value)
+                }
+                onKeyDown={(event) => {
+                  if (event.key === "Enter") submitAnswer("right");
+                }}
+                inputMode="numeric"
+                pattern="[0-9]*"
+                disabled={
+                  !currentRightQuestion ||
+                  isInteractionBlocked ||
+                  submitLockRef.current.right
+                }
+                className={`answer-flash mt-4 w-full rounded-[22px] bg-white px-4 py-3 text-center text-xl font-semibold text-slate-600 shadow-inner focus:outline-none ${
+                  answerFeedback.right === "correct"
+                    ? "answer-flash-good"
+                    : answerFeedback.right === "wrong"
+                      ? "answer-flash-bad"
+                      : ""
+                }`}
+              />
+
+              <div className="mt-4 grid grid-cols-3 gap-3">
+                {keypadLayout.flatMap((row) =>
+                  row.map((key) => renderKeypadButton("right", key)),
+                )}
+              </div>
+            </section>
+          </div>
+        )}
+
+        {!setupMode && (
+          <>
+            <button
+              type="button"
+              onClick={handleExitGame}
+              className="fixed bottom-6 left-6 z-20 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/80 bg-white/90 text-slate-500 shadow-[0_10px_24px_rgba(15,23,42,0.18)] transition hover:text-slate-700"
+              aria-label="Chiqish"
+            >
+              <Home className="h-5 w-5" />
+            </button>
+
+            <button
+              type="button"
+              onClick={toggleFullscreen}
+              className="fixed bottom-6 right-6 z-20 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/80 bg-white/90 text-slate-500 shadow-[0_10px_24px_rgba(15,23,42,0.18)] transition hover:text-slate-700"
+              aria-label="Fullscreen"
+            >
+              <Maximize2 className="h-5 w-5" />
+            </button>
+          </>
+        )}
+      </div>
+
+      <style>{`
+        @keyframes countdown-pop {
+          0% { transform: scale(0.5); opacity: 0; }
+          30% { transform: scale(1.1); opacity: 1; }
+          100% { transform: scale(1); opacity: 0.75; }
+        }
+        .countdown-pop { animation: countdown-pop 0.9s ease-out; }
+
+        @keyframes answer-flash-good {
+          0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55); background: #ffffff; }
+          40% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0.35); background: #ecfdf5; }
+          100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); background: #ffffff; }
+        }
+        @keyframes answer-flash-bad {
+          0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.45); background: #ffffff; }
+          40% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0.3); background: #fef2f2; }
+          100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); background: #ffffff; }
+        }
+        .answer-flash-good { animation: answer-flash-good 0.6s ease-out; }
+        .answer-flash-bad { animation: answer-flash-bad 0.6s ease-out; }
+      `}</style>
+    </div>
+  );
+}

@@ -12,7 +12,7 @@ const TopGames = () => {
     "a3f91c78-4b2e-4d73-bc77-5b9a6e823f10", // Baraban
     "21d8ecac-2441-46d4-9a37-5bbc874e2d42", // Chempion o'quvchi
     "e3678b4d-89e3-4f88-b1d6-6e40753af48b", // Millioner
-    "64a82a9c-7bc1-49f7-9a47-fcdfdf5b1af8", // So'z yasash
+    "e0de3c26-e964-483a-8736-3726a14556f4", // So'z yasash
     "f3b891d3-a389-4963-b59a-c44c5ebdc917", // Matematik misol
   ];
 
