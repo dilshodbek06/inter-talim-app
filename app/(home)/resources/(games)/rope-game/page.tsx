@@ -581,9 +581,13 @@ export default function RopeGamePage() {
         <button
           key={`${team}-clear`}
           type="button"
-          onClick={() => handleKeypadInput(team, "clear")}
+          onPointerDown={(e) => {
+            e.preventDefault();
+            handleKeypadInput(team, "clear");
+          }}
+          // onClick={() => handleKeypadInput(team, "clear")}
           disabled={isInteractionBlocked || submitLockRef.current[team]}
-          className="rounded-2xl bg-[#ff5b57] py-3 text-lg font-semibold text-white shadow-[0_8px_16px_rgba(255,91,87,0.35)] transition hover:brightness-95 disabled:opacity-60"
+          className="touch-none select-none rounded-2xl bg-[#ff5b57] py-3 text-lg font-semibold text-white shadow-[0_8px_16px_rgba(255,91,87,0.35)] transition hover:brightness-95 disabled:opacity-60"
         >
           C
         </button>
@@ -594,9 +598,13 @@ export default function RopeGamePage() {
         <button
           key={`${team}-submit`}
           type="button"
-          onClick={() => handleKeypadInput(team, "submit")}
+          onPointerDown={(e) => {
+            e.preventDefault();
+            handleKeypadInput(team, "submit");
+          }}
+          // onClick={() => handleKeypadInput(team, "submit")}
           disabled={isInteractionBlocked || submitLockRef.current[team]}
-          className="rounded-2xl bg-[#3b8cff] py-3 text-lg font-semibold text-white shadow-[0_8px_16px_rgba(59,140,255,0.35)] transition hover:brightness-95 disabled:opacity-60"
+          className="touch-none select-none rounded-2xl bg-[#3b8cff] py-3 text-lg font-semibold text-white shadow-[0_8px_16px_rgba(59,140,255,0.35)] transition hover:brightness-95 disabled:opacity-60"
         >
           Go
         </button>
@@ -606,9 +614,13 @@ export default function RopeGamePage() {
       <button
         key={`${team}-${key}`}
         type="button"
-        onClick={() => handleKeypadInput(team, key)}
+        onPointerDown={(e) => {
+          e.preventDefault();
+          handleKeypadInput(team, key);
+        }}
+        // onClick={() => handleKeypadInput(team, key)}
         disabled={isInteractionBlocked || submitLockRef.current[team]}
-        className="rounded-2xl bg-white py-3 text-lg font-semibold text-slate-600 shadow-[0_6px_12px_rgba(15,23,42,0.12)] transition hover:-translate-y-0.5 hover:shadow-[0_10px_16px_rgba(15,23,42,0.16)] disabled:opacity-60"
+        className="touch-none select-none rounded-2xl bg-white py-3 text-lg font-semibold text-slate-600 shadow-[0_6px_12px_rgba(15,23,42,0.12)] transition hover:-translate-y-0.5 hover:shadow-[0_10px_16px_rgba(15,23,42,0.16)] disabled:opacity-60"
       >
         {key}
       </button>
@@ -858,7 +870,7 @@ export default function RopeGamePage() {
                 }`}
               />
 
-              <div className="mt-4 grid grid-cols-3 gap-3">
+              <div className="mt-4 grid grid-cols-3 gap-3 touch-none">
                 {keypadLayout.flatMap((row) =>
                   row.map((key) => renderKeypadButton("left", key)),
                 )}
@@ -947,7 +959,7 @@ export default function RopeGamePage() {
                 }`}
               />
 
-              <div className="mt-4 grid grid-cols-3 gap-3">
+              <div className="mt-4 grid grid-cols-3 gap-3 touch-none">
                 {keypadLayout.flatMap((row) =>
                   row.map((key) => renderKeypadButton("right", key)),
                 )}
