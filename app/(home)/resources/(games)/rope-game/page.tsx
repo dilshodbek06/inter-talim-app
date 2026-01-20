@@ -660,10 +660,10 @@ export default function RopeGamePage() {
 
       {countdown !== null && countdown > 0 && (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-white/40 backdrop-blur-sm">
-        <div className="rope-game-countdown countdown-pop text-9xl font-black text-slate-700 sm:text-8xl">
-          {countdown}
+          <div className="rope-game-countdown countdown-pop text-9xl font-black text-slate-700 sm:text-8xl">
+            {countdown}
+          </div>
         </div>
-      </div>
       )}
 
       <div className="rope-game-inner relative z-10 w-full max-w-[1440px] px-4 py-10">
@@ -687,6 +687,10 @@ export default function RopeGamePage() {
                   O'qituvchi umumiy savollarni kiritadi, o'yin paytida har bir
                   jamoaga savollar tasodifiy tarzda chiqadi. Har bir tog'ri
                   javob arqonni sizning tomonga siljitadi.
+                </p>
+                <p className="mt-3 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-xs font-semibold text-amber-700">
+                  Telefonlarda o'ynash uchun ekraningizni gorizontal holatga
+                  o'tkazing.
                 </p>
 
                 <ul className="mt-4 space-y-2 text-sm text-slate-600">
