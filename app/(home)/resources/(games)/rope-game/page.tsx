@@ -587,7 +587,7 @@ export default function RopeGamePage() {
           }}
           // onClick={() => handleKeypadInput(team, "clear")}
           disabled={isInteractionBlocked || submitLockRef.current[team]}
-          className="touch-none select-none rounded-2xl bg-[#ff5b57] py-3 text-lg font-semibold text-white shadow-[0_8px_16px_rgba(255,91,87,0.35)] transition hover:brightness-95 disabled:opacity-60"
+          className="rope-game-keypad-btn touch-none select-none rounded-2xl bg-[#ff5b57] py-3 text-lg font-semibold text-white shadow-[0_8px_16px_rgba(255,91,87,0.35)] transition hover:brightness-95 disabled:opacity-60"
         >
           C
         </button>
@@ -604,7 +604,7 @@ export default function RopeGamePage() {
           }}
           // onClick={() => handleKeypadInput(team, "submit")}
           disabled={isInteractionBlocked || submitLockRef.current[team]}
-          className="touch-none select-none rounded-2xl bg-[#3b8cff] py-3 text-lg font-semibold text-white shadow-[0_8px_16px_rgba(59,140,255,0.35)] transition hover:brightness-95 disabled:opacity-60"
+          className="rope-game-keypad-btn touch-none select-none rounded-2xl bg-[#3b8cff] py-3 text-lg font-semibold text-white shadow-[0_8px_16px_rgba(59,140,255,0.35)] transition hover:brightness-95 disabled:opacity-60"
         >
           Go
         </button>
@@ -620,7 +620,7 @@ export default function RopeGamePage() {
         }}
         // onClick={() => handleKeypadInput(team, key)}
         disabled={isInteractionBlocked || submitLockRef.current[team]}
-        className="touch-none select-none rounded-2xl bg-white py-3 text-lg font-semibold text-slate-600 shadow-[0_6px_12px_rgba(15,23,42,0.12)] transition hover:-translate-y-0.5 hover:shadow-[0_10px_16px_rgba(15,23,42,0.16)] disabled:opacity-60"
+        className="rope-game-keypad-btn touch-none select-none rounded-2xl bg-white py-3 text-lg font-semibold text-slate-600 shadow-[0_6px_12px_rgba(15,23,42,0.12)] transition hover:-translate-y-0.5 hover:shadow-[0_10px_16px_rgba(15,23,42,0.16)] disabled:opacity-60"
       >
         {key}
       </button>
@@ -648,7 +648,7 @@ export default function RopeGamePage() {
   }, [stopAudio]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-slate-100 via-slate-50 to-sky-100 text-slate-900">
+    <div className="rope-game-shell flex min-h-screen items-center justify-center bg-linear-to-br from-slate-100 via-slate-50 to-sky-100 text-slate-900">
       <FallConfetti ref={confettiRef} />
 
       <WinModal
@@ -660,16 +660,16 @@ export default function RopeGamePage() {
 
       {countdown !== null && countdown > 0 && (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-white/40 backdrop-blur-sm">
-          <div className="countdown-pop text-9xl font-black text-slate-700 sm:text-8xl">
-            {countdown}
-          </div>
+        <div className="rope-game-countdown countdown-pop text-9xl font-black text-slate-700 sm:text-8xl">
+          {countdown}
         </div>
+      </div>
       )}
 
-      <div className="relative z-10 w-full max-w-[1440px] px-4 py-10">
+      <div className="rope-game-inner relative z-10 w-full max-w-[1440px] px-4 py-10">
         {setupMode ? (
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1.2fr]">
-            <section className="rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-sm">
+          <div className="rope-game-setup-grid grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1.2fr]">
+            <section className="rope-game-panel rope-game-setup-panel rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-sm">
               <div
                 className="animate-fade-up"
                 style={{ animationDelay: "0.05s" }}
@@ -752,7 +752,7 @@ export default function RopeGamePage() {
               </Button>
             </section>
 
-            <section className="rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-sm">
+            <section className="rope-game-panel rope-game-setup-panel rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-sm">
               <div className="flex items-center justify-between">
                 <h2 className="text-lg font-semibold text-slate-800">
                   Savol qo'shish
@@ -838,10 +838,10 @@ export default function RopeGamePage() {
             </section>
           </div>
         ) : (
-          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[320px_1fr_320px]">
-            <section className="relative z-10 rounded-3xl border border-white/80 bg-white/90 p-5 shadow-[0_20px_40px_rgba(15,23,42,0.15)]">
+          <div className="rope-game-match-grid grid grid-cols-1 items-center gap-8 lg:grid-cols-[320px_1fr_320px]">
+            <section className="rope-game-panel rope-game-side-panel relative z-10 rounded-3xl border border-white/80 bg-white/90 p-5 shadow-[0_20px_40px_rgba(15,23,42,0.15)]">
               <div
-                className={`rounded-3xl bg-linear-to-b px-4 py-4 text-center text-2xl font-bold text-white shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)] ${PANEL_THEME.left.header}`}
+                className={`rope-game-question rounded-3xl bg-linear-to-b px-4 py-4 text-center text-2xl font-bold text-white shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)] ${PANEL_THEME.left.header}`}
               >
                 {currentLeftQuestion?.question ?? "Savol"}
               </div>
@@ -861,7 +861,7 @@ export default function RopeGamePage() {
                   isInteractionBlocked ||
                   submitLockRef.current.left
                 }
-                className={`answer-flash mt-4 w-full rounded-[22px] bg-white px-4 py-3 text-center text-xl font-semibold text-slate-600 shadow-inner focus:outline-none ${
+                className={`rope-game-answer-input answer-flash mt-4 w-full rounded-[22px] bg-white px-4 py-3 text-center text-xl font-semibold text-slate-600 shadow-inner focus:outline-none ${
                   answerFeedback.left === "correct"
                     ? "answer-flash-good"
                     : answerFeedback.left === "wrong"
@@ -870,19 +870,19 @@ export default function RopeGamePage() {
                 }`}
               />
 
-              <div className="mt-4 grid grid-cols-3 gap-3 touch-none">
+              <div className="rope-game-keypad mt-4 grid grid-cols-3 gap-3 touch-none">
                 {keypadLayout.flatMap((row) =>
                   row.map((key) => renderKeypadButton("left", key)),
                 )}
               </div>
             </section>
 
-            <section className="flex flex-col items-center gap-4 text-center">
-              <h2 className="text-2xl font-bold text-slate-600 sm:text-3xl">
+            <section className="rope-game-center flex flex-col items-center gap-4 text-center">
+              <h2 className="rope-game-title text-2xl font-bold text-slate-600 sm:text-3xl">
                 Jamoaviy musobaqa
               </h2>
 
-              <div className="flex items-center gap-3 text-sm font-semibold">
+              <div className="rope-game-score flex items-center gap-3 text-sm font-semibold">
                 <span
                   className={`rounded-full px-3 py-1 shadow-sm ${PANEL_THEME.left.score}`}
                 >
@@ -896,10 +896,13 @@ export default function RopeGamePage() {
                 </span>
               </div>
 
-              <div className="relative w-full max-w-[520px] overflow-hidden rounded-3xl bg-linear-to-br from-slate-50 via-white to-slate-100 p-4 shadow-[0_20px_40px_rgba(15,23,42,0.12)]">
+              <div className="rope-game-arena relative w-full max-w-[520px] overflow-hidden rounded-3xl bg-linear-to-br from-slate-50 via-white to-slate-100 p-4 shadow-[0_20px_40px_rgba(15,23,42,0.12)]">
                 <div className="absolute left-1/2 top-4 h-[calc(100%-2rem)] w-px -translate-x-1/2 border-l-2 border-dashed border-slate-400/70" />
 
-                <div ref={arenaRef} className="relative h-[190px] sm:h-[230px]">
+                <div
+                  ref={arenaRef}
+                  className="rope-game-arena-canvas relative h-[190px] sm:h-[230px]"
+                >
                   <div
                     className="pointer-events-none absolute inset-0 z-20 transition-transform duration-300"
                     style={{ transform: `translateX(${ropeOffset}px)` }}
@@ -928,9 +931,9 @@ export default function RopeGamePage() {
               </p>
             </section>
 
-            <section className="relative z-10 rounded-3xl border border-white/80 bg-white/90 p-5 shadow-[0_20px_40px_rgba(15,23,42,0.15)]">
+            <section className="rope-game-panel rope-game-side-panel relative z-10 rounded-3xl border border-white/80 bg-white/90 p-5 shadow-[0_20px_40px_rgba(15,23,42,0.15)]">
               <div
-                className={`rounded-3xl bg-linear-to-b px-4 py-4 text-center text-2xl font-bold text-white shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)] ${PANEL_THEME.right.header}`}
+                className={`rope-game-question rounded-3xl bg-linear-to-b px-4 py-4 text-center text-2xl font-bold text-white shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)] ${PANEL_THEME.right.header}`}
               >
                 {currentRightQuestion?.question ?? "Savol"}
               </div>
@@ -950,7 +953,7 @@ export default function RopeGamePage() {
                   isInteractionBlocked ||
                   submitLockRef.current.right
                 }
-                className={`answer-flash mt-4 w-full rounded-[22px] bg-white px-4 py-3 text-center text-xl font-semibold text-slate-600 shadow-inner focus:outline-none ${
+                className={`rope-game-answer-input answer-flash mt-4 w-full rounded-[22px] bg-white px-4 py-3 text-center text-xl font-semibold text-slate-600 shadow-inner focus:outline-none ${
                   answerFeedback.right === "correct"
                     ? "answer-flash-good"
                     : answerFeedback.right === "wrong"
@@ -959,7 +962,7 @@ export default function RopeGamePage() {
                 }`}
               />
 
-              <div className="mt-4 grid grid-cols-3 gap-3 touch-none">
+              <div className="rope-game-keypad mt-4 grid grid-cols-3 gap-3 touch-none">
                 {keypadLayout.flatMap((row) =>
                   row.map((key) => renderKeypadButton("right", key)),
                 )}
@@ -973,7 +976,7 @@ export default function RopeGamePage() {
             <button
               type="button"
               onClick={handleExitGame}
-              className="fixed bottom-6 left-6 z-20 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/80 bg-white/90 text-slate-500 shadow-[0_10px_24px_rgba(15,23,42,0.18)] transition hover:text-slate-700"
+              className="rope-game-fab rope-game-fab-left fixed bottom-6 left-6 z-20 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/80 bg-white/90 text-slate-500 shadow-[0_10px_24px_rgba(15,23,42,0.18)] transition hover:text-slate-700"
               aria-label="Chiqish"
             >
               <Home className="h-5 w-5" />
@@ -982,7 +985,7 @@ export default function RopeGamePage() {
             <button
               type="button"
               onClick={toggleFullscreen}
-              className="fixed bottom-6 right-6 z-20 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/80 bg-white/90 text-slate-500 shadow-[0_10px_24px_rgba(15,23,42,0.18)] transition hover:text-slate-700"
+              className="rope-game-fab rope-game-fab-right fixed bottom-6 right-6 z-20 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/80 bg-white/90 text-slate-500 shadow-[0_10px_24px_rgba(15,23,42,0.18)] transition hover:text-slate-700"
               aria-label="Fullscreen"
             >
               <Maximize2 className="h-5 w-5" />
@@ -1011,6 +1014,102 @@ export default function RopeGamePage() {
         }
         .answer-flash-good { animation: answer-flash-good 0.6s ease-out; }
         .answer-flash-bad { animation: answer-flash-bad 0.6s ease-out; }
+
+        @media (orientation: landscape) and (max-height: 560px) {
+          .rope-game-shell {
+            align-items: flex-start;
+          }
+
+          .rope-game-inner {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+          }
+
+          .rope-game-setup-grid {
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 1rem;
+          }
+
+          .rope-game-setup-panel {
+            padding: 1rem;
+          }
+
+          .rope-game-match-grid {
+            grid-template-columns: minmax(200px, 30vw) minmax(0, 1fr) minmax(200px, 30vw);
+            gap: 1rem;
+            align-items: stretch;
+          }
+
+          .rope-game-panel {
+            padding: 0.75rem;
+            border-radius: 1.2rem;
+          }
+
+          .rope-game-question {
+            padding: 0.6rem 0.75rem;
+            font-size: 1.1rem;
+            border-radius: 1.1rem;
+          }
+
+          .rope-game-answer-input {
+            margin-top: 0.6rem;
+            padding: 0.5rem 0.75rem;
+            font-size: 1rem;
+            border-radius: 1rem;
+          }
+
+          .rope-game-keypad {
+            margin-top: 0.5rem;
+            gap: 0.5rem;
+          }
+
+          .rope-game-keypad-btn {
+            padding: 0.45rem 0;
+            font-size: 0.95rem;
+            border-radius: 0.9rem;
+          }
+
+          .rope-game-center {
+            gap: 0.75rem;
+          }
+
+          .rope-game-title {
+            font-size: 1.35rem;
+          }
+
+          .rope-game-score {
+            font-size: 0.75rem;
+            gap: 0.5rem;
+          }
+
+          .rope-game-arena {
+            padding: 0.75rem;
+            max-width: 420px;
+          }
+
+          .rope-game-arena-canvas {
+            height: 150px;
+          }
+
+          .rope-game-countdown {
+            font-size: 3.5rem;
+          }
+
+          .rope-game-fab {
+            bottom: 0.75rem;
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 0.9rem;
+          }
+
+          .rope-game-fab-left {
+            left: 0.75rem;
+          }
+
+          .rope-game-fab-right {
+            right: 0.75rem;
+          }
+        }
       `}</style>
     </div>
   );
