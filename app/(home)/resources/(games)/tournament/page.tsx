@@ -3,7 +3,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import { JSX, useEffect, useMemo, useState } from "react";
+import { JSX, useEffect, useState } from "react";
+import confetti from "canvas-confetti";
 import { Trophy, Shuffle, RotateCcw, FolderTree, Sparkles } from "lucide-react";
 import BackPrev from "@/components/back-prev";
 
@@ -29,33 +30,30 @@ const TournamentBracket = () => {
 
   const [championName, setChampionName] = useState<string | null>(null);
   const [showChampionBanner, setShowChampionBanner] = useState<boolean>(false);
-  const [showConfetti, setShowConfetti] = useState<boolean>(false);
-
-  const confettiPieces = useMemo(
-    () =>
-      Array.from({ length: 320 }, (_, i) => ({
-        id: i,
-        left: Math.random() * 100,
-        delay: Math.random() * 0.4,
-        duration: 4 + Math.random() * 2,
-        size: 6 + Math.random() * 8,
-        rotateStart: Math.random() * 360,
-        rotateEnd: 540 + Math.random() * 360,
-        color: ["#f59e0b", "#10b981", "#3b82f6", "#a855f7", "#ef4444"][
-          Math.floor(Math.random() * 5)
-        ],
-      })),
-    []
-  );
 
   useEffect(() => {
-    if (!showChampionBanner) {
-      setShowConfetti(false);
-      return;
-    }
-    setShowConfetti(true);
-    const timer = setTimeout(() => setShowConfetti(false), 4500);
-    return () => clearTimeout(timer);
+    if (!showChampionBanner) return;
+    const origin = { x: 0.5, y: 0.2 };
+    const colors = ["#f59e0b", "#10b981", "#3b82f6", "#a855f7", "#ef4444"];
+
+    confetti({
+      particleCount: 200,
+      spread: 80,
+      startVelocity: 45,
+      ticks: 240,
+      origin,
+      colors,
+      disableForReducedMotion: true,
+    });
+    confetti({
+      particleCount: 120,
+      spread: 120,
+      startVelocity: 35,
+      ticks: 260,
+      origin,
+      colors,
+      disableForReducedMotion: true,
+    });
   }, [showChampionBanner]);
 
   const shuffleArray = (array: string[]): string[] => {
@@ -218,7 +216,6 @@ const TournamentBracket = () => {
     setInputName("");
     setChampionName(null);
     setShowChampionBanner(false);
-    setShowConfetti(false);
   };
 
   const getMatchesForRound = (round: number) => {
@@ -423,49 +420,6 @@ const TournamentBracket = () => {
     );
   };
 
-  const ConfettiOverlay = ({ show }: { show: boolean }) => {
-    if (!show) return null;
-
-    return (
-      <>
-        <style jsx global>{`
-          @keyframes confetti-fall {
-            0% {
-              transform: translate3d(0, -10%, 0) rotate(var(--rotate-start));
-              opacity: 0;
-            }
-            10% {
-              opacity: 1;
-            }
-            100% {
-              transform: translate3d(0, 110vh, 0) rotate(var(--rotate-end));
-              opacity: 0;
-            }
-          }
-        `}</style>
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-linear-to-b from-amber-200/20 via-transparent to-transparent blur-3xl" />
-          {confettiPieces.map((piece) => (
-            <span
-              key={piece.id}
-              className="absolute block rounded-sm shadow-sm"
-              style={{
-                left: `${piece.left}%`,
-                top: "-10%",
-                width: piece.size,
-                height: piece.size * 0.4,
-                backgroundColor: piece.color,
-                animation: `confetti-fall ${piece.duration}s ease-out ${piece.delay}s`,
-                ["--rotate-start" as string]: `${piece.rotateStart}deg`,
-                ["--rotate-end" as string]: `${piece.rotateEnd}deg`,
-              }}
-            />
-          ))}
-        </div>
-      </>
-    );
-  };
-
   const SideColumn = ({ side }: { side: "left" | "right" }): JSX.Element => {
     const roundsArray = [...Array(bracket.rounds - 1)].map((_, i) => i);
 
@@ -580,7 +534,6 @@ const TournamentBracket = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 sm:p-6 overflow-x-auto relative">
-      <ConfettiOverlay show={showConfetti} />
       <div className="max-w-7xl mx-auto mb-4 sm:mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 rounded-full border-2 border-slate-900 flex items-center justify-center bg-white">

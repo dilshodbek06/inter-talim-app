@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import confetti from "canvas-confetti";
 import { Lock, LockOpen, Sparkles, Trash2 } from "lucide-react";
 import {
   Dialog,
@@ -11,7 +12,6 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import FallConfetti, { ConfettiHandle } from "@/components/fall-confetti";
 import BackPrev from "@/components/back-prev";
 
 type Question = {
@@ -45,7 +45,7 @@ export default function UnlockLocksGame() {
   const successSoundRef = useRef<HTMLAudioElement | null>(null);
   const errorSoundRef = useRef<HTMLAudioElement | null>(null);
 
-  const confettiRef = useRef<ConfettiHandle | null>(null);
+  const victoryPlayedRef = useRef(false);
 
   // add victory sound
   const victorySoundRef = useRef<HTMLAudioElement | null>(null);
@@ -60,6 +60,20 @@ export default function UnlockLocksGame() {
       errorSoundRef.current.load();
       victorySoundRef.current.load();
     }
+
+    return () => {
+      const audioRefs = [
+        successSoundRef,
+        errorSoundRef,
+        victorySoundRef,
+      ] as const;
+      audioRefs.forEach((ref) => {
+        if (!ref.current) return;
+        ref.current.pause();
+        ref.current.currentTime = 0;
+        ref.current = null;
+      });
+    };
   }, []);
 
   const playSuccessSound = () => {
@@ -90,11 +104,27 @@ export default function UnlockLocksGame() {
     // are all present question ids set to true in openedLocks?
     const allOpened = ids.every((id) => openedLocks[id] === true);
 
-    if (allOpened) {
-      // trigger confetti & victory sound
-      confettiRef.current?.start(150, {
-        // optional colors suited for edu — you can tweak
-        colors: ["#10B981", "#6366F1", "#F97316", "#06B6D4", "#F59E0B"],
+    if (allOpened && !victoryPlayedRef.current) {
+      victoryPlayedRef.current = true;
+      const colors = ["#10B981", "#6366F1", "#F97316", "#06B6D4", "#F59E0B"];
+      const origin = { x: 0.5, y: 0.3 };
+      confetti({
+        particleCount: 140,
+        spread: 80,
+        startVelocity: 45,
+        ticks: 220,
+        origin,
+        colors,
+        disableForReducedMotion: true,
+      });
+      confetti({
+        particleCount: 80,
+        spread: 120,
+        startVelocity: 35,
+        ticks: 250,
+        origin,
+        colors,
+        disableForReducedMotion: true,
       });
       playVictorySound();
     }
@@ -159,8 +189,8 @@ export default function UnlockLocksGame() {
       // mark providedAnswer and open lock
       setQuestions((prev) =>
         prev.map((q) =>
-          q.id === currentQuestion.id ? { ...q, providedAnswer: true } : q
-        )
+          q.id === currentQuestion.id ? { ...q, providedAnswer: true } : q,
+        ),
       );
       setOpenedLocks((prev) => ({ ...prev, [currentQuestion.id]: true }));
       // sound is handled in the openedLocks effect (to tie sound to the visual opening)
@@ -171,11 +201,11 @@ export default function UnlockLocksGame() {
       // teacher marked incorrect -> show error prompt
       setQuestions((prev) =>
         prev.map((q) =>
-          q.id === currentQuestion.id ? { ...q, providedAnswer: false } : q
-        )
+          q.id === currentQuestion.id ? { ...q, providedAnswer: false } : q,
+        ),
       );
       setAnswerError(
-        "Noto‘g‘ri deb belgilandi. O‘quvchi qayta urinishi mumkin."
+        "Noto‘g‘ri deb belgilandi. O‘quvchi qayta urinishi mumkin.",
       );
       playErrorSound();
     }
@@ -188,12 +218,12 @@ export default function UnlockLocksGame() {
     setIsDialogOpen(false);
     setAnswerError(null);
     prevOpenedRef.current = {};
+    victoryPlayedRef.current = false;
   };
 
   return (
     <div className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-10">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
-        <FallConfetti ref={confettiRef} />
         {/* Header */}
         <BackPrev />
         <div className="mb-6 text-center">

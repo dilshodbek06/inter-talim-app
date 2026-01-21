@@ -3,9 +3,9 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import confetti, { type Options as ConfettiOptions } from "canvas-confetti";
 import Image from "next/image";
 import { Home, Maximize2, Play, Plus, Trash2 } from "lucide-react";
-import FallConfetti, { ConfettiHandle } from "@/components/fall-confetti";
 import { WinModal } from "@/components/win-modal";
 import { Button } from "@/components/ui/button";
 
@@ -136,7 +136,6 @@ export default function RopeGamePage() {
   const [imageAspect, setImageAspect] = useState<number | null>(null);
 
   const arenaRef = useRef<HTMLDivElement | null>(null);
-  const confettiRef = useRef<ConfettiHandle | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // Locks/timers (fix: double scoring, pending timeouts, cleanup)
@@ -154,6 +153,29 @@ export default function RopeGamePage() {
   const imageAspectSetRef = useRef(false);
 
   const isInteractionBlocked = !!winner || countdown !== null;
+
+  const fireWinConfetti = useCallback((options: ConfettiOptions) => {
+    confetti({
+      particleCount: 160,
+      spread: 75,
+      startVelocity: 45,
+      ticks: 220,
+      gravity: 1,
+      scalar: 1,
+      disableForReducedMotion: true,
+      ...options,
+    });
+    confetti({
+      particleCount: 90,
+      spread: 120,
+      startVelocity: 35,
+      ticks: 250,
+      gravity: 1.1,
+      scalar: 0.9,
+      disableForReducedMotion: true,
+      ...options,
+    });
+  }, []);
 
   const stopAudio = useCallback(() => {
     if (!audioRef.current) return;
@@ -333,8 +355,10 @@ export default function RopeGamePage() {
       stopAudio();
       clearAllTimeouts();
       resetLocks();
-      confettiRef.current?.start(220, {
+      fireWinConfetti({
         colors: ["#1a2f8f", "#3b8cff", "#facc15", "#22c55e", "#0f172a"],
+        origin: { x: 0.2, y: 0.35 },
+        angle: 60,
       });
       return;
     }
@@ -345,8 +369,10 @@ export default function RopeGamePage() {
       stopAudio();
       clearAllTimeouts();
       resetLocks();
-      confettiRef.current?.start(220, {
+      fireWinConfetti({
         colors: ["#c11d1d", "#ef4444", "#f97316", "#facc15", "#7c2d12"],
+        origin: { x: 0.8, y: 0.35 },
+        angle: 120,
       });
     }
   }, [
@@ -354,6 +380,7 @@ export default function RopeGamePage() {
     setupMode,
     winThreshold,
     winner,
+    fireWinConfetti,
     stopAudio,
     clearAllTimeouts,
     resetLocks,
@@ -649,8 +676,6 @@ export default function RopeGamePage() {
 
   return (
     <div className="rope-game-shell flex min-h-screen items-center justify-center bg-linear-to-br from-slate-100 via-slate-50 to-sky-100 text-slate-900">
-      <FallConfetti ref={confettiRef} />
-
       <WinModal
         isOpen={showWinModal}
         onClose={resetToSetup}

@@ -1,3 +1,5 @@
+"use client";
+
 /* eslint-disable react-hooks/set-state-in-effect */
 import { useEffect, useState } from "react";
 
@@ -20,6 +22,12 @@ export const Confetti = ({ buttonRect }: ConfettiProps) => {
   const [pieces, setPieces] = useState<ConfettiPiece[]>([]);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches) {
+      setPieces([]);
+      return;
+    }
+
     const colors = [
       "#ff6b6b",
       "#4ecdc4",
@@ -30,16 +38,19 @@ export const Confetti = ({ buttonRect }: ConfettiProps) => {
     ];
     const newPieces: ConfettiPiece[] = [];
 
-    const startX = buttonRect?.left ?? window.innerWidth / 2;
+    const width = window.innerWidth || 0;
+    const pieceCount = width < 640 ? 36 : width < 1024 ? 48 : 60;
+    const scatter = width < 640 ? 55 : 80;
+    const startX = buttonRect?.left ?? width / 2;
     const startY = buttonRect?.top ?? window.innerHeight / 2;
     const buttonWidth = buttonRect?.width ?? 0;
     const buttonHeight = buttonRect?.height ?? 0;
 
-    for (let i = 0; i < 60; i++) {
-      const angle = (Math.PI * 2 * i) / 60;
-      const velocity = 4 + Math.random() * 6;
-      const offsetX = Math.cos(angle) * velocity;
-      const offsetY = Math.sin(angle) * velocity;
+    for (let i = 0; i < pieceCount; i++) {
+      const angle = (Math.PI * 2 * i) / pieceCount;
+      const velocity = width < 640 ? 3 + Math.random() * 4 : 4 + Math.random() * 6;
+      const offsetX = Math.cos(angle) * velocity * scatter;
+      const offsetY = Math.sin(angle) * velocity * scatter;
 
       newPieces.push({
         id: i,
@@ -69,8 +80,8 @@ export const Confetti = ({ buttonRect }: ConfettiProps) => {
               backgroundColor: piece.color,
               animationDelay: `${piece.delay}s`,
               animationDuration: `${piece.duration}s`,
-              "--offset-x": `${piece.offsetX * 80}px`,
-              "--offset-y": `${piece.offsetY * 80}px`,
+              "--offset-x": `${piece.offsetX}px`,
+              "--offset-y": `${piece.offsetY}px`,
             } as React.CSSProperties & {
               "--offset-x": string;
               "--offset-y": string;
