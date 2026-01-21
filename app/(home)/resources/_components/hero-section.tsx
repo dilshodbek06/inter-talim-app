@@ -13,7 +13,7 @@ const HeroSection = () => {
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-3 py-1 text-xs font-semibold text-sky-700 shadow-sm backdrop-blur">
             <span className="h-2 w-2 rounded-full bg-linear-to-r from-sky-400 to-indigo-500" />
-            Bizning interaktiv metodlar
+            Bizning interaktiv o‘yinlar
           </div>
           <div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900">

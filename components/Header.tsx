@@ -1,8 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import Logo from "./logo";
 import HeaderAuthControls from "./header-auth-controls";
 import HeaderMobileMenu from "./header-mobile-menu";
-import { getUser } from "@/lib/auth-server";
+import { authClient } from "@/lib/auth-client";
 import type { NavLink } from "./header-types";
 
 const navLinks: NavLink[] = [
@@ -18,13 +20,13 @@ const navLinks: NavLink[] = [
 //   { code: "en", label: "English", short: "EN", flag: "🇬🇧" },
 // ];
 
-const Header = async () => {
-  const user = await getUser();
-  const headerUser = user
+const Header = () => {
+  const { data: session } = authClient.useSession();
+  const headerUser = session?.user
     ? {
-        name: user.name ?? null,
-        email: user.email ?? null,
-        image: user.image ?? null,
+        name: session.user.name ?? null,
+        email: session.user.email ?? null,
+        image: session.user.image ?? null,
       }
     : null;
 
