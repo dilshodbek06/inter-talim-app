@@ -193,19 +193,19 @@ export const eduGames: Game[] = [
     webUrl: "/resources/linear-equations",
     textIcon: "x=?",
   },
-  // {
-  //   id: "3095f09f-5b66-4457-a4b1-d98fd4634a9d",
-  //   title: "Gap tuz o'yini",
-  //   description: "Ingliz tilidagi so'zlardan gapni to'g'ri shaklda yasash",
-  //   icon: Calculator,
-  //   categoryId: "e9e6f230-24f0-4c9a-8a71-11c7fd1e6b31",
-  //   players: "300+",
-  //   difficulty: "O'rta",
-  //   color: "from-zinc-600 to-stone-500",
-  //   image: "/images/methods/chiziqli.png",
-  //   webUrl: "/resources/make-english-word",
-  //   textIcon: "🧩",
-  // },
+  {
+    id: "5d6bd41b-ad1a-42a3-9c6c-32f3fc7056b9",
+    title: "Inglizcha so‘z o‘yini",
+    description: "Harflar o‘rnini o‘zgartirib yashirilgan so‘zni topish",
+    icon: Calculator,
+    categoryId: "e9e6f230-24f0-4c9a-8a71-11c7fd1e6b31",
+    players: "450+",
+    difficulty: "Murakkab",
+    color: "from-orange-600 to-red-500",
+    image: "/images/methods/find-english-word.png",
+    webUrl: "/resources/find-english-word",
+    textIcon: "x=?",
+  },
 ];
 
 export const categories = [

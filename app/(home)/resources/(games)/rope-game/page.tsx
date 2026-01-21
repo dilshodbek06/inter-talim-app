@@ -689,7 +689,7 @@ export default function RopeGamePage() {
                   javob arqonni sizning tomonga siljitadi.
                 </p>
                 <p className="mt-3 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-xs font-semibold text-amber-700">
-                  Telefonlarda o'ynash uchun ekraningizni gorizontal holatga
+                  Telefonda o'ynash uchun ekraningizni gorizontal holatga
                   o'tkazing.
                 </p>
 
