@@ -1,12 +1,10 @@
 "use client";
 
-import { ReactNode, useEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export function AosProvider({ children }: { children: ReactNode }) {
-  const pathname = usePathname();
+export function AosProvider() {
   const inited = useRef(false);
 
   useEffect(() => {
@@ -22,17 +20,16 @@ export function AosProvider({ children }: { children: ReactNode }) {
       inited.current = true;
     }
 
-    // DOM/rasm/font joylashgach qayta hisoblasin
-    const raf = requestAnimationFrame(() => AOS.refreshHard());
-
-    const onLoad = () => AOS.refreshHard();
+    // Light refresh once DOM settles (avoid heavy refreshHard)
+    const raf = requestAnimationFrame(() => AOS.refresh());
+    const onLoad = () => AOS.refresh();
     window.addEventListener("load", onLoad);
 
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener("load", onLoad);
     };
-  }, [pathname]);
+  }, []);
 
-  return <>{children}</>;
+  return null;
 }

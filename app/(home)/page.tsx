@@ -24,7 +24,8 @@ export const metadata = buildMetadata({
 
 export default function Home() {
   return (
-    <AosProvider>
+    <>
+      <AosProvider />
       <div className="min-h-screen bg-background">
         {/* Top alert banner */}
         <DemoModeBanner />
@@ -49,6 +50,6 @@ export default function Home() {
         {/* Footer */}
         <Footer />
       </div>
-    </AosProvider>
+    </>
   );
 }

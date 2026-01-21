@@ -92,7 +92,7 @@ const WordSearchGame: React.FC = () => {
     word: string,
     row: number,
     col: number,
-    direction: number
+    direction: number,
   ): boolean => {
     const len = word.length;
 
@@ -145,7 +145,7 @@ const WordSearchGame: React.FC = () => {
     word: string,
     row: number,
     col: number,
-    direction: number
+    direction: number,
   ): void => {
     const len = word.length;
 
@@ -198,7 +198,7 @@ const WordSearchGame: React.FC = () => {
       for (let j = 0; j < GRID_SIZE; j++) {
         if (newGrid[i][j] === "") {
           newGrid[i][j] = String.fromCharCode(
-            65 + Math.floor(Math.random() * 26)
+            65 + Math.floor(Math.random() * 26),
           );
         }
       }
@@ -331,11 +331,11 @@ const WordSearchGame: React.FC = () => {
 
   const getCellFromPoint = (
     clientX: number,
-    clientY: number
+    clientY: number,
   ): CellCoord | null => {
     const el = document.elementFromPoint(
       clientX,
-      clientY
+      clientY,
     ) as HTMLElement | null;
     if (!el) return null;
 
@@ -532,13 +532,15 @@ const WordSearchGame: React.FC = () => {
                         key={word}
                         className={`p-3 rounded-lg border text-sm sm:text-base flex items-center justify-between ${
                           found
-                            ? "bg-emerald-50 border-emerald-200 text-emerald-700 line-through"
+                            ? "bg-emerald-50 border-emerald-200 text-emerald-700"
                             : "bg-slate-50 border-slate-200 text-slate-800"
                         }`}
                         initial={{ opacity: 0, y: 6 }}
                         animate={{ opacity: 1, y: 0 }}
                       >
-                        <span className="font-semibold tracking-wide">
+                        <span
+                          className={`font-semibold tracking-wide ${found ? "line-through" : ""}`}
+                        >
                           {word}
                         </span>
                         {found && (
@@ -645,8 +647,8 @@ const WordSearchGame: React.FC = () => {
                                 selected
                                   ? "bg-sky-500 text-white border-sky-600 shadow-lg scale-110 z-10"
                                   : inFound
-                                  ? "bg-emerald-400 text-white border-emerald-500"
-                                  : "bg-white text-slate-800 border-slate-200 hover:bg-sky-50"
+                                    ? "bg-emerald-400 text-white border-emerald-500"
+                                    : "bg-white text-slate-800 border-slate-200 hover:bg-sky-50"
                               }
                             `}
                             whileHover={
@@ -661,7 +663,7 @@ const WordSearchGame: React.FC = () => {
                             {cell}
                           </motion.button>
                         );
-                      })
+                      }),
                     )}
                   </div>
                 </motion.div>
