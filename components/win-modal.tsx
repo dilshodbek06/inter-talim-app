@@ -188,12 +188,12 @@ export const WinModal = ({
                     i === 0
                       ? "bg-blue-500"
                       : i === 1
-                      ? "bg-purple-500"
-                      : i === 2
-                      ? "bg-pink-500"
-                      : i === 3
-                      ? "bg-orange-500"
-                      : "bg-yellow-500"
+                        ? "bg-purple-500"
+                        : i === 2
+                          ? "bg-pink-500"
+                          : i === 3
+                            ? "bg-orange-500"
+                            : "bg-yellow-500"
                   }`}
                 />
               ))}

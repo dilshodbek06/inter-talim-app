@@ -57,7 +57,7 @@ export const Intro = ({ onStart }: IntroProps) => {
     },
     {
       number: 5,
-      title: "O‘yin 6 ta xatogacha davom etadi",
+      title: "O‘yin 5 ta xatogacha davom etadi",
       description: "20 ta savolli raundlar bilan o‘zingizni sinab ko‘ring",
       bg: "bg-pink-100",
       text: "text-pink-600",
