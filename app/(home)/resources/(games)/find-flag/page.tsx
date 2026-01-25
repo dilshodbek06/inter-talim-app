@@ -4,11 +4,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { MouseEvent } from "react";
 import { Trophy, Timer, RotateCcw } from "lucide-react";
-import type { Question } from "@/types";
+import type { Country, Question } from "@/types";
 import { generateQuestion } from "@/utils/flag-game-logic";
 import { Intro } from "./intro";
 import { Confetti } from "@/components/confetti";
 import { WinModal } from "@/components/win-modal";
+import Image from "next/image";
 
 interface GameProps {
   playerName?: string;
@@ -17,6 +18,41 @@ interface GameProps {
 const ROUND_SECONDS = 10;
 const MAX_MISTAKES = 5; // UI: {mistakes}/5
 const MAX_QUESTIONS = 20;
+
+const FlagDisplay = ({ country }: { country: Country }) => {
+  const [imageFailed, setImageFailed] = useState(false);
+  const countryCode = country.code.toLowerCase();
+  const flagSrc = `/flags/${countryCode}.svg`;
+
+  useEffect(() => {
+    setImageFailed(false);
+  }, [countryCode]);
+
+  if (imageFailed) {
+    return (
+      <span
+        className="text-7xl sm:text-8xl md:text-9xl drop-shadow-lg"
+        aria-label={`${country.name} bayrog'i`}
+      >
+        {country.flag || "🏳️"}
+      </span>
+    );
+  }
+
+  return (
+    <Image
+      src={flagSrc}
+      alt={`${country.name} bayrog'i`}
+      className="h-20 sm:h-24 md:h-28 w-auto drop-shadow-lg"
+      width={160}
+      height={120}
+      sizes="(min-width: 768px) 112px, 96px"
+      priority
+      unoptimized
+      onError={() => setImageFailed(true)}
+    />
+  );
+};
 
 export default function Game({ playerName: initialPlayerName }: GameProps) {
   const [gameStarted, setGameStarted] = useState(() => !!initialPlayerName);
@@ -297,8 +333,14 @@ export default function Game({ playerName: initialPlayerName }: GameProps) {
         </h1>
 
         <div className="flex justify-center mb-10 sm:mb-12">
-          <div className="text-7xl sm:text-8xl md:text-9xl drop-shadow-lg scale-110 sm:scale-125">
-            {question?.correctCountry.flag ?? "🏳️"}
+          <div className="flex items-center justify-center scale-110 sm:scale-125">
+            {question ? (
+              <FlagDisplay country={question.correctCountry} />
+            ) : (
+              <span className="text-7xl sm:text-8xl md:text-9xl drop-shadow-lg">
+                {"🏳️"}
+              </span>
+            )}
           </div>
         </div>
 
