@@ -67,7 +67,7 @@ const SignUp = () => {
 
     if (isExistingAccount) {
       toast.error(
-        "Bu akkaunt allaqachon ro‘yxatdan o‘tgan. Iltimos, profilingizga kiring."
+        "Bu akkaunt allaqachon ro‘yxatdan o‘tgan. Iltimos, profilingizga kiring.",
       );
       router.replace("/sign-in");
       return;
@@ -111,7 +111,7 @@ const SignUp = () => {
             toast.error(ctx.error.message);
             setIsLoading(false);
           },
-        }
+        },
       );
     } catch (e: unknown) {
       console.log(e);
@@ -147,7 +147,7 @@ const SignUp = () => {
             toast.error(ctx.error.message);
             setIsLoading(false);
           },
-        }
+        },
       );
     } catch (e: unknown) {
       console.log(e);
@@ -167,17 +167,16 @@ const SignUp = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 py-12 flex items-center justify-center">
+      <div className="relative z-10 container mx-auto px-4 py-8 flex items-center justify-center">
         <div className="w-full max-w-md">
           {/* Header */}
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+          <div className="text-center mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-3">
               <UserPlus className="w-8 h-8 text-primary" />
             </div>
-            <h1 className="text-4xl font-bold text-foreground mb-2">
+            <h1 className="text-4xl font-bold text-foreground">
               Bizga qo‘shiling
             </h1>
-            <p className="text-muted-foreground">Shaxsiy akkaunt yarating</p>
           </div>
 
           {/* Form Card */}

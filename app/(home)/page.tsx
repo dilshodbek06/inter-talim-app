@@ -6,7 +6,6 @@ import HowWorks from "../_components/how-works";
 import Testimonials from "../_components/testimonials";
 import Cta from "../_components/cta";
 import Footer from "@/components/Footer";
-import DemoModeBanner from "@/components/demo-mode-banner";
 import { buildMetadata } from "@/lib/seo";
 import { AosProvider } from "@/providers/aos-provider";
 
@@ -28,7 +27,7 @@ export default function Home() {
       <AosProvider />
       <div className="min-h-screen bg-background">
         {/* Top alert banner */}
-        <DemoModeBanner />
+        {/* <DemoModeBanner /> */}
         {/* Navigation */}
         <Header />
         {/* Hero Section */}

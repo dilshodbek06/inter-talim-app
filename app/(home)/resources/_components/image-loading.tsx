@@ -37,7 +37,7 @@ export default function ImageLoading({
         src={src}
         alt={alt}
         fill
-        quality={70}
+        quality={75}
         sizes="(min-width: 1280px) 260px, (min-width: 768px) 40vw, 100vw"
         className={cn(
           "object-contain scale-[1.2] transition-opacity duration-500",

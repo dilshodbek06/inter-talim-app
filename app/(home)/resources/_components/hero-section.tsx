@@ -16,14 +16,14 @@ const HeroSection = () => {
             Bizning interaktiv o‘yinlar
           </div>
           <div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl max-w-3xl font-bold tracking-tight text-slate-900">
               <span className="bg-linear-to-r from-sky-500 via-indigo-500 to-violet-500 bg-clip-text text-transparent">
-                Qiziqarli metodlar
+                Qiziqarli o‘yinlar
               </span>{" "}
               bilan dars sifatini oshiring.
             </h1>
             <p className="mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
-              O‘quvchilar uchun mo‘ljallangan interaktiv metodlarni sinab
+              O‘quvchilar uchun mo‘ljallangan interaktiv o‘yinlarni sinab
               ko‘ring va o‘quv jarayoniga qo‘llash orqali dars sifatini
               o‘zgarishini kuzating.
             </p>

@@ -226,7 +226,7 @@ export default function RandomNamePicker() {
       gainNode.gain.setValueAtTime(0.2, ctx.currentTime + time);
       gainNode.gain.exponentialRampToValueAtTime(
         0.01,
-        ctx.currentTime + time + 0.4
+        ctx.currentTime + time + 0.4,
       );
       oscillator.start(ctx.currentTime + time);
       oscillator.stop(ctx.currentTime + time + 0.4);
@@ -273,7 +273,7 @@ export default function RandomNamePicker() {
         const anglePerSegmentDeg = 360 / names.length;
         const pointerAngle = 270; // top
         const segmentAtPointer = Math.floor(
-          ((pointerAngle - finalRotation + 360) % 360) / anglePerSegmentDeg
+          ((pointerAngle - finalRotation + 360) % 360) / anglePerSegmentDeg,
         );
         const winner = names[segmentAtPointer % names.length];
         setSelectedName(winner);
@@ -299,13 +299,13 @@ export default function RandomNamePicker() {
     setNames((prev) => prev.filter((n) => n !== nameToRemove));
   };
 
-  const resetNames = () => {
-    setNames(initialNames);
-    setSelectedName("");
-    setRotation(0);
-    setHistory([]);
-    setIsResultModalOpen(false);
-  };
+  // const resetNames = () => {
+  //   setNames(initialNames);
+  //   setSelectedName("");
+  //   setRotation(0);
+  //   setHistory([]);
+  //   setIsResultModalOpen(false);
+  // };
 
   const closeResultModal = () => setIsResultModalOpen(false);
 
@@ -365,7 +365,7 @@ export default function RandomNamePicker() {
         {/* Main layout: baraban LEFT, form RIGHT on large screens */}
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1.2fr)] gap-8 items-start">
           {/* LEFT: Wheel */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl border border-slate-100 p-4 md:p-6 flex flex-col">
+          <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl border border-slate-100 md:p-6 flex flex-col">
             <div className="flex flex-col items-center mb-4">
               <canvas
                 ref={canvasRef}
@@ -376,14 +376,14 @@ export default function RandomNamePicker() {
               />
             </div>
 
-            {selectedName && !isSpinning && (
+            {/* {selectedName && !isSpinning && (
               <div className="mt-10 mb-4 px-4 py-3 bg-emerald-50 border border-emerald-200 rounded-2xl text-center">
                 <p className="text-lg md:text-xl font-bold text-emerald-700">
                   🎉 Tanlangan o‘quvchi: {selectedName}! 🎉
                 </p>
               </div>
-            )}
-
+            )} */}
+            {/* 
             <div className="mt-2 flex flex-wrap gap-3 justify-center">
               <button
                 onClick={resetNames}
@@ -391,7 +391,7 @@ export default function RandomNamePicker() {
               >
                 Asl ro‘yxatni tiklash
               </button>
-            </div>
+            </div> */}
 
             {history.length > 0 && (
               <div className="mt-6 bg-slate-50 border border-slate-100 rounded-2xl p-4">
