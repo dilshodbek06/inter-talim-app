@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect x="0" y="0" width="600" height="800" rx="0" fill="#F8FAFC" />
+<rect x="600" y="0" width="600" height="800" rx="0" fill="#FFFFFF" />
+<line x1="600" y1="80" x2="600" y2="720" stroke="#E5E7EB" stroke-width="6" />
+<rect x="200" y="320" width="200" height="200" rx="18" fill="#F59E0B" />
+<polygon points="200,320 300,220 400,320" fill="#FCD34D" />
+<rect x="280" y="400" width="40" height="120" rx="10" fill="#60A5FA" />
+<rect x="230" y="360" width="40" height="40" rx="8" fill="#60A5FA" />
+<rect x="330" y="360" width="40" height="40" rx="8" fill="#60A5FA" />
+<rect x="800" y="320" width="200" height="200" rx="18" fill="none" stroke="#1F2937" stroke-width="4" />
+<polygon points="800,320 900,220 1000,320" fill="none" stroke="#1F2937" stroke-width="4" />
+<rect x="880" y="400" width="40" height="120" rx="10" fill="none" stroke="#1F2937" stroke-width="4" />
+<rect x="830" y="360" width="40" height="40" rx="8" fill="none" stroke="#1F2937" stroke-width="4" />
+<rect x="930" y="360" width="40" height="40" rx="8" fill="none" stroke="#1F2937" stroke-width="4" />
+</svg>

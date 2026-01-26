@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect x="0" y="0" width="600" height="800" rx="0" fill="#F8FAFC" />
+<rect x="600" y="0" width="600" height="800" rx="0" fill="#FFFFFF" />
+<line x1="600" y1="80" x2="600" y2="720" stroke="#E5E7EB" stroke-width="6" />
+<rect x="285" y="360" width="30" height="200" rx="14" fill="#A78BFA" />
+<circle cx="240" cy="300" r="45" fill="#7C3AED" />
+<circle cx="360" cy="300" r="45" fill="#7C3AED" />
+<circle cx="300" cy="240" r="45" fill="#7C3AED" />
+<circle cx="300" cy="360" r="45" fill="#7C3AED" />
+<circle cx="255" cy="255" r="45" fill="#7C3AED" />
+<circle cx="345" cy="255" r="45" fill="#7C3AED" />
+<circle cx="255" cy="345" r="45" fill="#7C3AED" />
+<circle cx="345" cy="345" r="45" fill="#7C3AED" />
+<circle cx="300" cy="300" r="45" fill="#FCD34D" />
+<rect x="220" y="520" width="160" height="40" rx="20" fill="#A78BFA" />
+<rect x="885" y="360" width="30" height="200" rx="14" fill="none" stroke="#1F2937" stroke-width="4" />
+<circle cx="840" cy="300" r="45" fill="none" stroke="#1F2937" stroke-width="4" />
+<circle cx="960" cy="300" r="45" fill="none" stroke="#1F2937" stroke-width="4" />
+<circle cx="900" cy="240" r="45" fill="none" stroke="#1F2937" stroke-width="4" />
+<circle cx="900" cy="360" r="45" fill="none" stroke="#1F2937" stroke-width="4" />
+<circle cx="855" cy="255" r="45" fill="none" stroke="#1F2937" stroke-width="4" />
+<circle cx="945" cy="255" r="45" fill="none" stroke="#1F2937" stroke-width="4" />
+<circle cx="855" cy="345" r="45" fill="none" stroke="#1F2937" stroke-width="4" />
+<circle cx="945" cy="345" r="45" fill="none" stroke="#1F2937" stroke-width="4" />
+<circle cx="900" cy="300" r="45" fill="none" stroke="#1F2937" stroke-width="4" />
+<rect x="820" y="520" width="160" height="40" rx="20" fill="none" stroke="#1F2937" stroke-width="4" />
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect x="0" y="0" width="600" height="800" rx="0" fill="#F8FAFC" />
+<rect x="600" y="0" width="600" height="800" rx="0" fill="#FFFFFF" />
+<line x1="600" y1="80" x2="600" y2="720" stroke="#E5E7EB" stroke-width="6" />
+<rect x="210" y="220" width="180" height="160" rx="24" fill="#2563EB" />
+<rect x="240" y="140" width="120" height="80" rx="18" fill="#60A5FA" />
+<circle cx="270" cy="280" r="12" fill="#34D399" />
+<circle cx="330" cy="280" r="12" fill="#34D399" />
+<rect x="260" y="320" width="80" height="30" rx="12" fill="#34D399" />
+<rect x="180" y="260" width="30" height="80" rx="12" fill="#60A5FA" />
+<rect x="390" y="260" width="30" height="80" rx="12" fill="#60A5FA" />
+<rect x="240" y="400" width="60" height="90" rx="14" fill="#60A5FA" />
+<rect x="300" y="400" width="60" height="90" rx="14" fill="#60A5FA" />
+<line x1="300" y1="120" x2="300" y2="60" stroke="#1F2937" stroke-width="5" />
+<circle cx="300" cy="48" r="12" fill="#34D399" />
+<rect x="810" y="220" width="180" height="160" rx="24" fill="none" stroke="#1F2937" stroke-width="4" />
+<rect x="840" y="140" width="120" height="80" rx="18" fill="none" stroke="#1F2937" stroke-width="4" />
+<circle cx="870" cy="280" r="12" fill="none" stroke="#1F2937" stroke-width="4" />
+<circle cx="930" cy="280" r="12" fill="none" stroke="#1F2937" stroke-width="4" />
+<rect x="860" y="320" width="80" height="30" rx="12" fill="none" stroke="#1F2937" stroke-width="4" />
+<rect x="780" y="260" width="30" height="80" rx="12" fill="none" stroke="#1F2937" stroke-width="4" />
+<rect x="990" y="260" width="30" height="80" rx="12" fill="none" stroke="#1F2937" stroke-width="4" />
+<rect x="840" y="400" width="60" height="90" rx="14" fill="none" stroke="#1F2937" stroke-width="4" />
+<rect x="900" y="400" width="60" height="90" rx="14" fill="none" stroke="#1F2937" stroke-width="4" />
+<line x1="900" y1="120" x2="900" y2="60" stroke="#1F2937" stroke-width="5" />
+<circle cx="900" cy="48" r="12" fill="none" stroke="#1F2937" stroke-width="4" />
+</svg>

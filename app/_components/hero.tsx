@@ -30,7 +30,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative py-16 sm:py-24 overflow-hidden"
+      className="relative flex-1 flex items-center overflow-hidden"
       data-aos="fade-up"
       data-aos-duration="900"
     >
@@ -42,7 +42,7 @@ const Hero = () => {
 
       {/* Floating Educational Icons */}
       <GradientItems />
-      <div className="container z-2 relative mx-auto px-4">
+      <div className="container z-2 relative mx-auto px-4 py-12 sm:py-16">
         <div
           className="max-w-4xl mx-auto text-center space-y-6 animate-slide-up"
           data-aos="fade-up"

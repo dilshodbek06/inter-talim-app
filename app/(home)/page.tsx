@@ -28,10 +28,12 @@ export default function Home() {
       <div className="min-h-screen bg-background">
         {/* Top alert banner */}
         {/* <DemoModeBanner /> */}
-        {/* Navigation */}
-        <Header />
-        {/* Hero Section */}
-        <Hero />
+        <div className="min-h-screen flex flex-col">
+          {/* Navigation */}
+          <Header />
+          {/* Hero Section */}
+          <Hero />
+        </div>
         {/* Features Grid */}
         <Features />
         {/* Statistics Section */}
