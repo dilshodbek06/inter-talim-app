@@ -42,7 +42,7 @@ const HeroSection = () => {
               </div>
               <div>
                 <p className="text-[11px] uppercase tracking-wide text-slate-500">
-                  Metodlar
+                  O‘yinlar
                 </p>
                 <p className="text-sm font-semibold text-slate-900">
                   {eduGames.length - 1}+
