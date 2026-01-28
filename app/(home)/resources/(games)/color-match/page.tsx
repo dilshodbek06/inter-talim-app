@@ -13,69 +13,12 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import BackPrev from "@/components/back-prev";
-
-type RangliConturAlbum = {
-  id: string;
-  title: string;
-  description: string;
-  combinedImage: string; // album-style single image (left color, right contour)
-  pagesCount: number;
-  level: "Easy" | "Medium" | "Hard";
-};
-
-const ALBUMS: RangliConturAlbum[] = [
-  {
-    id: "woody",
-    title: "Toy Story - Woody",
-    description:
-      "Ko‘zoynakli, bo‘yinbog‘li quvnoq tulki – kichik yoshdagi bolalar uchun mos.",
-    combinedImage: "/images/colored/toy1.png",
-    pagesCount: 1,
-    level: "Medium",
-  },
-  {
-    id: "buzz-ligthyear",
-    title: "Toy Story - Buzz",
-    description:
-      "Rangli namunalar va kontur sahifalar bilan dinozorlar mavzusidagi albom.",
-    combinedImage: "/images/colored/toy2.png",
-    pagesCount: 3,
-    level: "Medium",
-  },
-  {
-    id: "jessie",
-    title: "Toy Story - Jessie",
-    description:
-      "Koinot fonida chizilgan mushukcha – tasavvur va ijodni rivojlantiradi.",
-    combinedImage: "/images/colored/toy3.png",
-    pagesCount: 2,
-    level: "Medium",
-  },
-  {
-    id: "forky",
-    title: "Toy Story - Forky",
-    description:
-      "Sigir, qo‘y, ot va boshqa hayvonlar bilan tanishish uchun bo‘yash albomi.",
-    combinedImage: "/images/colored/toy4.png",
-    pagesCount: 4,
-    level: "Easy",
-  },
-];
-
-// Barcha albomlar ZIP
-// const downloadAllZip = () => {
-//   const link = document.createElement("a");
-//   link.href = "/api/rangli-contur/all-albums.zip";
-//   link.download = "rangli-contur-all-albums.zip";
-//   document.body.appendChild(link);
-//   link.click();
-//   document.body.removeChild(link);
-// };
+import { ALBUMS, RangliConturAlbum } from "@/mock/colored";
 
 export default function RangliConturPage() {
   const [previewOpen, setPreviewOpen] = useState(false);
   const [activeAlbum, setActiveAlbum] = useState<RangliConturAlbum | null>(
-    null
+    null,
   );
 
   const handlePreview = (album: RangliConturAlbum) => {
@@ -174,8 +117,8 @@ export default function RangliConturPage() {
                           (album.level === "Easy"
                             ? "bg-emerald-50 border-emerald-100 text-emerald-600"
                             : album.level === "Medium"
-                            ? "bg-amber-50 border-amber-100 text-amber-600"
-                            : "bg-rose-50 border-rose-100 text-rose-600")
+                              ? "bg-amber-50 border-amber-100 text-amber-600"
+                              : "bg-rose-50 border-rose-100 text-rose-600")
                         }
                       >
                         Daraja: {album.level}

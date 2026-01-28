@@ -17,18 +17,3 @@ export const useCategoryStore = create<CategoryState>((set) => ({
   setSelectedCategoryId: (id: string) => set({ selectedCategoryId: id }),
   reset: () => set({ selectedCategoryId: defaultCategoryId }),
 }));
-
-/*
-  // Optional: add persistence with zustand/middleware
-  import { persist } from "zustand/middleware";
-  export const useCategoryStore = create(
-    persist<CategoryState>(
-      (set) => ({
-        selectedCategoryId: defaultCategoryId,
-        setSelectedCategoryId: (id) => set({ selectedCategoryId: id }),
-        reset: () => set({ selectedCategoryId: defaultCategoryId }),
-      }),
-      { name: "category-storage" }
-    )
-  );
-*/
