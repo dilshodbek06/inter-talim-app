@@ -75,21 +75,30 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-bold mb-4">Huquqiy</h4>
+            <h4 className="font-bold mb-4">Yangi o‘yinlar</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <Link href="#" className="hover:text-primary transition-colors">
-                  Privacy
+                <Link
+                  href="/resources/krassword"
+                  className="hover:text-primary transition-colors"
+                >
+                  Krassword
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-primary transition-colors">
-                  Terms
+                <Link
+                  href="/resources/find-bigger"
+                  className="hover:text-primary transition-colors"
+                >
+                  Kattasini top
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-primary transition-colors">
-                  Security
+                <Link
+                  href="/resources/find-english-word"
+                  className="hover:text-primary transition-colors"
+                >
+                  Inglizcha so‘z o‘yini
                 </Link>
               </li>
             </ul>

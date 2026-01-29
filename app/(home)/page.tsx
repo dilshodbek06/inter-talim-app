@@ -36,8 +36,6 @@ export default function Home() {
         </div>
         {/* Features Grid */}
         <Features />
-        {/* Statistics Section */}
-
         {/* Top Games */}
         <TopGames />
         {/* How It Works */}

@@ -46,7 +46,7 @@ const Features = () => {
             Platforma xususiyatlari
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Zamonaviy o‘quvchilar va ustozlar uchun{" "}
+            Zamonaviy ustozlar va o‘quvchilar uchun{" "}
             <br className="hidden md:block" />
             samarali vositalar
           </p>

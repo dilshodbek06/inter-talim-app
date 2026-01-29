@@ -69,8 +69,8 @@ const Hero = () => {
           </div>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Interaktiv o‘yinlar, viktorinalar va o‘qitish vositalari — hammasi
-            bir joyda. O‘rganish va o‘qitish usulingizni boyiting.
+            Interaktiv o‘yinlar, metodlar va o‘qitish vositalari — hammasi bir
+            joyda. O‘rganish va o‘qitish usulingizni boyiting.
           </p>
           <div className="flex gap-2 sm:gap-4 justify-center w-full">
             <Button

@@ -83,7 +83,7 @@ const PANEL_THEME = {
 
 const SHIFT_STEP = 14;
 const MIN_SHIFT_STEPS = 8;
-const GAME_DURATION_SECONDS = 1 * 60;
+const GAME_DURATION_SECONDS = 5 * 60;
 
 const keypadLayout = [
   ["1", "2", "3"],
