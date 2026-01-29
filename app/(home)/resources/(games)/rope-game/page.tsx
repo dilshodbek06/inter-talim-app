@@ -83,6 +83,7 @@ const PANEL_THEME = {
 
 const SHIFT_STEP = 14;
 const MIN_SHIFT_STEPS = 8;
+const GAME_DURATION_SECONDS = 1 * 60;
 
 const keypadLayout = [
   ["1", "2", "3"],
@@ -134,6 +135,9 @@ export default function RopeGamePage() {
   const [formError, setFormError] = useState<string | null>(null);
   const [arenaSize, setArenaSize] = useState({ width: 0, height: 0 });
   const [imageAspect, setImageAspect] = useState<number | null>(null);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(GAME_DURATION_SECONDS);
+  const [gameOver, setGameOver] = useState(false);
 
   const arenaRef = useRef<HTMLDivElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -152,7 +156,7 @@ export default function RopeGamePage() {
   const lockReleaseTimersRef = useRef<{ left?: number; right?: number }>({});
   const imageAspectSetRef = useRef(false);
 
-  const isInteractionBlocked = !!winner || countdown !== null;
+  const isInteractionBlocked = !!winner || countdown !== null || gameOver;
 
   const fireWinConfetti = useCallback((options: ConfettiOptions) => {
     confetti({
@@ -175,6 +179,12 @@ export default function RopeGamePage() {
       disableForReducedMotion: true,
       ...options,
     });
+  }, []);
+
+  const formatTime = useCallback((value: number) => {
+    const minutes = Math.floor(value / 60);
+    const seconds = value % 60;
+    return `${minutes}:${seconds.toString().padStart(2, "0")}`;
   }, []);
 
   const stopAudio = useCallback(() => {
@@ -351,6 +361,7 @@ export default function RopeGamePage() {
 
     if (ropeOffset <= -winThreshold) {
       setWinner("left");
+      setGameOver(true);
       setShowWinModal(true);
       stopAudio();
       clearAllTimeouts();
@@ -365,6 +376,7 @@ export default function RopeGamePage() {
 
     if (ropeOffset >= winThreshold) {
       setWinner("right");
+      setGameOver(true);
       setShowWinModal(true);
       stopAudio();
       clearAllTimeouts();
@@ -380,6 +392,57 @@ export default function RopeGamePage() {
     setupMode,
     winThreshold,
     winner,
+    fireWinConfetti,
+    stopAudio,
+    clearAllTimeouts,
+    resetLocks,
+  ]);
+
+  // Game timer
+  useEffect(() => {
+    if (setupMode || winner || gameOver || countdown !== null) return;
+    if (timeLeft <= 0) return;
+
+    const timer = window.setTimeout(() => {
+      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+
+    return () => window.clearTimeout(timer);
+  }, [setupMode, winner, gameOver, countdown, timeLeft]);
+
+  // Time over winner decision
+  useEffect(() => {
+    if (setupMode || winner || gameOver) return;
+    if (timeLeft !== 0) return;
+
+    let timeWinner: TeamKey | null = null;
+    if (scores.left > scores.right) timeWinner = "left";
+    if (scores.right > scores.left) timeWinner = "right";
+
+    setWinner(timeWinner);
+    setGameOver(true);
+    setShowWinModal(true);
+    stopAudio();
+    clearAllTimeouts();
+    resetLocks();
+
+    if (timeWinner) {
+      fireWinConfetti({
+        colors:
+          timeWinner === "left"
+            ? ["#1a2f8f", "#3b8cff", "#facc15", "#22c55e", "#0f172a"]
+            : ["#c11d1d", "#ef4444", "#f97316", "#facc15", "#7c2d12"],
+        origin: { x: timeWinner === "left" ? 0.2 : 0.8, y: 0.35 },
+        angle: timeWinner === "left" ? 60 : 120,
+      });
+    }
+  }, [
+    setupMode,
+    winner,
+    gameOver,
+    timeLeft,
+    scores.left,
+    scores.right,
     fireWinConfetti,
     stopAudio,
     clearAllTimeouts,
@@ -411,8 +474,10 @@ export default function RopeGamePage() {
     setScores({ left: 0, right: 0 });
     setRopeShift(0);
     setWinner(null);
+    setGameOver(false);
     setShowWinModal(false);
     setCountdown(3);
+    setTimeLeft(GAME_DURATION_SECONDS);
     resetRoundState();
   }, [clearAllTimeouts, resetLocks, getRandomQuestionId, resetRoundState]);
 
@@ -426,8 +491,10 @@ export default function RopeGamePage() {
     setScores({ left: 0, right: 0 });
     setRopeShift(0);
     setWinner(null);
+    setGameOver(false);
     setShowWinModal(false);
     setCountdown(null);
+    setTimeLeft(GAME_DURATION_SECONDS);
     resetRoundState();
   }, [clearAllTimeouts, resetLocks, stopAudio, resetRoundState]);
 
@@ -655,6 +722,14 @@ export default function RopeGamePage() {
   };
 
   const winnerName = winner ? teamNames[winner] : "";
+  const timeEnded = timeLeft === 0 && showWinModal;
+  const winMessage = timeEnded
+    ? winnerName
+      ? `Vaqt tugadi! \n${winnerName} g'olib!`
+      : "Vaqt tugadi! Durang!"
+    : winnerName
+      ? `${winnerName} g'olib!`
+      : "G'olib aniqlandi!";
 
   // Warn before close during game
   useEffect(() => {
@@ -674,13 +749,39 @@ export default function RopeGamePage() {
     return () => window.removeEventListener("pagehide", handler);
   }, [stopAudio]);
 
+  // Disable system keyboard on touch devices (use custom keypad instead)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const media = window.matchMedia("(pointer: coarse)");
+    const update = () => setIsTouchDevice(media.matches);
+    update();
+    if (media.addEventListener) {
+      media.addEventListener("change", update);
+      return () => media.removeEventListener("change", update);
+    }
+    media.addListener(update);
+    return () => media.removeListener(update);
+  }, []);
+
   return (
     <div className="rope-game-shell flex min-h-screen items-center justify-center bg-linear-to-br from-slate-100 via-slate-50 to-sky-100 text-slate-900">
       <WinModal
         isOpen={showWinModal}
         onClose={resetToSetup}
         score={winner ? scores[winner] : undefined}
-        message={winnerName ? `${winnerName} g'olib!` : "G'olib aniqlandi!"}
+        message={winMessage}
+        results={[
+          {
+            label: teamNames.left,
+            score: scores.left,
+            className: "bg-linear-to-br from-[#1a2f8f] to-[#3b8cff]",
+          },
+          {
+            label: teamNames.right,
+            score: scores.right,
+            className: "bg-linear-to-br from-[#c11d1d] to-[#ef4444]",
+          },
+        ]}
       />
 
       {countdown !== null && countdown > 0 && (
@@ -703,9 +804,6 @@ export default function RopeGamePage() {
                   <h2 className="text-xl font-bold text-slate-800">
                     O‘yin haqida
                   </h2>
-                  <span className="rounded-full bg-slate-900 px-3 py-1 text-xs font-semibold text-white">
-                    {questions.length} ta demo savol
-                  </span>
                 </div>
 
                 <p className="mt-3 text-sm text-slate-600">
@@ -753,7 +851,7 @@ export default function RopeGamePage() {
                         left: event.target.value,
                       }))
                     }
-                    className="rounded-xl border border-slate-200 px-3 py-2 text-sm focus:border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-100"
+                    className="rounded-xl border border-slate-200 px-3 py-2 text-sm focus:border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
                     placeholder="1-Jamoa"
                   />
                   <input
@@ -764,7 +862,7 @@ export default function RopeGamePage() {
                         right: event.target.value,
                       }))
                     }
-                    className="rounded-xl border border-slate-200 px-3 py-2 text-sm focus:border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-100"
+                    className="rounded-xl border border-slate-200 px-3 py-2 text-sm focus:border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
                     placeholder="2-Jamoa"
                   />
                 </div>
@@ -777,7 +875,7 @@ export default function RopeGamePage() {
                 className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:scale-[1.03] disabled:cursor-not-allowed disabled:opacity-60"
               >
                 <Play className="h-4 w-4" />
-                Boshlash
+                O‘yinni Boshlash
               </Button>
             </section>
 
@@ -801,7 +899,7 @@ export default function RopeGamePage() {
                       question: event.target.value,
                     }));
                   }}
-                  className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm focus:border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-100"
+                  className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm focus:border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
                   placeholder="Savol (10-4=?)"
                 />
                 <input
@@ -813,7 +911,7 @@ export default function RopeGamePage() {
                       answer: event.target.value,
                     }));
                   }}
-                  className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm focus:border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-100"
+                  className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm focus:border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
                   placeholder="Javob (6)"
                 />
                 {formError && (
@@ -883,8 +981,12 @@ export default function RopeGamePage() {
                 onKeyDown={(event) => {
                   if (event.key === "Enter") submitAnswer("left");
                 }}
-                inputMode="numeric"
+                inputMode={isTouchDevice ? "none" : "numeric"}
                 pattern="[0-9]*"
+                readOnly={isTouchDevice}
+                onFocus={(event) => {
+                  if (isTouchDevice) event.currentTarget.blur();
+                }}
                 disabled={
                   !currentLeftQuestion ||
                   isInteractionBlocked ||
@@ -907,6 +1009,9 @@ export default function RopeGamePage() {
             </section>
 
             <section className="rope-game-center flex flex-col items-center gap-4 text-center">
+              <div className="rounded-full border border-slate-200 bg-white/90 px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm">
+                ⏱ {formatTime(timeLeft)}
+              </div>
               <h2 className="rope-game-title text-2xl font-bold text-slate-600 sm:text-3xl">
                 Jamoaviy musobaqa
               </h2>
@@ -975,8 +1080,12 @@ export default function RopeGamePage() {
                 onKeyDown={(event) => {
                   if (event.key === "Enter") submitAnswer("right");
                 }}
-                inputMode="numeric"
+                inputMode={isTouchDevice ? "none" : "numeric"}
                 pattern="[0-9]*"
+                readOnly={isTouchDevice}
+                onFocus={(event) => {
+                  if (isTouchDevice) event.currentTarget.blur();
+                }}
                 disabled={
                   !currentRightQuestion ||
                   isInteractionBlocked ||

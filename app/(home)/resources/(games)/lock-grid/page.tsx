@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import confetti from "canvas-confetti";
-import { Lock, LockOpen, Sparkles, Trash2 } from "lucide-react";
+import { Lock, LockOpen, Play, Sparkles, Trash2 } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -273,7 +273,7 @@ export default function UnlockLocksGame() {
 
               <div className="mt-6 flex items-center gap-3">
                 <Button onClick={() => setGameStarted(true)}>
-                  O‘yinni boshlash ▶
+                  <Play className="w-5 h-5" /> O‘yinni boshlash
                 </Button>
               </div>
             </div>

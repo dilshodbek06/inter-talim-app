@@ -64,14 +64,14 @@ export default function TrueFalsePreview() {
     if (typeof window === "undefined") return;
 
     tickRef.current = new Audio(
-      "https://actions.google.com/sounds/v1/ambiences/clock_ticking.ogg"
+      "https://actions.google.com/sounds/v1/ambiences/clock_ticking.ogg",
     );
     if (tickRef.current) {
       tickRef.current.volume = 0.4;
     }
 
     beepRef.current = new Audio(
-      "https://actions.google.com/sounds/v1/alarms/beep_short.ogg"
+      "https://actions.google.com/sounds/v1/alarms/beep_short.ogg",
     );
 
     successRef.current = new Audio("/sounds/success.wav");
@@ -113,7 +113,7 @@ export default function TrueFalsePreview() {
         }
       }, 900);
     },
-    [questions.length]
+    [questions.length],
   );
 
   /* ---------------- TIMER EFFECT (faqat interval) ---------------- */
@@ -412,19 +412,18 @@ export default function TrueFalsePreview() {
                 </div>
               )}
 
-              <button
-                type="button"
+              <Button
                 onClick={handleStartGame}
                 disabled={questions.length === 0}
-                className={`mt-4 w-full inline-flex items-center justify-center gap-2 rounded-2xl text-base sm:text-lg font-semibold px-4 py-3.5 shadow-md transition-all ${
+                className={`mt-4 w-full inline-flex items-center justify-center gap-2 rounded-2xl text-base sm:text-lg font-semibold px-4 py-6 shadow-md transition-all ${
                   questions.length === 0
                     ? "bg-slate-300 text-slate-600 cursor-not-allowed"
-                    : "bg-emerald-600 hover:bg-emerald-700 text-white"
+                    : " text-white"
                 }`}
               >
                 <Play className="w-5 h-5" />
                 O‘yinni boshlash
-              </button>
+              </Button>
             </div>
           </div>
         ) : (
@@ -483,8 +482,8 @@ export default function TrueFalsePreview() {
                   status === "correct"
                     ? "bg-emerald-50 border-emerald-200"
                     : status === "wrong"
-                    ? "bg-rose-50 border-rose-200"
-                    : "bg-slate-50 border-slate-200"
+                      ? "bg-rose-50 border-rose-200"
+                      : "bg-slate-50 border-slate-200"
                 }
               `}
             >
@@ -493,8 +492,8 @@ export default function TrueFalsePreview() {
                   status === "correct"
                     ? "text-emerald-700"
                     : status === "wrong"
-                    ? "text-rose-700"
-                    : "text-slate-900"
+                      ? "text-rose-700"
+                      : "text-slate-900"
                 }`}
               >
                 {q?.text}

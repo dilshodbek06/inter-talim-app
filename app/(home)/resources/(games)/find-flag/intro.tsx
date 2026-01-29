@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BookOpen, ArrowRight, Sparkles } from "lucide-react";
+import { BookOpen, Sparkles, Play } from "lucide-react";
 import BackPrev from "@/components/back-prev";
 
 interface IntroProps {
@@ -138,7 +138,7 @@ export const Intro = ({ onStart }: IntroProps) => {
                   className={`w-full px-4 py-3 border-2 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none transition-colors ${
                     errors
                       ? "border-rose-500"
-                      : "border-gray-200 focus:border-blue-500"
+                      : "border-gray-200 focus:border-sky-500"
                   }`}
                 />
                 {errors && (
@@ -150,7 +150,7 @@ export const Intro = ({ onStart }: IntroProps) => {
                 type="submit"
                 className="w-full bg-edu-blue text-white font-bold py-3 px-6 rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2"
               >
-                O‘yinni boshlash <ArrowRight className="w-5 h-5" />
+                <Play className="w-5 h-5" /> O‘yinni boshlash
               </button>
             </form>
 
@@ -165,9 +165,7 @@ export const Intro = ({ onStart }: IntroProps) => {
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                   <span className="text-lg">⚡</span>
                 </div>
-                <span className="text-sm">
-                  Tezkor reflekslarni sinab ko‘ring
-                </span>
+                <span className="text-sm">Tez fikrlashni kuchaytiring</span>
               </div>
               <div className="flex items-center gap-3 text-gray-600">
                 <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center">

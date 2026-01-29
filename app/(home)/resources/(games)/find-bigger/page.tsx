@@ -356,7 +356,7 @@ export default function FindBiggerPage() {
                   disabled={!playerName.trim()}
                   className="w-full rounded-2xl text-white"
                 >
-                  <Play className="h-4 w-4" /> Boshlash
+                  <Play className="h-4 w-4" /> O‘yinni Boshlash
                 </Button>
               </div>
             </div>

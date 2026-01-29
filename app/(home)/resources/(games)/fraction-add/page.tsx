@@ -48,7 +48,7 @@ export default function FractionWorksheet() {
 
   const generateExercise = (
     digits: 1 | 2 | 3,
-    unified: boolean
+    unified: boolean,
   ): FractionExercise => {
     const baseDen = generateDenominator(digits);
     const b = unified ? baseDen : generateDenominator(digits);
@@ -60,7 +60,7 @@ export default function FractionWorksheet() {
 
   const generateWorksheet = () => {
     const arr = Array.from({ length: 50 }, () =>
-      generateExercise(denominatorDigits, sameDenominator)
+      generateExercise(denominatorDigits, sameDenominator),
     );
     setExercises(arr);
   };
@@ -178,6 +178,12 @@ export default function FractionWorksheet() {
             .answer .line {
               border-bottom-color: #1f2937;
             }
+              .answer .num{
+              color:red;
+              }
+              .answer .den{
+              color:red;
+              }
           </style>
         </head>
         <body>
@@ -281,7 +287,7 @@ export default function FractionWorksheet() {
           <div className="w-full">
             {exercises.length === 0 ? (
               <div className="h-full flex items-center justify-center rounded-3xl border border-dashed border-slate-300 bg-white/70 p-6 text-sm text-slate-500 text-center">
-                Chap tomondan maxraj uzunligini tanlang va generatsiya qilish
+                Sozlamalardan maxraj uzunligini tanlang va generatsiya qilish
                 tugmasini bosing.
               </div>
             ) : (

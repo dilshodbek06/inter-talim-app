@@ -5,6 +5,7 @@ interface WinModalProps {
   onClose: () => void;
   score?: number;
   message?: string;
+  results?: { label: string; score: number; className?: string }[];
 }
 
 export const WinModal = ({
@@ -12,6 +13,7 @@ export const WinModal = ({
   onClose,
   score,
   message = "Ajoyib qatnashuv!",
+  results,
 }: WinModalProps) => {
   if (!isOpen) return null;
 
@@ -165,7 +167,34 @@ export const WinModal = ({
                 </h2>
               </div>
             </div>
-            {score !== undefined && (
+            {results && results.length > 0 ? (
+              <div className="score-pop relative mb-8 w-full max-w-md">
+                <div className="absolute inset-0 bg-linear-to-r from-blue-500 to-purple-600 rounded-3xl blur-md opacity-40" />
+                <div className="relative rounded-3xl bg-white/90 p-4 shadow-2xl">
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    {results.map((item) => (
+                      <div
+                        key={item.label}
+                        className={`rounded-2xl px-4 py-4 text-white shadow-lg ${
+                          item.className ??
+                          "bg-linear-to-br from-slate-600 to-slate-800"
+                        }`}
+                      >
+                        <p className="text-xs font-semibold uppercase tracking-wide opacity-90">
+                          {item.label}
+                        </p>
+                        <p className="mt-2 text-3xl font-black tracking-tight">
+                          {item.score}
+                        </p>
+                        <span className="text-[11px] font-semibold uppercase opacity-90">
+                          ball
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : score !== undefined ? (
               <div className="score-pop relative mb-8">
                 <div className="absolute inset-0 bg-linear-to-r from-blue-500 to-purple-600 rounded-3xl blur-md opacity-60" />
                 <div className="relative bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 px-9 py-5 md:px-12 md:py-6 rounded-3xl shadow-2xl">
@@ -179,7 +208,7 @@ export const WinModal = ({
                   </p>
                 </div>
               </div>
-            )}
+            ) : null}
             <div className="flex gap-3 mb-6">
               {[0, 1, 2, 3, 4].map((i) => (
                 <div

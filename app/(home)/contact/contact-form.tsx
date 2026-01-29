@@ -32,7 +32,7 @@ import {
   User,
   Gamepad2,
 } from "lucide-react";
-import { FaTelegram } from "react-icons/fa";
+import { FaInstagram, FaTelegram } from "react-icons/fa";
 import { eduGames } from "@/mock/mock-data";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -96,7 +96,7 @@ export default function ContactForm() {
 
     if (tgData.ok) {
       toast.success(
-        "Xabaringiz muvaffaqiyatli yuborildi. Xabar qoldirganingiz uchun rahmat!"
+        "Xabaringiz muvaffaqiyatli yuborildi. Xabar qoldirganingiz uchun rahmat!",
       );
     }
 
@@ -185,10 +185,7 @@ export default function ContactForm() {
                             Email
                           </FormLabel>
                           <FormControl>
-                            <Input
-                              placeholder="email@example.com"
-                              {...field}
-                            />
+                            <Input placeholder="email@example.com" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -275,22 +272,23 @@ export default function ContactForm() {
           <div className="grid md:grid-cols-3 gap-6 mt-12 animate-fade-in">
             {[
               {
-                icon: Mail,
-                title: "Email",
-                description: "ziyodullayevdilshod7@gmail.com",
+                icon: FaInstagram,
+                title: "Instagram",
+                description: "@interaktiv_talim",
                 color: "accent",
+              },
+
+              {
+                icon: FaTelegram,
+                title: "Telegram",
+                description: "@intertalim_uz",
+                color: "primary",
               },
               {
                 icon: MessageSquare,
                 title: "Aloqa vaqti",
                 description: "har kun 24/7",
                 color: "secondary",
-              },
-              {
-                icon: FaTelegram,
-                title: "Telegram",
-                description: "@dilshod_ziyodulloyev",
-                color: "primary",
               },
             ].map((item, index) => (
               <Card
