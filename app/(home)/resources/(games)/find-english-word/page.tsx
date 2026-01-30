@@ -69,19 +69,30 @@ const TileBody = ({
   char,
   isDragging,
   solved,
+  hinted,
+  hintPulse,
 }: {
   char: string;
   isDragging?: boolean;
   solved?: boolean;
+  hinted?: boolean;
+  hintPulse?: number;
 }) => (
   <div
     className={`${tileBase} ${
       solved
         ? "border-emerald-300 shadow-[0_6px_0_rgba(16,185,129,0.35)]"
         : "border-amber-200"
-    } ${isDragging ? "scale-[1.06] shadow-2xl" : ""}`}
+    } ${isDragging ? "scale-[1.06] shadow-2xl" : ""} ${
+      hinted ? "border-sky-300 shadow-[0_8px_0_rgba(56,189,248,0.35)]" : ""
+    }`}
   >
-    {char}
+    <span
+      key={hinted ? `hint-${hintPulse ?? 0}` : "char"}
+      className={hinted ? "inline-block animate-hint-pop" : ""}
+    >
+      {char}
+    </span>
   </div>
 );
 
@@ -89,10 +100,14 @@ const SortableTile = ({
   tile,
   disabled,
   solved,
+  hinted,
+  hintPulse,
 }: {
   tile: LetterTile;
   disabled?: boolean;
   solved?: boolean;
+  hinted?: boolean;
+  hintPulse?: number;
 }) => {
   const {
     attributes,
@@ -116,7 +131,13 @@ const SortableTile = ({
       {...listeners}
       className="touch-none select-none cursor-grab active:cursor-grabbing"
     >
-      <TileBody char={tile.char} isDragging={isDragging} solved={solved} />
+      <TileBody
+        char={tile.char}
+        isDragging={isDragging}
+        solved={solved}
+        hinted={hinted}
+        hintPulse={hintPulse}
+      />
     </div>
   );
 };
@@ -136,10 +157,16 @@ export default function FindEnglishWordPage() {
     DEMO_WORDS.map(() => false),
   );
   const [score, setScore] = useState(0);
+  const [hintUsedCount, setHintUsedCount] = useState(0);
+  const [hintedTileId, setHintedTileId] = useState<string | null>(null);
+  const [hintPulse, setHintPulse] = useState(0);
+  const hintTimeoutRef = useRef<number | null>(null);
+  const maxHints = 3;
 
   const currentIndex = order[index] ?? 0;
   const current = DEMO_WORDS[currentIndex] ?? DEMO_WORDS[0];
   const solved = progress[index];
+  const remainingHints = Math.max(maxHints - hintUsedCount, 0);
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 4 } }),
@@ -153,6 +180,7 @@ export default function FindEnglishWordPage() {
     setTiles(buildTiles(current.word));
     setStatus("idle");
     setActiveId(null);
+    setHintedTileId(null);
   }, [current.word, gameStarted, index]);
 
   useEffect(() => {
@@ -173,6 +201,15 @@ export default function FindEnglishWordPage() {
     };
   }, [status]);
 
+  useEffect(() => {
+    return () => {
+      if (hintTimeoutRef.current !== null) {
+        window.clearTimeout(hintTimeoutRef.current);
+        hintTimeoutRef.current = null;
+      }
+    };
+  }, []);
+
   const resetGame = () => {
     const shuffled = shuffleArray(DEMO_WORDS.map((_, idx) => idx));
     setOrder(shuffled);
@@ -181,6 +218,13 @@ export default function FindEnglishWordPage() {
     setIndex(0);
     setStatus("idle");
     setActiveId(null);
+    setHintUsedCount(0);
+    setHintedTileId(null);
+    setHintPulse(0);
+    if (hintTimeoutRef.current !== null) {
+      window.clearTimeout(hintTimeoutRef.current);
+      hintTimeoutRef.current = null;
+    }
     setTiles(buildTiles(DEMO_WORDS[shuffled[0]].word));
   };
 
@@ -211,6 +255,27 @@ export default function FindEnglishWordPage() {
   };
 
   const onDragCancel = () => setActiveId(null);
+
+  const triggerHint = () => {
+    if (remainingHints <= 0 || solved) return;
+    const firstChar = current.word?.[0]?.toUpperCase();
+    if (!firstChar) return;
+    const preferredId = `${current.word}-0-${firstChar}`;
+    const targetTile =
+      tiles.find((tile) => tile.id === preferredId) ||
+      tiles.find((tile) => tile.char === firstChar);
+    if (!targetTile) return;
+    setHintUsedCount((prev) => Math.min(prev + 1, maxHints));
+    setHintPulse((prev) => prev + 1);
+    setHintedTileId(targetTile.id);
+    if (hintTimeoutRef.current !== null) {
+      window.clearTimeout(hintTimeoutRef.current);
+    }
+    hintTimeoutRef.current = window.setTimeout(() => {
+      setHintedTileId(null);
+      hintTimeoutRef.current = null;
+    }, 700);
+  };
 
   const checkAnswer = () => {
     const guess = tiles.map((tile) => tile.char).join("");
@@ -314,7 +379,7 @@ export default function FindEnglishWordPage() {
 
         <header className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 px-3 sm:px-0">
           <div className="space-y-2">
-            <Badge className="rounded-full bg-sky-100 text-sky-700 border border-sky-200">
+            <Badge className="rounded-full bg-sky-100 hover:bg-sky-100 text-sky-700 border border-sky-200">
               Round {index + 1} / {totalRounds}
             </Badge>
             <h1 className="text-2xl sm:text-3xl font-extrabold">
@@ -348,7 +413,20 @@ export default function FindEnglishWordPage() {
 
           <div className="relative z-10 space-y-6">
             <div className="rounded-2xl bg-white/70 border border-white/80 px-4 py-3 text-sm text-slate-700 shadow-sm">
-              Yordam: <span className="font-semibold">{current.hint}</span>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  Yordam: <span className="font-semibold">{current.hint}</span>
+                </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={triggerHint}
+                  disabled={remainingHints <= 0 || solved}
+                  className="rounded-xl sm:rounded-full"
+                >
+                  Yordam olish ({remainingHints}/{maxHints})
+                </Button>
+              </div>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 sm:mt-10 pb-6 sm:pb-0">
@@ -369,6 +447,8 @@ export default function FindEnglishWordPage() {
                       tile={tile}
                       disabled={solved}
                       solved={solved}
+                      hinted={tile.id === hintedTileId}
+                      hintPulse={hintPulse}
                     />
                   ))}
                 </SortableContext>

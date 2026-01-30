@@ -173,6 +173,10 @@
     opacity: 0;
     animation: fade-down 0.6s ease-out forwards;
   }
+
+  .animate-hint-pop {
+    animation: hint-pop 0.6s ease-in-out;
+  }
 }
 
 @keyframes accordion-down {
@@ -263,6 +267,18 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes hint-pop {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.18);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
