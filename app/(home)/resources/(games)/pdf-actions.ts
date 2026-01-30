@@ -1,7 +1,7 @@
 "use server";
 
 import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
-import type { PDFFont, PDFPage } from "pdf-lib";
+import type { Color, PDFFont, PDFPage } from "pdf-lib";
 
 type WordScramblePayload = {
   title: string;
@@ -134,7 +134,7 @@ const drawFraction = (
   numerator: number,
   denominator: number,
   size: number,
-  color?: { r: number; g: number; b: number },
+  color?: Color,
 ) => {
   const numText = String(numerator);
   const denText = String(denominator);
