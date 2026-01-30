@@ -1,10 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
+import { generateFractionAddPdf } from "../pdf-actions";
+import { downloadBase64File } from "@/utils/download-base64";
 
 type FractionExercise = {
   a: number;
@@ -19,29 +21,14 @@ const generateDenominator = (digits: 1 | 2 | 3) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-const gcd = (x: number, y: number) => {
-  let a = Math.abs(x);
-  let b = Math.abs(y);
-  while (b !== 0) {
-    [a, b] = [b, a % b];
-  }
-  return a || 1;
-};
-
-const simplify = (numerator: number, denominator: number) => {
-  const divisor = gcd(numerator, denominator);
-  return {
-    n: Math.floor(numerator / divisor),
-    d: Math.floor(denominator / divisor),
-  };
-};
-
 export default function FractionWorksheet() {
   const [denominatorDigits, setDenominatorDigits] = useState<1 | 2 | 3>(1);
   const [sameDenominator, setSameDenominator] = useState(false);
   const [exercises, setExercises] = useState<FractionExercise[]>([]);
   const [titleName, setTitleName] = useState("");
-  const printRef = useRef<HTMLDivElement>(null);
+  const [downloadMode, setDownloadMode] = useState<
+    "no-answers" | "answers" | null
+  >(null);
 
   const getTitle = () =>
     titleName.trim() || "Kasrlarni qo'shish bo'yicha 50 ta misol";
@@ -65,142 +52,22 @@ export default function FractionWorksheet() {
     setExercises(arr);
   };
 
-  const computeAnswer = (ex: FractionExercise) => {
-    const numerator = ex.a * ex.d + ex.c * ex.b;
-    const denominator = ex.b * ex.d;
-    return simplify(numerator, denominator);
-  };
-
-  const downloadPdf = (withAnswers: boolean = false) => {
-    if (!printRef.current || exercises.length === 0) return;
-
-    const printWindow = window.open("", "", "width=800,height=600");
-    if (!printWindow) return;
-
-    const title = getTitle();
-
-    const htmlExercises = exercises
-      .map((ex, i) => {
-        const answer = computeAnswer(ex);
-        return `
-          <div class="exercise">
-            <div class="exercise-number">${i + 1})</div>
-            <div class="fraction-row">
-              <div class="fraction">
-                <div class="num">${ex.a}</div>
-                <div class="line"></div>
-                <div class="den">${ex.b}</div>
-              </div>
-              <div class="symbol">+</div>
-              <div class="fraction">
-                <div class="num">${ex.c}</div>
-                <div class="line"></div>
-                <div class="den">${ex.d}</div>
-              </div>
-              <div class="symbol">=</div>
-              ${
-                withAnswers
-                  ? `<div class="fraction answer">
-                      <div class="num">${answer.n}</div>
-                      <div class="line"></div>
-                      <div class="den">${answer.d}</div>
-                    </div>`
-                  : `<div class="answer-space"></div>`
-              }
-            </div>
-          </div>
-        `;
-      })
-      .join("");
-
-    printWindow.document.write(`
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>${title}</title>
-          <style>
-            @media print {
-              @page { margin: 1cm; }
-              body { margin: 0; }
-            }
-            body {
-              font-family: 'Inter', 'Courier New', monospace;
-              padding: 18px;
-              background: white;
-            }
-            h1 {
-              text-align: center;
-              font-size: 22px;
-              margin-bottom: 22px;
-            }
-            .grid {
-              display: grid;
-              grid-template-columns: repeat(2, 1fr);
-              gap: 22px 24px;
-            }
-            .exercise {
-              page-break-inside: avoid;
-              font-size: 16px;
-            }
-            .exercise-number {
-              font-size: 12px;
-              margin-bottom: 6px;
-              color: #444;
-            }
-            .fraction-row {
-              display: grid;
-              grid-template-columns: auto 16px auto 16px 1fr;
-              align-items: center;
-              gap: 8px;
-            }
-            .fraction {
-              display: inline-flex;
-              flex-direction: column;
-              align-items: center;
-              min-width: 46px;
-              max-width: 60px;
-            }
-            .fraction .line {
-              width: 100%;
-              border-bottom: 2px solid #000;
-              margin: 3px 0;
-            }
-            .symbol {
-              text-align: center;
-              font-weight: bold;
-            }
-            .answer-space {
-              height: 32px;
-              border-bottom: 2px dashed #999;
-              width: 64px;
-              margin-left: 6px;
-            }
-            .answer .line {
-              border-bottom-color: #1f2937;
-            }
-              .answer .num{
-              color:red;
-              }
-              .answer .den{
-              color:red;
-              }
-          </style>
-        </head>
-        <body>
-          <h1>${title}</h1>
-          <div class="grid">
-            ${htmlExercises}
-          </div>
-        </body>
-      </html>
-    `);
-
-    printWindow.document.close();
-
-    setTimeout(() => {
-      printWindow.print();
-      printWindow.onafterprint = () => printWindow.close();
-    }, 250);
+  const downloadPdf = async (withAnswers: boolean = false) => {
+    if (exercises.length === 0 || downloadMode) return;
+    setDownloadMode(withAnswers ? "answers" : "no-answers");
+    try {
+      const result = await generateFractionAddPdf({
+        title: getTitle(),
+        withAnswers,
+        exercises,
+      });
+      downloadBase64File({
+        base64: result.base64,
+        filename: result.filename,
+      });
+    } finally {
+      setDownloadMode(null);
+    }
   };
 
   return (
@@ -269,16 +136,27 @@ export default function FractionWorksheet() {
                 <div className="space-y-2">
                   <Button
                     onClick={() => downloadPdf(false)}
+                    disabled={downloadMode !== null}
                     className="w-full bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl py-3 font-semibold"
                   >
-                    📄 PDF yuklab olish (javobsiz)
+                    {downloadMode === "no-answers"
+                      ? "⏳ Tayyorlanmoqda..."
+                      : "📄 PDF yuklab olish (javobsiz)"}
                   </Button>
                   <Button
                     onClick={() => downloadPdf(true)}
+                    disabled={downloadMode !== null}
                     className="w-full bg-rose-600 hover:bg-rose-700 text-white rounded-xl py-3 font-semibold"
                   >
-                    📄 Javoblari bilan yuklab olish
+                    {downloadMode === "answers"
+                      ? "⏳ Tayyorlanmoqda..."
+                      : "📄 Javoblari bilan yuklab olish"}
                   </Button>
+                  <div className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-800 sm:hidden">
+                    Mobil brauzerda PDF yuklab olish cheklangan bo‘lishi mumkin.
+                    Iltimos, saytni tashqi brauzerda oching: yuqori o‘ng
+                    burchakdagi (⋮) menyuni bosing.
+                  </div>
                 </div>
               )}
             </CardContent>
@@ -291,10 +169,7 @@ export default function FractionWorksheet() {
                 tugmasini bosing.
               </div>
             ) : (
-              <div
-                ref={printRef}
-                className="bg-white rounded-3xl shadow-2xl p-8 md:p-10"
-              >
+              <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10">
                 <h1 className="text-center text-3xl font-bold mb-6 text-slate-800">
                   {getTitle()}
                 </h1>

@@ -1,17 +1,21 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
+import { generateMath23Pdf } from "../pdf-actions";
+import { downloadBase64File } from "@/utils/download-base64";
 
 export default function WorksheetGenerator() {
   const [digit, setDigit] = useState(2);
   const [operation, setOperation] = useState<"+" | "-" | "*">("-");
   const [exercises, setExercises] = useState<{ a: number; b: number }[]>([]);
   const [titleName, setTitleName] = useState(""); // ism / sarlavha
-  const printRef = useRef<HTMLDivElement>(null);
+  const [downloadMode, setDownloadMode] = useState<
+    "no-answers" | "answers" | null
+  >(null);
 
   const generateNumber = (digits: number) => {
     const min = Math.pow(10, digits - 1);
@@ -25,12 +29,6 @@ export default function WorksheetGenerator() {
     if (operation === "-") return "Ayirishga oid misollar";
     if (operation === "+") return "Qo'shishga oid misollar";
     return "Ko'paytirishga oid misollar";
-  };
-
-  const computeResult = (a: number, b: number, op: "+" | "-" | "*") => {
-    if (op === "+") return a + b;
-    if (op === "-") return a - b;
-    return a * b;
   };
 
   const generateWorksheet = () => {
@@ -49,100 +47,23 @@ export default function WorksheetGenerator() {
     setExercises(arr);
   };
 
-  const downloadPdf = (withAnswers: boolean = false) => {
-    if (!printRef.current || exercises.length === 0) return;
-
-    const printWindow = window.open("", "", "width=800,height=600");
-    if (!printWindow) return;
-
-    const title = getTitle();
-
-    const htmlExercises = exercises
-      .map((ex, i) => {
-        const result = computeResult(ex.a, ex.b, operation);
-        return `
-          <div class="exercise">
-            <div class="exercise-number">${i + 1})</div>
-            <div class="exercise-content">
-              <div class="number">${ex.a}</div>
-              <div class="number">${operation} ${ex.b}</div>
-              <div class="line"></div>
-              ${withAnswers ? `<div class="answer"> ${result}</div>` : ""}
-            </div>
-          </div>
-        `;
-      })
-      .join("");
-
-    printWindow.document.write(`
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>${title}</title>
-          <style>
-            @media print {
-              @page { margin: 1cm; }
-              body { margin: 0; }
-            }
-            body {
-              font-family: 'Courier New', monospace;
-              padding: 20px;
-              background: white;
-            }
-            h1 {
-              text-align: center;
-              font-size: 24px;
-              margin-bottom: 30px;
-            }
-            .grid {
-              display: grid;
-              grid-template-columns: repeat(4, 1fr);
-              gap: 40px 30px;
-            }
-            .exercise {
-              page-break-inside: avoid;
-            }
-            .exercise-number {
-              font-size: 12px;
-              margin-bottom: 5px;
-            }
-            .exercise-content {
-              padding-left: 20px;
-            }
-            .number {
-              text-align: right;
-              font-size: 16px;
-            }
-            .line {
-              border-bottom: 2px solid black;
-              margin-top: 5px;
-              width: 60px;
-              margin-left: auto;
-            }
-            .answer {
-              margin-top: 4px;
-              text-align: right;
-              font-size: 14px;
-              color: red;
-              font-weight: bold;
-            }
-          </style>
-        </head>
-        <body>
-          <h1>${title}</h1>
-          <div class="grid">
-            ${htmlExercises}
-          </div>
-        </body>
-      </html>
-    `);
-
-    printWindow.document.close();
-
-    setTimeout(() => {
-      printWindow.print();
-      printWindow.onafterprint = () => printWindow.close();
-    }, 250);
+  const downloadPdf = async (withAnswers: boolean = false) => {
+    if (exercises.length === 0 || downloadMode) return;
+    setDownloadMode(withAnswers ? "answers" : "no-answers");
+    try {
+      const result = await generateMath23Pdf({
+        title: getTitle(),
+        withAnswers,
+        operation,
+        exercises,
+      });
+      downloadBase64File({
+        base64: result.base64,
+        filename: result.filename,
+      });
+    } finally {
+      setDownloadMode(null);
+    }
   };
 
   return (
@@ -220,16 +141,27 @@ export default function WorksheetGenerator() {
                 <div className="space-y-2">
                   <Button
                     onClick={() => downloadPdf(false)}
+                    disabled={downloadMode !== null}
                     className="w-full bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl py-3 font-semibold"
                   >
-                    📄 PDF yuklab olish (javobsiz)
+                    {downloadMode === "no-answers"
+                      ? "⏳ Tayyorlanmoqda..."
+                      : "📄 PDF yuklab olish (javobsiz)"}
                   </Button>
                   <Button
                     onClick={() => downloadPdf(true)}
+                    disabled={downloadMode !== null}
                     className="w-full bg-rose-600 hover:bg-rose-700 text-white rounded-xl py-3 font-semibold"
                   >
-                    📄 Javoblari bilan yuklab olish
+                    {downloadMode === "answers"
+                      ? "⏳ Tayyorlanmoqda..."
+                      : "📄 Javoblari bilan yuklab olish"}
                   </Button>
+                  <div className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-800 sm:hidden">
+                    Mobil brauzerda PDF yuklab olish cheklangan bo‘lishi mumkin.
+                    Iltimos, saytni tashqi brauzerda oching: yuqori o‘ng
+                    burchakdagi (⋮) menyuni bosing.
+                  </div>
                 </div>
               )}
             </CardContent>
@@ -243,10 +175,7 @@ export default function WorksheetGenerator() {
                 bosing.
               </div>
             ) : (
-              <div
-                ref={printRef}
-                className="bg-white rounded-3xl shadow-2xl p-10"
-              >
+              <div className="bg-white rounded-3xl shadow-2xl p-10">
                 <h1 className="text-center text-3xl font-bold mb-8">
                   {getTitle()}
                 </h1>

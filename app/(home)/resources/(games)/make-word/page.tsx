@@ -1,17 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
+import { generateWordScramblePdf } from "../pdf-actions";
+import { downloadBase64File } from "@/utils/download-base64";
 
 export default function WordScrambleGame() {
   const [rawWords, setRawWords] = useState("davlat\nfutbol\nhayot\nbahor");
   const [words, setWords] = useState<string[]>([]);
   const [scrambled, setScrambled] = useState<string[]>([]);
   const [titleText, setTitleText] = useState("");
-  const printRef = useRef<HTMLDivElement>(null);
+  const [isDownloading, setIsDownloading] = useState(false);
 
   const effectiveTitle =
     titleText.trim().length > 0 ? titleText.trim() : "Aralash so'zlar";
@@ -41,74 +43,21 @@ export default function WordScrambleGame() {
     setScrambled(list.map((w) => scrambleWord(w)));
   };
 
-  const downloadPdf = () => {
-    if (!words.length) return;
-
-    const win = window.open("", "", "width=800,height=600");
-    if (!win) return;
-
-    const rows = scrambled
-      .map(
-        (scr) => `
-        <div class="row">
-          <div class="scrambled">${scr.toUpperCase()}</div>
-          <div class="line"></div>
-        </div>
-      `
-      )
-      .join("");
-
-    win.document.write(`
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>${effectiveTitle}</title>
-          <style>
-            @media print {
-              @page { margin: 1cm; }
-              body { margin: 0; }
-            }
-            body {
-              font-family: Arial, Helvetica, sans-serif;
-              padding: 40px 60px;
-              background: white;
-            }
-            h1 {
-              text-align: center;
-              font-size: 28px;
-              margin-bottom: 40px;
-            }
-            .row {
-              display: flex;
-              align-items: center;
-              margin-bottom: 24px;
-            }
-            .scrambled {
-              width: 160px;
-              font-size: 20px;
-              letter-spacing: 0.18em;
-            }
-            .line {
-              border-bottom: 2px solid black;
-              margin-left: 40px;
-              margin-top:11px;
-              width: 180px; /* kichikroq chiziq */
-            }
-          </style>
-        </head>
-        <body>
-          <h1>${effectiveTitle}</h1>
-          ${rows}
-        </body>
-      </html>
-    `);
-
-    win.document.close();
-
-    setTimeout(() => {
-      win.print();
-      win.onafterprint = () => win.close();
-    }, 250);
+  const downloadPdf = async () => {
+    if (!words.length || isDownloading) return;
+    setIsDownloading(true);
+    try {
+      const result = await generateWordScramblePdf({
+        title: effectiveTitle,
+        words: scrambled,
+      });
+      downloadBase64File({
+        base64: result.base64,
+        filename: result.filename,
+      });
+    } finally {
+      setIsDownloading(false);
+    }
   };
 
   return (
@@ -162,12 +111,22 @@ export default function WordScrambleGame() {
               </Button>
 
               {words.length > 0 && (
-                <Button
-                  onClick={downloadPdf}
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl py-3 font-semibold"
-                >
-                  📄 Yuklab olish (pdf)
-                </Button>
+                <>
+                  <Button
+                    onClick={downloadPdf}
+                    disabled={isDownloading}
+                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl py-3 font-semibold"
+                  >
+                    {isDownloading
+                      ? "⏳ Tayyorlanmoqda..."
+                      : "📄 Yuklab olish (pdf)"}
+                  </Button>
+                  <div className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-800 sm:hidden">
+                    Mobil brauzerda PDF yuklab olish cheklangan bo‘lishi mumkin.
+                    Iltimos, saytni tashqi brauzerda oching: yuqori o‘ng
+                    burchakdagi (⋮) menyuni bosing.
+                  </div>
+                </>
               )}
             </CardContent>
           </Card>
@@ -180,10 +139,7 @@ export default function WordScrambleGame() {
                 tugmasini bosing.
               </div>
             ) : (
-              <div
-                ref={printRef}
-                className="bg-white rounded-3xl shadow-2xl p-10"
-              >
+              <div className="bg-white rounded-3xl shadow-2xl p-10">
                 <h1 className="text-center text-3xl font-bold mb-10">
                   {effectiveTitle}
                 </h1>

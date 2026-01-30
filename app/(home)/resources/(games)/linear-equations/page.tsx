@@ -1,9 +1,11 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
+import { generateLinearEquationsPdf } from "../pdf-actions";
+import { downloadBase64File } from "@/utils/download-base64";
 
 type Magnitude = "small" | "medium" | "large";
 
@@ -54,11 +56,11 @@ const buildEquation = (magnitude: Magnitude): EquationItem => {
   const signToStr = (v: number) => (v === 1 ? "+" : "−");
 
   const text = `${m1}(${formatNumber(c1)}x ${signToStr(sign1)} ${formatNumber(
-    k1
+    k1,
   )}) ${signToStr(between)} ${m2}(${formatNumber(c2)}x ${signToStr(
-    sign2
+    sign2,
   )} ${formatNumber(k2)}) ${signToStr(tailSign)} ${formatNumber(
-    tailConst
+    tailConst,
   )} = ${formatNumber(rhs)}`;
 
   return { text, solution };
@@ -68,97 +70,31 @@ export default function LinearEquationGenerator() {
   const [magnitude, setMagnitude] = useState<Magnitude>("medium");
   const [count, setCount] = useState(30);
   const [equations, setEquations] = useState<EquationItem[]>([]);
-  const printRef = useRef<HTMLDivElement>(null);
+  const [downloadMode, setDownloadMode] = useState<
+    "no-answers" | "answers" | null
+  >(null);
 
   const generate = () => {
     const items = Array.from({ length: count }, () => buildEquation(magnitude));
     setEquations(items);
   };
 
-  const downloadPdf = (withAnswers: boolean) => {
-    if (!printRef.current || equations.length === 0) return;
-
-    const printWindow = window.open("", "", "width=800,height=600");
-    if (!printWindow) return;
-
-    const htmlExercises = equations
-      .map(
-        (eq, idx) => `
-        <div class="eq">
-          <div class="idx">${idx + 1})</div>
-          <div class="content">
-            <span class="expr">${eq.text}</span>
-            ${
-              withAnswers
-                ? `<span class="ans">x = ${formatNumber(eq.solution)}</span>`
-                : `<span class="ans blank">x=?</span>`
-            }
-          </div>
-        </div>
-      `
-      )
-      .join("");
-
-    printWindow.document.write(`
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>Tenglamalar varaqasi</title>
-          <style>
-            @media print {
-              @page { margin: 1cm; }
-              body { margin: 0; }
-            }
-            body {
-              font-family: 'Times New Roman', serif;
-              padding: 20px;
-            }
-            h1 {
-              text-align: center;
-              font-size: 22px;
-              margin-bottom: 18px;
-            }
-            .grid {
-              display: grid;
-              grid-template-columns: repeat(1, 1fr);
-              gap: 14px;
-            }
-            .eq {
-              display: grid;
-              grid-template-columns: 32px 1fr;
-              align-items: center;
-              page-break-inside: avoid;
-            }
-            .expr {
-              font-size: 16px;
-            }
-            .ans {
-              margin-left: 12px;
-              font-size: 14px;
-              color: #2563eb;
-            }
-            .ans.blank {
-              display: inline-block;
-              min-width: 100px;
-              border-bottom: 1px dashed #999;
-              height: 16px;
-            }
-          </style>
-        </head>
-        <body>
-          <h1>Chiziqli tenglamalar (x toping)</h1>
-          <div class="grid">
-            ${htmlExercises}
-          </div>
-        </body>
-      </html>
-    `);
-    printWindow.document.close();
-
-    setTimeout(() => {
-      printWindow.print();
-      printWindow.onafterprint = () => printWindow.close();
-    }, 250);
+  const downloadPdf = async (withAnswers: boolean) => {
+    if (equations.length === 0 || downloadMode) return;
+    setDownloadMode(withAnswers ? "answers" : "no-answers");
+    try {
+      const result = await generateLinearEquationsPdf({
+        title: "Chiziqli tenglamalar (x toping)",
+        withAnswers,
+        equations,
+      });
+      downloadBase64File({
+        base64: result.base64,
+        filename: result.filename,
+      });
+    } finally {
+      setDownloadMode(null);
+    }
   };
 
   return (
@@ -214,16 +150,27 @@ export default function LinearEquationGenerator() {
                 <div className="space-y-2">
                   <Button
                     onClick={() => downloadPdf(false)}
+                    disabled={downloadMode !== null}
                     className="w-full bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl py-3 font-semibold"
                   >
-                    📄 PDF yuklab olish (javobsiz)
+                    {downloadMode === "no-answers"
+                      ? "⏳ Tayyorlanmoqda..."
+                      : "📄 PDF yuklab olish (javobsiz)"}
                   </Button>
                   <Button
                     onClick={() => downloadPdf(true)}
+                    disabled={downloadMode !== null}
                     className="w-full bg-rose-600 hover:bg-rose-700 text-white rounded-xl py-3 font-semibold"
                   >
-                    📄 Javoblari bilan yuklab olish
+                    {downloadMode === "answers"
+                      ? "⏳ Tayyorlanmoqda..."
+                      : "📄 Javoblari bilan yuklab olish"}
                   </Button>
+                  <div className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-800 sm:hidden">
+                    Mobil brauzerda PDF yuklab olish cheklangan bo‘lishi mumkin.
+                    Iltimos, saytni tashqi brauzerda oching: yuqori o‘ng
+                    burchakdagi (⋮) menyuni bosing.
+                  </div>
                 </div>
               )}
             </CardContent>
@@ -236,10 +183,7 @@ export default function LinearEquationGenerator() {
                 tugmasini bosing.
               </div>
             ) : (
-              <div
-                ref={printRef}
-                className="bg-white rounded-3xl shadow-2xl px-4 py-5  md:p-10"
-              >
+              <div className="bg-white rounded-3xl shadow-2xl px-4 py-5  md:p-10">
                 <h1 className="text-center text-3xl font-bold mb-6 text-slate-800">
                   Chiziqli tenglamalar (x ni toping)
                 </h1>
