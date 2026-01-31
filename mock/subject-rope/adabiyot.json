@@ -1,0 +1,2202 @@
+[
+  {
+    "id": 1,
+    "question": "Alisher Navoiyning besh dostondan iborat yirik asari nima?",
+    "options": [
+      "Devon",
+      "G'azallar",
+      "Munojat",
+      "Xamsa"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 2,
+    "question": "Mubolag'a nimani anglatadi?",
+    "options": [
+      "Jonlantirish",
+      "O'xshatish",
+      "Zidlik",
+      "Bo'rttirib tasvirlash"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 3,
+    "question": "'O'tkan kunlar' romanining muallifi kim?",
+    "options": [
+      "Cho'lpon",
+      "Oybek",
+      "Abdulla Qahhor",
+      "Abdulla Qodiriy"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 4,
+    "question": "Peyzaj nimani anglatadi?",
+    "options": [
+      "Inson qiyofasi",
+      "Tabiat tasviri",
+      "Xona ko'rinishi",
+      "Qahramon nutqi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 5,
+    "question": "Zahiriddin Muhammad Bobur qaysi asari bilan mashhur?",
+    "options": [
+      "Xamsa",
+      "Boburnoma",
+      "O'tkan kunlar",
+      "Yulduzli tunlar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 6,
+    "question": "Tashxis nimani anglatadi?",
+    "options": [
+      "Zidlash",
+      "Taqqoslash",
+      "Jonlantirish",
+      "Kichraytirish"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 7,
+    "question": "O'zbek hikoyachiligi ustasi deb kimni ataymiz?",
+    "options": [
+      "Abdulla Qahhor",
+      "Said Ahmad",
+      "G'afur G'ulom",
+      "Oybek"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 8,
+    "question": "Kulminatsiya nimani anglatadi?",
+    "options": [
+      "Voqealar boshlanishi",
+      "Eng yuqori nuqta",
+      "Yechim",
+      "Kirish"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 9,
+    "question": "G'afur G'ulomning qaysi asari mashhur?",
+    "options": [
+      "Shum bola",
+      "Ufq",
+      "Navoiy",
+      "Sariq devni minib"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 10,
+    "question": "Epitet nimani anglatadi?",
+    "options": [
+      "Majoziy tasvir",
+      "O'xshatish",
+      "Badiiy aniqlovchi",
+      "Zidlik"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 11,
+    "question": "Amir Temurning hayoti bayon etilgan asar?",
+    "options": [
+      "Xamsa",
+      "Boburnoma",
+      "Temur tuzuklari",
+      "Alpomish"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 12,
+    "question": "Portret nimani anglatadi?",
+    "options": [
+      "Tabiat tasviri",
+      "Xulosa",
+      "Ichki kechinma",
+      "Qahramonning tashqi qiyofasi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 13,
+    "question": "Zulfiyaning turmush o'rtog'i, shoir?",
+    "options": [
+      "Erkin Vohidov",
+      "Cho'lpon",
+      "Abdulla Oripov",
+      "Hamid Olimjon"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 14,
+    "question": "Tazod nimani anglatadi?",
+    "options": [
+      "Zidlantirish",
+      "Mubolag'a",
+      "O'xshatish",
+      "Jonlantirish"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 15,
+    "question": "'Yulduzli tunlar' romani muallifi?",
+    "options": [
+      "Odil Yoqubov",
+      "Fitrat",
+      "Oybek",
+      "Pirimqul Qodirov"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 16,
+    "question": "Dialog nimani anglatadi?",
+    "options": [
+      "Bir kishi nutqi",
+      "Ikki kishi suhbati",
+      "Muallif izohi",
+      "Voqealar rivoji"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 17,
+    "question": "Abu Ali ibn Sino qaysi soha olimi?",
+    "options": [
+      "Matematika",
+      "Geografiya",
+      "Astronomiya",
+      "Tibbiyot"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 18,
+    "question": "Interyer nimani anglatadi?",
+    "options": [
+      "Bino ichki ko'rinishi",
+      "Nutq",
+      "Tabiat tasviri",
+      "Kiyimlar tasviri"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 19,
+    "question": "Birinchi o'zbek dramasi muallifi?",
+    "options": [
+      "Behbudiy",
+      "Cho'lpon",
+      "Fitrat",
+      "Hamza"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 20,
+    "question": "Monolog nimani anglatadi?",
+    "options": [
+      "Suhbat",
+      "Qofiya",
+      "Majoziy tasvir",
+      "Bir kishining nutqi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 21,
+    "question": "Al-Xorazmiy qaysi fanga asos solgan?",
+    "options": [
+      "Tarix",
+      "Biologiya",
+      "Algebra",
+      "Adabiyot"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 22,
+    "question": "Allegoriya nimani anglatadi?",
+    "options": [
+      "Bo'rttirish",
+      "O'xshatish",
+      "Majoziy tasvir",
+      "Xulosa"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 23,
+    "question": "'Dunyoning ishlari' asari muallifi?",
+    "options": [
+      "Shuhrat",
+      "Said Ahmad",
+      "Tohir Malik",
+      "O'tkir Hoshimov"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 24,
+    "question": "Remarka nimani anglatadi?",
+    "options": [
+      "Qofiya",
+      "Bosh qahramon",
+      "Muallif izohi",
+      "She'r turi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 25,
+    "question": "Mirzo Ulug'bek qaysi soha olimi bo'lgan?",
+    "options": [
+      "Astronomiya",
+      "Fizika",
+      "Kimyo",
+      "Tibbiyot"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 26,
+    "question": "Syujet nimani anglatadi?",
+    "options": [
+      "Qahramon kiyimi",
+      "Tabiat tasviri",
+      "Kitob nomi",
+      "Voqealar ketma-ketligi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 27,
+    "question": "'Kecha va kunduz' romani muallifi?",
+    "options": [
+      "Said Ahmad",
+      "Fitrat",
+      "Oybek",
+      "Cho'lpon"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 28,
+    "question": "Tashbeh nimani anglatadi?",
+    "options": [
+      "Zidlik",
+      "Mubolag'a",
+      "Jonlantirish",
+      "O'xshatish"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 29,
+    "question": "Abu Rayhon Beruniy qaysi asar muallifi?",
+    "options": [
+      "Ufq",
+      "Qanunul Mas'udiy",
+      "O'tkan kunlar",
+      "Xamsa"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 30,
+    "question": "Ekspozitsiya nimani anglatadi?",
+    "options": [
+      "Eng keskin nuqta",
+      "Yechim",
+      "Kirish, tanishtirish",
+      "Xotima"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 31,
+    "question": "'Sariq devni minib' asari muallifi?",
+    "options": [
+      "Hamid Olimjon",
+      "Anvar Obidjon",
+      "G'afur G'ulom",
+      "Xudoyberdi To'xtaboyev"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 32,
+    "question": "Talmih nimani anglatadi?",
+    "options": [
+      "Bo'rttirish",
+      "Tarixiy voqeaga ishora",
+      "Jonlantirish",
+      "Zidlik"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 33,
+    "question": "Erkin Vohidovning mashhur she'ri?",
+    "options": [
+      "Bahor",
+      "Vatan",
+      "Ona tili",
+      "O'zbegim"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 34,
+    "question": "Epilog nimani anglatadi?",
+    "options": [
+      "Muqaddima",
+      "Tugun",
+      "Voqealar rivoji",
+      "Xotima, yakun"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 35,
+    "question": "Said Ahmadning qaysi asari mashhur?",
+    "options": [
+      "Navoiy",
+      "Ufq",
+      "Sariq devni minib",
+      "Mehrobdan chayon"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 36,
+    "question": "Metafora nimani anglatadi?",
+    "options": [
+      "Vazn",
+      "Ko'chma ma'no",
+      "Qofiya",
+      "To'g'ri ma'no"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 37,
+    "question": "O'zbekiston Davlat Madhiyasi matni muallifi?",
+    "options": [
+      "Abdulla Oripov",
+      "Erkin Vohidov",
+      "Muhammad Yusuf",
+      "Zulfiya"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 38,
+    "question": "Prolog nimani anglatadi?",
+    "options": [
+      "Yechim",
+      "Xulosa",
+      "Asar o'rtasi",
+      "Muqaddima, kirish"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 39,
+    "question": "Muhammad Yusuf qaysi mavzuda she'rlar yozgan?",
+    "options": [
+      "Fizika",
+      "Matematika",
+      "Vatan va sevgi",
+      "Astronomiya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 40,
+    "question": "Masal nimani anglatadi?",
+    "options": [
+      "Tragediya",
+      "Majoziy hikoya",
+      "Roman",
+      "Doston"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 41,
+    "question": "Ibn Sinoning tibbiyotga oid asari?",
+    "options": [
+      "O'tkan kunlar",
+      "Al-jabr",
+      "Zij",
+      "Tib qonunlari"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 42,
+    "question": "Ruboiy nimani anglatadi?",
+    "options": [
+      "Ikki misrali",
+      "To'rt misrali she'r",
+      "Olti misrali",
+      "Doston"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 43,
+    "question": "Odil Yoqubovning mashhur romani?",
+    "options": [
+      "Ulug'bek xazinasi",
+      "Shum bola",
+      "Ufq",
+      "Mehrobdan chayon"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 44,
+    "question": "Janr nimani anglatadi?",
+    "options": [
+      "Asarning bo'limi",
+      "Asar nomi",
+      "Asarning turi",
+      "Muallif ismi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 45,
+    "question": "Jaloliddin Rumiy qaysi asar muallifi?",
+    "options": [
+      "Navoiy",
+      "Boburnoma",
+      "Masnaviy",
+      "Xamsa"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 46,
+    "question": "Tragediya nimani anglatadi?",
+    "options": [
+      "Sarguzasht",
+      "Kulgili asar",
+      "Fojiali asar",
+      "Mif"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 47,
+    "question": "Alisher Navoiy qaysi asr adibi?",
+    "options": [
+      "XV asr",
+      "XII asr",
+      "XX asr",
+      "X asr"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 48,
+    "question": "Komediya nimani anglatadi?",
+    "options": [
+      "Kulgili asar",
+      "Fojia",
+      "Doston",
+      "Ertak"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 49,
+    "question": "Oybekning mashhur romani?",
+    "options": [
+      "Shum bola",
+      "Ufq",
+      "O'g'ri",
+      "Navoiy"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 50,
+    "question": "Qofiya nimani anglatadi?",
+    "options": [
+      "Misra oxiridagi ohangdoshlik",
+      "Asar nomi",
+      "Rasm",
+      "Vazn"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 51,
+    "question": "O'zbekiston Qahramoni, shoir Abdulla Oripov qaysi asar muallifi?",
+    "options": [
+      "Jannatga yo'l",
+      "Ona tili",
+      "Sog'inch",
+      "O'zbegim"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 52,
+    "question": "Satira nimani anglatadi?",
+    "options": [
+      "Achchiq va fosh qiluvchi kulgi",
+      "Yengil hazil",
+      "Maqtov",
+      "Tabiat tasviri"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 53,
+    "question": "Abdulla Qahhorning 'O'g'ri' hikoyasidagi asosiy qahramon kim?",
+    "options": [
+      "Qobil bobo",
+      "Amin",
+      "Eshon",
+      "Sotiboldi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 54,
+    "question": "Aforizm nimani anglatadi?",
+    "options": [
+      "Qisqa va hikmatli so'z",
+      "Uzoq doston",
+      "Qofiya turi",
+      "Asar bo'limi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 55,
+    "question": "Algebra fanining otasi deb kim tan olingan?",
+    "options": [
+      "Al-Xorazmiy",
+      "Ibn Sino",
+      "Beruniy",
+      "Ulug'bek"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 56,
+    "question": "Lirika nimani anglatadi?",
+    "options": [
+      "Voqeali asar",
+      "Miflar",
+      "Sahna asari",
+      "Hissiyot va kechinmalarni ifodalovchi tur"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 57,
+    "question": "Zahiriddin Muhammad Boburning qizi, 'Humoyunnoma' muallifi kim?",
+    "options": [
+      "Nodira",
+      "Gulbadanbegim",
+      "Uvaysiy",
+      "Zebunniso"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 58,
+    "question": "Tugun (zavyazka) nimani anglatadi?",
+    "options": [
+      "Voqealar yechimi",
+      "Ziddiyatning boshlanish nuqtasi",
+      "Asar yakuni",
+      "Kirish"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 59,
+    "question": "'Mehrobdan chayon' romani muallifi kim?",
+    "options": [
+      "Abdulla Qahhor",
+      "Cho'lpon",
+      "Abdulla Qodiriy",
+      "Oybek"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 60,
+    "question": "Sarkazm nimani anglatadi?",
+    "options": [
+      "Yengil hazil",
+      "O'xshatish",
+      "Mubolag'a",
+      "Zaharxanda, achchiq kesatiq"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 61,
+    "question": "Abu Rayhon Beruniy qaysi shaharda tug'ilgan?",
+    "options": [
+      "Buxoro",
+      "Kat (Xorazm)",
+      "Samarqand",
+      "Xiva"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 62,
+    "question": "Ballada nimani anglatadi?",
+    "options": [
+      "Qisqa hikoya",
+      "Lirik-epik xarakterdagi she'riy asar",
+      "Dramatik asar",
+      "Masal"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 63,
+    "question": "Zulfiyaning mashhur she'ri qaysi?",
+    "options": [
+      "Vatan",
+      "O'zbegim",
+      "Sog'inch",
+      "Bahor keldi seni so'roqlab"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 64,
+    "question": "Metonimiya nimani anglatadi?",
+    "options": [
+      "Bo'rttirish",
+      "Nomni boshqasiga ko'chirish",
+      "Zidlik",
+      "Jonlantirish"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 65,
+    "question": "Hamid Olimjonning 'Zaynab va Omon' asari qaysi janrda?",
+    "options": [
+      "Roman",
+      "Doston",
+      "Hikoya",
+      "Drama"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 66,
+    "question": "Annotatsiya nimani anglatadi?",
+    "options": [
+      "Asar qahramoni",
+      "Kitobning qisqa tavsifi",
+      "Muallif hayoti",
+      "Qofiya"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 67,
+    "question": "'Ulug'bek xazinasi' romanidagi Ulug'bekning shogirdi kim?",
+    "options": [
+      "Navoiy",
+      "Ibn Sino",
+      "Bobur",
+      "Ali Qushchi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 68,
+    "question": "Ritual nimani anglatadi?",
+    "options": [
+      "Majoziy obraz",
+      "Asar nomi",
+      "Marosim tartibi",
+      "She'r turi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 69,
+    "question": "Maqsud Shayxzodaning mashhur dramasi?",
+    "options": [
+      "Jaloliddin Manguberdi",
+      "Alisher Navoiy",
+      "Boy ila xizmatchi",
+      "Padarkush"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 70,
+    "question": "Yumor nimani anglatadi?",
+    "options": [
+      "Tarixiy asar",
+      "Zaharxanda kulgi",
+      "Fojia",
+      "Beozor, xushchaqchaq kulgi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 71,
+    "question": "'Alpomish' dostonida Alpomishning yori kim?",
+    "options": [
+      "Qaldirg'och",
+      "Zuhra",
+      "Barchinoy",
+      "Kumush"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 72,
+    "question": "Epika nimani anglatadi?",
+    "options": [
+      "Hissiyotli tur",
+      "Voqeaband, hikoya qiluvchi tur",
+      "Sahna turi",
+      "Qisqa she'r"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 73,
+    "question": "Ogahiy qaysi adabiy muhit vakili?",
+    "options": [
+      "Qo'qon",
+      "Buxoro",
+      "Xiva",
+      "Toshkent"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 74,
+    "question": "Xronotop nimani anglatadi?",
+    "options": [
+      "Asar yechimi",
+      "Vaqt va makon birligi",
+      "Qahramon ismi",
+      "Tabiat tasviri"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 75,
+    "question": "Ibn Sinoning dunyoga mashhur asari?",
+    "options": [
+      "Zij",
+      "Al-jabr",
+      "Tib qonunlari",
+      "O'tkan kunlar"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 76,
+    "question": "Yechim (razvyazka) nimani anglatadi?",
+    "options": [
+      "Kirish",
+      "Asar boshlanishi",
+      "Voqealar tugallanishi",
+      "Eng keskin nuqta"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 77,
+    "question": "Tohir Malikning 'Alvido bolalik' asari qaysi janrda?",
+    "options": [
+      "She'riy to'plam",
+      "Doston",
+      "Drama",
+      "Qissa"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 78,
+    "question": "Ironiya nimani anglatadi?",
+    "options": [
+      "Piching, kinoya",
+      "Maqtov",
+      "Mubolag'a",
+      "O'xshatish"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 79,
+    "question": "Mirzo Ulug'bek Samarqandda nima qurdirgan?",
+    "options": [
+      "Rasadxona",
+      "Zavod",
+      "Teatr",
+      "Kutubxona"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 80,
+    "question": "Bob nimani anglatadi?",
+    "options": [
+      "Kitobning katta bo'limi",
+      "Asar muallifi",
+      "Qofiya turi",
+      "She'rning bir qatori"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 81,
+    "question": "Abdulla Qahhorning 'Bemor' hikoyasidagi qahramon?",
+    "options": [
+      "Qobil bobo",
+      "Otabek",
+      "Anvar",
+      "Sotiboldi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 82,
+    "question": "Mif nimani anglatadi?",
+    "options": [
+      "Haqiqiy voqea",
+      "Zamonaviy hikoya",
+      "Qadimiy afsonaviy tasavvur",
+      "She'riy vazn"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 83,
+    "question": "Muqimiy va Furqat qaysi shahar adabiy muhiti vakillari?",
+    "options": [
+      "Qo'qon",
+      "Namangan",
+      "Andijon",
+      "Buxoro"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 84,
+    "question": "Sifatlash (epitet) nimani anglatadi?",
+    "options": [
+      "Zidlik",
+      "Badiiy aniqlovchi",
+      "O'xshatish",
+      "Majoziy ma'no"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 85,
+    "question": "Chingiz Aytmatov qaysi millat vakili?",
+    "options": [
+      "O'zbek",
+      "Qirg'iz",
+      "Qozoq",
+      "Tojik"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 86,
+    "question": "Trilogiya nimani anglatadi?",
+    "options": [
+      "Ikkita she'r",
+      "To'rtta doston",
+      "Uchta mustaqil asardan iborat to'plam",
+      "Hikoya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 87,
+    "question": "Umar Xayyom qaysi janrning ustasi?",
+    "options": [
+      "G'azal",
+      "Doston",
+      "Qasida",
+      "Ruboiy"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 88,
+    "question": "Inversion nimani anglatadi?",
+    "options": [
+      "Vazn",
+      "O'xshatish",
+      "So'z tartibining buzilishi",
+      "Mubolag'a"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 89,
+    "question": "Fitratning mashhur she'ri?",
+    "options": [
+      "Bahor",
+      "O'zbegim",
+      "Mirrix yulduziga",
+      "Vatan"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 90,
+    "question": "Lirik qahramon nimani anglatadi?",
+    "options": [
+      "Yozuvchining o'zi",
+      "Asar dushmani",
+      "Kitobxon",
+      "She'rda his-tuyg'usi aytilgan shaxs"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 91,
+    "question": "Mahmud Qoshg'ariyning mashhur asari?",
+    "options": [
+      "Devonu lug'atit turk",
+      "Qutadg'u bilig",
+      "Xamsa",
+      "Boburnoma"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 92,
+    "question": "Masnaviy nimani anglatadi?",
+    "options": [
+      "Juft qofiyalangan she'r turi",
+      "To'rtlik",
+      "Yetti misrali she'r",
+      "Roman"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 93,
+    "question": "Cho'lponning haqiqiy ismi nima?",
+    "options": [
+      "Hamza",
+      "Abdurauf",
+      "Abdulhamid Sulaymon o'g'li",
+      "Abdulla"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 94,
+    "question": "Sarlavha nimani anglatadi?",
+    "options": [
+      "Rasm nomi",
+      "Asarning nomi",
+      "Oxirgi so'z",
+      "Muallif taxallusi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 95,
+    "question": "Mirzo Ulug'bekning ustozi kim?",
+    "options": [
+      "Qozizoda Rumiy",
+      "Navoiy",
+      "Ibn Sino",
+      "Beruniy"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 96,
+    "question": "Prolog nimani anglatadi?",
+    "options": [
+      "Tugun",
+      "Kirish qismi",
+      "Yechim",
+      "Xotima"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 97,
+    "question": "G'afur G'ulom nechanchi yilda tug'ilgan?",
+    "options": [
+      "1903-yil",
+      "1910-yil",
+      "1895-yil",
+      "1920-yil"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 98,
+    "question": "Qofiya nimani anglatadi?",
+    "options": [
+      "Misra oxiridagi ohangdoshlik",
+      "Asar vazni",
+      "Bo'lim nomi",
+      "Rasm"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 99,
+    "question": "Usmon Nosirning mashhur asari?",
+    "options": [
+      "Shum bola",
+      "O'tkan kunlar",
+      "Navoiy",
+      "Nil va Rim"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 100,
+    "question": "Obraz nimani anglatadi?",
+    "options": [
+      "Yozuv quroli",
+      "Kitob muqovasi",
+      "Vazn",
+      "Badiiy qahramon, timsol"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 101,
+    "question": "O'zbekiston Qahramoni Erkin Vohidovning o'zbek tili haqidagi mashhur asari?",
+    "options": [
+      "O'zbegim",
+      "Vatan",
+      "So'z latofati",
+      "Inson"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 102,
+    "question": "Retrospeksiya nimani anglatadi?",
+    "options": [
+      "Kelajakka qarash",
+      "O'tmishga qaytib hikoya qilish",
+      "Jonlantirish",
+      "Mubolag'a"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 103,
+    "question": "G'afur G'ulomning 'Sen yetim emassan' she'ri qaysi davrda yozilgan?",
+    "options": [
+      "Jadidchilik davri",
+      "Mustaqillik davri",
+      "Ikkinchi jahon urushi davri",
+      "Xonliklar davri"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 104,
+    "question": "Felyeton nimani anglatadi?",
+    "options": [
+      "Katta roman",
+      "She'riy vazn",
+      "Hajviy xarakterdagi gazeta maqolasi",
+      "Drama bo'limi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 105,
+    "question": "Al-Xorazmiyning 'Al-jabr' asari dunyo faniga nima berdi?",
+    "options": [
+      "Algebra fani",
+      "Tibbiyot",
+      "Geografiya",
+      "Tarix"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 106,
+    "question": "Kompozitsiya nimani anglatadi?",
+    "options": [
+      "Muallif taxallusi",
+      "Kitob narxi",
+      "Asar qismlarining o'zaro joylashishi",
+      "Qahramon ismi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 107,
+    "question": "Hamid Olimjonning 'Oygul va Baxtiyor' asari qaysi janrga kiradi?",
+    "options": [
+      "Masal",
+      "Hikoya",
+      "Drama",
+      "Ertak-doston"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 108,
+    "question": "Ritm nimani anglatadi?",
+    "options": [
+      "Kirish qismi",
+      "Ohangning bir tekis takrorlanishi",
+      "Asar yechimi",
+      "Majoziy ma'no"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 109,
+    "question": "Abdulla Qahhorning 'Anor' hikoyasidagi ayol qahramon ismi?",
+    "options": [
+      "Kumush",
+      "Tursunoy",
+      "O'lmas",
+      "Zaynab"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 110,
+    "question": "Giperbola nimani anglatadi?",
+    "options": [
+      "Kichraytirish",
+      "Zidlik",
+      "O'xshatish",
+      "Haddan tashqari bo'rttirish"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 111,
+    "question": "Sharq renessansi davri olimi, 'Ikkinchi muallim' kim?",
+    "options": [
+      "Beruniy",
+      "Ibn Sino",
+      "Abu Nasr Farobiy",
+      "Xorazmiy"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 112,
+    "question": "Drama asarlarida qahramonlarning o'zaro so'zlashuvi?",
+    "options": [
+      "Peyzaj",
+      "Dialog",
+      "Remarka",
+      "Monolog"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 113,
+    "question": "Mirtemirning mashhur she'ri qaysi?",
+    "options": [
+      "O'zbegim",
+      "Vatan",
+      "Surat",
+      "Bahor"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 114,
+    "question": "Litota nimani anglatadi?",
+    "options": [
+      "Jonlantirish",
+      "Bo'rttirish",
+      "O'xshatish",
+      "Haddan tashqari kichraytirish"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 115,
+    "question": "Xudoyberdi To'xtaboyevning 'Besh bolali yigitcha' asari muallifi?",
+    "options": [
+      "Anvar Obidjon",
+      "O'tkir Hoshimov",
+      "Said Ahmad",
+      "Xudoyberdi To'xtaboyev"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 116,
+    "question": "Vazn nimani anglatadi?",
+    "options": [
+      "Kitob og'irligi",
+      "Qahramon kuchi",
+      "She'rning o'lchovi",
+      "Sahna ko'rinishi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 117,
+    "question": "Oybekning 'Qutlug' qon' romani qaysi davr haqida?",
+    "options": [
+      "Mustaqillik",
+      "Amir Temur davri",
+      "Hozirgi kunlar",
+      "1916-yil qo'zg'oloni"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 118,
+    "question": "Patalogiya nimani anglatadi? (Adabiyotda obraz mantiqsizligi)",
+    "options": [
+      "Rivojlanish",
+      "Mantiqiy uzilish",
+      "Qofiya",
+      "Vazn"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 119,
+    "question": "O'zbek tili lug'atini (Devonu lug'atit turk) kim tuzgan?",
+    "options": [
+      "Navoiy",
+      "Mahmud Qoshg'ariy",
+      "Bobur",
+      "Beruniy"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 120,
+    "question": "Xarakter nimani anglatadi?",
+    "options": [
+      "Rasm",
+      "Qahramonning o'ziga xos tabiati",
+      "Asar muqovasi",
+      "Qofiya turi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 121,
+    "question": "Shukur Xolmirzayev qaysi janrning ustasi?",
+    "options": [
+      "Masal",
+      "Hikoya",
+      "G'azal",
+      "Mif"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 122,
+    "question": "Tip nimani anglatadi?",
+    "options": [
+      "Oddiy odam",
+      "Umumlashgan badiiy obraz",
+      "Muallif ismi",
+      "Kitob bo'limi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 123,
+    "question": "Odil Yoqubovning 'Diyonat' romani muallifi?",
+    "options": [
+      "Odil Yoqubov",
+      "Pirimqul Qodirov",
+      "Said Ahmad",
+      "Cho'lpon"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 124,
+    "question": "Sinekdoxa nimani anglatadi?",
+    "options": [
+      "Bo'rttirish",
+      "Zidlik",
+      "O'xshatish",
+      "Bo'lak orqali butunni ifodalash"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 125,
+    "question": "Alisher Navoiy 'Xamsa'ni necha yilda yozgan?",
+    "options": [
+      "2 yil",
+      "5 yil",
+      "1 yil",
+      "10 yil"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 126,
+    "question": "G'oya nimani anglatadi?",
+    "options": [
+      "Kitob narxi",
+      "Asarning asosiy fikri",
+      "Qahramon ismi",
+      "Sahna"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 127,
+    "question": "Tohir Malikning 'Shaytanat' asari qaysi janrda?",
+    "options": [
+      "Doston",
+      "She'r",
+      "Roman",
+      "Masal"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 128,
+    "question": "Inshat nimani anglatadi?",
+    "options": [
+      "She'rni baland ovozda o'qish",
+      "Yozma ish",
+      "Asar yakuni",
+      "Rasm chizish"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 129,
+    "question": "Uvaysiy qaysi shahar adabiy muhitida ijod qilgan?",
+    "options": [
+      "Samarqand",
+      "Xiva",
+      "Buxoro",
+      "Qo'qon"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 130,
+    "question": "Kontekst nimani anglatadi?",
+    "options": [
+      "Qofiya",
+      "Kitob muqovasi",
+      "So'z qo'llanilgan muhit",
+      "Rasm"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 131,
+    "question": "Zahiriddin Muhammad Boburning o'g'li kim?",
+    "options": [
+      "Akbar",
+      "Humoyun",
+      "Jahongir",
+      "Shohjahon"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 132,
+    "question": "Lirik chekinish nimani anglatadi?",
+    "options": [
+      "Yangi qahramon",
+      "Muallifning o'z his-tuyg'ularini kiritishi",
+      "Asarni tugatish",
+      "Tabiat tasviri"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 133,
+    "question": "Asqad Muxtorning 'Chinor' romani muallifi?",
+    "options": [
+      "Oybek",
+      "Said Ahmad",
+      "Asqad Muxtor",
+      "Cho'lpon"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 134,
+    "question": "Vaznning eng kichik bo'lagi?",
+    "options": [
+      "Band",
+      "Misra",
+      "Bayt",
+      "Rukn"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 135,
+    "question": "Amir Temurning poytaxti qaysi shahar bo'lgan?",
+    "options": [
+      "Toshkent",
+      "Buxoro",
+      "Andijon",
+      "Samarqand"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 136,
+    "question": "Epitet (Sifatlash) uchun misol?",
+    "options": [
+      "Kumush qish",
+      "Kitob o'qish",
+      "Uyga borish",
+      "Non yeyish"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 137,
+    "question": "Pahlavon Mahmud qaysi janr bilan mashhur?",
+    "options": [
+      "G'azal",
+      "Ruboiy",
+      "Roman",
+      "Drama"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 138,
+    "question": "Portret turlari?",
+    "options": [
+      "Uzoq va yaqin",
+      "Katta va kichik",
+      "Qora va oq",
+      "Tashqi va ichki"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 139,
+    "question": "Yusuf Xos Hojibning asari?",
+    "options": [
+      "Xamsa",
+      "Devonu lug'atit turk",
+      "Boburnoma",
+      "Qutadg'u bilig"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 140,
+    "question": "Dialog qaysi asarlarda ko'p uchraydi?",
+    "options": [
+      "Miflarda",
+      "G'azallarda",
+      "Dramatik asarlarda",
+      "Ruboiylarda"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 141,
+    "question": "Ahmad Yassaviy asari?",
+    "options": [
+      "Xamsa",
+      "Devoni hikmat",
+      "Ufq",
+      "Navoiy"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 142,
+    "question": "Stilistika nimani o'rganadi?",
+    "options": [
+      "Nutq uslublarini",
+      "Qofiyani",
+      "Vaznni",
+      "Asar narxini"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 143,
+    "question": "Jadidchilik harakati qachon paydo bo'ldi?",
+    "options": [
+      "XVIII asrda",
+      "XIX asr oxiri - XX asr boshi",
+      "XII asrda",
+      "XV asrda"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 144,
+    "question": "Omonim nimani anglatadi?",
+    "options": [
+      "Aytilishi bir, ma'nosi har xil so'zlar",
+      "Zid so'zlar",
+      "Ma'nodosh so'zlar",
+      "Chiroyli so'zlar"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 145,
+    "question": "Alisher Navoiyning taxallusi 'Foniy' qaysi tildagi she'rlari uchun?",
+    "options": [
+      "Turkiy tili",
+      "Fors tili",
+      "Arab tili",
+      "Urdu"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 146,
+    "question": "Badiiy nutq turlari?",
+    "options": [
+      "Yozma va og'zaki",
+      "Muallif nutqi va qahramon nutqi",
+      "Baland va past nutq",
+      "Tez va sekin nutq"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 147,
+    "question": "Abdulla Qahhor nechanchi yilda vafot etgan?",
+    "options": [
+      "1950-yil",
+      "1975-yil",
+      "1968-yil",
+      "1960-yil"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 148,
+    "question": "Falsafiy ruboiylar ustasi?",
+    "options": [
+      "Umar Xayyom",
+      "Navoiy",
+      "Bobur",
+      "Lutfiy"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 149,
+    "question": "Turg'un birikma (Frazeologizm) nimani anglatadi?",
+    "options": [
+      "Asar nomi",
+      "Yangi so'z",
+      "Qisqartma so'z",
+      "Ko'chma ma'noli ibora"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 150,
+    "question": "O'zbekistonning birinchi Prezidenti?",
+    "options": [
+      "Sharof Rashidov",
+      "Shavkat Mirziyoyev",
+      "Islom Karimov",
+      "Usmon Yusupov"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 151,
+    "question": "Alisher Navoiyning birinchi dostoni?",
+    "options": [
+      "Hayratul-abror",
+      "Farhod va Shirin",
+      "Layli va Majnun",
+      "Saddi Iskandariy"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 152,
+    "question": "Sarkazmga misol?",
+    "options": [
+      "Jimlik",
+      "Shirin hazil",
+      "Zaharxanda kulgi",
+      "Ochiq maqtov"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 153,
+    "question": "Muhammad Yusufning tug'ilgan joyi?",
+    "options": [
+      "Andijon",
+      "Farg'ona",
+      "Namangan",
+      "Qo'qon"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 154,
+    "question": "Oksyumoron nimani anglatadi?",
+    "options": [
+      "Mantiqan zid tushunchalar birikmasi",
+      "O'xshatish",
+      "Mubolag'a",
+      "Qofiya"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 155,
+    "question": "Mirzo Ulug'bekning eng mashhur shogirdi?",
+    "options": [
+      "Ali Qushchi",
+      "Bobur",
+      "Navoiy",
+      "Jomiy"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 156,
+    "question": "Parallellizm nimani anglatadi?",
+    "options": [
+      "Tabiat va inson holati o'xshashligi",
+      "Zidlik",
+      "Takror",
+      "Vazn"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 157,
+    "question": "Said Ahmadning 'Kelinlar qo'zg'oloni' qaysi janrda?",
+    "options": [
+      "Tragediya",
+      "Doston",
+      "Komediya",
+      "Masal"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 158,
+    "question": "Alliteratsiya nimani anglatadi?",
+    "options": [
+      "Undosh tovushlar takrori",
+      "Unli tovushlar takrori",
+      "Vazn",
+      "Qofiya"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 159,
+    "question": "Abdulla Qahhorning 'Qo'shchinor chiroqlari' asari muallifi?",
+    "options": [
+      "Said Ahmad",
+      "Oybek",
+      "Abdulla Qahhor",
+      "Cho'lpon"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 160,
+    "question": "Assonans nimani anglatadi?",
+    "options": [
+      "Undosh tovushlar takrori",
+      "Unli tovushlar takrori",
+      "Zidlik",
+      "O'xshatish"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 161,
+    "question": "Lutfiy qaysi asr shoiri?",
+    "options": [
+      "XX asr",
+      "XV asr",
+      "X asr",
+      "XVIII asr"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 162,
+    "question": "Ironiya uchun sinonim?",
+    "options": [
+      "Maqtov",
+      "Xursandchilik",
+      "Kinoya",
+      "G'am"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 163,
+    "question": "Erkin Vohidovning 'Nido' dostoni kimga bag'ishlangan?",
+    "options": [
+      "Do'stiga",
+      "Onasiga",
+      "Vatanga",
+      "Otasi va urush qurbonlariga"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 164,
+    "question": "Sujet elementlari tartibi?",
+    "options": [
+      "Ekspozitsiya, Tugun, Rivoj, Kulminatsiya, Yechim",
+      "Yechim, Tugun, Rivoj",
+      "Kirish va Xulosa",
+      "Rasm va Matn"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 165,
+    "question": "Chingiz Aytmatovning 'Oq kema' asari qahramoni?",
+    "options": [
+      "Shum bola",
+      "Bola",
+      "Otabek",
+      "Kumush"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 166,
+    "question": "Anafora nimani anglatadi?",
+    "options": [
+      "Misra oxiridagi takror",
+      "O'xshatish",
+      "Zidlik",
+      "Misra boshidagi takror"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 167,
+    "question": "Abdulla Oripov nechanchi yilda tug'ilgan?",
+    "options": [
+      "1920-yil",
+      "1930-yil",
+      "1950-yil",
+      "1941-yil"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 168,
+    "question": "Epifora nimani anglatadi?",
+    "options": [
+      "O'xshatish",
+      "Misra boshidagi takror",
+      "Zidlik",
+      "Misra oxiridagi takror"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 169,
+    "question": "O'tkir Hoshimovning 'Ikki eshik orasi' romani muallifi?",
+    "options": [
+      "Cho'lpon",
+      "Said Ahmad",
+      "Oybek",
+      "O'tkir Hoshimov"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 170,
+    "question": "Majoziy ma'no (Allegoriya) uchun misol?",
+    "options": [
+      "Non - aziz",
+      "Tulki - ayyorlik timsoli",
+      "Kitob - bilim manbai",
+      "Suv - hayot"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 171,
+    "question": "Abdurauf Fitrat qaysi shahar tug'ilgan?",
+    "options": [
+      "Toshkent",
+      "Samarqand",
+      "Xiva",
+      "Buxoro"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 172,
+    "question": "Adabiy tur necha xil bo'ladi?",
+    "options": [
+      "3 xil (Lirika, Epika, Drama)",
+      "2 xil",
+      "4 xil",
+      "5 xil"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 173,
+    "question": "Usmon Nosir qaysi yoshda vafot etgan?",
+    "options": [
+      "50 yoshda",
+      "32 yoshda",
+      "20 yoshda",
+      "45 yoshda"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 174,
+    "question": "Badiiy tasvir vositalari?",
+    "options": [
+      "Kitob va daftar",
+      "Son va Ot",
+      "Gap va So'z",
+      "Sifatlash, O'xshatish, Jonlantirish"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 175,
+    "question": "Amir Temur nechanchi yilda vafot etgan?",
+    "options": [
+      "1405-yil",
+      "1336-yil",
+      "1411-yil",
+      "1390-yil"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 176,
+    "question": "Bayt nimani anglatadi?",
+    "options": [
+      "Ikki misrali she'r",
+      "Roman",
+      "Bir band",
+      "To'rt misra"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 177,
+    "question": "Nodira qaysi shahar malikasi bo'lgan?",
+    "options": [
+      "Xiva",
+      "Buxoro",
+      "Qo'qon",
+      "Andijon"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 178,
+    "question": "Metonimiyaga misol?",
+    "options": [
+      "Qizil olma",
+      "Yaxshi odam",
+      "Navoiyni o'qidim (Navoiy asarini)",
+      "Tez yugurdi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 179,
+    "question": "Gulxaniyning 'Zarbulmasal' asari muallifi?",
+    "options": [
+      "Bobur",
+      "Lutfiy",
+      "Gulxaniy",
+      "Navoiy"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 180,
+    "question": "Felyeton qaysi tildan olingan?",
+    "options": [
+      "Rus tilidan",
+      "Turkiy",
+      "Ingliz tilidan",
+      "Fransuz tilidan"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 181,
+    "question": "G'afur G'ulom nechanchi yilda 'Xalq shoiri' bo'lgan?",
+    "options": [
+      "1970-yil",
+      "1950-yil",
+      "1963-yil",
+      "1945-yil"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 182,
+    "question": "Qofiya turlari?",
+    "options": [
+      "Tushdosh, Ohangdosh",
+      "Katta va kichik",
+      "Yangi va eski",
+      "Tez va sekin"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 183,
+    "question": "Abdulla Qodiriy qayerda otib tashlangan?",
+    "options": [
+      "Ishxonada",
+      "Bo'zsuv qirg'og'ida",
+      "Ko'chada",
+      "Uyida"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 184,
+    "question": "Badiiy uslub turlari?",
+    "options": [
+      "Qizil va ko'k",
+      "Yaxshi va yomon",
+      "Rasmiy, Ilmiy, Badiiy, So'zlashuv",
+      "Eski va yangi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 185,
+    "question": "O'zbekistonda 'O'qituvchilar kuni'?",
+    "options": [
+      "14-yanvar",
+      "1-sentabr",
+      "8-dekabr",
+      "1-oktabr"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 186,
+    "question": "Nasr nimani anglatadi?",
+    "options": [
+      "She'riy bo'lmagan badiiy matn",
+      "G'azal",
+      "Ruboiy",
+      "Doston"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 187,
+    "question": "Said Ahmadning 'Ufq' asari necha kitobdan iborat?",
+    "options": [
+      "3 kitob (trilogiya)",
+      "2 kitob",
+      "1 kitob",
+      "5 kitob"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 188,
+    "question": "Vazn turlari?",
+    "options": [
+      "Aruz, Barmoq",
+      "Og'ir va yengil",
+      "Uzun va qisqa",
+      "Yangi va eski"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 189,
+    "question": "Erkin Vohidov qayerda tug'ilgan?",
+    "options": [
+      "Namangan",
+      "Farg'ona (Oltiariq)",
+      "Toshkent",
+      "Andijon"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 190,
+    "question": "Lirik asar qahramoni?",
+    "options": [
+      "Lirik qahramon",
+      "Bosh qahramon",
+      "Salbiy obraz",
+      "Yozuvchi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 191,
+    "question": "Oybekning haqiqiy ismi?",
+    "options": [
+      "Abdulla",
+      "Abdulhamid",
+      "Muso Toshmuhammad o'g'li",
+      "Abdurauf"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 192,
+    "question": "Matnning asosiy birligi?",
+    "options": [
+      "Bo'g'in",
+      "So'z",
+      "Gap",
+      "Harf"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 193,
+    "question": "Abdulla Oripovning 'Sohibqiron' dramasi kim haqida?",
+    "options": [
+      "Navoiy",
+      "Bobur",
+      "Amir Temur",
+      "Ulug'bek"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 194,
+    "question": "Doston turlari?",
+    "options": [
+      "Katta va kichik",
+      "Qahramonlik, Ishqiy, Tarixiy",
+      "Yaxshi va yomon",
+      "Eski va yangi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 195,
+    "question": "Ibn Sinoning tug'ilgan joyi?",
+    "options": [
+      "Samarqand",
+      "Xiva",
+      "Afshona (Buxoro)",
+      "Kat"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 196,
+    "question": "Antiteza nimani anglatadi?",
+    "options": [
+      "Zidlash",
+      "O'xshatish",
+      "Mubolag'a",
+      "Jonlantirish"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 197,
+    "question": "Jadidchilikning maqsadi?",
+    "options": [
+      "Boylik",
+      "Urush",
+      "Ma'rifat va ozodlik",
+      "Savdo"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 198,
+    "question": "Hajv nimani anglatadi?",
+    "options": [
+      "Doston",
+      "Kulgi orqali tanqid",
+      "Hikoya",
+      "Maqtov"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 199,
+    "question": "Alisher Navoiyning ustozi va do'sti?",
+    "options": [
+      "Bobur",
+      "Lutfiy",
+      "Abdurahmon Jomiy",
+      "Gadoiy"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 200,
+    "question": "Adabiyotshunoslik nimani o'rganadi?",
+    "options": [
+      "O'simliklarni",
+      "Adabiy asarlar va ularning tarixini",
+      "Yer qatlamlarini",
+      "Yulduzlarni"
+    ],
+    "answerIndex": 1
+  }
+]

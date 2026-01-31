@@ -1,0 +1,1652 @@
+[
+  {
+    "id": 1,
+    "question": "Hujayraning 'energiya stansiyasi' deb ataladigan organoid qaysi?",
+    "options": [
+      "Mitoxondriya",
+      "Ribosoma",
+      "Lizosoma",
+      "Vakuola"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2,
+    "question": "O'simlik hujayrasiga yashil rang beruvchi pigment qanday ataladi?",
+    "options": [
+      "Xromoplast",
+      "Leykoplast",
+      "Xlorofill",
+      "Globin"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 3,
+    "question": "Odam organizmidagi eng yirik bez qaysi?",
+    "options": [
+      "Oshqozon osti bezi",
+      "Buyrak usti bezi",
+      "Qalqonsimon bez",
+      "Jigar"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 4,
+    "question": "Qonning qizil rangda bo'lishini ta'minlovchi modda qaysi?",
+    "options": [
+      "Insulin",
+      "Fibrinogen",
+      "Gemoglobin",
+      "Keratin"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 5,
+    "question": "Irsiyat haqidagi fan qanday nomlanadi?",
+    "options": [
+      "Genetika",
+      "Ekologiya",
+      "Zoologiya",
+      "Botanika"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "Baliqlar nima orqali nafas oladi?",
+    "options": [
+      "O'pka",
+      "Teri",
+      "Jabra",
+      "Traxeya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 7,
+    "question": "Fotosintez jarayonida o'simliklar havoga qaysi gazni chiqaradi?",
+    "options": [
+      "Azot",
+      "Uglerod angidrid",
+      "Vodorod",
+      "Kislorod"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 8,
+    "question": "Odam yuragi necha kamerali?",
+    "options": [
+      "2 kamerali",
+      "4 kamerali",
+      "3 kamerali",
+      "1 kamerali"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 9,
+    "question": "Zamburug'lar nima orqali ko'payadi?",
+    "options": [
+      "Urug'",
+      "Spora",
+      "Ildiz",
+      "Meva"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 10,
+    "question": "Hujayra yadrosini birinchi bo'lib kim kashf qilgan?",
+    "options": [
+      "Robert Guk",
+      "Robert Braun",
+      "Anton van Levenguk",
+      "Charlz Darvin"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 11,
+    "question": "Odam tanasidagi eng uzun suyak qaysi?",
+    "options": [
+      "Son suyagi",
+      "Umurtqa",
+      "Boldir",
+      "Qovurga"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 12,
+    "question": "Oqsillarni sintez qiluvchi organoidni toping.",
+    "options": [
+      "Lizosoma",
+      "Ribosoma",
+      "Vakuola",
+      "Sentriola"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 13,
+    "question": "Bakteriyalar qanday ko'payadi?",
+    "options": [
+      "Spora orqali",
+      "Ikkiyga bo'linish orqali",
+      "Jinsiy yo'l bilan",
+      "Kurtaklanish"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 14,
+    "question": "Organizmni mikroblardan himoya qiluvchi qon hujayralari?",
+    "options": [
+      "Leykotsitlar",
+      "Eritrotsitlar",
+      "Trombotsitlar",
+      "Plazma"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 15,
+    "question": "Yopiq urug'li o'simliklarning asosiy organi nima?",
+    "options": [
+      "Ildiz",
+      "Gul",
+      "Poya",
+      "Barg"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 16,
+    "question": "Suvda hamda quruqlikda chiquvchilar (amfibiyalar) vakili kim?",
+    "options": [
+      "Timsoh",
+      "Toshbaqa",
+      "Ilon",
+      "Baqa"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 17,
+    "question": "Hujayra nazariyasini kimlar yaratgan?",
+    "options": [
+      "Shleyden va Shvann",
+      "Darvin va Lamark",
+      "Mendel va Morgan",
+      "Votson va Krik"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 18,
+    "question": "Qon ivishini ta'minlovchi qon elementlari?",
+    "options": [
+      "Leykotsitlar",
+      "Trombotsitlar",
+      "Eritrotsitlar",
+      "Limfotsitlar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 19,
+    "question": "O'simlikning urug'lanish organi qaysi?",
+    "options": [
+      "Barg",
+      "Poya",
+      "Gul",
+      "Ildizmeva"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 20,
+    "question": "Viruslarni o'rganuvchi fan?",
+    "options": [
+      "Virusologiya",
+      "Mikologiya",
+      "Bakteriologiya",
+      "Embriologiya"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 21,
+    "question": "Inson skeletida nechta suyak bor?",
+    "options": [
+      "100 tacha",
+      "200 tadan ortiq",
+      "500 tacha",
+      "300 tacha"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 22,
+    "question": "Lizosomaning vazifasi nima?",
+    "options": [
+      "Oqsil sintezi",
+      "Energiya ishlab chiqarish",
+      "Hujayra ichida hazm qilish",
+      "Irsiyatni saqlash"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 23,
+    "question": "Kartoshkaning yeyiladigan qismi nima?",
+    "options": [
+      "Ildiz",
+      "Urug'",
+      "Meva",
+      "Tugunak (shakli o'zgargan poya)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 24,
+    "question": "Odamda necha juft xromosoma bor?",
+    "options": [
+      "22 juft",
+      "46 juft",
+      "23 juft",
+      "24 juft"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 25,
+    "question": "Baliqlarning harakatlanish organi?",
+    "options": [
+      "Suzgichlar",
+      "Oyoqlar",
+      "Qanotlar",
+      "Dumi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 26,
+    "question": "Ekologiya so'zining ma'nosi nima?",
+    "options": [
+      "Hayot haqidagi fan",
+      "O'simliklar haqida",
+      "Uy haqidagi fan (yashash joyi)",
+      "Tiriklik qonuni"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 27,
+    "question": "Oshqozon shirasidagi asosiy kislota?",
+    "options": [
+      "Sulfat kislota",
+      "Sirka kislotasi",
+      "Azot kislota",
+      "Xlorid kislota"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 28,
+    "question": "Sut emizuvchilarning asosiy belgisi?",
+    "options": [
+      "Tuxum qo'yishi",
+      "Bolalarini sut bilan boqishi",
+      "Suvda yashashi",
+      "Sovuq qonliligi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 29,
+    "question": "Gidra qanday ko'payadi?",
+    "options": [
+      "Kurtaklanish",
+      "Urug' orqali",
+      "Spora orqali",
+      "Faqat jinsiy"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 30,
+    "question": "DNK tarkibiga kirmaydigan azotli asos qaysi?",
+    "options": [
+      "Uratsil",
+      "Timin",
+      "Adenin",
+      "Guanin"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 31,
+    "question": "Inson bosh miyasi necha qismdan iborat?",
+    "options": [
+      "5 ta",
+      "3 ta",
+      "4 ta",
+      "2 ta"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 32,
+    "question": "Qushlar qanday nafas oladi?",
+    "options": [
+      "O'pka va havo xaltachalari",
+      "Faqat teri",
+      "Faqat jabra",
+      "Faqat burun"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 33,
+    "question": "Ildizning vazifasi nima?",
+    "options": [
+      "Fotosintez qilish",
+      "Changlanish",
+      "Meva hosil qilish",
+      "Suv va mineral moddalarni shimish"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 34,
+    "question": "Golji majmuasining vazifasi?",
+    "options": [
+      "Oqsil sintezi",
+      "Moddalarni to'plash va tashish",
+      "Nafas olish",
+      "Hujayra bo'linishi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 35,
+    "question": "Odam organizmida qon qayerda hosil bo'ladi?",
+    "options": [
+      "Qizil ilikda",
+      "Jigarda",
+      "Yurakda",
+      "Taloqda"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 36,
+    "question": "Gulli o'simliklarda changlanishdan keyin nima sodir bo'ladi?",
+    "options": [
+      "O'sish",
+      "Nafas olish",
+      "Fotosintez",
+      "Urug'lanish"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 37,
+    "question": "Asalari qaysi turkumga kiradi?",
+    "options": [
+      "Tangaqanotlilar",
+      "Qattiqqanotlilar",
+      "Ikkiqanotlilar",
+      "Pardaqanotlilar"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 38,
+    "question": "Odam ko'zidagi rangni belgilovchi qism?",
+    "options": [
+      "Gavhar",
+      "To'r parda",
+      "Shox parda",
+      "Rangdor parda"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 39,
+    "question": "Vitamin C yetishmasa qaysi kasallik kelib chiqadi?",
+    "options": [
+      "Raxit",
+      "Anemiya",
+      "Beriberi",
+      "Sking (tsinga)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 40,
+    "question": "Eng oddiy bir hujayrali hayvon qaysi?",
+    "options": [
+      "Gidra",
+      "Askarida",
+      "Planariya",
+      "Amiba"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 41,
+    "question": "Qaysi organoid 'hujayra skeleti' vazifasini bajaradi?",
+    "options": [
+      "Mikronaychalar",
+      "Ribosoma",
+      "Vakuola",
+      "Yadrocha"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 42,
+    "question": "O'simliklarda moddalar harakati qaysi to'qima orqali bo'ladi?",
+    "options": [
+      "Qoplovchi",
+      "Mexanik",
+      "O'tkazuvchi",
+      "Asosiy"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 43,
+    "question": "Buyrakning vazifasi nima?",
+    "options": [
+      "Qon aylantirish",
+      "Moddalar almashinuvi qoldiqlarini chiqarish",
+      "Hazm qilish",
+      "Harakat"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 44,
+    "question": "Kalamushlar qaysi turkumga kiradi?",
+    "options": [
+      "Yirtqichlar",
+      "Hasharotxo'rlar",
+      "Kemiruvchilar",
+      "Tuyoqlilar"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 45,
+    "question": "Tiriklikning eng yuqori darajasi?",
+    "options": [
+      "Biosfera",
+      "Populyatsiya",
+      "Ekotizim",
+      "Organizm"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 46,
+    "question": "Qaysi vitamin quyosh nuri ta'sirida terida hosil bo'ladi?",
+    "options": [
+      "Vitamin A",
+      "Vitamin D",
+      "Vitamin B",
+      "Vitamin K"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 47,
+    "question": "O'simliklarning jinsiy ko'payish organi?",
+    "options": [
+      "Ildiz",
+      "Barg",
+      "Gul",
+      "Poya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 48,
+    "question": "Yurakdan qon olib chiquvchi tomirlar?",
+    "options": [
+      "Arteriyalar",
+      "Venalar",
+      "Kapillyarlar",
+      "Limfa"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 49,
+    "question": "Genetika fanining asoschisi kim?",
+    "options": [
+      "Gregor Mendel",
+      "Charlz Darvin",
+      "Tomas Morgan",
+      "Lui Paster"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 50,
+    "question": "Xromosomalar hujayraning qayerida joylashgan?",
+    "options": [
+      "Sitoplazmada",
+      "Ribosomada",
+      "Membranada",
+      "Yadroda"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 51,
+    "question": "Odam organizmida qancha qon bor?",
+    "options": [
+      "2-3 litr",
+      "8-10 litr",
+      "4-6 litr",
+      "1-2 litr"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 52,
+    "question": "Baqa yuragi necha kamerali bo'ladi?",
+    "options": [
+      "2 kamerali",
+      "1 kamerali",
+      "4 kamerali",
+      "3 kamerali"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 53,
+    "question": "O'simlik hujayrasining qobig'i nimadan iborat?",
+    "options": [
+      "Xitin",
+      "Kletchatka (sellyuloza)",
+      "Glikogen",
+      "Kraxmal"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 54,
+    "question": "Qon bosimini o'lchaydigan asbob nima?",
+    "options": [
+      "Termometr",
+      "Spirometr",
+      "Barometr",
+      "Tonometr"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 55,
+    "question": "Hasharotlar nima orqali nafas oladi?",
+    "options": [
+      "O'pka",
+      "Jabra",
+      "Traxeyalar",
+      "Teri"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 56,
+    "question": "Odamda o't (safro) qayerda hosil bo'ladi?",
+    "options": [
+      "O't pufagida",
+      "Jigarda",
+      "Me'dada",
+      "Buyrakda"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 57,
+    "question": "Tiriklikning eng kichik tarkibiy birligi nima?",
+    "options": [
+      "Molekula",
+      "Organ",
+      "To'qima",
+      "Hujayra"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 58,
+    "question": "Sudralib yuruvchilarning tanasi nima bilan qoplangan?",
+    "options": [
+      "Yung bilan",
+      "Pat bilan",
+      "Tangachalar bilan",
+      "Shilliq bilan"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 59,
+    "question": "Nerv hujayrasi nima deb ataladi?",
+    "options": [
+      "Nefron",
+      "Akson",
+      "Neyron",
+      "Dendrit"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 60,
+    "question": "Fotosintez uchun eng muhim moddalarni ko'rsating.",
+    "options": [
+      "Suv va kislorod",
+      "Suv va karbonat angidrid",
+      "Azot va vodorod",
+      "Oqsil va yog'"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 61,
+    "question": "Kit qaysi guruhga kiradi?",
+    "options": [
+      "Baliqlar",
+      "Sut emizuvchilar",
+      "Amfibiyalar",
+      "Sudralib yuruvchilar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 62,
+    "question": "O'simliklarda zaxira oziq modda nima?",
+    "options": [
+      "Glikogen",
+      "Oqsil",
+      "Kraxmal",
+      "Vitamin"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 63,
+    "question": "Inson skeletida harakatsiz birikkan suyaklar?",
+    "options": [
+      "Tirsak suyaklari",
+      "Kalla suyagi choklari",
+      "Tizga qopqog'i",
+      "Umurtqalar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 64,
+    "question": "Ipak qurti nima bilan oziqlanadi?",
+    "options": [
+      "Olma bargi",
+      "Tut bargi",
+      "Terak bargi",
+      "Gullar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 65,
+    "question": "Vitamin A yetishmovchiligi qaysi a'zoga ta'sir qiladi?",
+    "options": [
+      "Ko'rish (shabko'rlik)",
+      "Eshitish",
+      "Hazm qilish",
+      "Yurak"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 66,
+    "question": "O'simliklar dunyosini o'rganadigan fan?",
+    "options": [
+      "Zoologiya",
+      "Botanika",
+      "Mikologiya",
+      "Ekologiya"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 67,
+    "question": "Yurakning eng qalin devorli kamerasi?",
+    "options": [
+      "O'ng bo'lmacha",
+      "Chap bo'lmacha",
+      "Chap qorincha",
+      "O'ng qorincha"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 68,
+    "question": "Zamburug'lar hujayra devori nimadan iborat?",
+    "options": [
+      "Kletchatka",
+      "Xitin",
+      "Oqsil",
+      "Yog'"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 69,
+    "question": "Odam organizmidagi eng kichik suyak qayerda joylashgan?",
+    "options": [
+      "Burunda",
+      "Tishda",
+      "Barmoqda",
+      "Quloqda (uzangi)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 70,
+    "question": "Bakteriofag nima?",
+    "options": [
+      "Foydali bakteriya",
+      "Zamburug' turi",
+      "Bakteriya yeyuvchi virus",
+      "Bir hujayrali hayvon"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 71,
+    "question": "O'pka arteriyasida qanday qon oqadi?",
+    "options": [
+      "Venoz (karbonat angidridga boy)",
+      "Arterial (kislorodga boy)",
+      "Aralash",
+      "Limfa"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 72,
+    "question": "Gullarning changlanish turlarini ko'rsating.",
+    "options": [
+      "O'z-o'zidan va chetdan",
+      "Faqat o'z-o'zidan",
+      "Faqat hasharotlar orqali",
+      "Faqat suv orqali"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 73,
+    "question": "Eng katta qush qaysi?",
+    "options": [
+      "Burgut",
+      "Albatros",
+      "Pingvin",
+      "Tuyaqush"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 74,
+    "question": "Hujayraning bo'linish turlari?",
+    "options": [
+      "Faqat meyoz",
+      "Faqat mitoz",
+      "Mitoz va meyoz",
+      "Kurtaklanish"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 75,
+    "question": "Odamda o'pkaning hayotiy sig'imi nima bilan o'lchanadi?",
+    "options": [
+      "Tonometr",
+      "Barometr",
+      "Termometr",
+      "Spirometr"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 76,
+    "question": "Bargning gaz almashinuvini ta'minlovchi qismi?",
+    "options": [
+      "Og'izchalari",
+      "Tomirlari",
+      "Epidermisi",
+      "Xloroplastlari"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 77,
+    "question": "Qizil kitob nima uchun xizmat qiladi?",
+    "options": [
+      "O'simliklar ro'yxati",
+      "Yangi turlarni yozish",
+      "Yo'qolib borayotgan turlarni muhofaza qilish",
+      "Dorivor o'simliklar"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 78,
+    "question": "Kalsiy elementi organizmda nima uchun kerak?",
+    "options": [
+      "Qon hosil qilish",
+      "Ko'rishni yaxshilash",
+      "Suyaklarni mustahkamlash",
+      "Hazm qilish"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 79,
+    "question": "Nerv tizimining markaziy qismi qayer?",
+    "options": [
+      "Nerv tolalari",
+      "Bosh va orqa miya",
+      "Nerv tugunlari",
+      "Retseptorlar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 80,
+    "question": "Askarida qayerda parazitlik qiladi?",
+    "options": [
+      "Jigarda",
+      "Mushakda",
+      "O'pkada",
+      "Ingichka ichakda"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 81,
+    "question": "Tiriklikning irsiyat va o'zgaruvchanlik qonunlarini kim kashf qilgan?",
+    "options": [
+      "Darvin",
+      "Mendel",
+      "Lamark",
+      "Paster"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 82,
+    "question": "Vakuolaning ichidagi suyuqlik nima?",
+    "options": [
+      "Suv",
+      "Yog'",
+      "Qon",
+      "Hujayra shirasi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 83,
+    "question": "Odamda jigar qaysi tomonda joylashgan?",
+    "options": [
+      "Chap tomonda",
+      "Orqa tomonda",
+      "O'ng tomonda",
+      "O'rtada"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 84,
+    "question": "Yopiq urug'li o'simliklarning urug'i qayerda bo'ladi?",
+    "options": [
+      "Bargda",
+      "Ildizda",
+      "Poyada",
+      "Meva ichida"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 85,
+    "question": "Xromosomalar soni o'zgarmay saqlanishini ta'minlovchi bo'linish?",
+    "options": [
+      "Amitoz",
+      "Meyoz",
+      "Mitoz",
+      "Kurtaklanish"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 86,
+    "question": "Kapalaklarning rivojlanish bosqichlari?",
+    "options": [
+      "Tuxum - kapalak",
+      "Tuxum - lichinka - g'umbak - kapalak",
+      "Lichinka - kapalak",
+      "Tuxum - g'umbak"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 87,
+    "question": "Odam qulog'i necha qismdan iborat?",
+    "options": [
+      "3 ta (tashqi, o'rta, ichki)",
+      "2 ta",
+      "4 ta",
+      "1 ta"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 88,
+    "question": "O'simlikning nafas olishi qachon sodir bo'ladi?",
+    "options": [
+      "Faqat kunduzi",
+      "Faqat kechasi",
+      "Faqat bahorda",
+      "Har doim (kecha-kunduz)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 89,
+    "question": "Eritrotsitlar qayerda parchalanadi?",
+    "options": [
+      "Yurakda",
+      "O'pkada",
+      "Taloq va jigarda",
+      "Ichakda"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 90,
+    "question": "Organizmdagi barcha bezlar yig'indisi?",
+    "options": [
+      "Nerv tizimi",
+      "Hazm tizimi",
+      "Endokrin tizimi",
+      "Ayirish tizimi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 91,
+    "question": "Meyoz bo'linish natijasida nechta hujayra hosil bo'ladi?",
+    "options": [
+      "2 ta",
+      "4 ta",
+      "1 ta",
+      "8 ta"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 92,
+    "question": "Eng baland bo'yli sut emizuvchi?",
+    "options": [
+      "Fil",
+      "Jirafa",
+      "Begemot",
+      "Kenguru"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 93,
+    "question": "Buyrakning funksional birligi nima?",
+    "options": [
+      "Neyron",
+      "Alveola",
+      "Akson",
+      "Nefron"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 94,
+    "question": "Paxta o'simligi qaysi oilaga kiradi?",
+    "options": [
+      "Gulxayridoshlar",
+      "Ra'nogullidoshlar",
+      "Burchoqdoshlar",
+      "Sho'radoshlar"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 95,
+    "question": "Oqsil parchalanganda nima hosil bo'ladi?",
+    "options": [
+      "Glyukoza",
+      "Suv",
+      "Yog' kislotalari",
+      "Aminokislotalar"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 96,
+    "question": "Insonning eng katta miya qismi?",
+    "options": [
+      "Miyacha",
+      "O'rta miya",
+      "Katta yarimsharlar",
+      "Uzunchoq miya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 97,
+    "question": "Qonning suyuq qismi nima?",
+    "options": [
+      "Plazma",
+      "Zardob",
+      "Limfa",
+      "Gemorragiya"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 98,
+    "question": "Hujayra ichidagi hazm qilish organi?",
+    "options": [
+      "Ribosoma",
+      "Vakuola",
+      "Mitoxondriya",
+      "Lizosoma"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 99,
+    "question": "Tiriklikning turg'unlik qonuniyati nima?",
+    "options": [
+      "Ko'payish",
+      "O'zgaruvchanlik",
+      "Irsiyat",
+      "O'sish"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 100,
+    "question": "Eshatuvchi bir hujayrali organizm?",
+    "options": [
+      "Amiba",
+      "Yashil evglena",
+      "Infuzoriya-tufelka",
+      "Bakteriya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 101,
+    "question": "Genetika faniga 'gen' atamasini kim kiritgan?",
+    "options": [
+      "Mendel",
+      "Iogannsen",
+      "Morgan",
+      "Darvin"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 102,
+    "question": "Inson organizmida necha juft qovurga bor?",
+    "options": [
+      "12 juft",
+      "10 juft",
+      "14 juft",
+      "24 juft"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 103,
+    "question": "O'simliklarda suv qaysi qism orqali ko'tariladi?",
+    "options": [
+      "Floema",
+      "Epidermis",
+      "Po'stloq",
+      "Ksilema"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 104,
+    "question": "Oqsillarning birlamchi strukturasi nima?",
+    "options": [
+      "Spiral",
+      "Aminokislotalar zanjiri",
+      "Shar shakli",
+      "Qatlamli"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 105,
+    "question": "Biosfera haqidagi ta'limot asoschisi?",
+    "options": [
+      "Darvin",
+      "Vernadskiy",
+      "Linney",
+      "Lamark"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 106,
+    "question": "Inson qon guruhlari nechta?",
+    "options": [
+      "2 ta",
+      "4 ta",
+      "3 ta",
+      "5 ta"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 107,
+    "question": "O'simlik hujayrasining o'ziga xos organoidi?",
+    "options": [
+      "Mitoxondriya",
+      "Lizosoma",
+      "Ribosoma",
+      "Plastidalar"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 108,
+    "question": "Irsiy kasalliklarni o'rganadigan soha?",
+    "options": [
+      "Tibbiyot genetikasi",
+      "Ekologiya",
+      "Sitologiya",
+      "Biofizika"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 109,
+    "question": "Sut emizuvchilar yuragi necha kamerali?",
+    "options": [
+      "2 ta",
+      "4 ta",
+      "3 ta",
+      "1 ta"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 110,
+    "question": "Fotosintez natijasida hosil bo'ladigan organik modda?",
+    "options": [
+      "Glyukoza",
+      "Oqsil",
+      "Vitamin",
+      "Yog'"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 111,
+    "question": "Insonning nafas olish markazi qayerda?",
+    "options": [
+      "O'rtacha miyada",
+      "Miya po'stlog'ida",
+      "Miyachada",
+      "Uzunchoq miyada"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 112,
+    "question": "Xromosomadagi genlar to'plami nima?",
+    "options": [
+      "Fenotip",
+      "Genotip",
+      "Genofond",
+      "Kariotip"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 113,
+    "question": "Zamburug'lar qanday oziqlanadi?",
+    "options": [
+      "Avtotrof",
+      "Havo orqali",
+      "Fotosintez orqali",
+      "Geterotrof"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 114,
+    "question": "Gemofiliya kasalligi nima bilan bog'liq?",
+    "options": [
+      "Ko'rish",
+      "Hazm qilish",
+      "Eshitish",
+      "Qon ivimasligi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 115,
+    "question": "Eng tez yuguradigan hayvon?",
+    "options": [
+      "Qoplon (Gepard)",
+      "Arslon",
+      "Bo'ri",
+      "Ot"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 116,
+    "question": "Odamda ko'r ichak (apendiks) qaysi organning bir qismi?",
+    "options": [
+      "Yo'g'on ichak",
+      "Ingichka ichak",
+      "Oshqozon",
+      "Jigar"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 117,
+    "question": "DNK tarkibidagi shakarni toping.",
+    "options": [
+      "Riboza",
+      "Glyukoza",
+      "Dezoksiriboza",
+      "Fruktoza"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 118,
+    "question": "Ekologik piramida qoidasini kim taklif qilgan?",
+    "options": [
+      "Darvin",
+      "Lindeman",
+      "Odum",
+      "Tinsli"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 119,
+    "question": "O'simlikning o'sish nuqtasi qayerda?",
+    "options": [
+      "Meva ichi",
+      "Barg o'rtasi",
+      "Ildiz uchi va poya uchi",
+      "Poya asosi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 120,
+    "question": "Inson ko'zidagi rangni ajratuvchi hujayralar?",
+    "options": [
+      "Tayyoqchasimon",
+      "Dumaloq",
+      "Saqichsimon (kolbachasimon)",
+      "Yassi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 121,
+    "question": "Bakteriyalar shakliga ko'ra sharsimon bo'lsa?",
+    "options": [
+      "Kokklar",
+      "Batsillalar",
+      "Vibrionlar",
+      "Spirillalar"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 122,
+    "question": "Yurakning qisqarish fazasi nima?",
+    "options": [
+      "Diastola",
+      "Sistola",
+      "Pauza",
+      "Ritmli"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 123,
+    "question": "Tabiiy tanlanish nazariyasini kim yaratgan?",
+    "options": [
+      "Lamark",
+      "Darvin",
+      "Linney",
+      "Mendel"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 124,
+    "question": "Organizmdagi barcha kimyoviy jarayonlar yig'indisi?",
+    "options": [
+      "Nafas olish",
+      "O'sish",
+      "Hazm qilish",
+      "Moddalar almashinuvi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 125,
+    "question": "Insonning eshitish organi qayerda tugaydi?",
+    "options": [
+      "Nog'ora parda",
+      "Ichki quloq",
+      "Miya po'stlog'i",
+      "Eshatuv nervi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 126,
+    "question": "Oqsillarni tashkil etuvchi aminokislotalar soni nechta?",
+    "options": [
+      "10 ta",
+      "20 ta",
+      "50 ta",
+      "100 ta"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 127,
+    "question": "Atmosferadagi ozon qatlamining ahamiyati?",
+    "options": [
+      "Yomg'ir yog'dirish",
+      "Kislorod hosil qilish",
+      "Issiqlikni saqlash",
+      "Ultrabinafsha nurlardan himoya"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 128,
+    "question": "Hujayra membranasining asosi nimadan iborat?",
+    "options": [
+      "Faqat suv",
+      "Oqsil va yog'lar (lipidlar)",
+      "Faqat uglevod",
+      "Mineral tuz"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 129,
+    "question": "Baliqlar yuragida qanday qon bo'ladi?",
+    "options": [
+      "Venoz",
+      "Arterial",
+      "Aralash",
+      "Kislorodli"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 130,
+    "question": "Insonning umurtqa pog'onasi nechta umurtqadan iborat?",
+    "options": [
+      "33-34 ta",
+      "20-25 ta",
+      "40-45 ta",
+      "12 ta"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 131,
+    "question": "Gidra qaysi tipga kiradi?",
+    "options": [
+      "Kovakichlilar",
+      "Yassi chuvalchanglar",
+      "Bo'g'imoyoqlilar",
+      "Molyuskalar"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 132,
+    "question": "O'simliklarda 'changlanish' nima?",
+    "options": [
+      "Changning tumshuqchaga tushishi",
+      "Urug'lanish",
+      "Meva pishishi",
+      "Barg to'kilishi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 133,
+    "question": "Mitozning qaysi bosqichida xromosomalar ekvatorga tiziladi?",
+    "options": [
+      "Metafaza",
+      "Profaza",
+      "Anafaza",
+      "Telofaza"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 134,
+    "question": "Insonning eng katta mushagi?",
+    "options": [
+      "Yuz mushagi",
+      "Tirsak mushagi",
+      "Yelka mushagi",
+      "Dumba mushagi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 135,
+    "question": "Vitamin D yetishmasa yosh bolalarda qaysi kasallik bo'ladi?",
+    "options": [
+      "Raxit",
+      "Sking",
+      "Grip",
+      "Anemiya"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 136,
+    "question": "Kroshingover nima?",
+    "options": [
+      "Hujayra o'limi",
+      "Nafas olish",
+      "O'sish",
+      "Gologen xromosomalar almashinuvi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 137,
+    "question": "Dengiz yulduzi qaysi guruhga kiradi?",
+    "options": [
+      "Baliqlar",
+      "Tikanterililar",
+      "Molyuskalar",
+      "Chuvalchanglar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 138,
+    "question": "Insonda 'shirin' ta'mni tilning qaysi qismi sezadi?",
+    "options": [
+      "Orqasi",
+      "Yonlari",
+      "Uchi",
+      "O'rtasi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 139,
+    "question": "Organizmni zaharlardan tozalaydigan asosiy organ?",
+    "options": [
+      "O'pka",
+      "Me'da",
+      "Yurak",
+      "Jigar"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 140,
+    "question": "Hujayraning 'o'z-o'zini parchalashi' nima deb ataladi?",
+    "options": [
+      "Sintez",
+      "Mitoz",
+      "Avtoliz",
+      "Fotosintez"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 141,
+    "question": "Ildiz uchi nima bilan himoyalangan?",
+    "options": [
+      "Po'stloq",
+      "Ildiz qinchasi (oqchasi)",
+      "Tuklar",
+      "Gul"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 142,
+    "question": "Qushlarda ovoz apparati qayerda joylashgan?",
+    "options": [
+      "Pastki hiqildoqda (sirinks)",
+      "Hiqildoqda",
+      "Burunda",
+      "O'pkada"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 143,
+    "question": "Biyogeotsenoz terminini kim fanga kiritgan?",
+    "options": [
+      "Sukachyov",
+      "Tinsli",
+      "Mendel",
+      "Darvin"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 144,
+    "question": "Glyukoza parchalanganda necha molekula ATF hosil bo'ladi (to'liq)?",
+    "options": [
+      "2 ta",
+      "100 ta",
+      "10 ta",
+      "36 ta (yoki 38 ta)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 145,
+    "question": "Insonning immunitet tizimining asosiy hujayralari?",
+    "options": [
+      "T-limfotsitlar",
+      "Eritrotsitlar",
+      "Trombotsitlar",
+      "Neyronlar"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 146,
+    "question": "Irsiyatning xromosoma nazariyasini kim yaratgan?",
+    "options": [
+      "Mendel",
+      "Darvin",
+      "Morgan",
+      "Votson"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 147,
+    "question": "O'simlik poyasining yo'g'onlashishi nimaga bog'liq?",
+    "options": [
+      "Floemaga",
+      "Epidermisga",
+      "Kambiyga",
+      "Yadroga"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 148,
+    "question": "Xlorofill tarkibida qaysi metall bor?",
+    "options": [
+      "Temir",
+      "Mis",
+      "Magniy",
+      "Rux"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 149,
+    "question": "Yer yuzidagi barcha tirik organizmlar yig'indisi?",
+    "options": [
+      "Litosfera",
+      "Gidrosfera",
+      "Atmosfera",
+      "Biosfera"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 150,
+    "question": "Gomologik organlar nima?",
+    "options": [
+      "Faqat bir xil",
+      "Vazifasi bir, kelib chiqishi har xil",
+      "Kelib chiqishi bir, vazifasi har xil",
+      "Keraksiz a'zolar"
+    ],
+    "answerIndex": 2
+  }
+]

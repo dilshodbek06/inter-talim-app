@@ -1,0 +1,1652 @@
+[
+  {
+    "id": 1,
+    "question": "Eng yengil element qaysi?",
+    "options": [
+      "Geliy",
+      "Azot",
+      "Vodorod",
+      "Kislorod"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 2,
+    "question": "Vodorodning kimyoviy belgisi qaysi?",
+    "options": [
+      "H",
+      "O",
+      "He",
+      "N"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 3,
+    "question": "Yer atmosferasining taxminan 78 foizini qaysi gaz tashkil qiladi?",
+    "options": [
+      "Kislorod",
+      "Argon",
+      "Azot",
+      "Karbonat angidrid"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 4,
+    "question": "Inson nafas olishi uchun zarur bo'lgan gaz qaysi?",
+    "options": [
+      "Vodorod",
+      "Azot",
+      "Geliy",
+      "Kislorod"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 5,
+    "question": "Davriy jadvalni kim kashf qilgan?",
+    "options": [
+      "Eynshteyn",
+      "Lomonosov",
+      "Nobel",
+      "Mendeleyev"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 6,
+    "question": "Oddiy sharoitda suyuq bo'lgan yagona metall qaysi?",
+    "options": [
+      "Temir",
+      "Simob",
+      "Mis",
+      "Oltin"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 7,
+    "question": "Osh tuzi qanday kimyoviy birikma?",
+    "options": [
+      "Natriy xlorid",
+      "Kalsiy karbonat",
+      "Kaliy sulfat",
+      "Magniy oksidi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 8,
+    "question": "Suv molekulasi tarkibida nechta vodorod atomi bor?",
+    "options": [
+      "2 ta",
+      "1 ta",
+      "3 ta",
+      "4 ta"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 9,
+    "question": "Olmos va grafit qaysi elementning ko'rinishlari?",
+    "options": [
+      "Azot",
+      "Uglerod",
+      "Oltingugurt",
+      "Fosfor"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 10,
+    "question": "Atomning markazida nima joylashgan?",
+    "options": [
+      "Elektron",
+      "Vakuola",
+      "Qobiq",
+      "Yadro"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 11,
+    "question": "Yadro tarkibiga qaysi zarrachalar kiradi?",
+    "options": [
+      "Proton va neytron",
+      "Elektron va neytron",
+      "Proton va elektron",
+      "Faqat proton"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 12,
+    "question": "Oltinning kimyoviy belgisi qanday?",
+    "options": [
+      "Ag",
+      "Fe",
+      "Au",
+      "Cu"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 13,
+    "question": "Kumushning kimyoviy belgisi qanday?",
+    "options": [
+      "Au",
+      "Pb",
+      "Ag",
+      "Hg"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 14,
+    "question": "Organik kimyo qaysi element birikmalarini o'rganadi?",
+    "options": [
+      "Uglerod",
+      "Temir",
+      "Kalsiy",
+      "Kaliy"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 15,
+    "question": "Suvning kimyoviy formulasi qaysi?",
+    "options": [
+      "CO2",
+      "NaCl",
+      "H2SO4",
+      "H2O"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 16,
+    "question": "Karbonat angidrid formulasi qaysi?",
+    "options": [
+      "CO",
+      "O2",
+      "CO2",
+      "CH4"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 17,
+    "question": "Kimyoviy reaksiya tezligini oshiradigan modda?",
+    "options": [
+      "Indikator",
+      "Katalizator",
+      "Erituvchi",
+      "Inhibitor"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 18,
+    "question": "Kislotalar ta'sirida lakmus qog'ozi qanday rangga kiradi?",
+    "options": [
+      "Ko'k",
+      "Qizil",
+      "Sariq",
+      "Yashil"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 19,
+    "question": "Ishqorlar ta'sirida lakmus qog'ozi qanday rangga kiradi?",
+    "options": [
+      "Ko'k",
+      "Qizil",
+      "Rangsiz",
+      "Jigarrang"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 20,
+    "question": "Eng faol metallmas element qaysi?",
+    "options": [
+      "Xlor",
+      "Ftor",
+      "Yod",
+      "Brom"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 21,
+    "question": "Suyaklarimiz tarkibida eng ko'p bo'ladigan metall?",
+    "options": [
+      "Temir",
+      "Rux",
+      "Kalsiy",
+      "Mis"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 22,
+    "question": "Qon tarkibidagi gemoglobin qaysi metall bilan bog'liq?",
+    "options": [
+      "Magniy",
+      "Kalsiy",
+      "Temir",
+      "Alyuminiy"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 23,
+    "question": "Eng qattiq tabiiy modda qaysi?",
+    "options": [
+      "Po'lat",
+      "Grafit",
+      "Kvars",
+      "Olmos"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 24,
+    "question": "Gaz plitasida yonadigan asosiy gaz?",
+    "options": [
+      "Metan",
+      "Etan",
+      "Propan",
+      "Butan"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 25,
+    "question": "Tuz kislotasi (xlorid kislota) formulasi?",
+    "options": [
+      "HNO3",
+      "H2SO4",
+      "HCl",
+      "H3PO4"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 26,
+    "question": "Sulfat kislota formulasi?",
+    "options": [
+      "HCl",
+      "H2SO4",
+      "HNO3",
+      "H2CO3"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 27,
+    "question": "Oksidlanish darajasi nolga teng bo'lgan modda?",
+    "options": [
+      "Suv",
+      "Tuz",
+      "Oddiy modda",
+      "Kislota"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 28,
+    "question": "Gugurt tayyorlashda ishlatiladigan element?",
+    "options": [
+      "Uglerod",
+      "Fosfor",
+      "Azot",
+      "Kremniy"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 29,
+    "question": "Osh sodasining kimyoviy nomi?",
+    "options": [
+      "Natriy gidrokarbonat",
+      "Natriy karbonat",
+      "Kalsiy sulfat",
+      "Kaliy xlorid"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 30,
+    "question": "Ozon gazining formulasi qanday?",
+    "options": [
+      "O",
+      "O3",
+      "O2",
+      "H2O2"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 31,
+    "question": "Quyoshda eng ko'p tarqalgan element?",
+    "options": [
+      "Geliy",
+      "Vodorod",
+      "Temir",
+      "Uglerod"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 32,
+    "question": "Suv necha gradusda qaynaydi?",
+    "options": [
+      "50°C",
+      "80°C",
+      "100°C",
+      "120°C"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 33,
+    "question": "Suv necha gradusda muzlaydi?",
+    "options": [
+      "-10°C",
+      "0°C",
+      "5°C",
+      "-273°C"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 34,
+    "question": "Molyar massa birligi nima?",
+    "options": [
+      "g/mol",
+      "mol",
+      "gramm",
+      "kg"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 35,
+    "question": "Nisbiy atom massa birligi sifatida nima qabul qilingan?",
+    "options": [
+      "Uglerod atomining 1/12 qismi",
+      "Vodorod atomi",
+      "Kislorod atomi",
+      "Elektron massasi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 36,
+    "question": "Metallmaslarni ko'rsating.",
+    "options": [
+      "Xlor, Oltingugurt",
+      "Oltin, Kumush",
+      "Temir, Mis",
+      "Natriy, Kaliy"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 37,
+    "question": "Qaysi gaz 'shatirlab' yonadi?",
+    "options": [
+      "Vodorod",
+      "Azot",
+      "Kislorod",
+      "Xlor"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 38,
+    "question": "Indikator nima?",
+    "options": [
+      "Reaksiya mahsuloti",
+      "Yondirgich",
+      "Zararli gaz",
+      "Muhitni aniqlovchi modda"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 39,
+    "question": "Fenolftalein ishqorda qanday rangga kiradi?",
+    "options": [
+      "Sariq",
+      "Malina rang",
+      "Ko'k",
+      "Rangsiz"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 40,
+    "question": "Kalsiyning kimyoviy belgisi?",
+    "options": [
+      "K",
+      "Cu",
+      "Cl",
+      "Ca"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 41,
+    "question": "Kaliyning kimyoviy belgisi?",
+    "options": [
+      "K",
+      "Ca",
+      "Na",
+      "Li"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 42,
+    "question": "Temirning zanglashi qanday jarayon?",
+    "options": [
+      "Fizik",
+      "Kimyoviy",
+      "Biologik",
+      "Mexanik"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 43,
+    "question": "Modda massasining saqlanish qonunini kim taklif qilgan?",
+    "options": [
+      "Boyl",
+      "Lomonosov",
+      "Dalton",
+      "Nyuton"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 44,
+    "question": "Havoning asosiy qismi qaysi elementlardan iborat?",
+    "options": [
+      "Azot va Kislorod",
+      "Azot va Vodorod",
+      "Kislorod va Argon",
+      "Vodorod va Geliy"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 45,
+    "question": "Erituvchi sifatida eng ko'p ishlatiladigan modda?",
+    "options": [
+      "Suv",
+      "Spirt",
+      "Benzin",
+      "Kislota"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 46,
+    "question": "Metallmaslar odatda elektrni...",
+    "options": [
+      "Yaxshi o'tkazadi",
+      "Simobdan yaxshi o'tkazadi",
+      "O'tkazmaydi",
+      "Faqat issiqda o'tkazadi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 47,
+    "question": "Kislorodning atom massasi necha?",
+    "options": [
+      "16",
+      "12",
+      "14",
+      "1"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 48,
+    "question": "Uglerodning atom massasi necha?",
+    "options": [
+      "12",
+      "1",
+      "16",
+      "32"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 49,
+    "question": "Atomning tartib raqami nimaga teng?",
+    "options": [
+      "Neytronlar soniga",
+      "Massa soniga",
+      "Protonlar soniga",
+      "Valentlikka"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 50,
+    "question": "Suvning molyar massasi necha (g/mol)?",
+    "options": [
+      "16",
+      "22",
+      "20",
+      "18"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 51,
+    "question": "Kislotali yomg'irlarga asosiy sababchi gaz?",
+    "options": [
+      "Metan",
+      "Oltingugurt oksidlari",
+      "Azot",
+      "Argon"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 52,
+    "question": "Qaysi metall eng plastik (cho'ziluvchan) hisoblanadi?",
+    "options": [
+      "Temir",
+      "Alyuminiy",
+      "Oltin",
+      "Mis"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 53,
+    "question": "Sutning achishi qanday hodisa?",
+    "options": [
+      "Fizik",
+      "Mexanik",
+      "Kimyoviy",
+      "Yutilish"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 54,
+    "question": "Muzning erishi qanday hodisa?",
+    "options": [
+      "Fizik",
+      "Kimyoviy",
+      "Oksidlanish",
+      "Yonish"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 55,
+    "question": "Ammiakning formulasi qanday?",
+    "options": [
+      "HCl",
+      "CH4",
+      "NH3",
+      "NaOH"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 56,
+    "question": "Natriy ishqori (o'yuvchi natriy) formulasi?",
+    "options": [
+      "NaCl",
+      "NaOH",
+      "Na2SO4",
+      "Na2CO3"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 57,
+    "question": "Kislota va ishqor o'rtasidagi reaksiya nima deyiladi?",
+    "options": [
+      "Oksidlanish",
+      "Neytrallanish",
+      "Gidroliz",
+      "Parchalanish"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 58,
+    "question": "Yodning rangi qanday?",
+    "options": [
+      "Sariq",
+      "Qizil",
+      "To'q binafsha (qora)",
+      "Oq"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 59,
+    "question": "Eng keng tarqalgan inert gaz?",
+    "options": [
+      "Argon",
+      "Neon",
+      "Ksenon",
+      "Radon"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 60,
+    "question": "Bromning agregat holati qanday?",
+    "options": [
+      "Gaz",
+      "Qattiq",
+      "Suyuq",
+      "Plazma"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 61,
+    "question": "Neytron qanday zaryadga ega?",
+    "options": [
+      "Musbat",
+      "Manfiy",
+      "O'zgaruvchan",
+      "Zaryadsiz"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 62,
+    "question": "Proton qanday zaryadga ega?",
+    "options": [
+      "Musbat",
+      "Manfiy",
+      "Zaryadsiz",
+      "Nol"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 63,
+    "question": "Elektron qanday zaryadga ega?",
+    "options": [
+      "Musbat",
+      "Katta",
+      "Neytral",
+      "Manfiy"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 64,
+    "question": "Atomning massa soni nimalar yig'indisidan iborat?",
+    "options": [
+      "Proton va neytron",
+      "Proton va elektron",
+      "Elektron va neytron",
+      "Faqat proton"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 65,
+    "question": "Kristall panjaraning necha turi bor?",
+    "options": [
+      "2 ta",
+      "5 ta",
+      "4 ta",
+      "10 ta"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 66,
+    "question": "Alyuminiyning kimyoviy belgisi?",
+    "options": [
+      "Ag",
+      "Au",
+      "Al",
+      "As"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 67,
+    "question": "Misning kimyoviy belgisi?",
+    "options": [
+      "Cr",
+      "Co",
+      "Ca",
+      "Cu"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 68,
+    "question": "Fosforning necha xil allotropik ko'rinishi bor?",
+    "options": [
+      "Oq va Qizil",
+      "Qora va Sariq",
+      "Faqat bitta",
+      "Rangsiz"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 69,
+    "question": "Vodorod peroksid formulasi?",
+    "options": [
+      "H2O",
+      "HO2",
+      "H2O2",
+      "H3O"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 70,
+    "question": "Gidrotermometr nima?",
+    "options": [
+      "Kislota turi",
+      "Laboratoriya idishi",
+      "Namlikni o'lchagich",
+      "Gaz idishi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 71,
+    "question": "Aralashmani ajratishning 'filtrlash' usuli nimaga asoslangan?",
+    "options": [
+      "Zichlikka",
+      "Qaynash temperaturasiga",
+      "Zarrachalar o'lchamiga",
+      "Rangiga"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 72,
+    "question": "Distillash usuli nimaga asoslangan?",
+    "options": [
+      "Eruvchanlikka",
+      "Magnetizmga",
+      "Qaynash temperaturasidagi farqqa",
+      "Og'irlikka"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 73,
+    "question": "Metallarning umumiy xossasi?",
+    "options": [
+      "Elektr o'tkazuvchanlik",
+      "Mo'rtlik",
+      "Gaz holat",
+      "Shishasimonlik"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 74,
+    "question": "Kimyoviy elementlarning atom massasini kim birinchi bo'lib aniqlagan?",
+    "options": [
+      "Lavuarze",
+      "Avogadro",
+      "Berselius",
+      "Dalton"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 75,
+    "question": "Molekulyar massasi eng katta gaz?",
+    "options": [
+      "Vodorod",
+      "Xlor",
+      "Kislorod",
+      "Azot"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 76,
+    "question": "Qaysi element 'quyosh' sharafiga nomlangan?",
+    "options": [
+      "Litiy",
+      "Neon",
+      "Argon",
+      "Geliy"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 77,
+    "question": "Magniy yonganda qanday rangli alanga beradi?",
+    "options": [
+      "Qizil",
+      "Yorqin oq",
+      "Ko'k",
+      "Yashil"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 78,
+    "question": "Benzinning yonishi qanday reaksiya?",
+    "options": [
+      "Endotermik",
+      "Ekzotermik",
+      "Neytrallanish",
+      "O'rin almashish"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 79,
+    "question": "Osh tuzi suvda eriganda nima hosil bo'ladi?",
+    "options": [
+      "Yangi modda",
+      "Gaz",
+      "Cho'kma",
+      "Eritma"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 80,
+    "question": "Qaysi metallni pichoq bilan kessa bo'ladi?",
+    "options": [
+      "Natriy",
+      "Temir",
+      "Alyuminiy",
+      "Mis"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 81,
+    "question": "Davriy jadvalda nechta guruh bor?",
+    "options": [
+      "7 ta",
+      "18 ta",
+      "10 ta",
+      "8 ta"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 82,
+    "question": "Davriy jadvalda nechta davr bor?",
+    "options": [
+      "5 ta",
+      "12 ta",
+      "8 ta",
+      "7 ta"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 83,
+    "question": "Kislota qoldig'i SO4 bo'lsa, bu qaysi kislota?",
+    "options": [
+      "Xlorid",
+      "Sulfat",
+      "Nitrat",
+      "Fosfat"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 84,
+    "question": "Uglerod (IV)-oksidi bu...",
+    "options": [
+      "Is gazi",
+      "Karbonat angidrid",
+      "Suv gazi",
+      "Tabiiy gaz"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 85,
+    "question": "Yadro atrofida elektronlar qayerda harakatlanadi?",
+    "options": [
+      "Yadro ichida",
+      "Orbitalarda",
+      "Vakuolada",
+      "Molekula orasida"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 86,
+    "question": "Eng oson eriydigan metall?",
+    "options": [
+      "Seziy",
+      "Temir",
+      "Oltin",
+      "Volfram"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 87,
+    "question": "Lampochka ichidagi qizish simi qaysi metalldan yasaladi?",
+    "options": [
+      "Mis",
+      "Xrom",
+      "Kumush",
+      "Volfram"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 88,
+    "question": "Qaysi modda 'quruq muz' deyiladi?",
+    "options": [
+      "Qattiq karbonat angidrid",
+      "Muzlagan suv",
+      "Suyuq azot",
+      "Suyuq kislorod"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 89,
+    "question": "Tabiatdagi eng ko'p tarqalgan metall element?",
+    "options": [
+      "Temir",
+      "Alyuminiy",
+      "Natriy",
+      "Mis"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 90,
+    "question": "Metallmaslarning o'zaro birikishidan qanday bog'lanish hosil bo'ladi?",
+    "options": [
+      "Ionli",
+      "Kovalent",
+      "Metall",
+      "Vodorodli"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 91,
+    "question": "Ionli bog'lanish qaysi moddalar orasida bo'ladi?",
+    "options": [
+      "Metallmas va Metallmas",
+      "Metall va Metall",
+      "Metall va Metallmas",
+      "Faqat gazlar"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 92,
+    "question": "Qaysi element 'hayot elementi' deb ataladi?",
+    "options": [
+      "Azot",
+      "Kislorod",
+      "Uglerod",
+      "Vodorod"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 93,
+    "question": "Nisbiy molekulyar massa qanday belgilanadi?",
+    "options": [
+      "Mr",
+      "Ar",
+      "n",
+      "m"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 94,
+    "question": "Avogadro soni qaysi harf bilan belgilanadi?",
+    "options": [
+      "N",
+      "V",
+      "M",
+      "Na"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 95,
+    "question": "Gazlarning normal sharoitdagi hajmi (l/mol)?",
+    "options": [
+      "11.2",
+      "44.8",
+      "22.4",
+      "2.24"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 96,
+    "question": "Kimyo laboratoriyasida gazlarni yig'ish usuli?",
+    "options": [
+      "Bug'latish",
+      "Filtrlash",
+      "Distillash",
+      "Suvni siqib chiqarish"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 97,
+    "question": "Suyuqlik hajmi nima bilan o'lchanadi?",
+    "options": [
+      "Tarozi",
+      "Barometr",
+      "Termometr",
+      "Menzurka"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 98,
+    "question": "Kristall holatdagi suv nima deyiladi?",
+    "options": [
+      "Bug'",
+      "Tuman",
+      "Shudring",
+      "Muz"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 99,
+    "question": "Qaysi element suyak va tish emalini mustahkamlaydi?",
+    "options": [
+      "Yod",
+      "Xlor",
+      "Ftor",
+      "Brom"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 100,
+    "question": "Eng og'ir tabiiy element?",
+    "options": [
+      "Qo'rg'oshin",
+      "Oltin",
+      "Uran",
+      "Simob"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 101,
+    "question": "Kraxmalga yod tomizilsa qanday rang hosil bo'ladi?",
+    "options": [
+      "Sariq",
+      "Qizil",
+      "To'q ko'k",
+      "Yashil"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 102,
+    "question": "Fotosintez jarayonida o'simliklar nima chiqaradi?",
+    "options": [
+      "Azot",
+      "Karbonat angidrid",
+      "Kislorod",
+      "Metan"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 103,
+    "question": "Tuzli suvdan tuzni qanday ajratib olish mumkin?",
+    "options": [
+      "Bug'latish",
+      "Filtrlash",
+      "Magnetizm",
+      "Chiritiy"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 104,
+    "question": "Qonning sho'rligini ta'minlovchi modda?",
+    "options": [
+      "Natriy xlorid",
+      "Shakar",
+      "Kalsiy",
+      "Oqsil"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 105,
+    "question": "Choyga limon solinsa rangi nima uchun ochiladi?",
+    "options": [
+      "Bo'yoq o'lishi",
+      "Muhit kislotali bo'lgani uchun",
+      "Suv ko'paygani uchun",
+      "Isishi uchun"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 106,
+    "question": "Kumush buyumlar nega qorayadi?",
+    "options": [
+      "Havodagi oltingugurt birikmalari bilan reaksiyadan",
+      "Changdan",
+      "Suvdan",
+      "Nurlanishdan"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 107,
+    "question": "Xlorid kislotaning texnik nomi?",
+    "options": [
+      "Osh tuzi",
+      "Gips",
+      "Sirka kislotasi",
+      "Tuz kislotasi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 108,
+    "question": "Qandning (saxaroza) tarkibida qaysi elementlar bor?",
+    "options": [
+      "Na, Cl",
+      "N, P, K",
+      "Fe, Cu, Zn",
+      "C, H, O"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 109,
+    "question": "Havo aralashmami yoki birikmami?",
+    "options": [
+      "Birikma",
+      "Metall",
+      "Element",
+      "Aralashma"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 110,
+    "question": "Eng keng tarqalgan erituvchi nima?",
+    "options": [
+      "Efir",
+      "Benzin",
+      "Atseton",
+      "Suv"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 111,
+    "question": "Kimyo so'zi qaysi tildan olingan?",
+    "options": [
+      "Yunoncha",
+      "Qadimgi Misr (Xemi)",
+      "Lotincha",
+      "Inglizcha"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 112,
+    "question": "Modda miqdori birligi nima?",
+    "options": [
+      "Kilogramm",
+      "Mol",
+      "Metr",
+      "Litr"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 113,
+    "question": "Dunyodagi eng qimmat metallardan biri?",
+    "options": [
+      "Platina",
+      "Temir",
+      "Alyuminiy",
+      "Mis"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 114,
+    "question": "Gipsning formulasi tarkibida qaysi metall bor?",
+    "options": [
+      "Natriy",
+      "Kalsiy",
+      "Magniy",
+      "Rux"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 115,
+    "question": "Sirka kislotasining hidi qanday?",
+    "options": [
+      "Hidsiz",
+      "O'tkir, o'ziga xos",
+      "Xushbo'y",
+      "Chirigan tuxum hidi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 116,
+    "question": "Oltingugurtning rangi qanday?",
+    "options": [
+      "Qizil",
+      "Sariq",
+      "Ko'k",
+      "Oq"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 117,
+    "question": "Vodorod gazi havodan yengilmi yoki og'irmi?",
+    "options": [
+      "Bir xil",
+      "Og'ir",
+      "Yengil",
+      "Suyuq"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 118,
+    "question": "Gazli suvlar tarkibida qaysi gaz bo'ladi?",
+    "options": [
+      "Azot",
+      "Vodorod",
+      "Kislorod",
+      "Karbonat angidrid"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 119,
+    "question": "Elementning tartib raqami 6 bo'lsa, bu qaysi element?",
+    "options": [
+      "Azot",
+      "Uglerod",
+      "Kislorod",
+      "Bor"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 120,
+    "question": "Elementning tartib raqami 8 bo'lsa, bu qaysi element?",
+    "options": [
+      "Azot",
+      "Kislorod",
+      "Uglerod",
+      "Ftor"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 121,
+    "question": "Geliyni nima uchun sharlar to'ldirishda ishlatishadi?",
+    "options": [
+      "Arzonligi uchun",
+      "Havodan yengil va xavfsiz (yonmaydi)",
+      "Rangi chiroyliligi uchun",
+      "Hidi borligi uchun"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 122,
+    "question": "Natriy xloridning kristalli shakli qanday?",
+    "options": [
+      "Ignasimon",
+      "Kubsimon",
+      "Yulduzsimon",
+      "Suyuq"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 123,
+    "question": "Valentlik nima?",
+    "options": [
+      "Atom massasi",
+      "Atomning bog' hosil qilish qobiliyati",
+      "Zaryadi",
+      "Rangi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 124,
+    "question": "Vodorod har doim necha valentli?",
+    "options": [
+      "IV",
+      "II",
+      "III",
+      "I"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 125,
+    "question": "Kislorod har doim necha valentli?",
+    "options": [
+      "I",
+      "IV",
+      "III",
+      "II"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 126,
+    "question": "Suvning qattiq holati?",
+    "options": [
+      "Bug'",
+      "Plazma",
+      "Suyuqlik",
+      "Muz"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 127,
+    "question": "Oltin havoda oksidlanadimi?",
+    "options": [
+      "Yo'q",
+      "Ha",
+      "Faqat qizdirilganda",
+      "Faqat namda"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 128,
+    "question": "Magniyning kimyoviy belgisi?",
+    "options": [
+      "Mn",
+      "Ma",
+      "Mo",
+      "Mg"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 129,
+    "question": "Temirning kimyoviy belgisi?",
+    "options": [
+      "Fr",
+      "F",
+      "Fe",
+      "I"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 130,
+    "question": "Qaysi kislota 'kislotalar shohi' deyiladi?",
+    "options": [
+      "Nitrat",
+      "Xlorid",
+      "Sulfat",
+      "Sirka"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 131,
+    "question": "Molekula tarkibiga nimalar kiradi?",
+    "options": [
+      "Hujayralar",
+      "Faqat elektronlar",
+      "G'ishtlar",
+      "Atomlar"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 132,
+    "question": "Metall mashtabda eng ko'p ishlatiladigan qurilish materiali?",
+    "options": [
+      "Temir",
+      "Mis",
+      "Oltin",
+      "Natriy"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 133,
+    "question": "Atseton nima uchun ishlatiladi?",
+    "options": [
+      "Ichish uchun",
+      "Yuvish uchun",
+      "Ovqatga solish uchun",
+      "Erituvchi sifatida"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 134,
+    "question": "Sirka kislotasining formulasi?",
+    "options": [
+      "CH4",
+      "C2H5OH",
+      "CH3COOH",
+      "HCOOH"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 135,
+    "question": "Etil spirti formulasi?",
+    "options": [
+      "CH3OH",
+      "C2H5OH",
+      "C3H7OH",
+      "NaOH"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 136,
+    "question": "Sovun nima?",
+    "options": [
+      "Kislota",
+      "Gaz",
+      "Sof metall",
+      "Yog' kislotalarining tuzlari"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 137,
+    "question": "Atmosferada issiqxona effektini keltirib chiqaruvchi asosiy gaz?",
+    "options": [
+      "Azot",
+      "Kislorod",
+      "Karbonat angidrid",
+      "Argon"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 138,
+    "question": "Yong'in o'chirgichlar ichida qaysi gaz bo'ladi?",
+    "options": [
+      "Vodorod",
+      "Kislorod",
+      "Metan",
+      "Karbonat angidrid"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 139,
+    "question": "Qalam ichidagi 'qo'rg'oshin' aslida nima?",
+    "options": [
+      "Qo'rg'oshin",
+      "Plastmassa",
+      "Temir",
+      "Grafit (Uglerod)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 140,
+    "question": "Olmos nega qimmat?",
+    "options": [
+      "Rangi chiroyli",
+      "Eng qattiq va kamyob bo'lgani uchun",
+      "O'zi nur chiqaradi",
+      "Erimaydi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 141,
+    "question": "Davriy jadvalda 1-guruh elementlari qanday ataladi?",
+    "options": [
+      "Ishqoriy metallar",
+      "Gidrogenlar",
+      "Inert gazlar",
+      "Gidroksidlar"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 142,
+    "question": "Xlorning hidi qanday?",
+    "options": [
+      "Xushbo'y",
+      "Gullar hidi",
+      "Hidsiz",
+      "O'tkir, bo'g'uvchi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 143,
+    "question": "Tuzli suvni muzlatgichga qo'ysak, birinchi nima muzlaydi?",
+    "options": [
+      "Toza suv",
+      "Tuz",
+      "Hammasi birga",
+      "Muzlamaydi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 144,
+    "question": "Kimyoviy formula nimani anglatadi?",
+    "options": [
+      "Modda tarkibini",
+      "Rasm",
+      "Narxini",
+      "Og'irligini"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 145,
+    "question": "Oltin (Au) lotincha qanday nomlanadi?",
+    "options": [
+      "Aurum",
+      "Argentum",
+      "Ferrum",
+      "Cuprum"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 146,
+    "question": "Kumush (Ag) lotincha qanday nomlanadi?",
+    "options": [
+      "Aurum",
+      "Argentum",
+      "Plumbum",
+      "Stannum"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 147,
+    "question": "Temir (Fe) lotincha qanday nomlanadi?",
+    "options": [
+      "Natrium",
+      "Cuprum",
+      "Ferrum",
+      "Kalium"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 148,
+    "question": "Mis (Cu) lotincha qanday nomlanadi?",
+    "options": [
+      "Ferrum",
+      "Aurum",
+      "Cuprum",
+      "Argentum"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 149,
+    "question": "Quyosh nuri ta'sirida xlorofill yordamida oziq hosil bo'lishi?",
+    "options": [
+      "Oksidlanish",
+      "Bug'lanish",
+      "Yonish",
+      "Fotosintez"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 150,
+    "question": "Kimyo fanini o'rganish nima uchun kerak?",
+    "options": [
+      "Moddalar dunyosini va hayotimizni tushunish uchun",
+      "Faqat baho uchun",
+      "Faqat shifokor bo'lish uchun",
+      "Keragi yo'q"
+    ],
+    "answerIndex": 0
+  }
+]

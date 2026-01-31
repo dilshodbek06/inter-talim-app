@@ -1,0 +1,1652 @@
+[
+  {
+    "id": 1,
+    "question": "Tarixning otasi deb kim tan olingan?",
+    "options": [
+      "Gomer",
+      "Gerodot",
+      "Platon",
+      "Aristotel"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 2,
+    "question": "Eng qadimgi odam qoldiqlari qaysi materikdan topilgan?",
+    "options": [
+      "Osiyo",
+      "Afrika",
+      "Yevropa",
+      "Amerika"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 3,
+    "question": "O'zbekiston hududidan topilgan eng qadimgi odam manzilgohi qaysi?",
+    "options": [
+      "Selungur",
+      "Teshiktosh",
+      "Obirahmat",
+      "Ko'lbuloq"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 4,
+    "question": "Nil daryosi bo'yida qaysi qadimgi davlat shakllangan?",
+    "options": [
+      "Bobil",
+      "Xet",
+      "Misr",
+      "Urartu"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 5,
+    "question": "Qadimgi Misr hukmdorlari nima deb atalgan?",
+    "options": [
+      "Shoh",
+      "Xon",
+      "Fir'avn",
+      "Imperator"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 6,
+    "question": "Dunyodagi eng qadimgi yozuv turi qaysi?",
+    "options": [
+      "Iyeroglif",
+      "Mixxat",
+      "Alifbo",
+      "Piktografiya"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 7,
+    "question": "Qadimgi Yunonistonda o'tkazilgan sport o'yinlari qanday nomlangan?",
+    "options": [
+      "Gladiator janglari",
+      "Spartakiada",
+      "Ritsar turnirlari",
+      "Olimpiada o'yinlari"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 8,
+    "question": "Makedoniyalik Aleksandr (Iskandar Zulqarnayn) qaysi asrda yashagan?",
+    "options": [
+      "Mil.avv. V asr",
+      "Mil.avv. VI asr",
+      "Mil.avv. III asr",
+      "Mil.avv. IV asr"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 9,
+    "question": "Qadimgi Rim davlati qaysi yarim orolda joylashgan?",
+    "options": [
+      "Apennin",
+      "Piriney",
+      "Bolqon",
+      "Kichik Osiyo"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 10,
+    "question": "Zardushtiylik dinining muqaddas kitobi nima?",
+    "options": [
+      "Avesto",
+      "Injil",
+      "Tavrot",
+      "Qur'on"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 11,
+    "question": "Buyuk ipak yo'li qaysi davlatdan boshlangan?",
+    "options": [
+      "Hindiston",
+      "Rim",
+      "Xitoy",
+      "Eron"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 12,
+    "question": "Qadimgi dunyoning yetti mo'jizasidan biri bo'lgan piramidalar qayerda?",
+    "options": [
+      "Misr",
+      "Gretsiya",
+      "Italiya",
+      "Turkiya"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 13,
+    "question": "Milodiy yil hisobi nima bilan bog'liq?",
+    "options": [
+      "Rim qurilishi",
+      "Dunyoning yaralishi",
+      "Muhammad (s.a.v) hijrati",
+      "Iso Masihning tug'ilishi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 14,
+    "question": "Spartak qo'zg'oloni qaysi davlatda sodir bo'lgan?",
+    "options": [
+      "Qadimgi Yunoniston",
+      "Karfagen",
+      "Qadimgi Rim",
+      "Misr"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 15,
+    "question": "Demokratiya vatani qayer hisoblanadi?",
+    "options": [
+      "Rim",
+      "Bobil",
+      "Afina (Gretsiya)",
+      "Xitoy"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 16,
+    "question": "Shaxmat o'yini birinchi bo'lib qayerda paydo bo'lgan?",
+    "options": [
+      "Hindiston",
+      "Xitoy",
+      "Eron",
+      "O'rta Osiyo"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 17,
+    "question": "Qog'oz, kompas va porox birinchi bo'lib qayerda ixtiro qilingan?",
+    "options": [
+      "Yaponiya",
+      "Misr",
+      "Xitoy",
+      "Gretsiya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 18,
+    "question": "Ahamoniylar davlatiga kim asos solgan?",
+    "options": [
+      "Doro I",
+      "Artakserks",
+      "Kserks",
+      "Kir II"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 19,
+    "question": "Amudaryo xazinasi qayerdan topilgan?",
+    "options": [
+      "Sirdaryo bo'yidan",
+      "Amudaryo bo'yidan (Taxti Sangin)",
+      "Zarafshon vodiysidan",
+      "Farg'onadan"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 20,
+    "question": "Qadimgi dunyoda 'Alfavit' (Alifbo)ni kimlar yaratgan?",
+    "options": [
+      "Misrliklar",
+      "Bofilliklar",
+      "Finikiyaliklar",
+      "Shumerlar"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 21,
+    "question": "Rim shahri qachon barpo etilgan?",
+    "options": [
+      "Mil.avv. 500-yil",
+      "Mil.avv. 753-yil",
+      "Milodiy 1-yil",
+      "Mil.avv. 1000-yil"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 22,
+    "question": "Buyuk ipak yo'li termini fanga kim tomonidan kiritilgan?",
+    "options": [
+      "Marko Polo",
+      "Ibn Battuta",
+      "Ferdinand Rixtgofen",
+      "Vasko da Gama"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 23,
+    "question": "Buddaviylik dini qaysi davlatda paydo bo'lgan?",
+    "options": [
+      "Xitoy",
+      "Yaponiya",
+      "Hindiston",
+      "Tailand"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 24,
+    "question": "Tarixda birinchi marta yozma qonunlar to'plamini kim tuzgan?",
+    "options": [
+      "Yuliy Sezar",
+      "Xammurapi",
+      "Napoleon",
+      "Chingizxon"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 25,
+    "question": "Piktografiya nima?",
+    "options": [
+      "Mixxat yozuvi",
+      "Raqamli yozuv",
+      "Harfli yozuv",
+      "Rasmli yozuv"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 26,
+    "question": "Iskandar Zulqarnaynning ustozi kim bo'lgan?",
+    "options": [
+      "Aristotel",
+      "Platon",
+      "Sokrat",
+      "Gerodot"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 27,
+    "question": "Rim imperiyasining birinchi imperatori kim?",
+    "options": [
+      "Yuliy Sezar",
+      "Neron",
+      "Oktavian Avgust",
+      "Konstantin"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 28,
+    "question": "Antik davr deganda qaysi xalqlar tarixi tushuniladi?",
+    "options": [
+      "Xitoy va Hindiston",
+      "Gretsiya va Rim",
+      "Misr va Bobil",
+      "Mayya va Astek"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 29,
+    "question": "Rimliklar o'z davlatini nima deb atashgan?",
+    "options": [
+      "Polis",
+      "Monarxiya",
+      "Imperiya",
+      "Respublika"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 30,
+    "question": "Qadimgi Dunyo tarixi qaysi voqea bilan yakunlanadi?",
+    "options": [
+      "Amerikaning kashf etilishi",
+      "Rimning qulashi (476-y)",
+      "Islomning yoyilishi",
+      "Xonliklar davri"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 31,
+    "question": "Eng qadimgi odamlarning asosiy mashg'uloti nima bo'lgan?",
+    "options": [
+      "Dehqonchilik",
+      "Hunarmandchilik",
+      "Termachilik va ovchilik",
+      "Savdo"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 32,
+    "question": "Olovni kashf etish qaysi davrga to'g'ri keladi?",
+    "options": [
+      "Eneolit",
+      "Mezolit",
+      "Neolit",
+      "Paleolit"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 33,
+    "question": "Kamalak va o'q-yoy qaysi davrda ixtiro qilingan?",
+    "options": [
+      "Mezolit",
+      "Paleolit",
+      "Neolit",
+      "Bronza davri"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 34,
+    "question": "Mis-tosh davri fanda nima deb ataladi?",
+    "options": [
+      "Eneolit",
+      "Neolit",
+      "Paleolit",
+      "Mezolit"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 35,
+    "question": "Antropologiya nimani o'rganadi?",
+    "options": [
+      "Topilmalarni",
+      "Insonning kelib chiqishi va tana tuzilishini",
+      "Yozuvlarni",
+      "Tog'larni"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 36,
+    "question": "Saka va Massagetlar qayerda yashagan?",
+    "options": [
+      "Misrda",
+      "Xitoyda",
+      "Yevropada",
+      "O'rta Osiyoda"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 37,
+    "question": "To'maris qaysi qabila malikasi bo'lgan?",
+    "options": [
+      "Saklar",
+      "Massagetlar",
+      "Xorazmiylar",
+      "Sug'diylar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 38,
+    "question": "Shiroqning jasorati kimlarga qarshi bo'lgan?",
+    "options": [
+      "Yunonlarga",
+      "Eronliklarga (Ahamoniylar)",
+      "Arablar",
+      "Mo'g'ullar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 39,
+    "question": "O'rta Osiyoda birinchi davlat birlashmalari qaysilar?",
+    "options": [
+      "Qoraxoniylar",
+      "Somoniylar",
+      "Temuriylar",
+      "Katta Xorazm va Qadimgi Baqtriya"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 40,
+    "question": "Arxeologik qazishmalar natijasida topilgan ashyolar?",
+    "options": [
+      "Manba",
+      "Ashyoviy manba",
+      "Yozma manba",
+      "Og'zaki manba"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 41,
+    "question": "Zikkuratlar qaysi davlatda qurilgan?",
+    "options": [
+      "Misr",
+      "Hindiston",
+      "Ikki daryo oralig'i (Mesopotamiya)",
+      "Gretsiya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 42,
+    "question": "Qadimgi Hindiston tabaqalari nima deb atalgan?",
+    "options": [
+      "Ordalar",
+      "Sinflar",
+      "Gildiyalar",
+      "Kastalar"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 43,
+    "question": "Olimpiada o'yinlari qachon boshlangan?",
+    "options": [
+      "Mil.avv. 500-yil",
+      "Milodiy 100-yil",
+      "Mil.avv. 776-yil",
+      "Mil.avv. 1000-yil"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 44,
+    "question": "Rim imperiyasi nechanchi yilda ikkiga bo'lindi?",
+    "options": [
+      "1054-yil",
+      "476-yil",
+      "330-yil",
+      "395-yil"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 45,
+    "question": "Sivilizatsiya so'zining ma'nosi?",
+    "options": [
+      "Davlat",
+      "Urush",
+      "Fuqarolik, ijtimoiy",
+      "Dengiz"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 46,
+    "question": "Buyuk Xitoy devori nima uchun qurilgan?",
+    "options": [
+      "Savdo uchun",
+      "Turizm uchun",
+      "Ko'chmanchi qabilalardan himoyalanish uchun",
+      "Daryo to'sish uchun"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 47,
+    "question": "Konfutsiy qaysi davlat donishmandi?",
+    "options": [
+      "Xitoy",
+      "Hindiston",
+      "Eron",
+      "Yaponiya"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 48,
+    "question": "Panteon nima?",
+    "options": [
+      "Sport maydoni",
+      "Barcha xudolar ibodatxonasi",
+      "Shoh saroyi",
+      "Qabr"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 49,
+    "question": "Marafondan Afinagacha bo'lgan masofa qancha?",
+    "options": [
+      "10 km",
+      "42 km 195 m",
+      "100 km",
+      "5 km"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 50,
+    "question": "Tarixiy sanalarni hisoblashda 'Era' nima?",
+    "options": [
+      "Bir kun",
+      "O'n yil",
+      "Yil hisobi boshlanishi",
+      "Asr"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 51,
+    "question": "Islom dini qaysi asrda paydo bo'ldi?",
+    "options": [
+      "V asr",
+      "VI asr",
+      "VIII asr",
+      "VII asr"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 52,
+    "question": "O'rta Osiyoda Somoniylar davlati poytaxti qaysi shahar edi?",
+    "options": [
+      "Samarqand",
+      "Xiva",
+      "Buxoro",
+      "Toshkent"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 53,
+    "question": "Buyuk ipak yo'li gullab-yashnagan davrda asosiy savdo moli nima edi?",
+    "options": [
+      "Tilla",
+      "Ipak",
+      "Chinnivuri",
+      "Ziravorlar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 54,
+    "question": "Amir Temur nechanchi yilda tug'ilgan?",
+    "options": [
+      "1336-yil",
+      "1342-yil",
+      "1405-yil",
+      "1299-yil"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 55,
+    "question": "Sohibqiron Amir Temur qaysi qishloqda tug'ilgan?",
+    "options": [
+      "Zanjirsaroy",
+      "Movarounnahr",
+      "Konigil",
+      "Xo'ja Ilg'or"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 56,
+    "question": "Amir Temur davlati poytaxti qaysi shahar bo'lgan?",
+    "options": [
+      "Shahrisabz",
+      "G'azna",
+      "Hirot",
+      "Samarqand"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 57,
+    "question": "Mirzo Ulug'bek kim bo'lgan?",
+    "options": [
+      "Shoir",
+      "Sarkarda",
+      "Astronom va hukmdor",
+      "Dengizchi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 58,
+    "question": "Alisher Navoiy qaysi tilda 'Xamsa' yaratgan?",
+    "options": [
+      "Arab",
+      "Fors",
+      "Eski o'zbek (turkiy)",
+      "Urdu"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 59,
+    "question": "Zahiriddin Muhammad Bobur qaysi asarni yozgan?",
+    "options": [
+      "Shohnoma",
+      "Boburnoma",
+      "Qutadg'u bilig",
+      "Tarixi Rashidiy"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 60,
+    "question": "Hindistonda 'Buyuk Boburiylar' sulolasiga kim asos solgan?",
+    "options": [
+      "Z.M. Bobur",
+      "Akbarshoh",
+      "Shohjahon",
+      "Humoyun"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 61,
+    "question": "Vizantiya imperiyasining poytaxti qaysi shahar edi?",
+    "options": [
+      "Rim",
+      "Konstantinopol",
+      "Afina",
+      "Qohira"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 62,
+    "question": "Amerika qit'asi nechanchi yilda kashf etilgan?",
+    "options": [
+      "1492-yil",
+      "1498-yil",
+      "1500-yil",
+      "1392-yil"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 63,
+    "question": "Amerikani kim kashf etgan (lekin uni Hindiston deb o'ylagan)?",
+    "options": [
+      "Xristofor Kolumb",
+      "Amerigo Vespushchi",
+      "Magellan",
+      "Vasko da Gama"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 64,
+    "question": "Buyuk geografik kashfiyotlar davri qaysi asrlarni o'z ichiga oladi?",
+    "options": [
+      "X-XII asrlar",
+      "XVIII asr",
+      "XV-XVII asrlar",
+      "XX asr"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 65,
+    "question": "Mo'g'ullar imperiyasining asoschisi kim?",
+    "options": [
+      "Chingizxon",
+      "Botuxon",
+      "Hulokuxon",
+      "O'qtoyxon"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 66,
+    "question": "Jaloliddin Manguberdi kimlarga qarshi kurashgan?",
+    "options": [
+      "Arablar",
+      "Mo'g'ullar",
+      "Ruslar",
+      "Xitoyliklar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 67,
+    "question": "Al-Xorazmiy qaysi fanga asos solgan?",
+    "options": [
+      "Algebra",
+      "Tibbiyot",
+      "Kimyo",
+      "Tarix"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 68,
+    "question": "Ibn Sino (Avitsenna) qaysi soha olimi bo'lgan?",
+    "options": [
+      "Tibbiyot",
+      "Astronomiya",
+      "Matematika",
+      "Geografiya"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 69,
+    "question": "Birinchi marta globus yasagan sharq olimi kim?",
+    "options": [
+      "Ulug'bek",
+      "Beruniy",
+      "Xorazmiy",
+      "Farobiy"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 70,
+    "question": "Ikkinchi muallim (Muallimus-soniy) deb kim atalgan?",
+    "options": [
+      "Ibn Sino",
+      "Farobiy",
+      "Beruniy",
+      "Navoiy"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 71,
+    "question": "Qadimgi Rimning qulashi bilan qaysi davr boshlanadi?",
+    "options": [
+      "O'rta asrlar",
+      "Yangi davr",
+      "Eng yangi davr",
+      "Temir davri"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 72,
+    "question": "Feodalizm nima?",
+    "options": [
+      "Erkin savdo",
+      "Sanoat jamiyati",
+      "Yer egaligiga asoslangan jamiyat",
+      "Quldorlik"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 73,
+    "question": "Renesans (Uyg'onish davri) vatani qayer?",
+    "options": [
+      "Fransiya",
+      "Angliya",
+      "Italiya",
+      "Germaniya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 74,
+    "question": "Leonardo da Vinchi qaysi davr san'atkori?",
+    "options": [
+      "Antik",
+      "Renesans",
+      "Zamonaviy",
+      "Barokko"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 75,
+    "question": "Qaysi shahar 'Uch din markazi' deb ataladi?",
+    "options": [
+      "Makka",
+      "Quddus (Ierusalim)",
+      "Rim",
+      "Parij"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 76,
+    "question": "Salib yurishlari maqsadi nima edi?",
+    "options": [
+      "Muqaddas Quddusni qaytarib olish",
+      "Savdo yo'llarini ochish",
+      "Amerika kashfiyoti",
+      "Xitoyni bosib olish"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 77,
+    "question": "Dunyo bo'ylab birinchi sayohatni kim amalga oshirgan?",
+    "options": [
+      "Vasko da Gama",
+      "Kolumb",
+      "James Kuk",
+      "Fernan Magellan"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 78,
+    "question": "O'zbekistonda uch xonlik davri deganda qaysilar tushuniladi?",
+    "options": [
+      "Buxoro, Xiva, Qo'qon",
+      "Samarqand, Toshkent, Xiva",
+      "Termiz, Namangan, Buxoro",
+      "G'allaorol, Zomin, Forish"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 79,
+    "question": "Buxoro amirligida hukmronlik qilgan oxirgi sulola?",
+    "options": [
+      "Shayboniylar",
+      "Ashtarxoniylar",
+      "Temuriylar",
+      "Mang'itlar"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 80,
+    "question": "Xiva xonligiga qaysi sulola asos solgan?",
+    "options": [
+      "Qo'ng'irotlar",
+      "Safforiylar",
+      "Mang'itlar",
+      "Yodgorxon avlodlari"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 81,
+    "question": "Qo'qon xonligining poytaxti qaysi shahar bo'lgan?",
+    "options": [
+      "Qo'qon",
+      "Namangan",
+      "Andijon",
+      "Marg'ilon"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 82,
+    "question": "Rus qo'shinlari Toshkentni nechanchi yilda egallagan?",
+    "options": [
+      "1885-yil",
+      "1873-yil",
+      "1917-yil",
+      "1865-yil"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 83,
+    "question": "Jadidchilik harakatining asoschisi kim?",
+    "options": [
+      "Ismoil Gasprinskiy",
+      "Mahmudxo'ja Behbudiy",
+      "Munavvarqori",
+      "Fitrat"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 84,
+    "question": "Turkistonda birinchi jadid maktabi qayerda ochilgan?",
+    "options": [
+      "Buxoroda",
+      "Toshkentda",
+      "Samarqandda",
+      "Andijonda"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 85,
+    "question": "Napoleon Bonapart qaysi davlat imperatori bo'lgan?",
+    "options": [
+      "Angliya",
+      "Prussiya",
+      "Rossiya",
+      "Fransiya"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 86,
+    "question": "Fransuz burjua inqilobi qachon boshlangan?",
+    "options": [
+      "1812-yil",
+      "1789-yil",
+      "1914-yil",
+      "1700-yil"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 87,
+    "question": "Hindistonning mustaqillik uchun kurashi yetakchisi?",
+    "options": [
+      "Javoharlal Neru",
+      "Mahatma Gandi",
+      "Indira Gandi",
+      "Subxas Chandra Bos"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 88,
+    "question": "Birinchi jahon urushi qaysi yillar oralig'ida bo'lgan?",
+    "options": [
+      "1914-1918",
+      "1939-1945",
+      "1905-1907",
+      "1920-1924"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 89,
+    "question": "Ikkinchi jahon urushi qachon boshlangan?",
+    "options": [
+      "1914-yil",
+      "1941-yil",
+      "1939-yil 1-sentabr",
+      "1945-yil"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 90,
+    "question": "Ikkinchi jahon urushi qachon tugagan?",
+    "options": [
+      "1941-yil",
+      "1944-yil",
+      "1945-yil 2-sentabr",
+      "1950-yil"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 91,
+    "question": "BMT (Birlashgan Millatlar Tashkiloti) qachon tuzilgan?",
+    "options": [
+      "1918-yil",
+      "1950-yil",
+      "1991-yil",
+      "1945-yil"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 92,
+    "question": "O'zbekiston Respublikasi Mustaqilligi qachon e'lon qilingan?",
+    "options": [
+      "1990-yil 20-iyun",
+      "1991-yil 31-avgust",
+      "1992-yil 8-dekabr",
+      "1991-yil 1-sentabr"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 93,
+    "question": "O'zbekiston Respublikasi Konstitutsiyasi qachon qabul qilingan?",
+    "options": [
+      "1991-yil",
+      "1992-yil 8-dekabr",
+      "1993-yil",
+      "1990-yil"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 94,
+    "question": "O'zbekiston BMTga qachon a'zo bo'ldi?",
+    "options": [
+      "1991-yil",
+      "1995-yil",
+      "1992-yil 2-mart",
+      "2000-yil"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 95,
+    "question": "Birinchi kosmonavt kim?",
+    "options": [
+      "Nil Armstrong",
+      "Vladimir Jonibekov",
+      "Valentina Tereshkova",
+      "Yuriy Gagarin"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 96,
+    "question": "Oyni birinchi bo'lib kim bosib o'tgan (qadam qo'ygan)?",
+    "options": [
+      "Yuriy Gagarin",
+      "Nil Armstrong",
+      "Aleksey Leonov",
+      "Buzz Aldrin"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 97,
+    "question": "O'zbekistonning birinchi Prezidenti kim?",
+    "options": [
+      "Shavkat Mirziyoyev",
+      "Islom Karimov",
+      "Sharof Rashidov",
+      "Usmon Yusupov"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 98,
+    "question": "Amir Temur necha yoshida vafot etgan?",
+    "options": [
+      "60",
+      "80",
+      "75",
+      "69"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 99,
+    "question": "Shahrisabzdagi Amir Temur qurdirgan mashhur saroy?",
+    "options": [
+      "Oqsaroy",
+      "Ko'ksaroy",
+      "Tosh hovli",
+      "Sitorai Mohi Xosa"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 100,
+    "question": "Tarixda 'Sovuq urush' davri qaysi yillarni o'z ichiga oladi?",
+    "options": [
+      "1914-1918",
+      "1939-1945",
+      "1946-1991",
+      "1991-hozirgacha"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 101,
+    "question": "Eramizdan avvalgi (eramizgacha) sanalar qanday hisoblanadi?",
+    "options": [
+      "Oldinga qarab o'sib boradi",
+      "O'zgarmaydi",
+      "Orqaga qarab kamayib boradi",
+      "Faqat juft sonlar"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 102,
+    "question": "Arxeologlar qadimiy shaharlarni qayerdan izlaydilar?",
+    "options": [
+      "Suv ostidan",
+      "Tog' uchidan",
+      "Yer tagidan (tuproq qatlamidan)",
+      "Havo qatlamidan"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 103,
+    "question": "Numizmatika nimani o'rganadi?",
+    "options": [
+      "Yozuvlarni",
+      "Gerblarni",
+      "Qadimiy tangalarni",
+      "Kiyimlarni"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 104,
+    "question": "Gerblarni o'rganadigan fan nomi?",
+    "options": [
+      "Numizmatika",
+      "Etnografiya",
+      "Sfragistika",
+      "Geraldika"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 105,
+    "question": "Muhrlarni o'rganadigan fan nomi?",
+    "options": [
+      "Sfragistika",
+      "Geraldika",
+      "Toponimika",
+      "Lingvistika"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 106,
+    "question": "O'rta Osiyoda temir davri qachon boshlangan?",
+    "options": [
+      "Mil.avv. IX-VIII asrlarda",
+      "Mil.avv. III ming yillikda",
+      "Milodiy V asrda",
+      "Mil.avv. I asrda"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 107,
+    "question": "Sparta qaysi davlatning bir qismi edi?",
+    "options": [
+      "Rim",
+      "Eron",
+      "Misr",
+      "Gretsiya"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 108,
+    "question": "Dunyodagi eng katta imperiyalardan birini tuzgan mo'g'ul hukmdori?",
+    "options": [
+      "Botuxon",
+      "Xubilayxon",
+      "Chingizxon",
+      "Shohrux"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 109,
+    "question": "Buyuk Britaniyada 'Sanoat to'ntarishi' qaysi asrda boshlandi?",
+    "options": [
+      "XV asr",
+      "XVIII asr",
+      "XX asr",
+      "XIX asr"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 110,
+    "question": "O'zbek tili qachon davlat tili maqomini oldi?",
+    "options": [
+      "1991-yil",
+      "1985-yil",
+      "1992-yil",
+      "1989-yil 21-oktabr"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 111,
+    "question": "Samarqand shahri necha yoshda?",
+    "options": [
+      "1000 yil",
+      "2750 yildan ortiq",
+      "500 yil",
+      "3000 yil"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 112,
+    "question": "Buxoro shahrining yoshi qancha?",
+    "options": [
+      "2500 yil",
+      "1000 yil",
+      "500 yil",
+      "2000 yil"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 113,
+    "question": "Xiva shahrining yoshi qancha?",
+    "options": [
+      "1000 yil",
+      "1500 yil",
+      "500 yil",
+      "2500 yil"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 114,
+    "question": "Parij shahri qaysi daryo bo'yida joylashgan?",
+    "options": [
+      "Temza",
+      "Dunay",
+      "Sena",
+      "Reyn"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 115,
+    "question": "London shahri qaysi daryo bo'yida?",
+    "options": [
+      "Sena",
+      "Amur",
+      "Nil",
+      "Temza"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 116,
+    "question": "Rossiya imperiyasining poytaxti bo'lgan (1712-1918) shahar?",
+    "options": [
+      "Moskva",
+      "Kiyev",
+      "Sankt-Peterburg",
+      "Qozon"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 117,
+    "question": "Fransiya qiroli Lyudovik XIV nima deb atalgan?",
+    "options": [
+      "Buyuk",
+      "Jasur",
+      "Quyosh-qirol",
+      "Zolim"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 118,
+    "question": "Amerikadagi mustaqillik uchun urush kimlarga qarshi bo'lgan?",
+    "options": [
+      "Fransuzlarga",
+      "Inglizlarga",
+      "Ispanlarga",
+      "Hindularga"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 119,
+    "question": "AQSHning birinchi prezidenti kim?",
+    "options": [
+      "Avraam Linkoln",
+      "Jorj Vashington",
+      "Tomas Jefferson",
+      "Jon Adams"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 120,
+    "question": "Qullikni bekor qilgan AQSH prezidenti?",
+    "options": [
+      "Jorj Vashington",
+      "Jon Kennedi",
+      "Teodor Ruzvelt",
+      "Avraam Linkoln"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 121,
+    "question": "Viktoriya davri qaysi davlat tarixiga tegishli?",
+    "options": [
+      "Fransiya",
+      "Angliya (Britaniya)",
+      "Rossiya",
+      "Germaniya"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 122,
+    "question": "Meidzi inqilobi qaysi davlatda sodir bo'lgan?",
+    "options": [
+      "Yaponiya",
+      "Xitoy",
+      "Koreya",
+      "Vyetnam"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 123,
+    "question": "Turkiya Respublikasining asoschisi va birinchi prezidenti?",
+    "options": [
+      "Mustafo Kamol Otaturk",
+      "Ismat Inonu",
+      "Adnan Menderes",
+      "Rejep Erdog'an"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 124,
+    "question": "Ikkinchi jahon urushida 'G'alaba kuni' qachon nishonlanadi?",
+    "options": [
+      "1-sentabr",
+      "9-may",
+      "1-yanvar",
+      "22-iyun"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 125,
+    "question": "O'zbekistonda 9-may qanday nomlanadi?",
+    "options": [
+      "Xotira va qadrlash kuni",
+      "G'alaba kuni",
+      "Mustaqillik kuni",
+      "Konstitutsiya kuni"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 126,
+    "question": "Afg'onistondan sobiq ittifoq qo'shinlari qachon chiqarilgan?",
+    "options": [
+      "1945-yil",
+      "1989-yil",
+      "1991-yil",
+      "2001-yil"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 127,
+    "question": "Berlin devori qachon qulagan?",
+    "options": [
+      "1989-yil",
+      "1945-yil",
+      "1991-yil",
+      "2000-yil"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 128,
+    "question": "Sobiq Ittifoq (SSSR) nechanchi yilda parchalangan?",
+    "options": [
+      "1989-yil",
+      "1985-yil",
+      "1990-yil",
+      "1991-yil"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 129,
+    "question": "O'zbekiston gerbi va bayrog'i qachon qabul qilingan?",
+    "options": [
+      "1991 va 1992-yillarda",
+      "1990-yilda",
+      "2000-yilda",
+      "1995-yilda"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 130,
+    "question": "Al-farg'oniy asosan qaysi fan bilan shug'ullangan?",
+    "options": [
+      "Astronomiya",
+      "Tibbiyot",
+      "Tarix",
+      "Adabiyot"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 131,
+    "question": "Ispaniyadan Amerikaga borish uchun qaysi okeanni kesib o'tish kerak?",
+    "options": [
+      "Hind okeani",
+      "Atlantika okeani",
+      "Tinch okeani",
+      "Muz okeani"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 132,
+    "question": "Napoleon qaysi orolda vafot etgan?",
+    "options": [
+      "Korsika",
+      "Madagaskar",
+      "Sitsiliya",
+      "Muqaddas Yelena"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 133,
+    "question": "Dunyo tarixida 'Buyuk' unvonini olgan rus imperatori?",
+    "options": [
+      "Ivan Grozniy",
+      "Nikolay II",
+      "Pyotr I",
+      "Aleksandr III"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 134,
+    "question": "Rossiyada krepostnoylik (qullik) tartibi qachon bekor qilingan?",
+    "options": [
+      "1861-yil",
+      "1812-yil",
+      "1917-yil",
+      "1800-yil"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 135,
+    "question": "Chernobil fojiasi qaysi yilda sodir bo'lgan?",
+    "options": [
+      "1986-yil",
+      "1945-yil",
+      "1991-yil",
+      "1980-yil"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 136,
+    "question": "O'rta Osiyoda arab istilosi qaysi asrda tugallandi?",
+    "options": [
+      "VII asr",
+      "X asr",
+      "IX asr",
+      "VIII asr"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 137,
+    "question": "Qoraxoniylar davlatiga kim asos solgan?",
+    "options": [
+      "O'lmas sulton",
+      "Ismoil Somoniy",
+      "Mahmud G'aznaviy",
+      "Satuq Bug'roxon"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 138,
+    "question": "G'aznaviylar davlati poytaxti?",
+    "options": [
+      "Buxoro",
+      "Hirot",
+      "Samarqand",
+      "G'azna"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 139,
+    "question": "Saljuqiylar davlati poytaxtlaridan biri?",
+    "options": [
+      "Marv",
+      "Qohira",
+      "Dehli",
+      "Afina"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 140,
+    "question": "Xorazmshohlar davlati eng rivojlangan davr?",
+    "options": [
+      "Anushtegin davri",
+      "Otsiz davri",
+      "Alauddin Muhammad davri",
+      "Takash davri"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 141,
+    "question": "O'tror fojiasi qaysi davrda bo'lgan?",
+    "options": [
+      "Arablar davrida",
+      "Amir Temur davrida",
+      "Ruslar davrida",
+      "Mo'g'ullar bosqini davrida"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 142,
+    "question": "Xitoyda hukmronlik qilgan mashhur sulola?",
+    "options": [
+      "Sin",
+      "Min",
+      "Hammasi to'g'ri",
+      "Xan"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 143,
+    "question": "Yaponiyada hukmdor nima deb ataladi?",
+    "options": [
+      "Xon",
+      "Qirol",
+      "Sulton",
+      "Mikado (Imperator)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 144,
+    "question": "Vikinglar qayerdan kelishgan?",
+    "options": [
+      "Skandinaviyadan (Shimoliy Yevropa)",
+      "Gretsiyadan",
+      "Afrikadan",
+      "Osiyodan"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 145,
+    "question": "Ingliz tili asosiy gapiriladigan AQSH shtatlari qachon tashkil topgan?",
+    "options": [
+      "1492-yil",
+      "1776-yil",
+      "1800-yil",
+      "1900-yil"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 146,
+    "question": "Tarix fanini o'rganish nima uchun kerak?",
+    "options": [
+      "Faqat sanalarni yodlash uchun",
+      "Eski narsalarni yig'ish uchun",
+      "Kino ko'rish uchun",
+      "O'tmishdan xulosa chiqarish va kelajakni qurish uchun"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 147,
+    "question": "O'zbekistonning yangi tarixi qaysi yildan boshlanadi?",
+    "options": [
+      "1991-yil",
+      "1917-yil",
+      "2000-yil",
+      "1945-yil"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 148,
+    "question": "Bobiylik harakati qayerda bo'lgan?",
+    "options": [
+      "Turkiyada",
+      "Iroqda",
+      "Misrda",
+      "Eronda"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 149,
+    "question": "Eng yangi tarix davri qachondan boshlanadi?",
+    "options": [
+      "1918-yildan",
+      "1914-yildan",
+      "1945-yildan",
+      "1991-yildan"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 150,
+    "question": "Tarixiy obidalarni asrash nima uchun muhim?",
+    "options": [
+      "Ular pul turadi",
+      "Ular xalqning ma'naviy boyligi va merosi",
+      "Ular rasmga tushish uchun",
+      "Ular turistlarga kerak emas"
+    ],
+    "answerIndex": 1
+  }
+]

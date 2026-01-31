@@ -1,0 +1,2202 @@
+[
+  {
+    "id": 1,
+    "question": "Paskal qonuni qaysi moddalar uchun amal qiladi?",
+    "options": [
+      "Faqat qattiq jismlar",
+      "Suyuqlik va gazlar",
+      "Faqat gazlar",
+      "Faqat vakuum"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 2,
+    "question": "Jismning inersiyasini xarakterlovchi asosiy kattalik nima?",
+    "options": [
+      "Massa",
+      "Tezlik",
+      "Kuch",
+      "Hajm"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 3,
+    "question": "Qaysi kuch jismning harakatiga qarshi yo'nalgan bo'ladi?",
+    "options": [
+      "Ishqalanish kuchi",
+      "Og'irlik kuchi",
+      "Elastiklik kuchi",
+      "Arximed kuchi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 4,
+    "question": "Suyuqlikka botirilgan jismni yuqoriga itaruvchi kuch nima deb ataladi?",
+    "options": [
+      "Nyuton kuchi",
+      "Amper kuchi",
+      "Kulon kuchi",
+      "Arximed kuchi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 5,
+    "question": "Termometr qaysi fizik hodisaga asoslanib ishlaydi?",
+    "options": [
+      "Bug'lanish",
+      "Moddalarning erishi",
+      "Moddalarning issiqlikdan kengayishi",
+      "Nur qaytishi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 6,
+    "question": "Diffuziya hodisasi moddaning qaysi holatida tezroq kechadi?",
+    "options": [
+      "Qattiq",
+      "Gazsimon",
+      "Suyuq",
+      "Hammasida bir xil"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 7,
+    "question": "Avtomobil spidometri nimani o'lchaydi?",
+    "options": [
+      "O'rtacha tezlikni",
+      "Tezlanishni",
+      "Oniy tezlikni",
+      "Bosib o'tilgan yo'lni"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 8,
+    "question": "Elektr tokini o'tkazmaydigan moddalar nima deyiladi?",
+    "options": [
+      "O'tkazgichlar",
+      "Dielektriklar (izolyatorlar)",
+      "Yarim o'tkazgichlar",
+      "Supero'tkazgichlar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 9,
+    "question": "Erkin tushish tezlanishining (g) qiymati yer yuzida taxminan qanchaga teng?",
+    "options": [
+      "5 m/s²",
+      "9.8 m/s²",
+      "15 m/s²",
+      "1.6 m/s²"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 10,
+    "question": "Barometr yordamida nima o'lchanadi?",
+    "options": [
+      "Suyuqlik bosimi",
+      "Atmosfera bosimi",
+      "Jismning temperaturasi",
+      "Tok kuchi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 11,
+    "question": "Quyosh energiyasi Yerga qaysi usulda yetib keladi?",
+    "options": [
+      "Konveksiya",
+      "Issiqlik o'tkazuvchanlik",
+      "Diffuziya",
+      "Nurlanish"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 12,
+    "question": "Ohm qonuniga ko'ra, tok kuchi kuchlanishga qanday bog'liq?",
+    "options": [
+      "Kvadratik bog'liq",
+      "Teskari proporsional",
+      "Bog'liq emas",
+      "To'g'ri proporsional"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 13,
+    "question": "Linzaning optik kuchi qaysi birlikda o'lchanadi?",
+    "options": [
+      "Dioptriya",
+      "Metr",
+      "Lumen",
+      "Vatt"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 14,
+    "question": "Qaysi rangdagi nurning sinish ko'rsatkichi eng katta?",
+    "options": [
+      "Qizil",
+      "Yashil",
+      "Sariq",
+      "Binafsha"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 15,
+    "question": "Modda suyuq holatdan gaz holatiga o'tishi nima deyiladi?",
+    "options": [
+      "Erish",
+      "Kondensatsiya",
+      "Bug'lanish",
+      "Sublimatsiya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 16,
+    "question": "Jismning tezligi 2 marta ortsa, uning kinetik energiyasi necha marta ortadi?",
+    "options": [
+      "2 marta",
+      "O'zgarmaydi",
+      "8 marta",
+      "4 marta"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 17,
+    "question": "Ovoz to'lqinlari qayerda tarqala olmaydi?",
+    "options": [
+      "Suvda",
+      "Vakuumda",
+      "Temirda",
+      "Havoda"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 18,
+    "question": "Reaktiv harakat qaysi qonunga asoslangan?",
+    "options": [
+      "Energiyaning saqlanish qonuni",
+      "Ohm qonuni",
+      "Paskal qonuni",
+      "Impulsning saqlanish qonuni"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 19,
+    "question": "Zaryadlangan zarrachalarining tartibli harakati nima?",
+    "options": [
+      "Magnit maydon",
+      "Elektrlanish",
+      "Elektr toki",
+      "Potensial"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 20,
+    "question": "Qaysi asbob elektr zanjiridagi tok kuchini o'lchaydi?",
+    "options": [
+      "Ampermetr",
+      "Voltmeter",
+      "Ommetr",
+      "Vatmetr"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 21,
+    "question": "Suyuqlik sirtining qisqarishga intilishi nima deb ataladi?",
+    "options": [
+      "Zichlik",
+      "Kapillyarlik",
+      "Yopishqoqlik",
+      "Sirt taranglik"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 22,
+    "question": "Qattiq moddaning suyuqlikka aylanmasdan to'g'ridan-to'g'ri gazga aylanishi nima?",
+    "options": [
+      "Desublimatsiya",
+      "Kristallanish",
+      "Sublimatsiya",
+      "Kondensatsiya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 23,
+    "question": "Yorug'likning vakuumdagi tezligi taxminan qancha?",
+    "options": [
+      "300 000 km/s",
+      "340 m/s",
+      "150 000 km/s",
+      "1000 m/s"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 24,
+    "question": "Atom yadrosi qanday zarrachalardan tashkil topgan?",
+    "options": [
+      "Elektron va proton",
+      "Elektron va neytron",
+      "Faqat neytron",
+      "Proton va neytron"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 25,
+    "question": "Magnitning nechta qutbi bor?",
+    "options": [
+      "1 ta",
+      "4 ta",
+      "3 ta",
+      "2 ta (shimoliy va janubiy)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 26,
+    "question": "Jismning og'irlik kuchi qaysi formula bilan aniqlanadi?",
+    "options": [
+      "F = ma",
+      "P = mg",
+      "E = mc²",
+      "v = s/t"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 27,
+    "question": "Elektr qarshiligi qaysi birlikda o'lchanadi?",
+    "options": [
+      "Amper",
+      "Volt",
+      "Ohm",
+      "Vatt"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 28,
+    "question": "Koinotdagi barcha jismlar orasidagi o'zaro tortishish qonunini kim kashf qilgan?",
+    "options": [
+      "Galiley",
+      "Arximed",
+      "Nyuton",
+      "Eynshteyn"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 29,
+    "question": "Quyosh tizimidagi eng kichik sayyora qaysi?",
+    "options": [
+      "Mars",
+      "Pluton",
+      "Venera",
+      "Merkuriy"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 30,
+    "question": "Bosimning birligi nima?",
+    "options": [
+      "Paskal",
+      "Joul",
+      "Nyuton",
+      "Vatt"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 31,
+    "question": "Massa qaysi asbob yordamida o'lchanadi?",
+    "options": [
+      "Dinamometr",
+      "Tarozi",
+      "Menzurka",
+      "Arometr"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 32,
+    "question": "Havo namligini o'lchaydigan asbob nima?",
+    "options": [
+      "Gigrometr",
+      "Termometr",
+      "Barometr",
+      "Manometr"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 33,
+    "question": "Ishning birligi nima?",
+    "options": [
+      "Vatt",
+      "Paskal",
+      "Nyuton",
+      "Joul"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 34,
+    "question": "Qaysi element eng yaxshi elektr o'tkazgich hisoblanadi?",
+    "options": [
+      "Temir",
+      "Alyuminiy",
+      "Kumush",
+      "Mis"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 35,
+    "question": "Yo'nalishga ega bo'lgan fizik kattaliklar nima deyiladi?",
+    "options": [
+      "Vektor",
+      "Skalyar",
+      "Asosiy",
+      "Hosila"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 36,
+    "question": "Egiluvchan jismni deformatsiyalaganda paydo bo'ladigan kuch?",
+    "options": [
+      "Og'irlik kuchi",
+      "Elastiklik kuchi",
+      "Ishqalanish kuchi",
+      "Magnit kuchi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 37,
+    "question": "Harakat trayektoriyasining uzunligi nima?",
+    "options": [
+      "Ko'chish",
+      "Tezlik",
+      "Yo'l",
+      "Vaqt"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 38,
+    "question": "Absolyut nol temperatura necha gradus Selsiyga teng?",
+    "options": [
+      "0 °C",
+      "-273.15 °C",
+      "100 °C",
+      "-100 °C"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 39,
+    "question": "Radioto'lqinlar qanday tabiatga ega?",
+    "options": [
+      "Elektromagnit",
+      "Mexanik",
+      "Akustik",
+      "Gidravlik"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 40,
+    "question": "Samolyot qanotining ko'tarish kuchi qaysi qonun bilan tushuntiriladi?",
+    "options": [
+      "Paskal qonuni",
+      "Bernulli qonuni",
+      "Ohm qonuni",
+      "Guk qonuni"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 41,
+    "question": "Jismning kinetik va potensial energiyalari yig'indisi nima?",
+    "options": [
+      "Kimyoviy energiya",
+      "Ichki energiya",
+      "To'liq mexanik energiya",
+      "Yadro energiyasi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 42,
+    "question": "Oq yorug'likning prizmadan o'tganda ranglarga ajralishi nima?",
+    "options": [
+      "Interferensiya",
+      "Diffraksiya",
+      "Polyarlanish",
+      "Dispersiya"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 43,
+    "question": "Elektr sig'imining birligi nima?",
+    "options": [
+      "Genri",
+      "Tesla",
+      "Farad",
+      "Veber"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 44,
+    "question": "Doimiy magnit maydonni nima hosil qiladi?",
+    "options": [
+      "Tinch turgan zaryad",
+      "Neytron",
+      "Harakatlanayotgan zaryad",
+      "Dielektrik"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 45,
+    "question": "Transformator nima uchun xizmat qiladi?",
+    "options": [
+      "Tokni o'zgartirish uchun",
+      "Kuchlanishni o'zgartirish uchun",
+      "Energiyani saqlash uchun",
+      "Qarshilikni o'lchash uchun"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 46,
+    "question": "Jismni muvozanatda saqlaydigan nuqta nima deyiladi?",
+    "options": [
+      "Og'irlik markazi",
+      "Tayanch nuqtasi",
+      "Inersiya markazi",
+      "Geometrik markaz"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 47,
+    "question": "Kuch momenti qanday aniqlanadi?",
+    "options": [
+      "Kuch va yelka ko'paytmasi",
+      "Kuch va vaqt ko'paytmasi",
+      "Massa va tezlik ko'paytmasi",
+      "Bosim va yuza ko'paytmasi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 48,
+    "question": "Magnit induksiya vektorining birligi nima?",
+    "options": [
+      "Tesla",
+      "Vatt",
+      "Nyuton",
+      "Kulon"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 49,
+    "question": "Erkin tebranishlar nima hisobiga amalga oshadi?",
+    "options": [
+      "Tashqi kuch",
+      "Ichki kuchlar",
+      "Ishqalanish",
+      "Havo qarshiligi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 50,
+    "question": "Fizikada 'eng kichik' zaryad miqdori nima deyiladi?",
+    "options": [
+      "Yadro zaryadi",
+      "Molekulyar zaryad",
+      "Elementar zaryad",
+      "Statik zaryad"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 51,
+    "question": "Modda miqdorining birligi nima?",
+    "options": [
+      "Mol",
+      "Kilogramm",
+      "Metr kub",
+      "Kelvin"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 52,
+    "question": "Avogadro doimiysining son qiymati qancha?",
+    "options": [
+      "3 * 10^8",
+      "9.81",
+      "6.02 * 10^23",
+      "1.6 * 10^-19"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 53,
+    "question": "Ideal gaz holati tenglamasini kim yaratgan?",
+    "options": [
+      "Mendeleyev-Klayperon",
+      "Nyuton",
+      "Paskal",
+      "Amper"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 54,
+    "question": "Izotermik jarayonda qaysi kattalik o'zgarmas qoladi?",
+    "options": [
+      "Bosim",
+      "Temperatura",
+      "Hajm",
+      "Massa"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 55,
+    "question": "Izobarik jarayonda qaysi kattalik o'zgarmas qoladi?",
+    "options": [
+      "Hajm",
+      "Bosim",
+      "Temperatura",
+      "Zichlik"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 56,
+    "question": "Izoxorik jarayonda qaysi kattalik o'zgarmas qoladi?",
+    "options": [
+      "Bosim",
+      "Hajm",
+      "Temperatura",
+      "Tezlik"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 57,
+    "question": "Suyuqlikning bug'ga aylanishi uchun sarflanadigan issiqlik miqdori?",
+    "options": [
+      "Solishtirma yonish issiqligi",
+      "Solishtirma erish issiqligi",
+      "Solishtirma bug'lanish issiqligi",
+      "Ichki energiya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 58,
+    "question": "Suyuqlikning barcha hajmi bo'ylab pufakchalar hosil qilib bug'lanishi nima?",
+    "options": [
+      "Qaynash",
+      "Sublimatsiya",
+      "Diffuziya",
+      "Konveksiya"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 59,
+    "question": "Nisbiy namlikni o'lchovchi asbob?",
+    "options": [
+      "Manometr",
+      "Barometr",
+      "Psixrometr",
+      "Arometr"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 60,
+    "question": "Termodinamikaning birinchi qonuni nima haqida?",
+    "options": [
+      "Inersiya",
+      "Nur sinishi",
+      "Elektr toki",
+      "Energiyaning saqlanishi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 61,
+    "question": "Issiqlik mashinalarining foydali ish koeffitsienti har doim...",
+    "options": [
+      "100% dan katta",
+      "100% ga teng",
+      "0 ga teng",
+      "100% dan kichik"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 62,
+    "question": "Qattiq jismning suyuqlikka o'tish jarayoni?",
+    "options": [
+      "Kristallanish",
+      "Yonish",
+      "Kondensatsiya",
+      "Erish"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 63,
+    "question": "Suyuqlikning qattiq jismga aylanishi?",
+    "options": [
+      "Erish",
+      "Kristallanish",
+      "Bug'lanish",
+      "Sublimatsiya"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 64,
+    "question": "Issiqlik o'tkazuvchanligi eng yuqori moddalar?",
+    "options": [
+      "Metallar",
+      "Suyuqliklar",
+      "Gazlar",
+      "Plastmassalar"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 65,
+    "question": "Konveksiya qayerda sodir bo'lmaydi?",
+    "options": [
+      "Suyuqlikda",
+      "Qattiq jismlarda",
+      "Gazda",
+      "Havoda"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 66,
+    "question": "Jismning ichki energiyasi nimaga bog'liq?",
+    "options": [
+      "Temperatura va agregat holatiga",
+      "Faqat balandligiga",
+      "Faqat tezligiga",
+      "Jismning rangiga"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 67,
+    "question": "Solishtirma issiqlik sig'imining birligi nima?",
+    "options": [
+      "Joul/kg",
+      "Joul/(kg*K)",
+      "Vatt",
+      "Paskal"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 68,
+    "question": "Muzning erish temperaturasi necha gradus?",
+    "options": [
+      "100 °C",
+      "273 °C",
+      "0 °C",
+      "-10 °C"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 69,
+    "question": "Gaz bosimi molekulalarning devorga ... natijasida hosil bo'ladi.",
+    "options": [
+      "Urilib qaytishi",
+      "Yopishishi",
+      "Erishi",
+      "To'xtashi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 70,
+    "question": "Havo namligi 100% bo'lganda nima sodir bo'ladi?",
+    "options": [
+      "Barometr buziladi",
+      "Qattiq issiq bo'ladi",
+      "Suv bug'lanmaydi",
+      "Shudring tushadi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 71,
+    "question": "Elektr zaryadining birligi nima?",
+    "options": [
+      "Amper",
+      "Tesla",
+      "Volt",
+      "Kulon"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 72,
+    "question": "Ikkita qo'zg'almas nuqtaviy zaryadlar orasidagi o'zaro ta'sir qonuni?",
+    "options": [
+      "Kulon qonuni",
+      "Amper qonuni",
+      "Ohm qonuni",
+      "Joul-Lens qonuni"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 73,
+    "question": "Elektr maydon kuchlanganligining birligi nima?",
+    "options": [
+      "Volt",
+      "Kulon",
+      "N/K (yoki V/m)",
+      "Amper"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 74,
+    "question": "Elektr sig'imi qaysi asbobda to'planadi?",
+    "options": [
+      "Reostat",
+      "Generator",
+      "Kondensator",
+      "Transformator"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 75,
+    "question": "O'tkazgichlarni ketma-ket ulaganda qaysi kattalik o'zgarmas qoladi?",
+    "options": [
+      "Kuchlanish",
+      "Quvvat",
+      "Qarshilik",
+      "Tok kuchi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 76,
+    "question": "O'tkazgichlarni parallel ulaganda qaysi kattalik hamma tarmoqda bir xil bo'ladi?",
+    "options": [
+      "Tok kuchi",
+      "Zaryad",
+      "Kuchlanish",
+      "Energiya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 77,
+    "question": "Tok o'tganda o'tkazgichdan issiqlik ajralish qonuni?",
+    "options": [
+      "Joul-Lens qonuni",
+      "Kulon qonuni",
+      "Guk qonuni",
+      "Paskal qonuni"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 78,
+    "question": "Elektr toki yo'nalishi sifatida qaysi zaryadlar harakati qabul qilingan?",
+    "options": [
+      "Musbat zaryadlar",
+      "Manfiy zaryadlar",
+      "Neytronlar",
+      "Protonlar"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 79,
+    "question": "Elektr qarshiligini o'zgartirish uchun ishlatiladigan asbob?",
+    "options": [
+      "Voltmetr",
+      "Kalit",
+      "Elektrometr",
+      "Reostat"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 80,
+    "question": "Yarim o'tkazgichli asbob nima?",
+    "options": [
+      "Lampochka",
+      "Diod",
+      "Dinamometr",
+      "Prizma"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 81,
+    "question": "Magnit maydon chiziqlari qayerdan chiqib qayerga kiradi?",
+    "options": [
+      "Janubdan chiqib shimolga",
+      "Sharqdan g'arbga",
+      "Shimoldan chiqib janubga",
+      "Aylana bo'ylab"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 82,
+    "question": "Yerning geografik shimoliy qutbi yaqinida qaysi magnit qutbi joylashgan?",
+    "options": [
+      "Janubiy",
+      "Shimoliy",
+      "Sharqiy",
+      "Magnit qutbi yo'q"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 83,
+    "question": "Magnit maydonida harakatlanayotgan zaryadga ta'sir etuvchi kuch?",
+    "options": [
+      "Amper kuchi",
+      "Kulon kuchi",
+      "Lorens kuchi",
+      "Og'irlik kuchi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 84,
+    "question": "Tokli o'tkazgichga magnit maydonining ko'rsatadigan ta'sir kuchi?",
+    "options": [
+      "Lorens kuchi",
+      "Ishqalanish kuchi",
+      "Arximed kuchi",
+      "Amper kuchi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 85,
+    "question": "Elektromagnit induksiya hodisasini kim kashf qilgan?",
+    "options": [
+      "Oersted",
+      "Faradey",
+      "Amper",
+      "Lenz"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 86,
+    "question": "Yorug'lik qaytish qonuniga ko'ra, tushish burchagi qaytish burchagiga...",
+    "options": [
+      "Katta",
+      "Kichik",
+      "Teng",
+      "Perpendikulyar"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 87,
+    "question": "Qavariq linza qanday xususiyatga ega?",
+    "options": [
+      "Sochuvchi",
+      "Yig'uvchi",
+      "Faqat qaytaruvchi",
+      "Rang o'zgartiruvchi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 88,
+    "question": "Yaqindan ko'ruvchi odamlar qanday ko'zoynak taqishadi?",
+    "options": [
+      "Yig'uvchi",
+      "Kattalashtiruvchi",
+      "Faqat qora",
+      "Sochuvchi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 89,
+    "question": "Yorug'lik tezligi havoda suvga qaraganda...",
+    "options": [
+      "Kichik",
+      "Nolga teng",
+      "Teng",
+      "Katta"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 90,
+    "question": "Kamalak hosil bo'lishiga sabab bo'ladigan hodisa?",
+    "options": [
+      "Dispersiya",
+      "Diffraksiya",
+      "Interferensiya",
+      "Fotoeffekt"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 91,
+    "question": "Elektromagnit to'lqinlarni kim nazariy bashorat qilgan?",
+    "options": [
+      "Nyuton",
+      "Gers",
+      "Popov",
+      "Maksvell"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 92,
+    "question": "Radioaloqani ixtiro qilgan olim?",
+    "options": [
+      "Eynshteyn",
+      "Faradey",
+      "Popov",
+      "Kulon"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 93,
+    "question": "Foton nima?",
+    "options": [
+      "Atom yadrosi",
+      "Elektron turi",
+      "Yorug'lik zarrachasi (kvanti)",
+      "Tovush to'lqini"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 94,
+    "question": "Fotoeffekt qonunlarini kim tushuntirib bergan?",
+    "options": [
+      "Eynshteyn",
+      "Nyuton",
+      "Bor",
+      "Rezerford"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 95,
+    "question": "Atomning planetar modelini kim taklif qilgan?",
+    "options": [
+      "Tomson",
+      "Kyuri",
+      "Mendeleyev",
+      "Rezerford"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 96,
+    "question": "Radioaktivlik hodisasini kim kashf qilgan?",
+    "options": [
+      "Lomonosov",
+      "Eynshteyn",
+      "Gers",
+      "Bekkerel"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 97,
+    "question": "Yadro reaktsiyasida ajraladigan energiya nima hisobiga hosil bo'ladi?",
+    "options": [
+      "Massa defekti",
+      "Ishqalanish",
+      "Kimyoviy yonish",
+      "Temperatura"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 98,
+    "question": "Atom yadrosidagi protonlar soni nimaga teng?",
+    "options": [
+      "Massaga",
+      "Hajmiga",
+      "Neytronlar soniga",
+      "Tartib raqamiga"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 99,
+    "question": "Vaqt o'tishi bilan tebranma harakat amplitudasining kamayishi?",
+    "options": [
+      "So'nuvchi tebranish",
+      "Erkin tebranish",
+      "Majburiy tebranish",
+      "Rezonans"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 100,
+    "question": "Quyoshda energiya qanday reaktsiya natijasida hosil bo'ladi?",
+    "options": [
+      "Yadro bo'linishi",
+      "Termoyadro sintezi",
+      "Kimyoviy yonish",
+      "Oksidlanish"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 101,
+    "question": "Birinchi kosmik tezlik qancha?",
+    "options": [
+      "11.2 km/s",
+      "16.7 km/s",
+      "7.9 km/s",
+      "340 m/s"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 102,
+    "question": "Ikkinchi kosmik tezlik nima uchun kerak?",
+    "options": [
+      "Orbitada qolish uchun",
+      "Quyosh tizimidan chiqish uchun",
+      "Yerni tark etish uchun",
+      "Oyni aylanish uchun"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 103,
+    "question": "Parchalanmaydigan eng kichik manfiy zaryadli zarracha?",
+    "options": [
+      "Proton",
+      "Neytron",
+      "Elektron",
+      "Foton"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 104,
+    "question": "Guk qonunining formulasi?",
+    "options": [
+      "F = ma",
+      "F = qE",
+      "F = mg",
+      "F = kx"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 105,
+    "question": "Keltirilganlardan qaysi biri skalyar kattalik?",
+    "options": [
+      "Vaqt",
+      "Tezlik",
+      "Kuch",
+      "Tezlanish"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 106,
+    "question": "Gidravlik press qaysi qonunga asoslangan?",
+    "options": [
+      "Paskal",
+      "Arximed",
+      "Nyuton",
+      "Ohm"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 107,
+    "question": "Jism impulsining formulasi nima?",
+    "options": [
+      "p = m/v",
+      "p = mv",
+      "p = Ft",
+      "p = mgh"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 108,
+    "question": "Matematik mayatnikning tebranish davri nimaga bog'liq?",
+    "options": [
+      "Ip uzunligiga",
+      "Massasiga",
+      "Amplitudasiga",
+      "Rangi-ga"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 109,
+    "question": "Potensial energiya qanday aniqlanadi?",
+    "options": [
+      "mv^2 / 2",
+      "mgh",
+      "Fs",
+      "Pt"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 110,
+    "question": "Vaqt birligi ichidagi tebranishlar soni?",
+    "options": [
+      "Davr",
+      "Amplituda",
+      "Chastota",
+      "Faza"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 111,
+    "question": "Jismning og'irligi qachon nolga teng bo'ladi?",
+    "options": [
+      "Harakatlanmasa",
+      "Suvda",
+      "Vaznsizlik holatida",
+      "Vakuumda"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 112,
+    "question": "Garmonik tebranishlar qaysi qonun bo'yicha o'zgaradi?",
+    "options": [
+      "Sinus yoki kosinus",
+      "Chiziqli",
+      "Logarifmik",
+      "Kvadratik"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 113,
+    "question": "Tovush balandligi nimaga bog'liq?",
+    "options": [
+      "Amplitudaga",
+      "Vaqtga",
+      "Tezlikka",
+      "Chastotaga"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 114,
+    "question": "Ultratovush chastotasi qancha?",
+    "options": [
+      "20 000 Gts dan katta",
+      "20 Gts dan kichik",
+      "100 Gts",
+      "16 Gts"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 115,
+    "question": "Infratovush nima?",
+    "options": [
+      "Eshitiladigan tovush",
+      "Magnit to'lqini",
+      "Nur turi",
+      "20 Gts dan past chastotali tovush"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 116,
+    "question": "Zichlikning birligi nima?",
+    "options": [
+      "kg/m",
+      "kg/m^2",
+      "kg/m^3",
+      "m/kg"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 117,
+    "question": "Suyuqlik qatlamlari orasidagi ishqalanish nima deyiladi?",
+    "options": [
+      "Quruq ishqalanish",
+      "Yopishqoqlik",
+      "Sirt taranglik",
+      "Diffuziya"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 118,
+    "question": "Fizikada 'moddiy nuqta' nima?",
+    "options": [
+      "Juda kichik atom",
+      "O'lchamlari hisobga olinmasa bo'ladigan jism",
+      "Faqat nuqta",
+      "Yadro"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 119,
+    "question": "Harakat trayektoriyasi nima?",
+    "options": [
+      "Jism chizgan chiziq",
+      "Bosib o'tilgan yo'l",
+      "Tezlik yo'nalishi",
+      "Vaqt grafigi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 120,
+    "question": "Tekis harakatda tezlanish nimaga teng?",
+    "options": [
+      "9.8",
+      "Doimiy songa",
+      "Nolga",
+      "Cheksiz"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 121,
+    "question": "Nyutonning ikkinchi qonuni formulasi?",
+    "options": [
+      "F = mg",
+      "P = UI",
+      "F = kx",
+      "a = F/m"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 122,
+    "question": "Jismlarning bir-biriga beradigan ta'siri har doim...",
+    "options": [
+      "Turlicha",
+      "O'zaro teng va qarama-qarshi",
+      "Nolga teng",
+      "Faqat bir tomonga"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 123,
+    "question": "Blok nima uchun ishlatiladi?",
+    "options": [
+      "Kuchdan yutish yoki yo'nalishni o'zgartirish",
+      "Ishdan yutish uchun",
+      "Vaqtni tejash",
+      "Massa o'lchash"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 124,
+    "question": "Mexanikaning 'oltin qoidasi': kuchdan necha marta yutsak, masofadan...",
+    "options": [
+      "Shuncha marta yutamiz",
+      "Nol bo'ladi",
+      "O'zgarmaydi",
+      "Shuncha marta yutqazamiz"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 125,
+    "question": "Suyuqlik va gazlarning idish devoriga bosimi qanday yo'nalgan?",
+    "options": [
+      "Faqat pastga",
+      "Faqat yuqoriga",
+      "Hamma tomonga bir xil",
+      "Faqat yon tomonga"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 126,
+    "question": "Aerostat nima hisobiga ucha oladi?",
+    "options": [
+      "Dvigatel",
+      "Arximed kuchi",
+      "Magnit kuchi",
+      "Inersiya"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 127,
+    "question": "Yer sun'iy yo'ldoshlari qanday trayektoriya bo'ylab harakatlanadi?",
+    "options": [
+      "To'g'ri chiziq",
+      "Gipersola",
+      "Parabola",
+      "Aylana yoki ellips"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 128,
+    "question": "Harakatdagi jism o'z tezligini saqlashga intilishi?",
+    "options": [
+      "Diffuziya",
+      "Reaktsiya",
+      "Sintez",
+      "Inersiya"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 129,
+    "question": "Kuchni o'lchaydigan asbob?",
+    "options": [
+      "Tarozi",
+      "Ampermetr",
+      "Dinamometr",
+      "Sekundomer"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 130,
+    "question": "Ishqalanishni kamaytirish uchun nima qilinadi?",
+    "options": [
+      "Sirtni g'adir-budur qilish",
+      "Massa qo'shish",
+      "Bosimni oshirish",
+      "Moylash"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 131,
+    "question": "Samoviy jismlar orasidagi masofa qaysi birlikda o'lchanadi?",
+    "options": [
+      "Metr",
+      "Gerts",
+      "Kilogramm",
+      "Yorug'lik yili"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 132,
+    "question": "Yerga eng yaqin yulduz qaysi?",
+    "options": [
+      "Siriis",
+      "Quyosh",
+      "Shimoliy yulduz",
+      "Alfa Sentavra"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 133,
+    "question": "Somon yo'li nima?",
+    "options": [
+      "Yulduzlar turkumi",
+      "Biz yashaydigan galaktika",
+      "Sayyora nomi",
+      "Mif"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 134,
+    "question": "Teleskop nima uchun kerak?",
+    "options": [
+      "Mikroblarni ko'rish",
+      "Uzoqdagi jismlarni kuzatish",
+      "Issiqlikni o'lchash",
+      "Zaryadni aniqlash"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 135,
+    "question": "Quyosh atrofida sayyoralar nima sababli aylanadi?",
+    "options": [
+      "Magnit kuchi",
+      "Havo oqimi",
+      "Butun olam tortishish kuchi",
+      "Inersiya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 136,
+    "question": "Qora tuynuk nima?",
+    "options": [
+      "Koinotdagi bo'shliq",
+      "Oddiy bulut",
+      "Gravitatsiyasi juda kuchli bo'lgan jism",
+      "Sayyora"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 137,
+    "question": "Oyning Yer atrofida aylanish davri qancha?",
+    "options": [
+      "24 soat",
+      "Taxminan 27-29 kun",
+      "365 kun",
+      "1 yil"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 138,
+    "question": "Yulduzlar nima uchun porlaydi?",
+    "options": [
+      "Quyosh nurini qaytaradi",
+      "Oyna kabi",
+      "Elektr toki bor",
+      "O'zidan energiya va nur chiqaradi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 139,
+    "question": "Qaysi sayyoraning halqalari eng yaqqol ko'rinadi?",
+    "options": [
+      "Saturn",
+      "Yupiter",
+      "Uran",
+      "Neptun"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 140,
+    "question": "Kometalarning 'dumi' qachon paydo bo'ladi?",
+    "options": [
+      "Har doim bor",
+      "Uzoqlashganda",
+      "Quyoshga yaqinlashganda",
+      "Muzlaganda"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 141,
+    "question": "Elektronning zaryadi qanday?",
+    "options": [
+      "Manfiy",
+      "Musbat",
+      "Neytral",
+      "O'zgaruvchan"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 142,
+    "question": "Protonning zaryadi qanday?",
+    "options": [
+      "Manfiy",
+      "Musbat",
+      "Neytral",
+      "Nol"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 143,
+    "question": "Atom massasi asosan qayerda to'plangan?",
+    "options": [
+      "Elektronlarda",
+      "Bo'shliqda",
+      "Sirtida",
+      "Yadroda"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 144,
+    "question": "Iyon nima?",
+    "options": [
+      "Oddiy atom",
+      "Nur",
+      "Yadro bo'lagi",
+      "Zaryadlangan atom"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 145,
+    "question": "Molekula nima?",
+    "options": [
+      "Eng katta jism",
+      "Moddaning kimyoviy xossalarini saqlovchi eng kichik bo'lagi",
+      "Faqat suv",
+      "Yadro"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 146,
+    "question": "Vakuum nima?",
+    "options": [
+      "Zich gaz",
+      "Suv osti",
+      "Modda bo'lmagan bo'shliq",
+      "Havo"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 147,
+    "question": "Eynshteynning mashhur energiya formulasi?",
+    "options": [
+      "E = mgh",
+      "E = hf",
+      "E = mc^2",
+      "E = qV"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 148,
+    "question": "Yorug'lik to'lqinmi yoki zarracha?",
+    "options": [
+      "Faqat to'lqin",
+      "Faqat zarracha",
+      "Ham to'lqin, ham zarracha (dualizm)",
+      "Hech biri"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 149,
+    "question": "Lazer nima?",
+    "options": [
+      "Oddiy chiroq",
+      "Kuchli va yo'naltirilgan monoxromatik nur manbai",
+      "Olov",
+      "Issiqlik asbobi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 150,
+    "question": "Yarim yemirilish davri nimani bildiradi?",
+    "options": [
+      "Radioaktiv yadrolarning yarmi parchalanish vaqtini",
+      "Atomning o'sishini",
+      "Portlashni",
+      "Isishni"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 151,
+    "question": "Nima uchun kema suvda cho'kmaydi?",
+    "options": [
+      "U yengil",
+      "Dengiz tuzli bo'lgani uchun",
+      "Motor ishlagani uchun",
+      "Suvning itarish kuchi og'irlik kuchi bilan muvozanatlashgani uchun"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 152,
+    "question": "Samolyot havoga ko'tarilishi uchun nima kerak?",
+    "options": [
+      "Faqat katta tezlik",
+      "Yengil massa",
+      "Qanot osti va ustida bosimlar farqi hosil bo'lishi",
+      "Shamol"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 153,
+    "question": "Muz nima uchun suv betida qalqiydi?",
+    "options": [
+      "U qattiq",
+      "Havo ko'p",
+      "Zichligi suvnikidan kichik",
+      "U sovuq"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 154,
+    "question": "Chaqmoq chaqqanda nima uchun avval nur, keyin ovoz keladi?",
+    "options": [
+      "Ovoz kechroq hosil bo'ladi",
+      "Nur ovozdan tezroq tarqaladi",
+      "Bulutlar baland",
+      "Quloq sekin eshitadi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 155,
+    "question": "Nima uchun qishda jun kiyim kiyamiz?",
+    "options": [
+      "U issiqlikni yomon o'tkazadi va tanani sovushdan saqlaydi",
+      "U issiqlik ishlab chiqaradi",
+      "U chiroyli",
+      "U og'ir"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 156,
+    "question": "Kosmosda choynakdagi suv qaynaydimi?",
+    "options": [
+      "Yo'q",
+      "Faqat yerda qaynaydi",
+      "Ha, lekin past temperaturada",
+      "Muzlaydi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 157,
+    "question": "Eko-lokatsiya nima?",
+    "options": [
+      "Tovush qaytishi (aks-sado) orqali masofani aniqlash",
+      "Rasm chizish",
+      "Elektr o'lchash",
+      "Yulduzni kuzatish"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 158,
+    "question": "Nima uchun oyna (ko'zgu) tasvirni ko'rsatadi?",
+    "options": [
+      "U yorug'likni yutadi",
+      "U yorug'likni tekis qaytaradi",
+      "U shaffof",
+      "U rangli"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 159,
+    "question": "Termos nima uchun choyni issiq saqlaydi?",
+    "options": [
+      "U isitadi",
+      "Undan issiqlik chiqib ketishi qiyin (vakuum va kumush qatlam)",
+      "U qalin",
+      "U yopiq"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 160,
+    "question": "Elektr lampochkasini kim mukammallashtirgan?",
+    "options": [
+      "Nyuton",
+      "Faradey",
+      "Edison",
+      "Tesla"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 161,
+    "question": "Dunyodagi eng katta teleskop qayerda joylashgan?",
+    "options": [
+      "Okean tubida",
+      "Tog' cho'qqilarida yoki koinotda",
+      "Shaharda",
+      "O'rmonda"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 162,
+    "question": "Suyuq azotning temperaturasi taxminan qancha?",
+    "options": [
+      "-196 °C",
+      "0 °C",
+      "100 °C",
+      "-50 °C"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 163,
+    "question": "Oq yorug'lik tarkibida nechta asosiy rang bor?",
+    "options": [
+      "3 ta",
+      "10 ta",
+      "7 ta",
+      "Cheksiz"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 164,
+    "question": "Muzeydagi eksponatlarni lazer nuri bilan himoya qilish qaysi hodisaga asoslangan?",
+    "options": [
+      "Fotoeffekt",
+      "Issiqlik",
+      "Diffraksiya",
+      "Magnit"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 165,
+    "question": "Nima uchun koinot qora ko'rinadi?",
+    "options": [
+      "Ko'zimiz shunday ko'radi",
+      "U yerda chiroq yo'q",
+      "Faqat kechasi shunday",
+      "U yerda yorug'likni sochuvchi atmosfera yo'qligi uchun"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 166,
+    "question": "Kompas nima uchun shimolni ko'rsatadi?",
+    "options": [
+      "Yerning magnit maydoni borligi uchun",
+      "Shamol tufayli",
+      "Quyosh tufayli",
+      "Inersiya tufayli"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 167,
+    "question": "Periskop nima uchun ishlatiladi?",
+    "options": [
+      "Rasm olish",
+      "Yulduzni ko'rish uchun",
+      "Mikrobni ko'rish",
+      "Suv ostidan sirtni kuzatish uchun"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 168,
+    "question": "Avtomobil g'ildiragi nega g'adir-budur bo'ladi?",
+    "options": [
+      "Chiroyli ko'rinish uchun",
+      "Tez yurish uchun",
+      "Yengil bo'lishi uchun",
+      "Ishqalanishni oshirish va sirpanishni kamaytirish uchun"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 169,
+    "question": "Oynaga (shishaga) issiq suv quyilsa nega yoriladi?",
+    "options": [
+      "U eriydi",
+      "Suv og'ir",
+      "Ichki va tashqi qismlar notekis kengayishi tufayli",
+      "U shaffof"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 170,
+    "question": "Qaysi metalldan yasalgan idishda ovqat tez pishadi?",
+    "options": [
+      "Shisha",
+      "Plastmassa",
+      "Mis yoki alyuminiy (issiqlikni yaxshi o'tkazgani uchun)",
+      "Loy"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 171,
+    "question": "Oydan Yer qanday ko'rinadi?",
+    "options": [
+      "Kichik nuqta",
+      "Ko'rinmaydi",
+      "Katta moviy shar",
+      "Sariq yulduz"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 172,
+    "question": "Fizika so'zi qaysi tildan olingan va ma'nosi nima?",
+    "options": [
+      "Lotincha - qonun",
+      "Yunoncha - tabiat",
+      "Inglizcha - kuch",
+      "Arabcha - ilm"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 173,
+    "question": "Quyosh tutilishi nima?",
+    "options": [
+      "Quyosh o'chishi",
+      "Bulut to'sishi",
+      "Yer Quyoshdan uzoqlashishi",
+      "Oy Quyosh bilan Yer orasiga kelib qolishi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 174,
+    "question": "Elektr tokining inson uchun xavfli tomoni nima?",
+    "options": [
+      "Mushaklar qisqarishi va yurak to'xtashiga sabab bo'lishi",
+      "Issiq bo'lishi",
+      "Rangli bo'lishi",
+      "Hidi borligi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 175,
+    "question": "Nima uchun koinotda ovoz eshitilmaydi?",
+    "options": [
+      "U yerda havo (muhit) yo'qligi uchun",
+      "U yerda jimjitlik",
+      "Quloq bitib qoladi",
+      "Uzoq masofa"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 176,
+    "question": "Tuzli suvning zichligi chuchuk suvnikidan...",
+    "options": [
+      "Kichik",
+      "Katta",
+      "Teng",
+      "Nol"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 177,
+    "question": "Qaysi rang issiqlikni ko'proq yutadi?",
+    "options": [
+      "Qora",
+      "Oq",
+      "Yashil",
+      "Sariq"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 178,
+    "question": "Metr nima?",
+    "options": [
+      "Massa birligi",
+      "Kuch birligi",
+      "Vaqt birligi",
+      "Uzunlik birligi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 179,
+    "question": "Eng og'ir suyuq metall?",
+    "options": [
+      "Alyuminiy",
+      "Simob",
+      "Oltin",
+      "Temir"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 180,
+    "question": "Fizikada 'L' harfi bilan ko'pincha nima belgilanadi?",
+    "options": [
+      "Massa",
+      "Uzunlik",
+      "Kuch",
+      "Bosim"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 181,
+    "question": "Yer necha yoshda?",
+    "options": [
+      "1000 yil",
+      "100 yil",
+      "1 million yil",
+      "4.5 milliard yil"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 182,
+    "question": "Dinamometrning ishlashi qaysi qonunga asoslangan?",
+    "options": [
+      "Paskal",
+      "Amper",
+      "Guk",
+      "Ohm"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 183,
+    "question": "Gazlardagi diffuziya suyuqlikdagidan...",
+    "options": [
+      "Sekinroq",
+      "Tezroq",
+      "Bir xil",
+      "Bo'lmaydi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 184,
+    "question": "Yorug'lik nuri bir muhitdan ikkinchisiga o'tganda yo'nalishini o'zgartirishi nima?",
+    "options": [
+      "Sinish",
+      "Qaytish",
+      "Yutilish",
+      "Diffuziya"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 185,
+    "question": "Antimateriya nima?",
+    "options": [
+      "Oddiy modda",
+      "Zarrachalari teskari zaryadli modda",
+      "Bo'shliq",
+      "Nur"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 186,
+    "question": "Nima uchun bulutlar havoda suzadi?",
+    "options": [
+      "Ularda dvigatel bor",
+      "Zichligi havodan deyarli farq qilmaydi va havo oqimi ko'tarib turadi",
+      "Yengil gaz",
+      "Quyosh tortadi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 187,
+    "question": "Radioaktivlik qaysi asbobda o'lchanadi?",
+    "options": [
+      "Termometr",
+      "Ampermetr",
+      "Barometr",
+      "Geyger hisoblagichi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 188,
+    "question": "Fizika o'rganadigan eng katta sistema?",
+    "options": [
+      "Galaktika",
+      "Yer",
+      "Quyosh tizimi",
+      "Koinot (Borliq)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 189,
+    "question": "Fizika o'rganadigan eng kichik zarrachalar?",
+    "options": [
+      "Molekulalar",
+      "Kvarklar",
+      "Hujayralar",
+      "Qumlar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 190,
+    "question": "Energiya yo'qdan bor bo'lmaydi va bordan yo'q bo'lmaydi, faqat...",
+    "options": [
+      "Kamayadi",
+      "To'xtaydi",
+      "Boshqa turga aylanadi",
+      "Eriydi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 191,
+    "question": "Samolyot qora qutisi aslida qaysi rangda bo'ladi?",
+    "options": [
+      "To'q sariq (oson topish uchun)",
+      "Qora",
+      "Oq",
+      "Yashil"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 192,
+    "question": "Suv necha gradusda muzlaydi?",
+    "options": [
+      "0 °C",
+      "Ham A ham B to'g'ri",
+      "32 °F",
+      "100 °C"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 193,
+    "question": "Oynaning orqa tomoniga nima surtiladi?",
+    "options": [
+      "Kumush yoki alyuminiy qatlami",
+      "Bo'yoq",
+      "Loyi",
+      "Yog'"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 194,
+    "question": "Magnit nimani tortmaydi?",
+    "options": [
+      "Temir",
+      "Kobalt",
+      "Nikel",
+      "Oltin"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 195,
+    "question": "Atmosfera nima?",
+    "options": [
+      "Havo qatlami",
+      "Suv qatlami",
+      "Tog'lar",
+      "Bo'shliq"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 196,
+    "question": "Elektr simlari nega plastik bilan o'ralgan?",
+    "options": [
+      "Chiroyli bo'lishi uchun",
+      "Tok urmasligi (izolyatsiya) uchun",
+      "Yengil bo'lishi uchun",
+      "Issiq bo'lishi uchun"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 197,
+    "question": "Odam tanasi elektrni o'tkazadimi?",
+    "options": [
+      "Yo'q",
+      "Faqat metall ushlasa",
+      "Faqat sochi bo'lsa",
+      "Ha, chunki tarkibida suv va tuzlar bor"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 198,
+    "question": "Yerning markazida nima bor?",
+    "options": [
+      "Qattiq va suyuq metall yadro",
+      "Suv",
+      "Havo",
+      "Muz"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 199,
+    "question": "Koinot qachon paydo bo'lgan deb hisoblanadi?",
+    "options": [
+      "Katta portlash (Big Bang) natijasida",
+      "Sekin o'sib",
+      "Har doim bo'lgan",
+      "Kecha"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 200,
+    "question": "Fizika qonunlari butun koinotda bir xilmi?",
+    "options": [
+      "Yo'q",
+      "Faqat Quyoshda",
+      "Faqat Yerda",
+      "Ha, hozirgi ma'lumotlarga ko'ra hamma joyda bir xil amal qiladi"
+    ],
+    "answerIndex": 3
+  }
+]

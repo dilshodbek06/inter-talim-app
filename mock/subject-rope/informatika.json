@@ -1,0 +1,1652 @@
+[
+  {
+    "id": 1,
+    "question": "Kompyuterning barcha qurilmalari ishini boshqaradigan va ma'lumotlarni qayta ishlaydigan asosiy qurilma nima?",
+    "options": [
+      "Monitor",
+      "Klaviatura",
+      "Protsessor (CPU)",
+      "Sichqoncha"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 2,
+    "question": "Axborotning eng kichik o'lchov birligi nima?",
+    "options": [
+      "Bayt",
+      "Bit",
+      "Kilobayt",
+      "Megabayt"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 3,
+    "question": "1 Bayt necha bitga teng?",
+    "options": [
+      "2 bit",
+      "1024 bit",
+      "10 bit",
+      "8 bit"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 4,
+    "question": "Kompyuter o'chirilganda undagi ma'lumotlar o'chib ketadigan xotira turi qaysi?",
+    "options": [
+      "Doimiy xotira (ROM)",
+      "Fleshka",
+      "Qattiq disk (HDD)",
+      "Tezkor xotira (RAM)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 5,
+    "question": "Ma'lumotlarni qog'ozga chop etuvchi qurilma nima?",
+    "options": [
+      "Skaner",
+      "Printer",
+      "Plotter",
+      "Monitor"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 6,
+    "question": "Qog'ozdagi tasvir yoki matnni kompyuter xotirasiga kirituvchi qurilma?",
+    "options": [
+      "Skaner",
+      "Printer",
+      "Klaviatura",
+      "Sichqoncha"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 7,
+    "question": "Klaviatura qanday qurilmalar sirasiga kiradi?",
+    "options": [
+      "Chiqarish qurilmasi",
+      "Aloqa qurilmasi",
+      "Xotira qurilmasi",
+      "Kiritish qurilmasi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 8,
+    "question": "Monitor qanday qurilmalar sirasiga kiradi?",
+    "options": [
+      "Kiritish qurilmasi",
+      "Chiqarish qurilmasi",
+      "Boshqarish qurilmasi",
+      "Hech biri"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 9,
+    "question": "Kompyuterning 'miyasi' deb qaysi qurilma aytiladi?",
+    "options": [
+      "Qattiq disk",
+      "Monitor",
+      "Protsessor",
+      "Ona plata"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 10,
+    "question": "1 Kilobayt (KB) necha Baytga teng?",
+    "options": [
+      "1000 Bayt",
+      "512 Bayt",
+      "8 Bayt",
+      "1024 Bayt"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 11,
+    "question": "Axborotni uzoq muddat saqlab beruvchi asosiy qurilma?",
+    "options": [
+      "RAM",
+      "Monitor",
+      "Qattiq disk (HDD/SSD)",
+      "Protsessor"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 12,
+    "question": "Sichqoncha (mouse) qanday vazifani bajaradi?",
+    "options": [
+      "Matn yozadi",
+      "Chop etadi",
+      "Ko'rsatkichni boshqaradi",
+      "Ovoz chiqaradi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 13,
+    "question": "Kompyuterda matnlarni tahrirlash uchun mo'ljallangan dastur?",
+    "options": [
+      "Paint",
+      "Calculator",
+      "MS Word",
+      "Excel"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 14,
+    "question": "Grafik tahrirlash (rasm chizish) uchun ishlatiladigan sodda dastur?",
+    "options": [
+      "Word",
+      "Paint",
+      "PowerPoint",
+      "Access"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 15,
+    "question": "Elektron jadvallar bilan ishlash uchun mo'ljallangan dastur?",
+    "options": [
+      "Word",
+      "Outlook",
+      "Excel",
+      "Photoshop"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 16,
+    "question": "Taqdimotlar (prezentatsiya) tayyorlash dasturi qaysi?",
+    "options": [
+      "Excel",
+      "Publisher",
+      "PowerPoint",
+      "Word"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 17,
+    "question": "Kompyuter yoqilganda birinchi bo'lib ishga tushadigan asosiy dasturiy ta'minot?",
+    "options": [
+      "Operatsion tizim",
+      "Antivirus",
+      "Brauzer",
+      "O'yinlar"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 18,
+    "question": "Eng keng tarqalgan operatsion tizim qaysi?",
+    "options": [
+      "Chrome",
+      "Windows",
+      "Word",
+      "Telegram"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 19,
+    "question": "Fayl nima?",
+    "options": [
+      "Qog'oz papka",
+      "Diskdagi nomlangan axborot",
+      "Klaviatura tugmasi",
+      "Dastur kodi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 20,
+    "question": "Papka (katalog) nima uchun xizmat qiladi?",
+    "options": [
+      "Rasm chizish uchun",
+      "Fayllarni tartibga solish uchun",
+      "Internetga kirish uchun",
+      "O'yin o'ynash uchun"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 21,
+    "question": "Windows tizimida o'chirilgan fayllar qayerga tushadi?",
+    "options": [
+      "Mening hujjatlarim",
+      "Musiqalar",
+      "Boshqaruv paneli",
+      "Savat (Recycle Bin)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 22,
+    "question": "Matnli fayllarning kengaytmasi qaysi bo'lishi mumkin?",
+    "options": [
+      ".docx",
+      ".mp3",
+      ".jpg",
+      ".avi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 23,
+    "question": "Rasm (tasvir) fayllarining kengaytmasi qaysi?",
+    "options": [
+      ".txt",
+      ".mp4",
+      ".exe",
+      ".jpg"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 24,
+    "question": "Ijro etiluvchi (dasturiy) fayllar kengaytmasi qaysi?",
+    "options": [
+      ".png",
+      ".exe",
+      ".docx",
+      ".pdf"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 25,
+    "question": "Kompyuter viruslaridan himoya qiluvchi dastur?",
+    "options": [
+      "Brauzer",
+      "Antivirus",
+      "Arxivator",
+      "Drayver"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 26,
+    "question": "Axborotning necha xil ko'rinishi bor?",
+    "options": [
+      "Faqat rasm",
+      "Faqat matnli",
+      "Faqat sonli",
+      "Matnli, sonli, grafik, tovushli, video"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 27,
+    "question": "Kompyuter sichqonchasining o'ng tugmasi nima vazifani bajaradi?",
+    "options": [
+      "Dasturni ochadi",
+      "Kontekst menyuni chiqaradi",
+      "Kompyuterni o'chiradi",
+      "Hech narsa"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 28,
+    "question": "Klaviatura yordamida nusxa olish (copy) uchun qaysi klavishlar bosiladi?",
+    "options": [
+      "Ctrl + C",
+      "Ctrl + V",
+      "Ctrl + X",
+      "Ctrl + A"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 29,
+    "question": "Nusxa olingan matnni joylashtirish (paste) uchun qaysi klavishlar ishlatiladi?",
+    "options": [
+      "Ctrl + C",
+      "Ctrl + V",
+      "Ctrl + S",
+      "Alt + F4"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 30,
+    "question": "Matndagi harfni o'ng tomondan o'chirish uchun qaysi klavish bosiladi?",
+    "options": [
+      "Backspace",
+      "Delete",
+      "Enter",
+      "Space"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 31,
+    "question": "Matndagi harfni chap tomondan o'chirish uchun qaysi klavish bosiladi?",
+    "options": [
+      "Backspace",
+      "Delete",
+      "Shift",
+      "End"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 32,
+    "question": "Katta harflar bilan yozish tartibini doimiy yoqib qo'yuvchi klavish?",
+    "options": [
+      "Caps Lock",
+      "Shift",
+      "Tab",
+      "Esc"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 33,
+    "question": "Ma'lumotlarni zichlab, hajmini kichraytirib beruvchi dasturlar?",
+    "options": [
+      "Antivirus",
+      "Brauzer",
+      "Arxivator (WinRAR)",
+      "Pleyer"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 34,
+    "question": "Kompyuterni tarmoqqa bog'lash uchun xizmat qiluvchi qurilma?",
+    "options": [
+      "Printer",
+      "Skaner",
+      "Modem/Ruter",
+      "Monitor"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 35,
+    "question": "Brauzer nima?",
+    "options": [
+      "Internet sahifalarini ko'rish dasturi",
+      "O'yin dasturi",
+      "Rasm chizish dasturi",
+      "O'chiruvchi dastur"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 36,
+    "question": "Quyidagilardan qaysi biri brauzer hisoblanadi?",
+    "options": [
+      "Word",
+      "Telegram",
+      "Google Chrome",
+      "Photoshop"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 37,
+    "question": "Internetda ma'lumot qidirish tizimini toping.",
+    "options": [
+      "Windows",
+      "Excel",
+      "Google",
+      "Paint"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 38,
+    "question": "Elektron pochta manzili qaysi belgi orqali yoziladi?",
+    "options": [
+      "#",
+      "$",
+      "@ (kuchukcha)",
+      "&"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 39,
+    "question": "Sayt manzili (URL) qanday boshlanadi?",
+    "options": [
+      "www.",
+      "txt.",
+      "exe.",
+      "doc."
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 40,
+    "question": "Kompyuter ekranidagi ko'rinishni rasmga olish nima deyiladi?",
+    "options": [
+      "Skrinshot",
+      "Skaner",
+      "Print",
+      "Kamera"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 41,
+    "question": "USB qisqartmasining ma'nosi nima?",
+    "options": [
+      "Universal Serial Bus",
+      "United System Base",
+      "User Simple Book",
+      "Hech biri"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 42,
+    "question": "Axborotni kiritish qurilmalarini aniqlang.",
+    "options": [
+      "Monitor, Printer",
+      "Klaviatura, Sichqoncha",
+      "Qattiq disk, RAM",
+      "Protsessor, Ona plata"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 43,
+    "question": "Zamonaviy noutbuklarning ajralmas qismi bo'lgan, sichqoncha vazifasini bajaruvchi maydon?",
+    "options": [
+      "Klaviatura",
+      "Ekran",
+      "Tachpad (Touchpad)",
+      "Kamera"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 44,
+    "question": "Axborot ustida bajariladigan asosiy amallar?",
+    "options": [
+      "Faqat o'chirish",
+      "Faqat o'qish",
+      "Faqat rasm chizish",
+      "To'plash, Saqlash, Qayta ishlash, Uzatish"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 45,
+    "question": "Ona plata (Motherboard) nima?",
+    "options": [
+      "Kichik dastur",
+      "Quvvat bloki",
+      "Ekran turi",
+      "Asosiy plata, barcha qurilmalar unga ulanadi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 46,
+    "question": "Kompyuter tizim blokining ichida joylashmagan qurilma?",
+    "options": [
+      "Printer",
+      "Qattiq disk",
+      "Protsessor",
+      "Ona plata"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 47,
+    "question": "Drayver nima?",
+    "options": [
+      "Mashina haydovchisi",
+      "Qurilmalarni kompyuterga tanituvchi dastur",
+      "O'yin turi",
+      "Internet sayti"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 48,
+    "question": "Axborotni tovush orqali chiqaruvchi qurilma?",
+    "options": [
+      "Mikrofon",
+      "Kalonka (Karnaylar)",
+      "Monitor",
+      "Skaner"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 49,
+    "question": "Tovushni kompyuterga kirituvchi qurilma?",
+    "options": [
+      "Karnay",
+      "Naushnik",
+      "Mikrofon",
+      "Monitor"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 50,
+    "question": "Eng katta axborot o'lchov birligi (quyidagilardan)?",
+    "options": [
+      "Bayt",
+      "Kilobayt",
+      "Megabayt",
+      "Terabayt"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 51,
+    "question": "Butunjahon kompyuter tarmog'i nima deb ataladi?",
+    "options": [
+      "Local network",
+      "Intranet",
+      "Internet",
+      "Offline"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 52,
+    "question": "Veb-sahifalar yaratish uchun ishlatiladigan til qaysi?",
+    "options": [
+      "Pascal",
+      "HTML",
+      "Binary",
+      "MP3"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 53,
+    "question": "Mahalliy tarmoq (Local Area Network) qisqartmasi?",
+    "options": [
+      "LAN",
+      "WAN",
+      "MAN",
+      "PAN"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 54,
+    "question": "Global tarmoq (Wide Area Network) qisqartmasi?",
+    "options": [
+      "LAN",
+      "URL",
+      "WIFI",
+      "WAN"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 55,
+    "question": "Wi-Fi so'zining ma'nosi nima bilan bog'liq?",
+    "options": [
+      "Simli ulanish",
+      "Elektr toki",
+      "Tezkor xotira",
+      "Simsiz ulanish"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 56,
+    "question": "IP-manzil nima?",
+    "options": [
+      "Tarmoqdagi kompyuterning takrorlanmas raqami",
+      "Kompyuter nomi",
+      "Dasturchi ismi",
+      "Elektron pochta"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 57,
+    "question": "Dasturiy ta'minotning inglizcha nomi nima?",
+    "options": [
+      "Hardware",
+      "Software",
+      "Firmware",
+      "Shareware"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 58,
+    "question": "Kompyuterning fizik qismlari (qurilmalari) inglizcha nima deyiladi?",
+    "options": [
+      "Hardware",
+      "Software",
+      "Database",
+      "Mainframe"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 59,
+    "question": "Axborot xavfsizligi nima?",
+    "options": [
+      "Kompyuterni qulflash",
+      "Kompyuterni sotish",
+      "Faqat antivirus o'rnatish",
+      "Axborotni ruxsatsiz kirish va zarar yetkazishdan himoya qilish"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 60,
+    "question": "Login va Parol nima uchun kerak?",
+    "options": [
+      "Internetni tezlashtirish uchun",
+      "Rasm tahrirlash uchun",
+      "Shaxsiy ma'lumotlarni himoyalash va tizimga kirish uchun",
+      "Hech narsa"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 61,
+    "question": "Bulutli saqlash (Cloud storage) xizmatini toping.",
+    "options": [
+      "Calculator",
+      "Notepad",
+      "Google Drive",
+      "Excel"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 62,
+    "question": "Ijtimoiy tarmoqlardan birini ko'rsating.",
+    "options": [
+      "Facebook",
+      "Microsoft Word",
+      "Antivirus",
+      "Recycle Bin"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 63,
+    "question": "Spam nima?",
+    "options": [
+      "Muhim xabar",
+      "Internetdagi keraksiz, ommaviy reklama xabarlari",
+      "O'yin turi",
+      "Virus nomi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 64,
+    "question": "Kibermayinlik yoki fishing (Phishing) nima?",
+    "options": [
+      "Parol va bank kartasi ma'lumotlarini aldab olish",
+      "Baliq ovlash",
+      "Kompyuter o'yini",
+      "Dasturlash tili"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 65,
+    "question": "Qidiruv tizimi botlari nima deb ataladi?",
+    "options": [
+      "Dogs",
+      "Spiders (O'rgimchaklar)",
+      "Cats",
+      "Wolves"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 66,
+    "question": "Veb-saytning birinchi sahifasi odatda nima deb ataladi?",
+    "options": [
+      "Last page",
+      "End page",
+      "Home page (Bosh sahifa)",
+      "Contact page"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 67,
+    "question": "Giperssilka (Hyperlink) nima?",
+    "options": [
+      "Katta rasm",
+      "Bosilganda boshqa sahifa yoki hujjatga o'tkazuvchi matn yoki rasm",
+      "Virusli dastur",
+      "Klaviatura xatosi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 68,
+    "question": "Modem so'zining kengaytmasi?",
+    "options": [
+      "Modulyator-Demodulyator",
+      "Modern-Mode",
+      "Model-Memory",
+      "Monitor-Demod"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 69,
+    "question": "Axborot texnologiyalari (IT) qisqartmasi nima?",
+    "options": [
+      "Internal Tech",
+      "Intel Team",
+      "Internet Tech",
+      "Information Technology"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 70,
+    "question": "Kompyuterni qayta yuklash (restart) nima uchun qilinadi?",
+    "options": [
+      "O'chirish uchun",
+      "Internetni yoqish uchun",
+      "Rasm chizish uchun",
+      "Xotirani tozalash va xatolarni tuzatish uchun"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 71,
+    "question": "ASCII nima?",
+    "options": [
+      "Video formati",
+      "Protsessor turi",
+      "O'yin nomi",
+      "Belgilarni kodlash standarti"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 72,
+    "question": "Piksel nima?",
+    "options": [
+      "Monitor og'irligi",
+      "Printer siyohi",
+      "Xotira birligi",
+      "Ekrandagi tasvirni hosil qiluvchi eng kichik nuqta"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 73,
+    "question": "Video fayllarning kengaytmasini toping.",
+    "options": [
+      ".jpg",
+      ".mp4",
+      ".txt",
+      ".mp3"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 74,
+    "question": "Audio (tovush) fayllarning kengaytmasini toping.",
+    "options": [
+      ".exe",
+      ".bmp",
+      ".docx",
+      ".mp3"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 75,
+    "question": "Arxivlangan fayllar kengaytmasi qaysi?",
+    "options": [
+      ".dll",
+      ".html",
+      ".sys",
+      ".zip / .rar"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 76,
+    "question": "MS Excel dasturida katakcha manzili qanday yoziladi?",
+    "options": [
+      "1A",
+      "A1",
+      "A=1",
+      "1+A"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 77,
+    "question": "Excelda har qanday formula qaysi belgi bilan boshlanadi?",
+    "options": [
+      "=",
+      "#",
+      "+",
+      "$"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 78,
+    "question": "Algoritm nima?",
+    "options": [
+      "Kompyuter qurilmasi",
+      "Matnli xabar",
+      "Ma'lum bir maqsadga erishish uchun bajariladigan aniq ko'rsatmalar ketma-ketligi",
+      "Rasm turi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 79,
+    "question": "Algoritmning necha xil turi bor?",
+    "options": [
+      "Chiziqli, Tarmoqlanuvchi, Takrorlanuvchi",
+      "Faqat to'g'ri",
+      "Faqat aylanma",
+      "Hech biri"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 80,
+    "question": "Algoritmning grafik ko'rinishi nima deb ataladi?",
+    "options": [
+      "Blok-sxema",
+      "Rasm",
+      "Matn",
+      "Xarita"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 81,
+    "question": "Dasturlash tili nima uchun kerak?",
+    "options": [
+      "Rasm tahrirlash uchun",
+      "Kino ko'rish uchun",
+      "Musiqa tinglash uchun",
+      "Kompyuter bilan muloqot qilish va dasturlar yaratish uchun"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 82,
+    "question": "Quyidagilardan qaysi biri dasturlash tili hisoblanadi?",
+    "options": [
+      "Windows",
+      "Python",
+      "Google",
+      "Excel"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 83,
+    "question": "Dasturdagi xatolarni topish va tuzatish jarayoni nima deyiladi?",
+    "options": [
+      "Debugging (sozlash)",
+      "Copying",
+      "Printing",
+      "Scanning"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 84,
+    "question": "Blok-sxemada 'shart' (tanlash) qaysi shakl ichida yoziladi?",
+    "options": [
+      "Romb",
+      "To'rtburchak",
+      "Aylana",
+      "Uchburchak"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 85,
+    "question": "Blok-sxemada 'boshlanish' va 'tamom' qaysi shakl bilan ko'rsatiladi?",
+    "options": [
+      "Oval (ellips)",
+      "Romb",
+      "Kvadrat",
+      "Trapetsiya"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 86,
+    "question": "Kibermakonda etika nima?",
+    "options": [
+      "Tez yozish qobiliyati",
+      "O'yin qoidalari",
+      "Internetda o'zini tutish va muloqot madaniyati",
+      "Virus yaratish"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 87,
+    "question": "Ergonometrika nima?",
+    "options": [
+      "Dasturlash turi",
+      "Xotira o'lchovi",
+      "Elektr toki o'lchovi",
+      "Kompyuterda ishlaganda sog'liq va qulaylikni ta'minlash haqidagi fan"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 88,
+    "question": "Monitor ekranidan ko'z necha sm uzoqlikda bo'lishi kerak?",
+    "options": [
+      "10-20 sm",
+      "50-70 sm",
+      "100-150 sm",
+      "5 sm"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 89,
+    "question": "Dasturiy mahsulotning litsenziyasi nima?",
+    "options": [
+      "Dastur narxi",
+      "Dastur logotipi",
+      "Dasturdan foydalanish huquqini beruvchi shartnoma",
+      "Dastur kodi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 90,
+    "question": "Ochiq kodli dasturiy ta'minot (Open source) nima?",
+    "options": [
+      "Kodi hamma uchun ochiq va o'zgartirish mumkin bo'lgan dastur",
+      "Faqat pullik dastur",
+      "Yashirin dastur",
+      "Virusli dastur"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 91,
+    "question": "Bluetooth texnologiyasi nima uchun xizmat qiladi?",
+    "options": [
+      "Uzoq masofaga signal yuborish",
+      "Kompyuterni isitish",
+      "Qisqa masofada simsiz ma'lumot almashish",
+      "Monitor ravshanligi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 92,
+    "question": "Smartfonlar qanday turdagi kompyuterlarga kiradi?",
+    "options": [
+      "Mikrokompyuter (mobil qurilma)",
+      "Superkompyuter",
+      "Server",
+      "Mainframe"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 93,
+    "question": "Elektron hukumat (E-gov) nima?",
+    "options": [
+      "Elektron o'yin",
+      "Pochta xizmati",
+      "Elektron pul",
+      "Davlat xizmatlarini internet orqali ko'rsatish tizimi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 94,
+    "question": "Sun'iy intellekt (AI) nima?",
+    "options": [
+      "Faqat robotlar",
+      "Inson kabi fikrlash va qaror qabul qilishga taqlid qiluvchi tizimlar",
+      "Kalkulyator",
+      "Elektr lampochkasi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 95,
+    "question": "QR-kod nima?",
+    "options": [
+      "Oddiy rasm",
+      "Tez o'qiladigan shtrix-kod turi",
+      "Rangli kod",
+      "Kompyuter paroli"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 96,
+    "question": "Veb-brauzer manzillar satriga nima yoziladi?",
+    "options": [
+      "Ism-familiya",
+      "URL (sayt manzili)",
+      "Kompyuter narxi",
+      "Kino nomi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 97,
+    "question": "Fayllarni yuklab olish (Download) nima?",
+    "options": [
+      "Internetdan kompyuterga ko'chirib olish",
+      "Kompyuterdan internetga yuborish",
+      "Faylni o'chirish",
+      "Rasm chizish"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 98,
+    "question": "Fayllarni yuklash (Upload) nima?",
+    "options": [
+      "Internetdan ko'chirish",
+      "Kompyuterdan tarmoqqa yoki saytga yuborish",
+      "Kompyuterni o'chirish",
+      "Savatni tozalash"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 99,
+    "question": "Kompyuter xotirasidagi o'lchovlarning to'g'ri ketma-ketligi?",
+    "options": [
+      "Bit < Bayt < KB < MB < GB < TB",
+      "TB < GB < MB",
+      "Bayt < Bit < MB",
+      "MB < KB < Bayt"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 100,
+    "question": "Informatika fani nimani o'rganadi?",
+    "options": [
+      "Faqat kompyuterni",
+      "Faqat internetni",
+      "Axborotni to'plash, saqlash va qayta ishlash usullarini",
+      "Faqat o'yinlarni"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 101,
+    "question": "Python dasturlash tilida ma'lumotni ekranga chiqarish buyrug'i qaysi?",
+    "options": [
+      "input()",
+      "output()",
+      "print()",
+      "show()"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 102,
+    "question": "Python'da foydalanuvchidan ma'lumot kiritishni so'rash buyrug'i?",
+    "options": [
+      "input()",
+      "print()",
+      "get()",
+      "read()"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 103,
+    "question": "Dasturlashda 'o'zgaruvchi' nima?",
+    "options": [
+      "Qiymatni saqlash uchun ajratilgan nomlangan xotira maydoni",
+      "Doimiy son",
+      "Monitor turi",
+      "Klaviatura xatosi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 104,
+    "question": "Butun sonlar turi qaysi atama bilan belgilanadi?",
+    "options": [
+      "float",
+      "string",
+      "int",
+      "bool"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 105,
+    "question": "O'nli kasr sonlar (haqiqiy sonlar) turi qaysi?",
+    "options": [
+      "float",
+      "char",
+      "int",
+      "list"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 106,
+    "question": "Mantiqiy tur (rost yoki yolg'on) qanday ataladi?",
+    "options": [
+      "int",
+      "float",
+      "bool",
+      "str"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 107,
+    "question": "Satrli (matnli) ma'lumot turi qanday ataladi?",
+    "options": [
+      "int",
+      "list",
+      "str (string)",
+      "tuple"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 108,
+    "question": "Python'da sharh (izoh) yozish uchun qaysi belgi qo'yiladi?",
+    "options": [
+      "#",
+      "//",
+      "/*",
+      "--"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 109,
+    "question": "Dasturdagi 'shart operatori' qaysi kalit so'z bilan boshlanadi?",
+    "options": [
+      "for",
+      "while",
+      "def",
+      "if"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 110,
+    "question": "Takrorlanuvchi jarayonlar (tsikl) uchun qaysi operatorlar ishlatiladi?",
+    "options": [
+      "if / else",
+      "for / while",
+      "print / input",
+      "def / return"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 111,
+    "question": "Mantiqiy 'VA' amali qaysi?",
+    "options": [
+      "OR",
+      "XOR",
+      "NOT",
+      "AND"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 112,
+    "question": "Mantiqiy 'YOKI' amali qaysi?",
+    "options": [
+      "AND",
+      "NOT",
+      "OR",
+      "IF"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 113,
+    "question": "Informatikada 'ikkilik sanoq tizimi' raqamlari qaysilar?",
+    "options": [
+      "1 va 2",
+      "A dan Z gacha",
+      "0 dan 9 gacha",
+      "0 va 1"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 114,
+    "question": "Ikkilik sanoq tizimi nechanchi asosga ega?",
+    "options": [
+      "10 lik",
+      "2 lik",
+      "8 lik",
+      "16 lik"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 115,
+    "question": "Kompyuter grafikasi necha xil bo'ladi?",
+    "options": [
+      "Qog'ozli va ekranli",
+      "Qizil va ko'k",
+      "Katta va kichik",
+      "Rastrli va Vektorli"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 116,
+    "question": "Piksellardan tashkil topgan grafika turi?",
+    "options": [
+      "Vektorli",
+      "Fraktal",
+      "3D",
+      "Rastrli"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 117,
+    "question": "Geometrik shakllar va formulalarga asoslangan grafika turi?",
+    "options": [
+      "Rastrli",
+      "Vektorli",
+      "Piksel",
+      "Hech biri"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 118,
+    "question": "Eng mashhur rastrli grafik tahrirlash dasturi?",
+    "options": [
+      "Adobe Photoshop",
+      "CorelDRAW",
+      "MS Word",
+      "Excel"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 119,
+    "question": "Vektorli grafikada ishlash uchun ishlatiladigan dastur?",
+    "options": [
+      "Photoshop",
+      "Calculator",
+      "Paint",
+      "CorelDRAW / Adobe Illustrator"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 120,
+    "question": "Ma'lumotlar bazasini boshqarish tizimi (MBBT) qaysi?",
+    "options": [
+      "WinRAR",
+      "MS Word",
+      "Antivirus",
+      "MS Access"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 121,
+    "question": "Robototexnika nima?",
+    "options": [
+      "Rasm chizish",
+      "Robotlar yaratish va ularni boshqarish haqidagi fan",
+      "Kino turi",
+      "Faqat o'yinlar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 122,
+    "question": "Robotlarning asosiy 'miyasi' vazifasini nima bajaradi?",
+    "options": [
+      "Dvigatel",
+      "G'ildirak",
+      "Mikrokontroller / Protsessor",
+      "Korpus"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 123,
+    "question": "Dasturiy injeneriya nima?",
+    "options": [
+      "Sifatli dasturiy ta'minot yaratish jarayoni",
+      "Kompyuter tuzatish",
+      "Monitor yig'ish",
+      "Internetni o'rnatish"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 124,
+    "question": "HTML teglarining (tag) yozilish qoidasi qanday?",
+    "options": [
+      "{ }",
+      "[ ]",
+      "< >",
+      "( )"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 125,
+    "question": "HTML'da matnni qalin (bold) qilish tegi qaysi?",
+    "options": [
+      "<i>",
+      "<u>",
+      "<b>",
+      "<s>"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 126,
+    "question": "Veb-saytga rasm joylashtirish tegi qaysi?",
+    "options": [
+      "<link>",
+      "<pic>",
+      "<src>",
+      "<img>"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 127,
+    "question": "Veb-saytlarga stil (rang, dizayn) berish uchun nima ishlatiladi?",
+    "options": [
+      "HTML",
+      "CSS",
+      "Python",
+      "SQL"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 128,
+    "question": "Axborotni kodlashdan maqsad nima?",
+    "options": [
+      "Axborotni o'chirish",
+      "Internetni yoqish",
+      "Axborotni uzatish va saqlashga qulay shaklga keltirish",
+      "Monitor ravshanligi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 129,
+    "question": "Informatikada 'Model' nima?",
+    "options": [
+      "Kiyim kiygan odam",
+      "Yangi kompyuter",
+      "Faqat rasm",
+      "Asl nusxaning xususiyatlarini aks ettiruvchi soddalashtirilgan nusxa"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 130,
+    "question": "Kompyuter tarmog'ining topologiyasi nima?",
+    "options": [
+      "Tarmoq tezligi",
+      "Kompyuterlarning tarmoqda joylashish sxemasi (shina, halqa, yulduz)",
+      "Kabel turi",
+      "Monitor nomi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 131,
+    "question": "Internetda fayllarni uzatish protokoli qaysi?",
+    "options": [
+      "FTP",
+      "HTTP",
+      "SMTP",
+      "IP"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 132,
+    "question": "Xavfsiz internet protokoli qaysi?",
+    "options": [
+      "HTTPS",
+      "HTTP",
+      "FTP",
+      "TCP"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 133,
+    "question": "Domen nima?",
+    "options": [
+      "Kompyuter narxi",
+      "Internetdagi saytning takrorlanmas nomi (masalan, .uz, .com)",
+      "Rasm formati",
+      "Printer turi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 134,
+    "question": "O'zbekistonning milliy domeni qaysi?",
+    "options": [
+      ".ru",
+      ".com",
+      ".net",
+      ".uz"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 135,
+    "question": "Axborotni kriptografiya orqali himoyalash nima?",
+    "options": [
+      "O'chirib yuborish",
+      "Nusxa olish",
+      "Maxfiy kodlash (shifrlash)",
+      "Printerdan chiqarish"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 136,
+    "question": "SQL tili nima uchun ishlatiladi?",
+    "options": [
+      "Rasm chizish",
+      "Video tahrirlash",
+      "Ma'lumotlar bazasi bilan ishlash",
+      "O'yin o'ynash"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 137,
+    "question": "3D printerlar nima vazifani bajaradi?",
+    "options": [
+      "Faqat qog'ozga chiqaradi",
+      "Hajmli (fizik) modellarni qatlam-qatlam qilib yasaydi",
+      "Rasm tahrirlaydi",
+      "Musiqa chaladi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 138,
+    "question": "Virtual borliq (VR) nima?",
+    "options": [
+      "Oddiy kino",
+      "Internet sayti",
+      "Faqat smartfon",
+      "Kompyuter yaratgan sun'iy dunyo"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 139,
+    "question": "Kompyuter o'yinlarini yaratuvchi mutaxassis?",
+    "options": [
+      "Skaner",
+      "Designer",
+      "Game Developer",
+      "System Admin"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 140,
+    "question": "Smart-soatlar qaysi texnologiyaga kiradi?",
+    "options": [
+      "Analog qurilmalar",
+      "Serverlar",
+      "Mainframelar",
+      "Kiyiladigan texnologiyalar (Wearables)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 141,
+    "question": "Big Data (Katta ma'lumotlar) nima?",
+    "options": [
+      "Bitta fayl",
+      "Katta monitor",
+      "Juda katta hajmdagi va murakkab ma'lumotlar to'plami",
+      "Katta printer"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 142,
+    "question": "Blokcheyn (Blockchain) nima?",
+    "options": [
+      "O'yin zanjiri",
+      "Kabel turi",
+      "Rasm turi",
+      "Ma'lumotlarni zanjir shaklida xavfsiz saqlash texnologiyasi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 143,
+    "question": "Kompyuter klaviaturasidagi 'F1-F12' tugmalari qanday ataladi?",
+    "options": [
+      "Funksional",
+      "Sonli",
+      "Boshqaruv",
+      "Harfli"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 144,
+    "question": "Kompyuterda 'hotkey' (issiq tugmalar) nima uchun kerak?",
+    "options": [
+      "Kompyuterni isitish uchun",
+      "Ranglarni o'zgartirish",
+      "O'yinlarda yutish uchun",
+      "Amallarni tezroq bajarish uchun"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 145,
+    "question": "Monitor ekranining o'lchami nima bilan o'lchanadi?",
+    "options": [
+      "Santimetr",
+      "Kilogramm",
+      "Dyuym (diagonal bo'ylab)",
+      "Piksel"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 146,
+    "question": "Elektron kitoblar formati odatda qaysi kengaytmada bo'ladi?",
+    "options": [
+      ".pdf / .epub",
+      ".mp3",
+      ".exe",
+      ".jpg"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 147,
+    "question": "Noutbukni quvvatlagichsiz ishlashini nima ta'minlaydi?",
+    "options": [
+      "Protsessor",
+      "Akkumulyator (Batareya)",
+      "Monitor",
+      "Klaviatura"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 148,
+    "question": "Dasturlashda 'Litsenziya shartnomasi'ni buzish nima deb ataladi?",
+    "options": [
+      "Dasturlash",
+      "Yuklash",
+      "Sozlash",
+      "Piratlik (Piratstvo)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 149,
+    "question": "Axborot texnologiyalari sohasida 'Soft skills' nima?",
+    "options": [
+      "Yumshoq qurilmalar",
+      "Muloqot qilish va jamoada ishlash qobiliyati",
+      "Dastur kodi",
+      "Monitor ekranining yumshoqligi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 150,
+    "question": "Informatika fani kelajakda qaysi sohalarda kerak bo'ladi?",
+    "options": [
+      "Deyarli barcha sohalarda",
+      "Faqat IT",
+      "Faqat bankda",
+      "Faqat maktabda"
+    ],
+    "answerIndex": 0
+  }
+]

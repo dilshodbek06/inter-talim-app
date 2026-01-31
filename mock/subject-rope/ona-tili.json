@@ -1,0 +1,1652 @@
+[
+  {
+    "id": 1,
+    "question": "O'zbek tili alifbosida nechta unli harf bor?",
+    "options": [
+      "6 ta",
+      "5 ta",
+      "10 ta",
+      "12 ta"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2,
+    "question": "Nutq tovushlarini o'rganadigan bo'lim nima deyiladi?",
+    "options": [
+      "Fonetika",
+      "Leksikologiya",
+      "Morfologiya",
+      "Sintaksis"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 3,
+    "question": "Kim? nima? qayer? so'roqlariga javob bo'ladigan so'z turkumi?",
+    "options": [
+      "Sifat",
+      "Son",
+      "Ot",
+      "Ravish"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 4,
+    "question": "Predmetning belgi va xususiyatini bildiruvchi so'z turkumi?",
+    "options": [
+      "Ot",
+      "Son",
+      "Fe'l",
+      "Sifat"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 5,
+    "question": "Harakatni bildiruvchi so'z turkumi qaysi?",
+    "options": [
+      "Olmosh",
+      "Ravish",
+      "Fe'l",
+      "Ot"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 6,
+    "question": "O'zbek tili qaysi tillar oilasiga kiradi?",
+    "options": [
+      "Hind-yevropa",
+      "Turkiy tillar",
+      "Som-Xom",
+      "Fin-ugor"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 7,
+    "question": "Ma'nosi bir-biriga yaqin so'zlar nima deyiladi?",
+    "options": [
+      "Antonimlar",
+      "Sinonimlar",
+      "Omonimlar",
+      "Paronimlar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 8,
+    "question": "Ma'nosi bir-biriga zid (qarama-qarshi) so'zlar?",
+    "options": [
+      "Sinonimlar",
+      "Frazeologizmlar",
+      "Omonimlar",
+      "Antonimlar"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 9,
+    "question": "Yozilishi bir xil, ma'nosi turlicha bo'lgan so'zlar?",
+    "options": [
+      "Sinonimlar",
+      "Antonimlar",
+      "Omonimlar",
+      "Paronimlar"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 10,
+    "question": "Talaffuzi yaqin, lekin ma'nosi va yozilishi har xil so'zlar?",
+    "options": [
+      "Antonim",
+      "Omonim",
+      "Sinonim",
+      "Paronim"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 11,
+    "question": "So'zning ma'noli eng kichik bo'lagi nima?",
+    "options": [
+      "Morfema",
+      "Tovush",
+      "Bo'g'in",
+      "Ildiz"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 12,
+    "question": "O'zbek tilida nechta kelishik bor?",
+    "options": [
+      "4 ta",
+      "5 ta",
+      "6 ta",
+      "7 ta"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 13,
+    "question": "Tushum kelishigining qo'shimchasi qaysi?",
+    "options": [
+      "-ning",
+      "-da",
+      "-ga",
+      "-ni"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 14,
+    "question": "Qaratqich kelishigining qo'shimchasi qaysi?",
+    "options": [
+      "-da",
+      "-ni",
+      "-ning",
+      "-dan"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 15,
+    "question": "Chiqish kelishigining qo'shimchasi qaysi?",
+    "options": [
+      "-ga",
+      "-da",
+      "-dan",
+      "-ni"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 16,
+    "question": "O'rin-payt kelishigining qo'shimchasi?",
+    "options": [
+      "-ni",
+      "-ning",
+      "-da",
+      "-dan"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 17,
+    "question": "Jo'nalish kelishigining qo'shimchasi?",
+    "options": [
+      "-da",
+      "-ga",
+      "-dan",
+      "-ni"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 18,
+    "question": "Ko'plik qo'shimchasi qaysi?",
+    "options": [
+      "-m",
+      "-da",
+      "-lar",
+      "-chi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 19,
+    "question": "Otning o'rnida qo'llaniladigan so'z turkumi?",
+    "options": [
+      "Sifat",
+      "Son",
+      "Olmosh",
+      "Ravish"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 20,
+    "question": "Predmetning miqdori va tartibini bildiruvchi so'z turkumi?",
+    "options": [
+      "Ravish",
+      "Sifat",
+      "Son",
+      "Fe'l"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 21,
+    "question": "Harakatning bajarilish tarzini, o'rni va vaqtini bildiruvchi so'z turkumi?",
+    "options": [
+      "Olmosh",
+      "Son",
+      "Sifat",
+      "Ravish"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 22,
+    "question": "Yordamchi so'z turkumlarini aniqlang.",
+    "options": [
+      "Ko'makchi, Bog'lovchi, Yuklama",
+      "Ot, Sifat",
+      "Fe'l, Ravish",
+      "Son, Olmosh"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 23,
+    "question": "Hujjatli yoki rasmiy munosabatlarda qo'llaniladigan uslub?",
+    "options": [
+      "Badiiy uslub",
+      "Ilmiy uslub",
+      "Rasmiy-idoraviy uslub",
+      "Ommabop uslub"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 24,
+    "question": "Ma'lumot berish, tushuntirish uchun qo'llaniladigan uslub?",
+    "options": [
+      "Badiiy",
+      "So'zlashuv",
+      "Rasmiy",
+      "Ilmiy"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 25,
+    "question": "Obrazli, ta'sirchan ifodalangan nutq uslubi?",
+    "options": [
+      "Ilmiy",
+      "Badiiy",
+      "Rasmiy",
+      "Ommabop"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 26,
+    "question": "Sintaksis nimani o'rganadi?",
+    "options": [
+      "Tovushlarni",
+      "So'z yasalishini",
+      "So'z birikmasi va gapni",
+      "Lug'at boyligini"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 27,
+    "question": "Gapning egalik qo'shimchasini olgan asosiy bo'lagi nima?",
+    "options": [
+      "To'ldiruvchi",
+      "Kesim",
+      "Ega",
+      "Hol"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 28,
+    "question": "Eganing harakatini, holatini bildiruvchi bosh bo'lak?",
+    "options": [
+      "Aniqlovchi",
+      "Kesim",
+      "Hol",
+      "Ega"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 29,
+    "question": "Predmetning belgisini bildiruvchi gap bo'lagi?",
+    "options": [
+      "To'ldiruvchi",
+      "Aniqlovchi",
+      "Hol",
+      "Kesim"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 30,
+    "question": "Harakatning bajarilish o'rni, vaqti va maqsadini bildiruvchi gap bo'lagi?",
+    "options": [
+      "Hol",
+      "Aniqlovchi",
+      "To'ldiruvchi",
+      "Kesim"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 31,
+    "question": "Gapda tushum kelishigidagi so'z qaysi bo'lak bo'ladi?",
+    "options": [
+      "To'ldiruvchi",
+      "Aniqlovchi",
+      "Hol",
+      "Ega"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 32,
+    "question": "Mustaqillik kuni qachon?",
+    "options": [
+      "8-dekabr",
+      "21-mart",
+      "1-sentabr",
+      "14-yanvar"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 33,
+    "question": "O'zbek tili davlat tili maqomini qachon olgan?",
+    "options": [
+      "1991-yil",
+      "1992-yil",
+      "1989-yil 21-oktabr",
+      "1990-yil"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 34,
+    "question": "O'zbek tili alifbosi hozirda qaysi yozuvga asoslangan?",
+    "options": [
+      "Kirill",
+      "Arab",
+      "Lotin",
+      "Fors"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 35,
+    "question": "Bo'g'in hosil qiluvchi tovushlar qaysi?",
+    "options": [
+      "Undoshlar",
+      "Unlilar",
+      "Hammasi",
+      "Hech biri"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 36,
+    "question": "Dona sonlarni ko'rsating.",
+    "options": [
+      "Beshinchi",
+      "Beshta",
+      "Besh-oltita",
+      "Beshdan bir"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 37,
+    "question": "Tartib son yasovchi qo'shimcha?",
+    "options": [
+      "-inchi",
+      "-ta",
+      "-ov",
+      "-talab"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 38,
+    "question": "Sifatning darajalari nechta?",
+    "options": [
+      "2 ta",
+      "4 ta",
+      "3 ta",
+      "5 ta"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 39,
+    "question": "Ortirma darajadagi sifatni toping.",
+    "options": [
+      "Yaxshiroq",
+      "Nimrang",
+      "Yaxshi",
+      "Eng yaxshi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 40,
+    "question": "Kishilik olmoshlari necha xil?",
+    "options": [
+      "3 xil",
+      "4 xil",
+      "10 ta",
+      "6 ta"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 41,
+    "question": "Fe'lning zamonlari nechta?",
+    "options": [
+      "2 ta",
+      "5 ta",
+      "4 ta",
+      "3 ta"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 42,
+    "question": "Hozirgi zamon fe'lini toping.",
+    "options": [
+      "Yozmoqda",
+      "Yozdi",
+      "Yozadi",
+      "Yozgan"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 43,
+    "question": "Kelasi zamon fe'lini toping.",
+    "options": [
+      "O'qidi",
+      "O'qiyapti",
+      "O'qiydi",
+      "O'qigan edi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 44,
+    "question": "So'z oxirida kelganda jarangsizlanadigan undoshlar?",
+    "options": [
+      "p, t, k, s",
+      "b, d, g, z",
+      "m, n, l, r",
+      "f, x, sh"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 45,
+    "question": "Tinish belgilarini o'rganuvchi bo'lim?",
+    "options": [
+      "Orfografiya",
+      "Orfoepiya",
+      "Punktuatsiya",
+      "Morfologiya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 46,
+    "question": "To'g'ri yozish qoidalarini o'rganuvchi bo'lim?",
+    "options": [
+      "Orfoepiya",
+      "Orfografiya",
+      "Fonetika",
+      "Leksika"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 47,
+    "question": "To'g'ri talaffuz qilish qoidalarini o'rganuvchi bo'lim?",
+    "options": [
+      "Orfografiya",
+      "Sintaksis",
+      "Orfoepiya",
+      "Morfologiya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 48,
+    "question": "Ko'chma ma'noli iboralarni nima deymiz?",
+    "options": [
+      "Maqol",
+      "Frazeologizm",
+      "Matal",
+      "Termin"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 49,
+    "question": "Shaxs va narsaning miqdorini bildiruvchi so'z turkumi?",
+    "options": [
+      "Sifat",
+      "Son",
+      "Ravish",
+      "Ot"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 50,
+    "question": "O'zbekistonning poytaxti qaysi shahar?",
+    "options": [
+      "Samarqand",
+      "Toshkent",
+      "Buxoro",
+      "Xiva"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 51,
+    "question": "So'roq yuklamalarini ko'rsating.",
+    "options": [
+      "-mi, -chi, -mi-yu",
+      "-gina, -faqat",
+      "hatto, -da",
+      "xuddi, go'yo"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 52,
+    "question": "Kimsasiz, hech kim, allaqachon so'zlari qaysi turkumga kiradi?",
+    "options": [
+      "Olmosh",
+      "Sifat",
+      "Ot",
+      "Son"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 53,
+    "question": "Fe'lning asosi nimani bildiradi?",
+    "options": [
+      "Vaqtni",
+      "Narsani",
+      "Belgini",
+      "Harakatni"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 54,
+    "question": "Mustaqil so'z turkumlari nechta?",
+    "options": [
+      "4 ta",
+      "8 ta",
+      "6 ta",
+      "10 ta"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 55,
+    "question": "O'zbek tilida urg'u asosan so'zning qaysi bo'g'iniga tushadi?",
+    "options": [
+      "Birinchi",
+      "O'rtadagi",
+      "Urg'u yo'q",
+      "Oxirgi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 56,
+    "question": "Gapda bir xil so'roqqa javob bo'ladigan, bir xil vazifa bajaradigan bo'laklar?",
+    "options": [
+      "Uyumshiq bo'laklar",
+      "Ajratilgan bo'laklar",
+      "Kirish so'zlar",
+      "Undalmalar"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 57,
+    "question": "Suhbatdoshning diqqatini jalb qilish uchun qo'llaniladigan birlik?",
+    "options": [
+      "Kirish so'z",
+      "Hol",
+      "Undalma",
+      "To'ldiruvchi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 58,
+    "question": "So'zlovchining o'z fikriga munosabatini bildiruvchi birlik?",
+    "options": [
+      "Kirish so'z",
+      "Undalma",
+      "Aniqlovchi",
+      "Kesim"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 59,
+    "question": "Gapda undalma qanday tinish belgilari bilan ajratiladi?",
+    "options": [
+      "Nuqta",
+      "Tire",
+      "Ikki nuqta",
+      "Vergul"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 60,
+    "question": "So'z oxirida 'k' tovushi 'g' ga aylanishi qachon sodir bo'ladi?",
+    "options": [
+      "Kelishik qo'shilganda",
+      "Hech qachon",
+      "Ko'plik qo'shilganda",
+      "Egalik qo'shilganda"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 61,
+    "question": "Morfologiya nimani o'rganadi?",
+    "options": [
+      "Tovushlarni",
+      "Lug'atni",
+      "Gaplarni",
+      "So'z turkumlarini"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 62,
+    "question": "Sifatdosh yasovchi qo'shimchani toping.",
+    "options": [
+      "-ib",
+      "-gani",
+      "-gach",
+      "-gan"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 63,
+    "question": "Ravishdosh yasovchi qo'shimchani toping.",
+    "options": [
+      "-ib",
+      "-gan",
+      "-ar",
+      "-uvchi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 64,
+    "question": "Harakat nomi qo'shimchasini toping.",
+    "options": [
+      "-gan",
+      "-moq, -ish, -v",
+      "-yotgan",
+      "-ib"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 65,
+    "question": "Sodda gap nechta kesimdan iborat bo'ladi?",
+    "options": [
+      "2 ta",
+      "1 ta",
+      "Bir nechta",
+      "Kesimi bo'lmaydi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 66,
+    "question": "Murakkab gaplar necha xil bo'ladi?",
+    "options": [
+      "Sodda va Qo'shma",
+      "Egalik va Kesimlik",
+      "Darak va So'roq",
+      "Bog'langan, Ergashgan, Bog'lovchisiz"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 67,
+    "question": "Bog'lovchisiz qo'shma gaplarda qanday tinish belgisi qo'yiladi?",
+    "options": [
+      "Nuqta",
+      "Qavs",
+      "Vergul, Tire yoki Ikki nuqta",
+      "Undov"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 68,
+    "question": "Leksikologiya nimani o'rganadi?",
+    "options": [
+      "Tilning lug'at boyligini",
+      "So'z turkumini",
+      "Tovushni",
+      "Gapni"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 69,
+    "question": "O'zbek tiliga xos bo'lgan 'q, g', h' tovushlari qanday tovushlar?",
+    "options": [
+      "Lab undoshlari",
+      "Bo'g'iz va chuqur til orqa undoshlari",
+      "Til oldi undoshlari",
+      "Burun undoshlari"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 70,
+    "question": "Egalik qo'shimchalarini toping.",
+    "options": [
+      "-im, -ing, -i",
+      "-da, -dan",
+      "-ni, -ning",
+      "-lar"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 71,
+    "question": "Sifat turkumiga misol keltiring.",
+    "options": [
+      "Maktab",
+      "O'qimoq",
+      "Uchta",
+      "Chiroyli"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 72,
+    "question": "Ravish turkumiga misol keltiring.",
+    "options": [
+      "Tez",
+      "Baland",
+      "Kitob",
+      "U"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 73,
+    "question": "Son turkumiga misol keltiring.",
+    "options": [
+      "O'nta",
+      "Bor",
+      "Yaxshi",
+      "Odam"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 74,
+    "question": "Olmosh turkumiga misol keltiring.",
+    "options": [
+      "Shahar",
+      "Qizil",
+      "Yugurdi",
+      "Ular"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 75,
+    "question": "Sifat yasovchi qo'shimchani toping.",
+    "options": [
+      "-chi",
+      "-da",
+      "-lar",
+      "-li"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 76,
+    "question": "Ot yasovchi qo'shimchani toping.",
+    "options": [
+      "-dek",
+      "-chan",
+      "-loq",
+      "-simon"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 77,
+    "question": "Asosdosh so'zlar nima?",
+    "options": [
+      "Ildizi bir bo'lgan so'zlar",
+      "Ma'nosi bir xil so'zlar",
+      "Qarama-qarshi so'zlar",
+      "Vazndosh so'zlar"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 78,
+    "question": "Tildagi barcha so'zlar yig'indisi nima deyiladi?",
+    "options": [
+      "Leksika",
+      "Grammatika",
+      "Morfema",
+      "Sintaksis"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 79,
+    "question": "Frazeologizmga misol ko'rsating.",
+    "options": [
+      "Oltin soat",
+      "Katta bino",
+      "Yaxshi odam",
+      "Qo'li ochiq"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 80,
+    "question": "O'zbek tilida gap oxirida qanday belgilar qo'yilishi mumkin?",
+    "options": [
+      "Nuqta, So'roq, Undov",
+      "Faqat nuqta",
+      "Vergul",
+      "Ikki nuqta"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 81,
+    "question": "His-hayajon gaplar oxirida nima qo'yiladi?",
+    "options": [
+      "?",
+      ".",
+      "!",
+      ","
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 82,
+    "question": "O'zbek tilida necha xil unli harf bor?",
+    "options": [
+      "6 ta",
+      "10 ta",
+      "26 ta",
+      "30 ta"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 83,
+    "question": "Lablangan unlilarni toping.",
+    "options": [
+      "o, u, o'",
+      "a, i, e",
+      "u, i",
+      "e, o"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 84,
+    "question": "Jarangsiz undoshni toping.",
+    "options": [
+      "b",
+      "p",
+      "d",
+      "g"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 85,
+    "question": "Jarangli undoshni toping.",
+    "options": [
+      "t",
+      "k",
+      "s",
+      "v"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 86,
+    "question": "Sonning ma'no turlari nechta?",
+    "options": [
+      "4 ta",
+      "6 ta",
+      "5 ta",
+      "7 ta"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 87,
+    "question": "Chama sonni ko'rsating.",
+    "options": [
+      "Besh",
+      "Oltinchi",
+      "O'ntacha",
+      "Ikkidan bir"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 88,
+    "question": "Jamlovchi sonni toping.",
+    "options": [
+      "To'rtta",
+      "To'rtovlon",
+      "To'rtinchi",
+      "To'rt-besh"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 89,
+    "question": "Olmoshning ma'no turlari nechta?",
+    "options": [
+      "5 ta",
+      "7 ta",
+      "9 ta",
+      "4 ta"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 90,
+    "question": "O'zlik olmoshi qaysi?",
+    "options": [
+      "Men",
+      "U",
+      "Kimdir",
+      "O'z"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 91,
+    "question": "Fe'l nisbatlari nechta?",
+    "options": [
+      "3 ta",
+      "5 ta",
+      "4 ta",
+      "6 ta"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 92,
+    "question": "Birgalik nisbati qo'shimchasi?",
+    "options": [
+      "-ish",
+      "-in",
+      "-il",
+      "-dir"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 93,
+    "question": "Majhul nisbat qo'shimchasi?",
+    "options": [
+      "-dir",
+      "-ish",
+      "-il",
+      "-giz"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 94,
+    "question": "Ortirma nisbat qo'shimchasi?",
+    "options": [
+      "-in",
+      "-dir",
+      "-ish",
+      "-il"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 95,
+    "question": "Fe'lning necha xil mayli bor?",
+    "options": [
+      "4 ta",
+      "2 ta",
+      "3 ta",
+      "5 ta"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 96,
+    "question": "Buyruq-istak maylidagi fe'lni toping.",
+    "options": [
+      "Kelgin",
+      "Kelsang",
+      "Keldi",
+      "Kelmoqchi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 97,
+    "question": "Shart mayli qo'shimchasi?",
+    "options": [
+      "-ar",
+      "-sa",
+      "-moqchi",
+      "-sa kerak"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 98,
+    "question": "Ko'makchi fe'lli so'z birikmasini toping.",
+    "options": [
+      "Yozish kerak",
+      "Yaxshi yozdi",
+      "Darsni yozdi",
+      "Yozib bo'ldi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 99,
+    "question": "O'zbek tili lug'at boyligi qaysi asarda keng yoritilgan?",
+    "options": [
+      "Boburnoma",
+      "Devonu lug'atit turk",
+      "Xamsa",
+      "Qutadg'u bilig"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 100,
+    "question": "Alisher Navoiy tilshunoslikka oid qaysi asarni yozgan?",
+    "options": [
+      "Muhokamatul-lug'atayn",
+      "Xazoyinul-maoniy",
+      "Lisonut-tayr",
+      "Munshoot"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 101,
+    "question": "Gapning maqsadga ko'ra turlari nechta?",
+    "options": [
+      "2 ta",
+      "4 ta",
+      "3 ta",
+      "5 ta"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 102,
+    "question": "Xabar berish maqsadida aytilgan gap?",
+    "options": [
+      "Darak gap",
+      "So'roq gap",
+      "Buyruq gap",
+      "His-hayajon gap"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 103,
+    "question": "Buyruq, iltimos, maslahat ma'nosini anglatuvchi gap?",
+    "options": [
+      "Darak gap",
+      "So'roq gap",
+      "Undov gap",
+      "Buyruq gap"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 104,
+    "question": "Sodda gapning bosh bo'laklari qaysilar?",
+    "options": [
+      "Hammasi",
+      "Aniqlovchi va Hol",
+      "To'ldiruvchi",
+      "Ega va Kesim"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 105,
+    "question": "Ikkinchi darajali bo'laklarni ko'rsating.",
+    "options": [
+      "Aniqlovchi, To'ldiruvchi, Hol",
+      "Ega, Kesim",
+      "Undalma",
+      "Kirish so'z"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 106,
+    "question": "Gapda ega va kesim orasida qachon tire qo'yiladi?",
+    "options": [
+      "Ikkala bo'lak ot bilan ifodalansa",
+      "Sifat bilan ifodalansa",
+      "Fe'l bo'lsa",
+      "Hech qachon"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 107,
+    "question": "Qo'shma gaplar qismlarini bog'lovchi vositalar?",
+    "options": [
+      "Faqat vergul",
+      "Bog'lovchilar, yuklamalar, ohang",
+      "Nuqta",
+      "Chiziqcha"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 108,
+    "question": "Ergashgan qo'shma gapning qismlari?",
+    "options": [
+      "Birinchi va Ikkinchi",
+      "Bosh va Ergash gap",
+      "Sodda va Murakkab",
+      "Teng huquqli"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 109,
+    "question": "Punctuation nima?",
+    "options": [
+      "Imlo qoidalari",
+      "Tovushlar tizimi",
+      "Tinish belgilari tizimi",
+      "Nutq madaniyati"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 110,
+    "question": "Mustaqil so'z turkumlari soni?",
+    "options": [
+      "5 ta",
+      "7 ta",
+      "6 ta",
+      "8 ta"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 111,
+    "question": "Modal so'zlarni ko'rsating.",
+    "options": [
+      "Albatta, ehtimol",
+      "Va, bilan",
+      "Chunki, shuning uchun",
+      "Garchi, lekin"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 112,
+    "question": "Undov so'zlarni toping.",
+    "options": [
+      "Sariq, qizil",
+      "Bor, kel",
+      "Men, sen",
+      "Voy, oh, uf"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 113,
+    "question": "Taqlid so'zlarni ko'rsating.",
+    "options": [
+      "Yaxshi-yomon",
+      "Gup-gup, taq-tuq",
+      "Yugur-yugur",
+      "Oz-moz"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 114,
+    "question": "Kelishik qo'shimchalari so'zning qaysi turiga qo'shiladi?",
+    "options": [
+      "Faqat fe'lga",
+      "Yordamchi so'zlarga",
+      "Mustaqil so'zlarga",
+      "Hech biriga"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 115,
+    "question": "So'z birikmasining qismlari?",
+    "options": [
+      "Teng va Ergashgan",
+      "Hokim va Tobe",
+      "Bosh va Kesim",
+      "Ega va Hol"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 116,
+    "question": "O'zbek tili lug'at boyligi manbalari?",
+    "options": [
+      "Faqat arabcha",
+      "Faqat o'zbekcha so'zlar",
+      "O'z qatlam va o'zlashgan qatlam",
+      "Faqat ruscha"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 117,
+    "question": "Eski o'zbek tili lug'ati kimga tegishli?",
+    "options": [
+      "Navoiy",
+      "Yassaviy",
+      "Qoshg'ariy",
+      "Xorazmiy"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 118,
+    "question": "Tilshunoslikning so'z yasalishini o'rganadigan bo'limi?",
+    "options": [
+      "Derivatsiya",
+      "Morfemika",
+      "Leksika",
+      "Sintaksis"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 119,
+    "question": "Qofiya nima?",
+    "options": [
+      "Gap turi",
+      "So'z turkumi",
+      "Misra oxiridagi ohangdoshlik",
+      "Tinish belgisi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 120,
+    "question": "Badiiy tasvir vositalari?",
+    "options": [
+      "Bo'g'in, Tovush",
+      "Ot, Sifat, Son",
+      "Ega, Kesim",
+      "Sifatlash, O'xshatish, Jonlantirish"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 121,
+    "question": "Teskari so'z tartibi nima deyiladi?",
+    "options": [
+      "Inversiya",
+      "Konversiya",
+      "Sinfonizm",
+      "Metafora"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 122,
+    "question": "Gapda vergul qachon qo'yiladi?",
+    "options": [
+      "Gap oxirida",
+      "Uyumshiq bo'laklar orasida",
+      "So'z o'rtasida",
+      "Hech qachon"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 123,
+    "question": "Ko'chirma gap nima?",
+    "options": [
+      "O'zgarishsiz berilgan o'zganing gapi",
+      "O'zimizning gapimiz",
+      "Yolg'on gap",
+      "Kitob nomi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 124,
+    "question": "Muallif gapi ko'chirma gapdan qanday ajratiladi?",
+    "options": [
+      "Nuqta bilan",
+      "Hech qanday",
+      "Qavs bilan",
+      "Tire va qo'shtirnoq bilan"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 125,
+    "question": "Sifatdosh va Ravishdosh fe'lning qanday shakllari?",
+    "options": [
+      "Vazifa shakllari",
+      "Zamon shakllari",
+      "Shaxs-son",
+      "Mayl"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 126,
+    "question": "O'zbek tili qaysi tildan ko'p so'z qabul qilgan (tarixan)?",
+    "options": [
+      "Fransuz",
+      "Ingliz",
+      "Arab va Fors",
+      "Xitoy"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 127,
+    "question": "Ma'nodosh so'zlarga misol?",
+    "options": [
+      "Yaxshi-yomon",
+      "Kel-ket",
+      "Yuz-chehra",
+      "Baland-past"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 128,
+    "question": "Zid ma'noli so'zlarga misol?",
+    "options": [
+      "Uy-xona",
+      "Katta-ulkan",
+      "Chiroyli-go'zal",
+      "Oq-qora"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 129,
+    "question": "Omonim so'zga misol?",
+    "options": [
+      "Maktab",
+      "Yaxshi",
+      "Kitob",
+      "Olma (meva va fe'l)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 130,
+    "question": "Paronim so'zga misol?",
+    "options": [
+      "Asr-asr",
+      "Suv-non",
+      "Katta-kichik",
+      "Aql-ahil"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 131,
+    "question": "Tole so'zining ma'nosi?",
+    "options": [
+      "Shahar",
+      "G'am",
+      "Vaqt",
+      "Baxt"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 132,
+    "question": "Ziyoli so'zining turkumi?",
+    "options": [
+      "Sifat",
+      "Ot",
+      "Fe'l",
+      "Ravish"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 133,
+    "question": "O'zbek tilida urg'u o'zgarsa ma'nosi o'zgaradigan so'zlar?",
+    "options": [
+      "Omonim",
+      "Sinonim",
+      "Antonim",
+      "Gomograf"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 134,
+    "question": "Yopiq bo'g'inni toping.",
+    "options": [
+      "Bo-la",
+      "Dars",
+      "Ham B, ham C",
+      "Suv"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 135,
+    "question": "Ochiq bo'g'inni toping.",
+    "options": [
+      "Da-la",
+      "Mak-tab",
+      "Qish",
+      "Yoz"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 136,
+    "question": "Bo'g'in ko'chirish qoidasi qaysi bo'limga kiradi?",
+    "options": [
+      "Leksika",
+      "Sintaksis",
+      "Fonetika",
+      "Grafika va Imlo"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 137,
+    "question": "O'zbekistonning milliy tili?",
+    "options": [
+      "Ingliz",
+      "O'zbek",
+      "Rus",
+      "Tojik"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 138,
+    "question": "Til - bu muloqot ...",
+    "options": [
+      "Quroli/Vositasi",
+      "Qoidasi",
+      "Rangi",
+      "Siri"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 139,
+    "question": "Nutq turlari nechta?",
+    "options": [
+      "3 ta",
+      "2 ta (Og'zaki va Yozma)",
+      "4 ta",
+      "5 ta"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 140,
+    "question": "Monolog nima?",
+    "options": [
+      "Ikki kishi suhbati",
+      "Bir kishining nutqi",
+      "Kitob o'qish",
+      "She'r aytish"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 141,
+    "question": "Dialog nima?",
+    "options": [
+      "Yolg'iz gapirish",
+      "Ikki yoki undan ortiq kishi suhbati",
+      "Matn yozish",
+      "Rasm chizish"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 142,
+    "question": "Sheva nima?",
+    "options": [
+      "Davlat tili",
+      "Ilmiy atama",
+      "Chet tili",
+      "Ma'lum hududga xos nutq"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 143,
+    "question": "Adabiy til nima?",
+    "options": [
+      "Ko'cha tili",
+      "Normalashtirilgan, umumxalq tili",
+      "Faqat she'rlar",
+      "Qishloq tili"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 144,
+    "question": "Atamalar (terminlar) qaysi uslubda ko'p qo'llaniladi?",
+    "options": [
+      "Ilmiy",
+      "So'zlashuv",
+      "Badiiy",
+      "Rasmiy"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 145,
+    "question": "Metafora nima?",
+    "options": [
+      "Ism o'zgarishi",
+      "Zid ma'no",
+      "To'g'ri ma'no",
+      "O'xshatish asosidagi ko'chma ma'no"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 146,
+    "question": "Fe'lning bo'lishsiz shakli qo'shimchasi?",
+    "options": [
+      "-lar",
+      "-ma",
+      "-chi",
+      "-li"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 147,
+    "question": "Shaxs-son qo'shimchalari fe'lning nimasini bildiradi?",
+    "options": [
+      "Joyni",
+      "Vaqtni",
+      "Harakat egasini",
+      "Maqsadni"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 148,
+    "question": "Mustaqil so'zlar gapda nima vazifasini bajaradi?",
+    "options": [
+      "Tinish belgisi",
+      "Gap bo'lagi",
+      "Bog'lovchi",
+      "Hech qanday"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 149,
+    "question": "Gap bo'lagi bo'la olmaydigan so'zlar?",
+    "options": [
+      "Ot va Sifat",
+      "Yordamchi so'zlar",
+      "Son va Olmosh",
+      "Ravish"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 150,
+    "question": "O'zbek tili grammatikasi necha qismdan iborat?",
+    "options": [
+      "5 qism",
+      "3 qism",
+      "4 qism",
+      "2 qism (Morfologiya va Sintaksis)"
+    ],
+    "answerIndex": 3
+  }
+]

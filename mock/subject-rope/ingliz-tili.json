@@ -1,0 +1,1652 @@
+[
+  {
+    "id": 1,
+    "question": "\"Red\" so'zi o'zbekcha nima?",
+    "options": [
+      "Sariq",
+      "Qizil",
+      "Yashil",
+      "Moviy"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 2,
+    "question": "\"Yashil\" inglizcha qanday?",
+    "options": [
+      "Blue",
+      "Red",
+      "Black",
+      "Green"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 3,
+    "question": "\"Father\" so'zi o'zbekcha nima?",
+    "options": [
+      "Aka",
+      "Ona",
+      "Ota",
+      "Amaki"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 4,
+    "question": "\"Brother\" inglizcha nima?",
+    "options": [
+      "Aka/Uka",
+      "Opa",
+      "Singil",
+      "O'g'il"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 5,
+    "question": "\"Pen\" so'zi o'zbekcha nima?",
+    "options": [
+      "Daftar",
+      "Ruchka",
+      "Qalam",
+      "O'chirg'ich"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 6,
+    "question": "\"Pencil\" so'zi o'zbekcha nima?",
+    "options": [
+      "Qalam",
+      "Ruchka",
+      "Chizg'ich",
+      "Sumka"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 7,
+    "question": "\"Window\" so'zi o'zbekcha nima?",
+    "options": [
+      "Deraza",
+      "Eshik",
+      "Devor",
+      "Uy"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 8,
+    "question": "\"Door\" inglizcha qanday?",
+    "options": [
+      "Window",
+      "Chair",
+      "Table",
+      "Door"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 9,
+    "question": "\"Dog\" so'zi o'zbekcha nima?",
+    "options": [
+      "Mushuk",
+      "Sichqon",
+      "Ot",
+      "It"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 10,
+    "question": "\"Cat\" inglizcha nima?",
+    "options": [
+      "It",
+      "Mushuk",
+      "Quyon",
+      "Tovuq"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 11,
+    "question": "\"Bread\" so'zi o'zbekcha nima?",
+    "options": [
+      "Suv",
+      "Sut",
+      "Non",
+      "Choy"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 12,
+    "question": "\"Milk\" so'zi o'zbekcha nima?",
+    "options": [
+      "Suv",
+      "Sut",
+      "Sharbat",
+      "Qahva"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 13,
+    "question": "\"Hot\" so'zi o'zbekcha nima?",
+    "options": [
+      "Sovuq",
+      "Iliq",
+      "Issiq",
+      "Muzdek"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 14,
+    "question": "\"Cold\" inglizcha nima?",
+    "options": [
+      "Hot",
+      "Warm",
+      "Cold",
+      "Sunny"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 15,
+    "question": "\"Always\" so'zi o'zbekcha nima?",
+    "options": [
+      "Hech qachon",
+      "Har doim",
+      "Ba'zan",
+      "Tez-tez"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 16,
+    "question": "\"Never\" inglizcha nima?",
+    "options": [
+      "Always",
+      "Never",
+      "Sometimes",
+      "Often"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 17,
+    "question": "\"Strong\" so'zi o'zbekcha nima?",
+    "options": [
+      "Kuchsiz",
+      "Aqlli",
+      "Kuchli",
+      "Chiroyli"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 18,
+    "question": "\"Kuchsiz\" inglizcha nima?",
+    "options": [
+      "Weak",
+      "Fast",
+      "Strong",
+      "Slow"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 19,
+    "question": "\"Fast\" so'zi o'zbekcha nima?",
+    "options": [
+      "Sekin",
+      "Yaqin",
+      "Baland",
+      "Tez"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 20,
+    "question": "\"Slow\" inglizcha nima?",
+    "options": [
+      "Fast",
+      "Quick",
+      "Slow",
+      "High"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 21,
+    "question": "\"Young\" so'zi o'zbekcha nima?",
+    "options": [
+      "Qari",
+      "Kambag'al",
+      "Boy",
+      "Yosh"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 22,
+    "question": "\"Old\" inglizcha nima?",
+    "options": [
+      "Young",
+      "New",
+      "Old",
+      "Modern"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 23,
+    "question": "\"Rich\" so'zi o'zbekcha nima?",
+    "options": [
+      "Baxtsiz",
+      "Kambag'al",
+      "Baxtli",
+      "Boy"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 24,
+    "question": "\"Poor\" inglizcha nima?",
+    "options": [
+      "Poor",
+      "Happy",
+      "Rich",
+      "Sad"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 25,
+    "question": "\"Table\" so'zi o'zbekcha nima?",
+    "options": [
+      "Stul",
+      "Parta",
+      "Doska",
+      "Stol"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 26,
+    "question": "\"Chair\" inglizcha nima?",
+    "options": [
+      "Table",
+      "Desk",
+      "Bed",
+      "Chair"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 27,
+    "question": "\"Winter\" so'zi o'zbekcha nima?",
+    "options": [
+      "Bahor",
+      "Qish",
+      "Kuz",
+      "Yoz"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 28,
+    "question": "\"Spring\" inglizcha nima?",
+    "options": [
+      "Qish",
+      "Kuz",
+      "Yoz",
+      "Bahor"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 29,
+    "question": "\"Summer\" so'zi o'zbekcha nima?",
+    "options": [
+      "Yoz",
+      "Bahor",
+      "Qish",
+      "Kuz"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 30,
+    "question": "\"Autumn\" so'zi o'zbekcha nima?",
+    "options": [
+      "Qish",
+      "Bahor",
+      "Kuz",
+      "Yoz"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 31,
+    "question": "\"Head\" so'zi o'zbekcha nima?",
+    "options": [
+      "Qo'l",
+      "Oyoq",
+      "Bosh",
+      "Yuz"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 32,
+    "question": "\"Hand\" inglizcha nima?",
+    "options": [
+      "Leg",
+      "Foot",
+      "Eye",
+      "Hand"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 33,
+    "question": "\"Eye\" so'zi o'zbekcha nima?",
+    "options": [
+      "Burun",
+      "Quloq",
+      "Ko'z",
+      "Og'iz"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 34,
+    "question": "\"Ear\" so'zi o'zbekcha nima?",
+    "options": [
+      "Quloq",
+      "Burun",
+      "Ko'z",
+      "Tish"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 35,
+    "question": "\"Mouth\" inglizcha nima?",
+    "options": [
+      "Tounge",
+      "Mouth",
+      "Tooth",
+      "Nose"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 36,
+    "question": "\"Monday\" so'zi o'zbekcha nima?",
+    "options": [
+      "Seshanba",
+      "Chorshanba",
+      "Dushanba",
+      "Yakshanba"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 37,
+    "question": "\"Sunday\" inglizcha nima?",
+    "options": [
+      "Shanba",
+      "Yakshanba",
+      "Juma",
+      "Seshanba"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 38,
+    "question": "\"Sunnat\" (sovg'a) inglizcha nima?",
+    "options": [
+      "Present",
+      "Gift",
+      "Future",
+      "Past"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 39,
+    "question": "\"Morning\" so'zi o'zbekcha nima?",
+    "options": [
+      "Kechqurun",
+      "Tun",
+      "Tushdan keyin",
+      "Tong/Ertalab"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 40,
+    "question": "\"Evening\" inglizcha nima?",
+    "options": [
+      "Morning",
+      "Evening",
+      "Afternoon",
+      "Night"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 41,
+    "question": "\"Fruit\" so'zi o'zbekcha nima?",
+    "options": [
+      "Sabzavot",
+      "Yong'oq",
+      "Meva",
+      "Shirinlik"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 42,
+    "question": "\"Vegetable\" inglizcha nima?",
+    "options": [
+      "Fruit",
+      "Berry",
+      "Vegetable",
+      "Meat"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 43,
+    "question": "\"Meat\" so'zi o'zbekcha nima?",
+    "options": [
+      "Sut",
+      "Tuxum",
+      "Go'sht",
+      "Yog'"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 44,
+    "question": "\"Sut\" inglizcha nima?",
+    "options": [
+      "Juice",
+      "Water",
+      "Milk",
+      "Tea"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 45,
+    "question": "\"Yellow\" so'zi o'zbekcha nima?",
+    "options": [
+      "Sariq",
+      "Oq",
+      "Qora",
+      "Jigarrang"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 46,
+    "question": "\"White\" inglizcha nima?",
+    "options": [
+      "Black",
+      "Blue",
+      "Grey",
+      "White"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 47,
+    "question": "\"Black\" so'zi o'zbekcha nima?",
+    "options": [
+      "Oq",
+      "Pushti",
+      "Sariq",
+      "Qora"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 48,
+    "question": "\"Blue\" inglizcha nima?",
+    "options": [
+      "Qizil",
+      "Yashil",
+      "Moviy",
+      "Siyohrang"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 49,
+    "question": "\"Shirt\" so'zi o'zbekcha nima?",
+    "options": [
+      "Shim",
+      "Shlyapa",
+      "Poyabzal",
+      "Ko'ylak"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 50,
+    "question": "\"Shoes\" inglizcha nima?",
+    "options": [
+      "T-shirt",
+      "Dress",
+      "Socks",
+      "Shoes"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 51,
+    "question": "\"I\" kishilik olmoshi qaysi 'to be' fe'li bilan ishlatiladi?",
+    "options": [
+      "Am",
+      "Is",
+      "Are",
+      "Be"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 52,
+    "question": "\"He, She, It\" olmoshlari bilan qaysi 'to be' ishlatiladi?",
+    "options": [
+      "Are",
+      "Is",
+      "Am",
+      "Were"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 53,
+    "question": "\"We, You, They\" bilan qaysi 'to be' ishlatiladi?",
+    "options": [
+      "Is",
+      "Are",
+      "Am",
+      "Was"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 54,
+    "question": "\"Men o'quvchiman\" gapining to'g'ri tarjimasi?",
+    "options": [
+      "I is a student",
+      "I am a student",
+      "I are a student",
+      "He am a student"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 55,
+    "question": "\"U mening do'stim\" (o'g'il bolaga nisbatan)?",
+    "options": [
+      "She is my friend",
+      "They are my friends",
+      "He is my friend",
+      "I am my friend"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 56,
+    "question": "\"They ___ from Uzbekistan.\" Bo'sh joyni to'ldiring.",
+    "options": [
+      "Is",
+      "Am",
+      "Are",
+      "Been"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 57,
+    "question": "\"My\" so'zining ma'nosi nima?",
+    "options": [
+      "Sening",
+      "Uning",
+      "Bizning",
+      "Mening"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 58,
+    "question": "\"Your\" so'zining ma'nosi nima?",
+    "options": [
+      "Mening",
+      "Uning",
+      "Sening",
+      "Ularning"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 59,
+    "question": "\"Uning\" (qiz bolaga nisbatan) inglizcha nima?",
+    "options": [
+      "Her",
+      "His",
+      "Its",
+      "Our"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 60,
+    "question": "\"His\" so'zining ma'nosi nima?",
+    "options": [
+      "Uning (qiz bolaga)",
+      "Uning (o'g'il bolaga)",
+      "Bizning",
+      "Ularning"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 61,
+    "question": "\"Ular\" inglizcha nima?",
+    "options": [
+      "We",
+      "You",
+      "They",
+      "He"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 62,
+    "question": "\"Biz\" inglizcha nima?",
+    "options": [
+      "They",
+      "We",
+      "She",
+      "It"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 63,
+    "question": "\"This\" so'zining ma'nosi nima?",
+    "options": [
+      "Mana bu (yaqindagi bitta)",
+      "Anavi",
+      "Mana bular",
+      "Anavilar"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 64,
+    "question": "\"That\" so'zining ma'nosi nima?",
+    "options": [
+      "Anavi (uzoqdagi bitta)",
+      "Mana bu",
+      "Mana bular",
+      "O'sha"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 65,
+    "question": "\"A\" va \"An\" nima deb ataladi?",
+    "options": [
+      "Fe'l",
+      "Artikl",
+      "Sifat",
+      "Olmosh"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 66,
+    "question": "\"___ apple\" (Artiklni qo'ying).",
+    "options": [
+      "A",
+      "-",
+      "The",
+      "An"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 67,
+    "question": "\"___ book\" (Artiklni qo'ying).",
+    "options": [
+      "An",
+      "A",
+      "Some",
+      "Any"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 68,
+    "question": "Ingliz tilida ko'plik qo'shimchasi odatda qaysi?",
+    "options": [
+      "-s/-es",
+      "-ing",
+      "-ed",
+      "-er"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 69,
+    "question": "\"Box\" so'zining ko'plik shakli?",
+    "options": [
+      "Boxs",
+      "Boxes",
+      "Boxen",
+      "Boxies"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 70,
+    "question": "\"Child\" (bola) so'zining ko'plik shakli?",
+    "options": [
+      "Children",
+      "Childes",
+      "Childs",
+      "Childrens"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 71,
+    "question": "\"Man\" (erkak) so'zining ko'plik shakli?",
+    "options": [
+      "Mans",
+      "Mens",
+      "Manes",
+      "Men"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 72,
+    "question": "\"Am, Is, Are\" ning o'tgan zamon shakllari?",
+    "options": [
+      "Was/Were",
+      "Do/Does",
+      "Have/Has",
+      "Did"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 73,
+    "question": "\"I ___ at home yesterday.\" Bo'sh joyni to'ldiring.",
+    "options": [
+      "Were",
+      "Am",
+      "Was",
+      "Is"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 74,
+    "question": "\"You ___ at school yesterday.\"",
+    "options": [
+      "Were",
+      "Is",
+      "Was",
+      "Are"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 75,
+    "question": "\"Have got / Has got\" nimani bildiradi?",
+    "options": [
+      "Bormoq",
+      "O'qimoq",
+      "Yemoq",
+      "Bor bo'lmoq (ega bo'lmoq)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 76,
+    "question": "\"I ___ a big dog.\" Bo'sh joyni to'ldiring.",
+    "options": [
+      "Has got",
+      "Is",
+      "Have got",
+      "Are"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 77,
+    "question": "\"He ___ a new car.\"",
+    "options": [
+      "Has got",
+      "Have got",
+      "Are",
+      "Am"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 78,
+    "question": "\"Can\" fe'li nimani bildiradi?",
+    "options": [
+      "Kerak",
+      "Xohlamoq",
+      "Qila olmoq (imkoniyat)",
+      "Majbur bo'lmoq"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 79,
+    "question": "\"Men suza olaman\" inglizcha qanday bo'ladi?",
+    "options": [
+      "I can swim",
+      "I can to swim",
+      "I swim can",
+      "I am swim"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 80,
+    "question": "\"Must\" fe'li nimani bildiradi?",
+    "options": [
+      "Mumkin",
+      "Sotib olmoq",
+      "Yordam bermoq",
+      "Majbur bo'lmoq / Kerak"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 81,
+    "question": "\"Who\" so'rog'i nimaga nisbatan ishlatiladi?",
+    "options": [
+      "Narsalarga",
+      "Odamlarga (Kim?)",
+      "Vaqtga",
+      "Joyga"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 82,
+    "question": "\"Where\" so'rog'i nimani bildiradi?",
+    "options": [
+      "Qachon?",
+      "Nima uchun?",
+      "Qayerda?",
+      "Qanday?"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 83,
+    "question": "\"When\" so'rog'i nimani bildiradi?",
+    "options": [
+      "Qachon?",
+      "Qayerda?",
+      "Kim?",
+      "Nima?"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 84,
+    "question": "\"What\" so'rog'i nimani bildiradi?",
+    "options": [
+      "Nima?",
+      "Qachon?",
+      "Qayerda?",
+      "Qanday?"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 85,
+    "question": "\"How\" so'rog'i nimani bildiradi?",
+    "options": [
+      "Qayerda?",
+      "Nima uchun?",
+      "Qanday?",
+      "Kim?"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 86,
+    "question": "Sifatlarning qiyosiy darajasi qo'shimchasi (sodda so'zlar uchun)?",
+    "options": [
+      "-er",
+      "-est",
+      "-ing",
+      "-ed"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 87,
+    "question": "\"Tall\" (baland) so'zining qiyosiy darajasi?",
+    "options": [
+      "Tallest",
+      "Tallier",
+      "More tall",
+      "Taller"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 88,
+    "question": "\"Big\" so'zining qiyosiy darajasi?",
+    "options": [
+      "Bigger",
+      "Biger",
+      "Biggest",
+      "Bigest"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 89,
+    "question": "Sifatlarning orttirma darajasi qo'shimchasi?",
+    "options": [
+      "-est",
+      "-er",
+      "-ly",
+      "-ful"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 90,
+    "question": "\"Smallest\" so'zining ma'nosi nima?",
+    "options": [
+      "Kichikroq",
+      "Kichik",
+      "Eng kichik",
+      "Kichik emas"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 91,
+    "question": "\"Good\" sifatining qiyosiy darajasi (noto'g'ri sifat)?",
+    "options": [
+      "Gooder",
+      "Better",
+      "Best",
+      "The best"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 92,
+    "question": "\"Bad\" (yomon) sifatining qiyosiy darajasi?",
+    "options": [
+      "Badder",
+      "Worst",
+      "Bader",
+      "Worse"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 93,
+    "question": "\"Many / Much\" so'zlarining ma'nosi?",
+    "options": [
+      "Kam",
+      "Ko'p",
+      "Kichik",
+      "Yaxshi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 94,
+    "question": "\"Little / Few\" so'zlarining ma'nosi?",
+    "options": [
+      "Ko'p",
+      "Kam / Ozgina",
+      "Katta",
+      "Tez"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 95,
+    "question": "Sanaladigan otlar bilan qaysi 'ko'p' ishlatiladi?",
+    "options": [
+      "Much",
+      "Many",
+      "A little",
+      "Any"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 96,
+    "question": "Sanalmaydigan otlar bilan qaysi 'ko'p' ishlatiladi?",
+    "options": [
+      "Many",
+      "Much",
+      "Few",
+      "A few"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 97,
+    "question": "\"Water\" (suv) sanaladimi?",
+    "options": [
+      "Ha",
+      "Ba'zan",
+      "Faqat ko'plikda",
+      "Yo'q"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 98,
+    "question": "\"There is / There are\" nimani bildiradi?",
+    "options": [
+      "Ketmoq",
+      "Gapirmoq",
+      "Yozmoq",
+      "Mavjud bo'lmoq (Bor)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 99,
+    "question": "\"There ___ an apple on the table.\"",
+    "options": [
+      "Are",
+      "Am",
+      "Be",
+      "Is"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 100,
+    "question": "\"There ___ two books in my bag.\"",
+    "options": [
+      "Is",
+      "Am",
+      "Was",
+      "Are"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 101,
+    "question": "Present Simple (Hozirgi oddiy zamon) ko'rsatkichini toping.",
+    "options": [
+      "Every day",
+      "Tomorrow",
+      "Yesterday",
+      "Now"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 102,
+    "question": "Present Simple'da uchinchi shaxs (He, She, It) uchun fe'lga qaysi qo'shimcha qo'shiladi?",
+    "options": [
+      "-ing",
+      "-ed",
+      "-en",
+      "-s / -es"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 103,
+    "question": "Present Simple so'roq va inkor gaplari uchun qaysi yordamchi fe'llar ishlatiladi?",
+    "options": [
+      "Am/Is/Are",
+      "Was/Were",
+      "Have/Has",
+      "Do/Does"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 104,
+    "question": "\"I ___ to school every day.\" Bo'sh joyni to'ldiring.",
+    "options": [
+      "Go",
+      "Goes",
+      "Going",
+      "Went"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 105,
+    "question": "\"He ___ football on Sundays.\"",
+    "options": [
+      "Play",
+      "Played",
+      "Playing",
+      "Plays"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 106,
+    "question": "Present Continuous (Hozirgi davomiy zamon) ko'rsatkichi?",
+    "options": [
+      "Often",
+      "Next year",
+      "Last week",
+      "Now"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 107,
+    "question": "Present Continuous'da fe'lga qaysi qo'shimcha qo'shiladi?",
+    "options": [
+      "-ing",
+      "-ed",
+      "-s",
+      "-er"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 108,
+    "question": "\"I am ___ a book now.\"",
+    "options": [
+      "Reading",
+      "Reads",
+      "Read",
+      "Readed"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 109,
+    "question": "\"She is ___ TV at the moment.\"",
+    "options": [
+      "Watch",
+      "Watching",
+      "Watches",
+      "Watched"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 110,
+    "question": "Past Simple (O'tgan oddiy zamon) ko'rsatkichi?",
+    "options": [
+      "Always",
+      "Usually",
+      "Yesterday",
+      "Soon"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 111,
+    "question": "To'g'ri fe'llarga o'tgan zamonda qaysi qo'shimcha qo'shiladi?",
+    "options": [
+      "-ing",
+      "-s",
+      "-es",
+      "-ed"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 112,
+    "question": "Past Simple uchun yordamchi fe'l qaysi?",
+    "options": [
+      "Do",
+      "Does",
+      "Did",
+      "Done"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 113,
+    "question": "\"I ___ a movie yesterday.\" (watch)",
+    "options": [
+      "Watch",
+      "Watching",
+      "Watched",
+      "Watches"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 114,
+    "question": "\"Go\" (bormoq) fe'lining o'tgan zamon shakli (noto'g'ri fe'l)?",
+    "options": [
+      "Goed",
+      "Gone",
+      "Went",
+      "Going"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 115,
+    "question": "\"See\" (ko'rmoq) fe'lining o'tgan zamon shakli?",
+    "options": [
+      "Seed",
+      "Seen",
+      "Saw",
+      "Seeing"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 116,
+    "question": "\"Eat\" (yemoq) fe'lining o'tgan zamon shakli?",
+    "options": [
+      "Eated",
+      "Ate",
+      "Eating",
+      "Eaten"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 117,
+    "question": "Future Simple (Kelasi oddiy zamon) yordamchi fe'li?",
+    "options": [
+      "Will",
+      "Was",
+      "Is",
+      "Did"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 118,
+    "question": "\"I ___ help you tomorrow.\"",
+    "options": [
+      "Am",
+      "Did",
+      "Was",
+      "Will"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 119,
+    "question": "Present Perfect (Hozirgi tugallangan zamon) yordamchi fe'li?",
+    "options": [
+      "Do/Does",
+      "Have/Has",
+      "Am/Is/Are",
+      "Will"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 120,
+    "question": "\"Just, already, yet\" qaysi zamon ko'rsatkichlari?",
+    "options": [
+      "Present Perfect",
+      "Present Simple",
+      "Past Simple",
+      "Future Simple"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 121,
+    "question": "\"In\" predlogi nima bilan ishlatiladi?",
+    "options": [
+      "Kunlar bilan",
+      "Oylar va yillar bilan",
+      "Soatlar bilan",
+      "Faqat yakshanba bilan"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 122,
+    "question": "\"On\" predlogi nima bilan ishlatiladi?",
+    "options": [
+      "Yillar bilan",
+      "Hafta kunlari bilan",
+      "Soatlar bilan",
+      "Oylar bilan"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 123,
+    "question": "\"At\" predlogi nima bilan ishlatiladi?",
+    "options": [
+      "Yillar bilan",
+      "Soatlar bilan",
+      "Kunlar bilan",
+      "Oylar bilan"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 124,
+    "question": "\"On Sunday\" qanday tarjima qilinadi?",
+    "options": [
+      "Yakshanbadan keyin",
+      "Yakshanbada",
+      "Yakshanba kuni",
+      "Yakshanba uchun"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 125,
+    "question": "\"Under\" predlogining ma'nosi?",
+    "options": [
+      "Ustida",
+      "Yonida",
+      "Ichida",
+      "Tagida"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 126,
+    "question": "\"In front of\" predlogining ma'nosi?",
+    "options": [
+      "Oldida",
+      "Orqasida",
+      "Ustida",
+      "Tagida"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 127,
+    "question": "\"Between\" predlogining ma'nosi?",
+    "options": [
+      "Yaqinida",
+      "Ichida",
+      "Ustida",
+      "O'rtasida (ikki narsaning)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 128,
+    "question": "\"To read\" fe'lining ma'nosi nima?",
+    "options": [
+      "Yozmoq",
+      "O'qimoq",
+      "Tinglamoq",
+      "Gapirmoq"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 129,
+    "question": "\"To write\" fe'lining ma'nosi nima?",
+    "options": [
+      "O'qimoq",
+      "Yugurmoq",
+      "Yozmoq",
+      "Sakramoq"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 130,
+    "question": "\"To listen\" fe'lining ma'nosi nima?",
+    "options": [
+      "Ko'rmoq",
+      "Ichmoq",
+      "Yemoq",
+      "Tinglamoq"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 131,
+    "question": "\"To sleep\" fe'lining ma'nosi nima?",
+    "options": [
+      "Turmoq",
+      "Uxlamoq",
+      "Ishlamoq",
+      "O'ynamoq"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 132,
+    "question": "\"To work\" fe'lining ma'nosi nima?",
+    "options": [
+      "Ishlamoq",
+      "Dam olmoq",
+      "Sotib olmoq",
+      "Sotmoq"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 133,
+    "question": "\"By car\" nima degani?",
+    "options": [
+      "Mashinasiz",
+      "Mashina ichida",
+      "Mashina yonida",
+      "Mashina bilan"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 134,
+    "question": "\"Hello\" so'ziga sinonim toping.",
+    "options": [
+      "Goodbye",
+      "Fine",
+      "Hi",
+      "Nice"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 135,
+    "question": "\"Small\" so'ziga antonim (qarshi ma'no) toping.",
+    "options": [
+      "Big",
+      "Short",
+      "Little",
+      "Thin"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 136,
+    "question": "\"Fast\" so'ziga antonim toping.",
+    "options": [
+      "Quick",
+      "Slow",
+      "High",
+      "Long"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 137,
+    "question": "\"11\" soni inglizcha nima?",
+    "options": [
+      "Eleven",
+      "Ten",
+      "Twelve",
+      "Thirteen"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 138,
+    "question": "\"20\" soni inglizcha nima?",
+    "options": [
+      "Twenty",
+      "Twelve",
+      "Twelve",
+      "Two"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 139,
+    "question": "\"First\" nima degani?",
+    "options": [
+      "Bir",
+      "Birinchi",
+      "Ikki",
+      "Ikkinchi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 140,
+    "question": "\"Second\" nima degani?",
+    "options": [
+      "Ham A, ham C",
+      "Uchinchi",
+      "Soniya",
+      "Ikkinchi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 141,
+    "question": "\"My mother's bag\" gapining tarjimasi?",
+    "options": [
+      "Onamning sumkasi",
+      "Onam va sumka",
+      "Onalar sumkasi",
+      "Sening onangning sumkasi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 142,
+    "question": "Egalik qo'shimchasi ('s) nima uchun ishlatiladi?",
+    "options": [
+      "Ko'plik uchun",
+      "Fe'l yasash uchun",
+      "Qarashlilikni bildirish uchun",
+      "Zamon uchun"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 143,
+    "question": "\"I am hungry\" nima degani?",
+    "options": [
+      "Men ochman",
+      "Men tashnaman",
+      "Men charchadim",
+      "Men xursandman"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 144,
+    "question": "\"I am thirsty\" nima degani?",
+    "options": [
+      "Men ochman",
+      "Men chanqadim",
+      "Men uxlamoqchiman",
+      "Men kasalman"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 145,
+    "question": "\"Nice to meet you\" qachon aytiladi?",
+    "options": [
+      "Xayrlashganda",
+      "Tanishganda",
+      "Rahmat aytganda",
+      "Kechirim so'raganda"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 146,
+    "question": "\"Thank you\" ga javoban nima deyiladi?",
+    "options": [
+      "Please",
+      "Sorry",
+      "You are welcome",
+      "Okay"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 147,
+    "question": "\"How are you?\" savoliga javob bering.",
+    "options": [
+      "I am ten",
+      "I am at home",
+      "I am a teacher",
+      "I am fine, thanks"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 148,
+    "question": "\"What is your name?\" savoliga javob bering.",
+    "options": [
+      "I am from Samarkand",
+      "My name is Ali",
+      "I am fine",
+      "This is my book"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 149,
+    "question": "\"Goodbye\" qachon aytiladi?",
+    "options": [
+      "Xayrlashganda",
+      "Salomlashganda",
+      "Uchrashuv tayinlaganda",
+      "Uxlaganda"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 150,
+    "question": "Ingliz tili alifbosida nechta harf bor?",
+    "options": [
+      "24",
+      "28",
+      "26",
+      "30"
+    ],
+    "answerIndex": 2
+  }
+]

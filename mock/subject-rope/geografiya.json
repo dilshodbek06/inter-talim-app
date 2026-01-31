@@ -1,0 +1,1652 @@
+[
+  {
+    "id": 1,
+    "question": "Yer yuzida nechta materik bor?",
+    "options": [
+      "6 ta",
+      "5 ta",
+      "4 ta",
+      "7 ta"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 2,
+    "question": "Dunyodagi eng katta materik qaysi?",
+    "options": [
+      "Yevrosiyo",
+      "Afrika",
+      "Shimoliy Amerika",
+      "Antarktida"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 3,
+    "question": "Eng kichik materikni toping.",
+    "options": [
+      "Antarktida",
+      "Avstraliya",
+      "Janubiy Amerika",
+      "Afrika"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 4,
+    "question": "Dunyodagi eng katta okean qaysi?",
+    "options": [
+      "Atlantika okeani",
+      "Tinch okeani",
+      "Hind okeani",
+      "Shimoliy muz okeani"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 5,
+    "question": "Eng chuqur botiq — Mariana botig'i qaysi okeanda joylashgan?",
+    "options": [
+      "Hind okeani",
+      "Shimoliy muz okeani",
+      "Atlantika okeani",
+      "Tinch okeani"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 6,
+    "question": "Dunyodagi eng uzun daryo qaysi?",
+    "options": [
+      "Amazonka",
+      "Nil",
+      "Yanszi",
+      "Missisipi"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 7,
+    "question": "Eng sersuv daryoni toping.",
+    "options": [
+      "Nil",
+      "Kongo",
+      "Amazonka",
+      "Amudaryo"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 8,
+    "question": "Dunyodagi eng baland cho'qqi qaysi?",
+    "options": [
+      "K2",
+      "Monblan",
+      "Everest (Jomolungma)",
+      "Kilimanjaro"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 9,
+    "question": "Eng katta ko'l (dengiz) qaysi?",
+    "options": [
+      "Kaspiy",
+      "Baykal",
+      "Orol",
+      "Viktoriya"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 10,
+    "question": "Eng chuqur chuchuk suvli ko'lni toping.",
+    "options": [
+      "Baykal",
+      "Kaspiy",
+      "Yuqori ko'l",
+      "Tanganika"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 11,
+    "question": "Materiklarning bir-biridan uzoqlashishi haqidagi nazariya muallifi kim?",
+    "options": [
+      "Magellan",
+      "Kolumb",
+      "Vagner",
+      "Kuk"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 12,
+    "question": "Yer sharining eng issiq materigi qaysi?",
+    "options": [
+      "Avstraliya",
+      "Yevrosiyo",
+      "Janubiy Amerika",
+      "Afrika"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 13,
+    "question": "Yerning eng sovuq nuqtasi (Vostok stansiyasi) qaysi materikda?",
+    "options": [
+      "Shimoliy Amerika",
+      "Yevrosiyo",
+      "Antarktida",
+      "Avstraliya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 14,
+    "question": "Dunyodagi eng katta cho'l qaysi?",
+    "options": [
+      "Qizilqum",
+      "Gobi",
+      "Sahroi Kabir",
+      "Kalahari"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 15,
+    "question": "Eng baland sharshara — Anxel qaysi materikda joylashgan?",
+    "options": [
+      "Afrika",
+      "Janubiy Amerika",
+      "Shimoliy Amerika",
+      "Avstraliya"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 16,
+    "question": "Xaritada suv havzalari qaysi rangda tasvirlanadi?",
+    "options": [
+      "Yashil",
+      "Jigarrang",
+      "Moviy",
+      "Sariq"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 17,
+    "question": "Yerning havo qobig'i nima deyiladi?",
+    "options": [
+      "Litosfera",
+      "Gidrosfera",
+      "Atmosfera",
+      "Biosfera"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 18,
+    "question": "Dunyo okeanida nechta okean bor (hozirgi darsliklarda)?",
+    "options": [
+      "3 ta",
+      "5 ta",
+      "4 ta",
+      "6 ta"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 19,
+    "question": "Janubiy qutbga birinchi bo'lib kim yetib borgan?",
+    "options": [
+      "Robert Skott",
+      "Rual Amundsen",
+      "James Kuk",
+      "M. Lazarev"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 20,
+    "question": "Birinchi marta dunyo bo'ylab sayohat qilgan dengizchi?",
+    "options": [
+      "Xristofor Kolumb",
+      "Vasko da Gama",
+      "Fernan Magellan",
+      "Amerigo Vespushchi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 21,
+    "question": "Yerning tosh qobig'i nima deyiladi?",
+    "options": [
+      "Gidrosfera",
+      "Litosfera",
+      "Atmosfera",
+      "Biosfera"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 22,
+    "question": "Dunyo xaritasida baland tog'lar qaysi rangda?",
+    "options": [
+      "Yashil",
+      "Sariq",
+      "To'q jigarrang",
+      "Oq"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 23,
+    "question": "Eng nam materik qaysi?",
+    "options": [
+      "Afrika",
+      "Avstraliya",
+      "Janubiy Amerika",
+      "Shimoliy Amerika"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 24,
+    "question": "Ekvator chizig'i Yerni qanday qismlarga bo'ladi?",
+    "options": [
+      "G'arbiy va Sharqiy",
+      "Shimoliy va Janubiy",
+      "Materik va Okean",
+      "Muzlik va Suv"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 25,
+    "question": "Shimoliy va Janubiy yarimsharlarni birlashtiruvchi chiziq?",
+    "options": [
+      "Ekvator",
+      "Tropik",
+      "Paralel",
+      "Meridian"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 26,
+    "question": "Kenglik va uzunlikni aniqlash uchun ishlatiladigan tarmoq?",
+    "options": [
+      "Xarita",
+      "Masshtab",
+      "Gradus to'ri",
+      "Azimut"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 27,
+    "question": "Eng kichik okean qaysi?",
+    "options": [
+      "Hind okeani",
+      "Shimoliy muz okeani",
+      "Atlantika okeani",
+      "Tinch okeani"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 28,
+    "question": "Tog'larning tepasi qalin muz bo'lsa, xaritada qanday rangda bo'ladi?",
+    "options": [
+      "Oq",
+      "Moviy",
+      "Kulrang",
+      "Qizil"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 29,
+    "question": "Yerning suv qobig'i nima deyiladi?",
+    "options": [
+      "Gidrosfera",
+      "Atmosfera",
+      "Litosfera",
+      "Biosfera"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 30,
+    "question": "Okean suvi nima uchun ichishga yaroqsiz?",
+    "options": [
+      "Sho'r va achchiq",
+      "Juda sovuq",
+      "Loyi ko'p",
+      "Kislorod yo'q"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 31,
+    "question": "Afrika va Yevropani ajratib turuvchi bo'g'oz?",
+    "options": [
+      "Bering",
+      "Gibraltar",
+      "Dreyk",
+      "Mozambik"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 32,
+    "question": "Dunyo okeanidagi eng katta orol qaysi?",
+    "options": [
+      "Madagaskar",
+      "Grenlandiya",
+      "Sumatra",
+      "Britaniya"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 33,
+    "question": "Okean o'rtasida joylashgan bir guruh orollar nima deyiladi?",
+    "options": [
+      "Arxipelag",
+      "Yarim orol",
+      "Atoll",
+      "Materik"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 34,
+    "question": "Yer osti silkinishlari nima deyiladi?",
+    "options": [
+      "Zilzila",
+      "Vulkan",
+      "Ssunami",
+      "To'fon"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 35,
+    "question": "Vulkan og'zi nima deyiladi?",
+    "options": [
+      "Lava",
+      "Kanal",
+      "Krater",
+      "O'choq"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 36,
+    "question": "Atmosferaning eng quyi qatlami?",
+    "options": [
+      "Stratosfera",
+      "Troposfera",
+      "Mezosfera",
+      "Termosfera"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 37,
+    "question": "Havoning harakati (shamol) nima sababdan yuzaga keladi?",
+    "options": [
+      "Bulutlar harakati",
+      "Bosimlar farqi",
+      "Yerning aylanishi",
+      "Namlik"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 38,
+    "question": "Yog'in miqdori nima bilan o'lchanadi?",
+    "options": [
+      "Yog'in o'lchagich",
+      "Termometr",
+      "Barometr",
+      "Gigrometr"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 39,
+    "question": "Dengiz sathi ustidagi balandlik nima deyiladi?",
+    "options": [
+      "Nisbiy balandlik",
+      "Chuqurlik",
+      "Absolyut balandlik",
+      "Masshtab"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 40,
+    "question": "Dunyoning tabiiy zonalari ichida eng sersuv va o'rmonli zona?",
+    "options": [
+      "Savanma",
+      "Ekvatorial o'rmonlar",
+      "Tayga",
+      "Tundra"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 41,
+    "question": "Shimoliy va Janubiy Amerika materiklari orasidagi kanal?",
+    "options": [
+      "Suvaysh",
+      "Kiel",
+      "Kallao",
+      "Panama"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 42,
+    "question": "Eng katta yarim orolni toping.",
+    "options": [
+      "Hindiston",
+      "Skandinaviya",
+      "Indoxitoy",
+      "Arabiston"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 43,
+    "question": "Dunyodagi eng baland sharshara?",
+    "options": [
+      "Niagara",
+      "Viktoriya",
+      "Anxel",
+      "Boyoma"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 44,
+    "question": "Zichligi eng yuqori bo'lgan (sho'r) ko'l?",
+    "options": [
+      "Orol",
+      "Balkash",
+      "Eri",
+      "O'lik dengiz"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 45,
+    "question": "Atmosfera tarkibidagi eng ko'p gaz?",
+    "options": [
+      "Kislorod",
+      "Karbonat angidrid",
+      "Argon",
+      "Azot"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 46,
+    "question": "Grizli ayig'i qaysi materikda yashaydi?",
+    "options": [
+      "Yevrosiyo",
+      "Antarktida",
+      "Janubiy Amerika",
+      "Shimoliy Amerika"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 47,
+    "question": "Kenguru va ekidna qaysi materik uchun xos?",
+    "options": [
+      "Avstraliya",
+      "Afrika",
+      "Shimoliy Amerika",
+      "Yevropa"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 48,
+    "question": "Eng katta o'tloq cho'llar (pampalar) qaysi materikda?",
+    "options": [
+      "Shimoliy Amerika",
+      "Janubiy Amerika",
+      "Avstraliya",
+      "Yevrosiyo"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 49,
+    "question": "Amazonka daryosi qaysi okeanga quyiladi?",
+    "options": [
+      "Tinch okeani",
+      "Hind okeani",
+      "Atlantika okeani",
+      "Arktika okeani"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 50,
+    "question": "O'zbekiston qaysi materikda joylashgan?",
+    "options": [
+      "Osiyo",
+      "Yevropa",
+      "Afrika",
+      "Yevrosiyo"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 51,
+    "question": "O'zbekistonning poytaxti qaysi shahar?",
+    "options": [
+      "Samarqand",
+      "Toshkent",
+      "Buxoro",
+      "Xiva"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 52,
+    "question": "O'zbekiston necha davlat bilan chegaradosh?",
+    "options": [
+      "4 ta",
+      "5 ta",
+      "6 ta",
+      "3 ta"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 53,
+    "question": "O'zbekistonning eng baland nuqtasi?",
+    "options": [
+      "Adelung",
+      "Zomin",
+      "Beshtor",
+      "Hazrat Sulton cho'qqisi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 54,
+    "question": "Eng uzun daryo O'zbekiston hududida?",
+    "options": [
+      "Sirdaryo",
+      "Qashqadaryo",
+      "Zarafshon",
+      "Amudaryo"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 55,
+    "question": "O'zbekistonning eng katta cho'li?",
+    "options": [
+      "Ustyurt",
+      "Qizilqum",
+      "Qoraqum",
+      "Mirzacho'l"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 56,
+    "question": "O'zbekistondagi eng yirik ko'l (tabiiy/sun'iy)?",
+    "options": [
+      "Aydarkul",
+      "Orol dengizi",
+      "Chorvoq",
+      "Tuzkon"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 57,
+    "question": "O'zbekistonning qaysi viloyati maydoni jihatidan eng katta?",
+    "options": [
+      "Toshkent",
+      "Qashqadaryo",
+      "Navoiy",
+      "Surxondaryo"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 58,
+    "question": "Qoraqalpog'iston Respublikasining poytaxti?",
+    "options": [
+      "Urganch",
+      "Mo'ynoq",
+      "Beruniy",
+      "Nukus"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 59,
+    "question": "O'zbekistonda oltin qayerda ko'p qazib olinadi?",
+    "options": [
+      "Angren",
+      "Sharg'un",
+      "Muruntov",
+      "Gazli"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 60,
+    "question": "O'zbekistonning eng issiq shahri (Termiz) qaysi daryo bo'yida?",
+    "options": [
+      "Sirdaryo",
+      "Zarafshon",
+      "Amudaryo",
+      "Surxondaryo"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 61,
+    "question": "Xaritada aholi soni va zichligini ko'rsatuvchi xarita turi?",
+    "options": [
+      "Tabiiy xarita",
+      "Siyosiy xarita",
+      "Iqlim xaritasi",
+      "Demografik xarita"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 62,
+    "question": "O'zbekiston dunyoning qaysi qismida joylashgan?",
+    "options": [
+      "Sharqiy Osiyo",
+      "Janubiy Osiyo",
+      "Markaziy Osiyo",
+      "Yaqin Sharq"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 63,
+    "question": "Dunyo aholisi soni taxminan qancha?",
+    "options": [
+      "5 mlrd",
+      "3 mlrd",
+      "10 mlrd",
+      "8 mlrd dan ortiq"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 64,
+    "question": "Aholi zichligi nima?",
+    "options": [
+      "1 kv.km maydonga to'g'ri keladigan odamlar soni",
+      "Aholi tug'ilishi",
+      "Aholi ko'chib ketishi",
+      "Shahar aholisi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 65,
+    "question": "Aholining shaharlarda to'planishi va shaharlarning kengayishi nima?",
+    "options": [
+      "Urbanizatsiya",
+      "Migratsiya",
+      "Demografiya",
+      "Eksport"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 66,
+    "question": "Dunyoning eng ko'p aholisiga ega davlat (hozirda)?",
+    "options": [
+      "Xitoy",
+      "Rossiya",
+      "AQSH",
+      "Hindiston"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 67,
+    "question": "Maydoni bo'yicha dunyodagi eng katta davlat?",
+    "options": [
+      "Kanada",
+      "Rossiya",
+      "Xitoy",
+      "Braziliya"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 68,
+    "question": "Dunyodagi eng katta shahar (aholi bo'yicha)?",
+    "options": [
+      "Nyu-York",
+      "Pekin",
+      "London",
+      "Tokio"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 69,
+    "question": "Orol dengizining qurishi qanday muammo?",
+    "options": [
+      "Siyosiy",
+      "Madaniy",
+      "Iqtisodiy",
+      "Ekologik"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 70,
+    "question": "Faqat bir materikda joylashgan davlat?",
+    "options": [
+      "Rossiya",
+      "Misr",
+      "Avstraliya",
+      "Turkiya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 71,
+    "question": "G'arbiy yarimsharda joylashgan materik?",
+    "options": [
+      "Osiyo",
+      "Avstraliya",
+      "Afrika",
+      "Shimoliy Amerika"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 72,
+    "question": "Dunyo okeaniga chiqish imkoniga ega bo'lmagan davlat?",
+    "options": [
+      "Hindiston",
+      "Fransiya",
+      "Yaponiya",
+      "O'zbekiston"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 73,
+    "question": "Eng ko'p mamlakatlar joylashgan materik?",
+    "options": [
+      "Shimoliy Amerika",
+      "Osiyo",
+      "Yevropa",
+      "Afrika"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 74,
+    "question": "AQSH poytaxti qaysi?",
+    "options": [
+      "Vashington",
+      "Nyu-York",
+      "Los-Anjeles",
+      "Chikago"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 75,
+    "question": "Buyuk Britaniya qayerda joylashgan?",
+    "options": [
+      "Materikda",
+      "Orolda",
+      "Yarim orolda",
+      "Okean tubida"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 76,
+    "question": "Fransiya poytaxti?",
+    "options": [
+      "Parij",
+      "London",
+      "Berlin",
+      "Rim"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 77,
+    "question": "Eng baland tog' tizmasi?",
+    "options": [
+      "And",
+      "Gimalay",
+      "Alp",
+      "Kordilyera"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 78,
+    "question": "Eng uzun tog' tizmasi?",
+    "options": [
+      "Gimalay",
+      "Ural",
+      "And",
+      "Tyan-Shan"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 79,
+    "question": "Tyan-Shan so'zining ma'nosi nima?",
+    "options": [
+      "Tangritog' (Osmon tog'i)",
+      "Oltin tog'",
+      "Qora tog'",
+      "Muzli tog'"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 80,
+    "question": "O'zbekistonda gaz qazib olinadigan mashhur kon?",
+    "options": [
+      "Muruntov",
+      "Gazli",
+      "Angren",
+      "Konimex"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 81,
+    "question": "Qaysi daryo o'zini o'zi 'ichadi' (qumga singib ketadi)?",
+    "options": [
+      "Sirdaryo",
+      "Amudaryo",
+      "Zarafshon",
+      "Norin"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 82,
+    "question": "O'zbekistondagi eng katta voha?",
+    "options": [
+      "Samarqand",
+      "Toshkent",
+      "Farg'ona",
+      "Xorazm"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 83,
+    "question": "Cho'l o'simligini toping.",
+    "options": [
+      "Saksovul",
+      "Chinor",
+      "Archa",
+      "Yong'oq"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 84,
+    "question": "O'zbekistonda ko'mir qayerda qazib olinadi?",
+    "options": [
+      "Buxoro",
+      "Nukus",
+      "Angren",
+      "Andijon"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 85,
+    "question": "Aholisi eng ko'p viloyat (O'zbekistonda)?",
+    "options": [
+      "Toshkent",
+      "Farg'ona",
+      "Samarqand",
+      "Andijon"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 86,
+    "question": "Eng kichik viloyat maydoni bo'yicha?",
+    "options": [
+      "Xorazm",
+      "Andijon",
+      "Sirdaryo",
+      "Buxoro"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 87,
+    "question": "Dunyodagi eng chuqur dengizlardan biri?",
+    "options": [
+      "Filippin dengizi",
+      "O'lik dengiz",
+      "Qizil dengiz",
+      "O'rta dengiz"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 88,
+    "question": "Yer o'z o'qi atrofida necha soatda bir aylanadi?",
+    "options": [
+      "24",
+      "12",
+      "48",
+      "365"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 89,
+    "question": "Yer Quyosh atrofida necha kunda aylanadi?",
+    "options": [
+      "365",
+      "100",
+      "30",
+      "24"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 90,
+    "question": "Fasllar almashishiga nima sabab bo'ladi?",
+    "options": [
+      "Yerning o'z o'qi atrofida aylanishi",
+      "Oyning ta'siri",
+      "Yerning Quyosh atrofida aylanishi",
+      "Shamol"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 91,
+    "question": "Eng issiq materik?",
+    "options": [
+      "Osiyo",
+      "Shimoliy Amerika",
+      "Avstraliya",
+      "Afrika"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 92,
+    "question": "Eng nam materik?",
+    "options": [
+      "Afrika",
+      "Shimoliy Amerika",
+      "Avstraliya",
+      "Janubiy Amerika"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 93,
+    "question": "Viktoriya sharsharasi qaysi daryoda?",
+    "options": [
+      "Nil",
+      "Zambezi",
+      "Kongo",
+      "Niger"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 94,
+    "question": "Eng katta mitti davlat?",
+    "options": [
+      "Andorra",
+      "Monako",
+      "San-Marino",
+      "Vatikan"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 95,
+    "question": "Yaponiya qanday davlat?",
+    "options": [
+      "Materik",
+      "Eksklav",
+      "Yarim orol",
+      "Orol"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 96,
+    "question": "Janubiy Amerikadagi eng katta davlat?",
+    "options": [
+      "Braziliya",
+      "Argentina",
+      "Chili",
+      "Peru"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 97,
+    "question": "Shimoliy Amerikadagi eng katta davlat?",
+    "options": [
+      "Kanada",
+      "AQSH",
+      "Meksika",
+      "Kuba"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 98,
+    "question": "Yevropadagi eng baland tog' cho'qqisi?",
+    "options": [
+      "Elbrus",
+      "Monblan",
+      "Everest",
+      "Olimp"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 99,
+    "question": "Eng sho'r okean?",
+    "options": [
+      "Atlantika",
+      "Tinch",
+      "Hind",
+      "Arktika"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 100,
+    "question": "Shimoliy yarimsharning eng sovuq joyi?",
+    "options": [
+      "Antarktida",
+      "Oymyakon (Yoqutiston)",
+      "Grenlandiya",
+      "Alyaska"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 101,
+    "question": "Yashash uchun eng qulay iqlim mintaqasi?",
+    "options": [
+      "Tropik",
+      "Mo'tadil",
+      "Arktika",
+      "Ekvatorial"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 102,
+    "question": "O'zbekistonning iqlimi qanday?",
+    "options": [
+      "Nam",
+      "Dengizli",
+      "Trotik",
+      "Keskin kontinental"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 103,
+    "question": "Farg'ona vodiysini Toshkent bilan bog'lovchi dovon?",
+    "options": [
+      "Qamchiq",
+      "Taxtaqoracha",
+      "Oqrabot",
+      "Kitob"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 104,
+    "question": "Insoniyat paydo bo'lgan deb hisoblanadigan materik?",
+    "options": [
+      "Yevropa",
+      "Avstraliya",
+      "Osiyo",
+      "Afrika"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 105,
+    "question": "Xitoy devori qaysi maqsadda qurilgan?",
+    "options": [
+      "Savdo",
+      "Mudofaa",
+      "Turizm",
+      "Diniy"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 106,
+    "question": "Misr piramidalari qaysi daryo bo'yida?",
+    "options": [
+      "Nil",
+      "Amazonka",
+      "Yevfrat",
+      "Ganga"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 107,
+    "question": "Italiya poytaxti?",
+    "options": [
+      "Venesiya",
+      "Rim",
+      "Milan",
+      "Neapol"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 108,
+    "question": "Eng ko'p orollarga ega davlat?",
+    "options": [
+      "Indoneziya",
+      "Yaponiya",
+      "Filippin",
+      "Maldiv"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 109,
+    "question": "Dunyoning 'tom qismi' deb ataladigan hudud?",
+    "options": [
+      "Alp",
+      "And",
+      "Kavkaz",
+      "Pomir"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 110,
+    "question": "Eng kichik aholili materik (Antarktidadan tashqari)?",
+    "options": [
+      "Janubiy Amerika",
+      "Shimoliy Amerika",
+      "Avstraliya",
+      "Afrika"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 111,
+    "question": "Rossiya va AQSHni ajratib turuvchi bo'g'oz?",
+    "options": [
+      "Bering",
+      "Malakka",
+      "Gibraltar",
+      "Dreyk"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 112,
+    "question": "Eng baland haroratli joy (Lyut cho'li/Sahro)?",
+    "options": [
+      "Afrika",
+      "AQSH",
+      "Eron",
+      "Avstraliya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 113,
+    "question": "Poytaxti Kanberra bo'lgan davlat?",
+    "options": [
+      "Kanada",
+      "Avstriya",
+      "Yangi Zelandiya",
+      "Avstraliya"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 114,
+    "question": "Kanada poytaxti?",
+    "options": [
+      "Ottava",
+      "Toronto",
+      "Vankuver",
+      "Monreal"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 115,
+    "question": "Germaniya poytaxti?",
+    "options": [
+      "Myunxen",
+      "Berlin",
+      "Frankfurt",
+      "Gamburg"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 116,
+    "question": "Turkiya poytaxti?",
+    "options": [
+      "Anqara",
+      "Istanbul",
+      "Antaliya",
+      "Izmir"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 117,
+    "question": "G'o'za (paxta) vatani?",
+    "options": [
+      "Hindiston",
+      "Misr",
+      "Xitoy",
+      "O'zbekiston"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 118,
+    "question": "Choy vatani?",
+    "options": [
+      "Hindiston",
+      "Braziliya",
+      "Yaponiya",
+      "Xitoy"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 119,
+    "question": "Kofe vatani?",
+    "options": [
+      "Kolumbiya",
+      "Braziliya",
+      "Vyetnam",
+      "Efiopiya"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 120,
+    "question": "Masshtab nima?",
+    "options": [
+      "Xarita ranglari",
+      "Daryo uzunligi",
+      "Tog' balandligi",
+      "Kichraytirish darajasi"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 121,
+    "question": "Azimut nima?",
+    "options": [
+      "Shimol va predmet orasidagi burchak",
+      "Xaritadagi chiziq",
+      "Tog' tizmasi",
+      "Okean chuqurligi"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 122,
+    "question": "Kompasning ko'k tili qayerga ko'rsatadi?",
+    "options": [
+      "Janubga",
+      "Shimolga",
+      "Sharqqa",
+      "G'arbga"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 123,
+    "question": "O'simliklar o'smaydigan materik?",
+    "options": [
+      "Avstraliya",
+      "Shimoliy Amerika",
+      "Afrika",
+      "Antarktida"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 124,
+    "question": "Ssunami nima?",
+    "options": [
+      "Shamol",
+      "Yomg'ir",
+      "Dengiz tubidagi zilzila natijasidagi to'lqin",
+      "Muz ko'chishi"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 125,
+    "question": "Vulkan lavasi soviganida nima hosil bo'ladi?",
+    "options": [
+      "Suv",
+      "Magmatik tog' jinsi",
+      "Qum",
+      "Gaz"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 126,
+    "question": "Geyzer nima?",
+    "options": [
+      "Vaqti-vaqti bilan otilib chiquvchi qaynoq suv",
+      "Sovuq daryo",
+      "Sharshara",
+      "Muzlik"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 127,
+    "question": "Muzliklar eng ko'p qayerda to'plangan?",
+    "options": [
+      "Shimoliy qutbda",
+      "Tog' cho'qqilarida",
+      "Antarktida va Grenlandiyada",
+      "Okean tubida"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 128,
+    "question": "O'rta dengiz qaysi materiklar orasida?",
+    "options": [
+      "Yevropa va Afrika",
+      "Osiyo va Amerika",
+      "Avstraliya va Antarktida",
+      "Yevropa va Amerika"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 129,
+    "question": "Eng kichik davlat - Vatikan qaysi shahar ichida?",
+    "options": [
+      "Parij",
+      "Madrid",
+      "Rim",
+      "Afina"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 130,
+    "question": "Ispaniya poytaxti?",
+    "options": [
+      "Barselona",
+      "Valensiya",
+      "Madrid",
+      "Seviliya"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 131,
+    "question": "Poytaxti Braziliya bo'lgan davlat?",
+    "options": [
+      "Braziliya",
+      "Peru",
+      "Argentina",
+      "Urugvay"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 132,
+    "question": "Nil daryosi qayerga quyiladi?",
+    "options": [
+      "Qizil dengizga",
+      "O'rta dengizga",
+      "Hind okeaniga",
+      "Kaspiyga"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 133,
+    "question": "Qizilqum cho'li qaysi davlatlarda?",
+    "options": [
+      "Faqat O'zbekiston",
+      "Tojikiston",
+      "Turkmaniston",
+      "O'zbekiston va Qozog'iston"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 134,
+    "question": "Eng balandda joylashgan ko'l?",
+    "options": [
+      "Titikaka",
+      "Baykal",
+      "Viktoriya",
+      "Issiqko'l"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 135,
+    "question": "O'zbekistonda yiliga nechta fasl bor?",
+    "options": [
+      "2 ta",
+      "1 ta",
+      "4 ta",
+      "3 ta"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 136,
+    "question": "O'zbekistonda eng uzun kun qachon?",
+    "options": [
+      "21-mart",
+      "22-iyun",
+      "1-yanvar",
+      "22-dekabr"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 137,
+    "question": "Gimolay tog'lari qayerda?",
+    "options": [
+      "Amerika",
+      "Osiyo",
+      "Yevropa",
+      "Afrika"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 138,
+    "question": "Qoraqum cho'li qaysi davlatda?",
+    "options": [
+      "O'zbekiston",
+      "Turkmaniston",
+      "Qozog'iston",
+      "Eron"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 139,
+    "question": "Kaspiy dengizi aslida nima?",
+    "options": [
+      "Okean",
+      "Daryo",
+      "Ko'l",
+      "Muzlik"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 140,
+    "question": "Dunyoning tabiiy zonalari nima bilan bog'liq?",
+    "options": [
+      "Faqat tuproq",
+      "Iqlim (issiqlik va namlik)",
+      "Daryolar",
+      "Hayvonlar"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 141,
+    "question": "Ekologiya so'zi nima degani?",
+    "options": [
+      "Yer haqida",
+      "Uy/makon haqidagi ilm",
+      "Suv haqida",
+      "Shahar haqida"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 142,
+    "question": "Biosfera nima?",
+    "options": [
+      "Suv qobig'i",
+      "Havo qobig'i",
+      "Tosh qobig'i",
+      "Hayot qobig'i (tirik organizmlar)"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 143,
+    "question": "Insonning tabiatga ta'siri qanday bo'lishi kerak?",
+    "options": [
+      "Faqat foydalanish",
+      "E'tibor bermaslik",
+      "Muhofaza qilish va asrash",
+      "Faqat yo'q qilish"
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": 144,
+    "question": "BMT poytaxti (shtab-kvartirasi) qayerda?",
+    "options": [
+      "Vashington",
+      "Jeneva",
+      "London",
+      "Nyu-York"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 145,
+    "question": "O'zbekiston gerbidagi ramziy qush?",
+    "options": [
+      "Lochin",
+      "Turna",
+      "Burgut",
+      "Humо"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 146,
+    "question": "Eng quruq materik?",
+    "options": [
+      "Afrika",
+      "Avstraliya",
+      "Janubiy Amerika",
+      "Osiyo"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 147,
+    "question": "Eng yirik qush - tuyaqush qayerda yashaydi?",
+    "options": [
+      "Avstraliya",
+      "Antarktida",
+      "Yevropa",
+      "Afrika"
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": 148,
+    "question": "Shimoliy yarimsharning eng katta oroli?",
+    "options": [
+      "Grenlandiya",
+      "Yaponiya",
+      "Madagaskar",
+      "Tailand"
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": 149,
+    "question": "Dunyo okeani umumiy maydonning necha foizini egallaydi?",
+    "options": [
+      "50%",
+      "71%",
+      "90%",
+      "30%"
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": 150,
+    "question": "Geografiya so'zining ma'nosi?",
+    "options": [
+      "Dunyo siri",
+      "Tog'lar ilmi",
+      "Yer tasviri",
+      "Suv xaritasi"
+    ],
+    "answerIndex": 2
+  }
+]
