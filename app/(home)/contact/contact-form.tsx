@@ -36,6 +36,7 @@ import { FaInstagram, FaTelegram } from "react-icons/fa";
 import { eduGames } from "@/mock/mock-data";
 import axios from "axios";
 import toast from "react-hot-toast";
+import Link from "next/link";
 
 const feedbackSchema = z.object({
   name: z
@@ -276,6 +277,7 @@ export default function ContactForm() {
                 title: "Instagram",
                 description: "@interaktiv_talim",
                 color: "accent",
+                href: "https://www.instagram.com/interaktiv_talim/",
               },
 
               {
@@ -283,6 +285,7 @@ export default function ContactForm() {
                 title: "Telegram",
                 description: "@intertalim_uz",
                 color: "primary",
+                href: "https://t.me/intertalim_uz",
               },
               {
                 icon: MessageSquare,
@@ -290,24 +293,41 @@ export default function ContactForm() {
                 description: "har kun 24/7",
                 color: "secondary",
               },
-            ].map((item, index) => (
-              <Card
-                key={index}
-                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50"
-              >
-                <CardContent className="p-6 text-center space-y-3">
-                  <div
-                    className={`w-12 h-12 rounded-lg bg-${item.color}/10 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform`}
-                  >
-                    <item.icon className={`w-6 h-6 text-${item.color}`} />
-                  </div>
-                  <h3 className="font-bold">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {item.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+            ].map((item) => {
+              const card = (
+                <Card
+                  key={item.title}
+                  className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50"
+                >
+                  <CardContent className="p-6 text-center space-y-3">
+                    <div
+                      className={`w-12 h-12 rounded-lg bg-${item.color}/10 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform`}
+                    >
+                      <item.icon className={`w-6 h-6 text-${item.color}`} />
+                    </div>
+                    <h3 className="font-bold">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">
+                      {item.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              );
+
+              if (!item.href) return card;
+
+              return (
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label={`${item.title} sahifasini ochish`}
+                  className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2"
+                >
+                  {card}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
