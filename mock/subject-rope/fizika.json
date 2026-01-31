@@ -1584,17 +1584,6 @@
     "answerIndex": 3
   },
   {
-    "id": 145,
-    "question": "Molekula nima?",
-    "options": [
-      "Eng katta jism",
-      "Moddaning kimyoviy xossalarini saqlovchi eng kichik bo'lagi",
-      "Faqat suv",
-      "Yadro"
-    ],
-    "answerIndex": 1
-  },
-  {
     "id": 146,
     "question": "Vakuum nima?",
     "options": [
@@ -1650,28 +1639,6 @@
     "answerIndex": 0
   },
   {
-    "id": 151,
-    "question": "Nima uchun kema suvda cho'kmaydi?",
-    "options": [
-      "U yengil",
-      "Dengiz tuzli bo'lgani uchun",
-      "Motor ishlagani uchun",
-      "Suvning itarish kuchi og'irlik kuchi bilan muvozanatlashgani uchun"
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": 152,
-    "question": "Samolyot havoga ko'tarilishi uchun nima kerak?",
-    "options": [
-      "Faqat katta tezlik",
-      "Yengil massa",
-      "Qanot osti va ustida bosimlar farqi hosil bo'lishi",
-      "Shamol"
-    ],
-    "answerIndex": 2
-  },
-  {
     "id": 153,
     "question": "Muz nima uchun suv betida qalqiydi?",
     "options": [
@@ -1692,17 +1659,6 @@
       "Quloq sekin eshitadi"
     ],
     "answerIndex": 1
-  },
-  {
-    "id": 155,
-    "question": "Nima uchun qishda jun kiyim kiyamiz?",
-    "options": [
-      "U issiqlikni yomon o'tkazadi va tanani sovushdan saqlaydi",
-      "U issiqlik ishlab chiqaradi",
-      "U chiroyli",
-      "U og'ir"
-    ],
-    "answerIndex": 0
   },
   {
     "id": 156,
@@ -1734,17 +1690,6 @@
       "U yorug'likni tekis qaytaradi",
       "U shaffof",
       "U rangli"
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": 159,
-    "question": "Termos nima uchun choyni issiq saqlaydi?",
-    "options": [
-      "U isitadi",
-      "Undan issiqlik chiqib ketishi qiyin (vakuum va kumush qatlam)",
-      "U qalin",
-      "U yopiq"
     ],
     "answerIndex": 1
   },
@@ -1804,17 +1749,6 @@
     "answerIndex": 0
   },
   {
-    "id": 165,
-    "question": "Nima uchun koinot qora ko'rinadi?",
-    "options": [
-      "Ko'zimiz shunday ko'radi",
-      "U yerda chiroq yo'q",
-      "Faqat kechasi shunday",
-      "U yerda yorug'likni sochuvchi atmosfera yo'qligi uchun"
-    ],
-    "answerIndex": 3
-  },
-  {
     "id": 166,
     "question": "Kompas nima uchun shimolni ko'rsatadi?",
     "options": [
@@ -1848,28 +1782,6 @@
     "answerIndex": 3
   },
   {
-    "id": 169,
-    "question": "Oynaga (shishaga) issiq suv quyilsa nega yoriladi?",
-    "options": [
-      "U eriydi",
-      "Suv og'ir",
-      "Ichki va tashqi qismlar notekis kengayishi tufayli",
-      "U shaffof"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 170,
-    "question": "Qaysi metalldan yasalgan idishda ovqat tez pishadi?",
-    "options": [
-      "Shisha",
-      "Plastmassa",
-      "Mis yoki alyuminiy (issiqlikni yaxshi o'tkazgani uchun)",
-      "Loy"
-    ],
-    "answerIndex": 2
-  },
-  {
     "id": 171,
     "question": "Oydan Yer qanday ko'rinadi?",
     "options": [
@@ -1890,28 +1802,6 @@
       "Arabcha - ilm"
     ],
     "answerIndex": 1
-  },
-  {
-    "id": 173,
-    "question": "Quyosh tutilishi nima?",
-    "options": [
-      "Quyosh o'chishi",
-      "Bulut to'sishi",
-      "Yer Quyoshdan uzoqlashishi",
-      "Oy Quyosh bilan Yer orasiga kelib qolishi"
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": 174,
-    "question": "Elektr tokining inson uchun xavfli tomoni nima?",
-    "options": [
-      "Mushaklar qisqarishi va yurak to'xtashiga sabab bo'lishi",
-      "Issiq bo'lishi",
-      "Rangli bo'lishi",
-      "Hidi borligi"
-    ],
-    "answerIndex": 0
   },
   {
     "id": 175,
@@ -2035,17 +1925,6 @@
     "answerIndex": 1
   },
   {
-    "id": 186,
-    "question": "Nima uchun bulutlar havoda suzadi?",
-    "options": [
-      "Ularda dvigatel bor",
-      "Zichligi havodan deyarli farq qilmaydi va havo oqimi ko'tarib turadi",
-      "Yengil gaz",
-      "Quyosh tortadi"
-    ],
-    "answerIndex": 1
-  },
-  {
     "id": 187,
     "question": "Radioaktivlik qaysi asbobda o'lchanadi?",
     "options": [
@@ -2156,17 +2035,6 @@
     "answerIndex": 1
   },
   {
-    "id": 197,
-    "question": "Odam tanasi elektrni o'tkazadimi?",
-    "options": [
-      "Yo'q",
-      "Faqat metall ushlasa",
-      "Faqat sochi bo'lsa",
-      "Ha, chunki tarkibida suv va tuzlar bor"
-    ],
-    "answerIndex": 3
-  },
-  {
     "id": 198,
     "question": "Yerning markazida nima bor?",
     "options": [
@@ -2187,16 +2055,5 @@
       "Kecha"
     ],
     "answerIndex": 0
-  },
-  {
-    "id": 200,
-    "question": "Fizika qonunlari butun koinotda bir xilmi?",
-    "options": [
-      "Yo'q",
-      "Faqat Quyoshda",
-      "Faqat Yerda",
-      "Ha, hozirgi ma'lumotlarga ko'ra hamma joyda bir xil amal qiladi"
-    ],
-    "answerIndex": 3
   }
 ]

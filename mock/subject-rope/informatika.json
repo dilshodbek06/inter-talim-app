@@ -638,28 +638,6 @@
     "answerIndex": 0
   },
   {
-    "id": 59,
-    "question": "Axborot xavfsizligi nima?",
-    "options": [
-      "Kompyuterni qulflash",
-      "Kompyuterni sotish",
-      "Faqat antivirus o'rnatish",
-      "Axborotni ruxsatsiz kirish va zarar yetkazishdan himoya qilish"
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": 60,
-    "question": "Login va Parol nima uchun kerak?",
-    "options": [
-      "Internetni tezlashtirish uchun",
-      "Rasm tahrirlash uchun",
-      "Shaxsiy ma'lumotlarni himoyalash va tizimga kirish uchun",
-      "Hech narsa"
-    ],
-    "answerIndex": 2
-  },
-  {
     "id": 61,
     "question": "Bulutli saqlash (Cloud storage) xizmatini toping.",
     "options": [
@@ -693,17 +671,6 @@
     "answerIndex": 1
   },
   {
-    "id": 64,
-    "question": "Kibermayinlik yoki fishing (Phishing) nima?",
-    "options": [
-      "Parol va bank kartasi ma'lumotlarini aldab olish",
-      "Baliq ovlash",
-      "Kompyuter o'yini",
-      "Dasturlash tili"
-    ],
-    "answerIndex": 0
-  },
-  {
     "id": 65,
     "question": "Qidiruv tizimi botlari nima deb ataladi?",
     "options": [
@@ -724,17 +691,6 @@
       "Contact page"
     ],
     "answerIndex": 2
-  },
-  {
-    "id": 67,
-    "question": "Giperssilka (Hyperlink) nima?",
-    "options": [
-      "Katta rasm",
-      "Bosilganda boshqa sahifa yoki hujjatga o'tkazuvchi matn yoki rasm",
-      "Virusli dastur",
-      "Klaviatura xatosi"
-    ],
-    "answerIndex": 1
   },
   {
     "id": 68,
@@ -777,17 +733,6 @@
       "Protsessor turi",
       "O'yin nomi",
       "Belgilarni kodlash standarti"
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": 72,
-    "question": "Piksel nima?",
-    "options": [
-      "Monitor og'irligi",
-      "Printer siyohi",
-      "Xotira birligi",
-      "Ekrandagi tasvirni hosil qiluvchi eng kichik nuqta"
     ],
     "answerIndex": 3
   },
@@ -847,17 +792,6 @@
     "answerIndex": 0
   },
   {
-    "id": 78,
-    "question": "Algoritm nima?",
-    "options": [
-      "Kompyuter qurilmasi",
-      "Matnli xabar",
-      "Ma'lum bir maqsadga erishish uchun bajariladigan aniq ko'rsatmalar ketma-ketligi",
-      "Rasm turi"
-    ],
-    "answerIndex": 2
-  },
-  {
     "id": 79,
     "question": "Algoritmning necha xil turi bor?",
     "options": [
@@ -878,17 +812,6 @@
       "Xarita"
     ],
     "answerIndex": 0
-  },
-  {
-    "id": 81,
-    "question": "Dasturlash tili nima uchun kerak?",
-    "options": [
-      "Rasm tahrirlash uchun",
-      "Kino ko'rish uchun",
-      "Musiqa tinglash uchun",
-      "Kompyuter bilan muloqot qilish va dasturlar yaratish uchun"
-    ],
-    "answerIndex": 3
   },
   {
     "id": 82,
@@ -946,17 +869,6 @@
     "answerIndex": 2
   },
   {
-    "id": 87,
-    "question": "Ergonometrika nima?",
-    "options": [
-      "Dasturlash turi",
-      "Xotira o'lchovi",
-      "Elektr toki o'lchovi",
-      "Kompyuterda ishlaganda sog'liq va qulaylikni ta'minlash haqidagi fan"
-    ],
-    "answerIndex": 3
-  },
-  {
     "id": 88,
     "question": "Monitor ekranidan ko'z necha sm uzoqlikda bo'lishi kerak?",
     "options": [
@@ -977,17 +889,6 @@
       "Dastur kodi"
     ],
     "answerIndex": 2
-  },
-  {
-    "id": 90,
-    "question": "Ochiq kodli dasturiy ta'minot (Open source) nima?",
-    "options": [
-      "Kodi hamma uchun ochiq va o'zgartirish mumkin bo'lgan dastur",
-      "Faqat pullik dastur",
-      "Yashirin dastur",
-      "Virusli dastur"
-    ],
-    "answerIndex": 0
   },
   {
     "id": 91,
@@ -1021,17 +922,6 @@
       "Davlat xizmatlarini internet orqali ko'rsatish tizimi"
     ],
     "answerIndex": 3
-  },
-  {
-    "id": 94,
-    "question": "Sun'iy intellekt (AI) nima?",
-    "options": [
-      "Faqat robotlar",
-      "Inson kabi fikrlash va qaror qabul qilishga taqlid qiluvchi tizimlar",
-      "Kalkulyator",
-      "Elektr lampochkasi"
-    ],
-    "answerIndex": 1
   },
   {
     "id": 95,
@@ -1078,28 +968,6 @@
     "answerIndex": 1
   },
   {
-    "id": 99,
-    "question": "Kompyuter xotirasidagi o'lchovlarning to'g'ri ketma-ketligi?",
-    "options": [
-      "Bit < Bayt < KB < MB < GB < TB",
-      "TB < GB < MB",
-      "Bayt < Bit < MB",
-      "MB < KB < Bayt"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 100,
-    "question": "Informatika fani nimani o'rganadi?",
-    "options": [
-      "Faqat kompyuterni",
-      "Faqat internetni",
-      "Axborotni to'plash, saqlash va qayta ishlash usullarini",
-      "Faqat o'yinlarni"
-    ],
-    "answerIndex": 2
-  },
-  {
     "id": 101,
     "question": "Python dasturlash tilida ma'lumotni ekranga chiqarish buyrug'i qaysi?",
     "options": [
@@ -1118,17 +986,6 @@
       "print()",
       "get()",
       "read()"
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": 103,
-    "question": "Dasturlashda 'o'zgaruvchi' nima?",
-    "options": [
-      "Qiymatni saqlash uchun ajratilgan nomlangan xotira maydoni",
-      "Doimiy son",
-      "Monitor turi",
-      "Klaviatura xatosi"
     ],
     "answerIndex": 0
   },
@@ -1320,17 +1177,6 @@
     "answerIndex": 3
   },
   {
-    "id": 121,
-    "question": "Robototexnika nima?",
-    "options": [
-      "Rasm chizish",
-      "Robotlar yaratish va ularni boshqarish haqidagi fan",
-      "Kino turi",
-      "Faqat o'yinlar"
-    ],
-    "answerIndex": 1
-  },
-  {
     "id": 122,
     "question": "Robotlarning asosiy 'miyasi' vazifasini nima bajaradi?",
     "options": [
@@ -1397,39 +1243,6 @@
     "answerIndex": 1
   },
   {
-    "id": 128,
-    "question": "Axborotni kodlashdan maqsad nima?",
-    "options": [
-      "Axborotni o'chirish",
-      "Internetni yoqish",
-      "Axborotni uzatish va saqlashga qulay shaklga keltirish",
-      "Monitor ravshanligi"
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": 129,
-    "question": "Informatikada 'Model' nima?",
-    "options": [
-      "Kiyim kiygan odam",
-      "Yangi kompyuter",
-      "Faqat rasm",
-      "Asl nusxaning xususiyatlarini aks ettiruvchi soddalashtirilgan nusxa"
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": 130,
-    "question": "Kompyuter tarmog'ining topologiyasi nima?",
-    "options": [
-      "Tarmoq tezligi",
-      "Kompyuterlarning tarmoqda joylashish sxemasi (shina, halqa, yulduz)",
-      "Kabel turi",
-      "Monitor nomi"
-    ],
-    "answerIndex": 1
-  },
-  {
     "id": 131,
     "question": "Internetda fayllarni uzatish protokoli qaysi?",
     "options": [
@@ -1450,17 +1263,6 @@
       "TCP"
     ],
     "answerIndex": 0
-  },
-  {
-    "id": 133,
-    "question": "Domen nima?",
-    "options": [
-      "Kompyuter narxi",
-      "Internetdagi saytning takrorlanmas nomi (masalan, .uz, .com)",
-      "Rasm formati",
-      "Printer turi"
-    ],
-    "answerIndex": 1
   },
   {
     "id": 134,
@@ -1538,17 +1340,6 @@
       "Kiyiladigan texnologiyalar (Wearables)"
     ],
     "answerIndex": 3
-  },
-  {
-    "id": 141,
-    "question": "Big Data (Katta ma'lumotlar) nima?",
-    "options": [
-      "Bitta fayl",
-      "Katta monitor",
-      "Juda katta hajmdagi va murakkab ma'lumotlar to'plami",
-      "Katta printer"
-    ],
-    "answerIndex": 2
   },
   {
     "id": 142,

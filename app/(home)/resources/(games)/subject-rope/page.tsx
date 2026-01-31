@@ -1037,6 +1037,19 @@ export default function SubjectRopePage() {
           word-break: break-word;
         }
 
+        @media (max-width: 640px) {
+          .subject-rope-question {
+            padding: 0.75rem 0.9rem;
+            font-size: 1.1rem;
+            min-height: 110px;
+          }
+
+          .subject-rope-option {
+            padding: 0.7rem 0.85rem;
+            font-size: 0.9rem;
+          }
+        }
+
         @media (orientation: landscape) and (max-height: 560px) {
           .subject-rope-shell {
             align-items: flex-start;

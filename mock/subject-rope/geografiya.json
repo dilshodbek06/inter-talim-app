@@ -693,17 +693,6 @@
     "answerIndex": 3
   },
   {
-    "id": 64,
-    "question": "Aholi zichligi nima?",
-    "options": [
-      "1 kv.km maydonga to'g'ri keladigan odamlar soni",
-      "Aholi tug'ilishi",
-      "Aholi ko'chib ketishi",
-      "Shahar aholisi"
-    ],
-    "answerIndex": 0
-  },
-  {
     "id": 65,
     "question": "Aholining shaharlarda to'planishi va shaharlarning kengayishi nima?",
     "options": [

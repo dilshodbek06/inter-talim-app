@@ -1595,17 +1595,6 @@
     "answerIndex": 1
   },
   {
-    "id": 146,
-    "question": "Tarix fanini o'rganish nima uchun kerak?",
-    "options": [
-      "Faqat sanalarni yodlash uchun",
-      "Eski narsalarni yig'ish uchun",
-      "Kino ko'rish uchun",
-      "O'tmishdan xulosa chiqarish va kelajakni qurish uchun"
-    ],
-    "answerIndex": 3
-  },
-  {
     "id": 147,
     "question": "O'zbekistonning yangi tarixi qaysi yildan boshlanadi?",
     "options": [
