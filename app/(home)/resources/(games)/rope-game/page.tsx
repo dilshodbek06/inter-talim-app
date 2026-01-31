@@ -5,70 +5,17 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import confetti, { type Options as ConfettiOptions } from "canvas-confetti";
 import Image from "next/image";
-import { Home, Maximize2, Play, Plus, Trash2 } from "lucide-react";
+import { Divide, Home, Maximize2, Minus, Play, Plus, X } from "lucide-react";
 import { WinModal } from "@/components/win-modal";
 import { Button } from "@/components/ui/button";
+import {
+  buildRopeQuestions,
+  type DifficultyKey,
+  type OperationKey,
+  type Question,
+} from "@/mock/rope-math";
 
 type TeamKey = "left" | "right";
-
-type Question = {
-  id: number;
-  question: string;
-  answer: string;
-};
-
-const DEFAULT_QUESTIONS: Question[] = [
-  { id: 1, question: "1 + 1 = ?", answer: "2" },
-  { id: 2, question: "6 - 2 = ?", answer: "4" },
-  { id: 3, question: "3 + 5 = ?", answer: "8" },
-  { id: 4, question: "8 + 4 = ?", answer: "12" },
-  { id: 5, question: "10 - 3 = ?", answer: "7" },
-  { id: 6, question: "7 + 6 = ?", answer: "13" },
-  { id: 7, question: "14 - 5 = ?", answer: "9" },
-  { id: 8, question: "9 + 8 = ?", answer: "17" },
-  { id: 9, question: "12 - 4 = ?", answer: "8" },
-  { id: 10, question: "5 + 9 = ?", answer: "14" },
-  { id: 11, question: "16 - 7 = ?", answer: "9" },
-  { id: 12, question: "11 + 3 = ?", answer: "14" },
-  { id: 13, question: "18 - 9 = ?", answer: "9" },
-  { id: 14, question: "4 + 7 = ?", answer: "11" },
-  { id: 15, question: "20 - 8 = ?", answer: "12" },
-  { id: 16, question: "13 + 6 = ?", answer: "19" },
-  { id: 17, question: "15 - 6 = ?", answer: "9" },
-  { id: 18, question: "2 + 9 = ?", answer: "11" },
-  { id: 19, question: "17 - 5 = ?", answer: "12" },
-  { id: 20, question: "6 + 8 = ?", answer: "14" },
-  { id: 21, question: "22 - 10 = ?", answer: "12" },
-  { id: 22, question: "9 + 4 = ?", answer: "13" },
-  { id: 23, question: "24 - 6 = ?", answer: "18" },
-  { id: 24, question: "7 + 5 = ?", answer: "12" },
-  { id: 25, question: "19 - 11 = ?", answer: "8" },
-  { id: 26, question: "8 + 7 = ?", answer: "15" },
-  { id: 27, question: "30 - 12 = ?", answer: "18" },
-  { id: 28, question: "21 + 3 = ?", answer: "24" },
-  { id: 29, question: "25 - 7 = ?", answer: "18" },
-  { id: 30, question: "14 + 5 = ?", answer: "19" },
-  { id: 31, question: "27 - 9 = ?", answer: "18" },
-  { id: 32, question: "16 + 4 = ?", answer: "20" },
-  { id: 33, question: "28 - 13 = ?", answer: "15" },
-  { id: 34, question: "18 + 2 = ?", answer: "20" },
-  { id: 35, question: "32 - 14 = ?", answer: "18" },
-  { id: 36, question: "12 + 9 = ?", answer: "21" },
-  { id: 37, question: "26 - 8 = ?", answer: "18" },
-  { id: 38, question: "23 + 5 = ?", answer: "28" },
-  { id: 39, question: "29 - 11 = ?", answer: "18" },
-  { id: 40, question: "17 + 7 = ?", answer: "24" },
-  { id: 41, question: "34 - 16 = ?", answer: "18" },
-  { id: 42, question: "15 + 8 = ?", answer: "23" },
-  { id: 43, question: "36 - 15 = ?", answer: "21" },
-  { id: 44, question: "22 + 6 = ?", answer: "28" },
-  { id: 45, question: "40 - 19 = ?", answer: "21" },
-  { id: 46, question: "24 + 7 = ?", answer: "31" },
-  { id: 47, question: "42 - 18 = ?", answer: "24" },
-  { id: 48, question: "27 + 9 = ?", answer: "36" },
-  { id: 49, question: "45 - 20 = ?", answer: "25" },
-  { id: 50, question: "30 + 8 = ?", answer: "38" },
-];
 
 const PANEL_THEME = {
   left: {
@@ -81,6 +28,23 @@ const PANEL_THEME = {
   },
 };
 
+const OPERATION_OPTIONS: {
+  key: OperationKey;
+  label: string;
+  icon: typeof Plus;
+}[] = [
+  { key: "add", label: "Qo'shish", icon: Plus },
+  { key: "sub", label: "Ayirish", icon: Minus },
+  { key: "mul", label: "Ko'paytirish", icon: X },
+  { key: "div", label: "Bo'lish", icon: Divide },
+];
+
+const DIFFICULTY_OPTIONS: { key: DifficultyKey; label: string }[] = [
+  { key: "easy", label: "Oson" },
+  { key: "medium", label: "O'rta" },
+  { key: "hard", label: "Qiyin" },
+];
+
 const SHIFT_STEP = 14;
 const MIN_SHIFT_STEPS = 8;
 const GAME_DURATION_SECONDS = 5 * 60;
@@ -92,25 +56,21 @@ const keypadLayout = [
   ["clear", "0", "submit"],
 ];
 
-const isMathQuestion = (value: string) => {
-  const normalized = value.trim();
-  if (!normalized) return false;
-  return /[0-9]/.test(normalized) && /^[0-9+\-*/().=?\s]+$/.test(normalized);
-};
-
-const isMathAnswer = (value: string) => {
-  const normalized = value.trim();
-  if (!normalized) return false;
-  return /[0-9]/.test(normalized) && /^[0-9+\-*/().\s]+$/.test(normalized);
-};
-
 export default function RopeGamePage() {
   const [setupMode, setSetupMode] = useState(true);
   const [teamNames, setTeamNames] = useState({
     left: "1-Jamoa",
     right: "2-Jamoa",
   });
-  const [questions, setQuestions] = useState<Question[]>(DEFAULT_QUESTIONS);
+  const [selectedOperations, setSelectedOperations] = useState<OperationKey[]>([
+    "add",
+    "sub",
+  ]);
+  const [difficulty, setDifficulty] = useState<DifficultyKey>("easy");
+  const questions = useMemo<Question[]>(
+    () => buildRopeQuestions(selectedOperations, difficulty),
+    [selectedOperations, difficulty],
+  );
   const [currentQuestionIds, setCurrentQuestionIds] = useState<{
     left: number | null;
     right: number | null;
@@ -131,8 +91,6 @@ export default function RopeGamePage() {
     left: null,
     right: null,
   });
-  const [newQuestion, setNewQuestion] = useState({ question: "", answer: "" });
-  const [formError, setFormError] = useState<string | null>(null);
   const [arenaSize, setArenaSize] = useState({ width: 0, height: 0 });
   const [imageAspect, setImageAspect] = useState<number | null>(null);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
@@ -193,20 +151,23 @@ export default function RopeGamePage() {
     audioRef.current.currentTime = 0;
   }, []);
 
-  const clearTeamTimeout = useCallback((team: TeamKey) => {
-    if (feedbackTimersRef.current[team]) {
-      window.clearTimeout(feedbackTimersRef.current[team]);
-      feedbackTimersRef.current[team] = undefined;
-    }
-    if (advanceTimersRef.current[team]) {
-      window.clearTimeout(advanceTimersRef.current[team]);
-      advanceTimersRef.current[team] = undefined;
-    }
-    if (lockReleaseTimersRef.current[team]) {
-      window.clearTimeout(lockReleaseTimersRef.current[team]);
-      lockReleaseTimersRef.current[team] = undefined;
-    }
-  }, []);
+  const clearTeamTimeout = useCallback(
+    (team: TeamKey, options?: { skipFeedback?: boolean }) => {
+      if (!options?.skipFeedback && feedbackTimersRef.current[team]) {
+        window.clearTimeout(feedbackTimersRef.current[team]);
+        feedbackTimersRef.current[team] = undefined;
+      }
+      if (advanceTimersRef.current[team]) {
+        window.clearTimeout(advanceTimersRef.current[team]);
+        advanceTimersRef.current[team] = undefined;
+      }
+      if (lockReleaseTimersRef.current[team]) {
+        window.clearTimeout(lockReleaseTimersRef.current[team]);
+        lockReleaseTimersRef.current[team] = undefined;
+      }
+    },
+    [],
+  );
 
   const clearAllTimeouts = useCallback(() => {
     clearTeamTimeout("left");
@@ -522,7 +483,7 @@ export default function RopeGamePage() {
       }));
 
       // release lock (store timer for cleanup)
-      clearTeamTimeout(team);
+      clearTeamTimeout(team, { skipFeedback: true });
       lockReleaseTimersRef.current[team] = window.setTimeout(() => {
         advanceLockRef.current[team] = false;
       }, 250);
@@ -619,35 +580,12 @@ export default function RopeGamePage() {
     [isInteractionBlocked],
   );
 
-  const addQuestion = useCallback(() => {
-    const question = newQuestion.question.trim();
-    const answer = newQuestion.answer.trim();
-
-    if (!question || !answer) {
-      setFormError("Savol va javobni to'ldiring.");
-      return;
-    }
-
-    if (!isMathQuestion(question) || !isMathAnswer(answer)) {
-      setFormError("Faqat matematik belgilar va raqamlar kiritilishi kerak.");
-      return;
-    }
-
-    setQuestions((prev) => [
-      ...prev,
-      {
-        id: Date.now(),
-        question,
-        answer,
-      },
-    ]);
-
-    setNewQuestion({ question: "", answer: "" });
-    setFormError(null);
-  }, [newQuestion]);
-
-  const removeQuestion = useCallback((id: number) => {
-    setQuestions((prev) => prev.filter((q) => q.id !== id));
+  const toggleOperation = useCallback((operation: OperationKey) => {
+    setSelectedOperations((prev) =>
+      prev.includes(operation)
+        ? prev.filter((item) => item !== operation)
+        : [...prev, operation],
+    );
   }, []);
 
   const toggleFullscreen = useCallback(() => {
@@ -720,6 +658,19 @@ export default function RopeGamePage() {
       </button>
     );
   };
+
+  const selectedOperationLabels = useMemo(() => {
+    if (selectedOperations.length === 0) return "";
+    return OPERATION_OPTIONS.filter((option) =>
+      selectedOperations.includes(option.key),
+    )
+      .map((option) => option.label)
+      .join(", ");
+  }, [selectedOperations]);
+
+  const difficultyLabel =
+    DIFFICULTY_OPTIONS.find((option) => option.key === difficulty)?.label ??
+    "Oson";
 
   const winnerName = winner ? teamNames[winner] : "";
   const timeEnded = timeLeft === 0 && showWinModal;
@@ -807,7 +758,7 @@ export default function RopeGamePage() {
                 </div>
 
                 <p className="mt-3 text-sm text-slate-600">
-                  O'qituvchi umumiy savollarni kiritadi, o'yin paytida har bir
+                  O'qituvchi amallar va darajani tanlaydi, o'yin paytida har bir
                   jamoaga savollar tasodifiy tarzda chiqadi. Har bir tog'ri
                   javob arqonni sizning tomonga siljitadi.
                 </p>
@@ -818,19 +769,19 @@ export default function RopeGamePage() {
 
                 <ul className="mt-4 space-y-2 text-sm text-slate-600">
                   <li>1. Jamoa nomlarini kiriting.</li>
-                  <li>2. Umumiy savollar va javoblarni qo'shing.</li>
+                  <li>2. Amallar va darajani tanlang.</li>
                   <li>3. "Boshlash" tugmasini bosing.</li>
                 </ul>
 
                 <div className="mt-5 rounded-2xl border border-slate-200 bg-linear-to-br from-slate-50 via-white to-slate-100 px-4 py-3">
                   <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
-                    Tayyor savollar
+                    Tanlangan savollar
                   </p>
                   <p className="mt-2 text-3xl font-bold text-slate-800">
                     {questions.length}
                   </p>
                   <p className="text-xs text-slate-500">
-                    O'yin uchun tayyor namuna savollar
+                    Tanlangan amallar bo'yicha savollar
                   </p>
                 </div>
               </div>
@@ -882,84 +833,98 @@ export default function RopeGamePage() {
             <section className="rope-game-panel rope-game-setup-panel rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-sm">
               <div className="flex items-center justify-between">
                 <h2 className="text-lg font-semibold text-slate-800">
-                  Savol qo'shish
+                  Amal tanlash
                 </h2>
                 <span className="text-xs font-semibold text-slate-400">
-                  {questions.length} ta savol
+                  {selectedOperations.length} ta amal
                 </span>
               </div>
 
-              <div className="mt-4 space-y-3">
-                <input
-                  value={newQuestion.question}
-                  onChange={(event) => {
-                    setFormError(null);
-                    setNewQuestion((prev) => ({
-                      ...prev,
-                      question: event.target.value,
-                    }));
-                  }}
-                  className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm focus:border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
-                  placeholder="Savol (10-4=?)"
-                />
-                <input
-                  value={newQuestion.answer}
-                  onChange={(event) => {
-                    setFormError(null);
-                    setNewQuestion((prev) => ({
-                      ...prev,
-                      answer: event.target.value,
-                    }));
-                  }}
-                  className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm focus:border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
-                  placeholder="Javob (6)"
-                />
-                {formError && (
-                  <p className="text-xs font-semibold text-rose-500">
-                    {formError}
-                  </p>
-                )}
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {OPERATION_OPTIONS.map((option) => {
+                  const active = selectedOperations.includes(option.key);
+                  const Icon = option.icon;
+                  return (
+                    <button
+                      key={option.key}
+                      type="button"
+                      onClick={() => toggleOperation(option.key)}
+                      className={`group flex w-full items-center gap-4 rounded-2xl border p-4 text-left transition ${
+                        active
+                          ? "border-sky-500 bg-sky-50 shadow-[0_10px_20px_rgba(14,165,233,0.15)]"
+                          : "border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50/60"
+                      }`}
+                    >
+                      <span
+                        className={`flex h-12 w-12 items-center justify-center rounded-2xl transition ${
+                          active
+                            ? "bg-sky-500 text-white shadow-[0_10px_20px_rgba(14,165,233,0.35)]"
+                            : "bg-white text-slate-700 shadow-[0_8px_18px_rgba(15,23,42,0.08)]"
+                        }`}
+                      >
+                        <Icon className="h-6 w-6" />
+                      </span>
+                      <span className="text-base font-semibold text-slate-700">
+                        {option.label}
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
 
-              <button
-                type="button"
-                onClick={addQuestion}
-                className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-slate-100 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-200"
-              >
-                <Plus className="h-4 w-4" />
-                Savol qo'shish
-              </button>
+              <div className="mt-6">
+                <h3 className="text-sm font-semibold text-slate-700">
+                  Daraja tanlash
+                </h3>
+                <div className="mt-3 grid grid-cols-3 gap-2">
+                  {DIFFICULTY_OPTIONS.map((option) => {
+                    const active = difficulty === option.key;
+                    return (
+                      <button
+                        key={option.key}
+                        type="button"
+                        onClick={() => setDifficulty(option.key)}
+                        className={`rounded-xl px-3 py-2 text-sm font-semibold transition ${
+                          active
+                            ? "bg-sky-500 text-white shadow-[0_12px_22px_rgba(14,165,233,0.3)]"
+                            : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                        }`}
+                      >
+                        {option.label}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
 
-              <div className="mt-6 max-h-80 space-y-3 overflow-y-auto pr-2">
-                {questions.length === 0 ? (
-                  <div className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 p-6 text-center text-sm text-slate-400">
-                    Savollar hali yo'q. Yuqorida savol qo'shing.
+              <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                      Tanlov
+                    </p>
+                    <p className="mt-1 text-sm font-semibold text-slate-700">
+                      {selectedOperations.length > 0
+                        ? selectedOperationLabels
+                        : "Amal tanlanmagan"}
+                    </p>
+                    <p className="mt-1 text-xs text-slate-500">
+                      Daraja: {difficultyLabel}
+                    </p>
                   </div>
-                ) : (
-                  questions.map((question, index) => (
-                    <div
-                      key={question.id}
-                      className="rounded-2xl border border-slate-200 bg-white p-4"
-                    >
-                      <div className="flex items-center justify-between text-xs font-semibold text-slate-400">
-                        <span>Savol {index + 1}</span>
-                        <button
-                          type="button"
-                          onClick={() => removeQuestion(question.id)}
-                          className="inline-flex items-center gap-1 text-rose-500 hover:text-rose-600"
-                        >
-                          <Trash2 className="h-3 w-3" />
-                          O'chirish
-                        </button>
-                      </div>
-                      <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm">
-                        <p className="text-slate-700">{question.question}</p>
-                        <p className="mt-1 text-xs text-slate-400">
-                          Javob: {question.answer}
-                        </p>
-                      </div>
-                    </div>
-                  ))
+                  <div className="text-right">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                      Savollar
+                    </p>
+                    <p className="mt-1 text-2xl font-bold text-slate-800">
+                      {questions.length}
+                    </p>
+                  </div>
+                </div>
+                {selectedOperations.length === 0 && (
+                  <p className="mt-3 text-xs font-semibold text-rose-500">
+                    Kamida bitta amal tanlang, shunda savollar paydo bo'ladi.
+                  </p>
                 )}
               </div>
             </section>
