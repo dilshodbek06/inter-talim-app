@@ -776,9 +776,6 @@ export default function SubjectRopePage() {
                   {SUBJECTS.length} ta fan
                 </span>
               </div>
-              <p className="mt-2 text-sm text-slate-500">
-                Har bir fan uchun 50 ta demo savol tayyorlangan.
-              </p>
 
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {SUBJECTS.map((subject) => {
