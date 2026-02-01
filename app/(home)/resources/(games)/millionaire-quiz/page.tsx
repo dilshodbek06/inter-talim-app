@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef, JSX } from "react";
+import React, { useState, useEffect, useRef, useMemo, JSX } from "react";
 import {
   HelpCircle,
   Users,
@@ -161,29 +161,27 @@ const DEFAULT_QUESTIONS: Question[] = [
   },
 ];
 
-const MONEY_LADDER: string[] = [
-  "1000 so‘m",
-  "1500 so‘m",
-  "2000 so‘m",
-  "3000 so‘m",
-  "4000 so‘m",
-  "5000 so‘m",
-  "7000 so‘m",
-  "10 000 so‘m",
-  "15 000 so‘m",
-  "20 000 so‘m",
-];
-const MONEY_VALUES: number[] = [
-  50, 100, 150, 200, 250, 300, 350, 400, 450, 500,
-];
+const PRIZE_START = 1000;
+const PRIZE_STEP = 500;
 const ROUND_TIME = 30;
 type Phase = "intro" | "game" | "results";
+
+const formatSom = (value: number): string =>
+  `${String(value).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} so‘m`;
 
 export default function MillionerLivePreview(): JSX.Element {
   const [phase, setPhase] = useState<Phase>("intro");
   const [customQuestions, setCustomQuestions] = useState<Question[]>([]);
   const questions =
     customQuestions.length > 0 ? customQuestions : DEFAULT_QUESTIONS;
+  const prizeValues = useMemo(() => {
+    const length = Math.max(1, questions.length);
+    return Array.from({ length }, (_, i) => PRIZE_START + i * PRIZE_STEP);
+  }, [questions.length]);
+  const moneyLadder = useMemo(
+    () => prizeValues.map((value) => formatSom(value)),
+    [prizeValues]
+  );
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -194,6 +192,8 @@ export default function MillionerLivePreview(): JSX.Element {
   const [hiddenOptions, setHiddenOptions] = useState<number[]>([]);
   const [usedAudience, setUsedAudience] = useState<boolean>(false);
   const [audienceVotes, setAudienceVotes] = useState<number[]>([]);
+  const [usedFriendCall, setUsedFriendCall] = useState<boolean>(false);
+  const [showFriendModal, setShowFriendModal] = useState<boolean>(false);
 
   const [time, setTime] = useState<number>(ROUND_TIME);
   const [soundEnabled, setSoundEnabled] = useState<boolean>(false);
@@ -266,6 +266,13 @@ export default function MillionerLivePreview(): JSX.Element {
           setLocked(true);
           setIsCorrect(false);
 
+          if (tickRef.current) {
+            try {
+              tickRef.current.pause();
+              tickRef.current.currentTime = 0;
+            } catch {}
+          }
+
           if (soundEnabled && errorRef.current) {
             errorRef.current.currentTime = 0;
             errorRef.current.play().catch(() => {});
@@ -324,8 +331,8 @@ export default function MillionerLivePreview(): JSX.Element {
     }
 
     if (correct) {
-      const prizeIndex = Math.min(currentIndex, MONEY_VALUES.length - 1);
-      setTotalWinnings((prev) => prev + MONEY_VALUES[prizeIndex]);
+      const prizeIndex = Math.min(currentIndex, prizeValues.length - 1);
+      setTotalWinnings(prizeValues[prizeIndex]);
       setCorrectCount((prev) => prev + 1);
 
       if (successRef.current) {
@@ -351,6 +358,7 @@ export default function MillionerLivePreview(): JSX.Element {
   const handleNextQuestion = () => {
     // Backward compatibility: keep existing logic but it's now unused for wrong/time-out
     if (!locked || phase !== "game") return;
+    if (isCorrect !== true) return;
 
     if (isLastQuestion) {
       setPhase("results");
@@ -364,8 +372,6 @@ export default function MillionerLivePreview(): JSX.Element {
     setAudienceVotes([]);
     setLocked(false);
     setTime(ROUND_TIME);
-    setUsed5050(false);
-    setUsedAudience(false);
   };
 
   const handle5050 = () => {
@@ -389,7 +395,18 @@ export default function MillionerLivePreview(): JSX.Element {
     );
     const sum = votes.reduce((a, b) => a + b, 0);
     const normalized = votes.map((v) => Math.round((v / sum) * 100));
+    const diff = 100 - normalized.reduce((a, b) => a + b, 0);
+    if (diff !== 0) {
+      const maxIdx = votes.indexOf(Math.max(...votes));
+      normalized[maxIdx] = Math.max(0, normalized[maxIdx] + diff);
+    }
     setAudienceVotes(normalized);
+  };
+
+  const handleFriendCall = () => {
+    if (usedFriendCall || locked || phase !== "game") return;
+    setUsedFriendCall(true);
+    setShowFriendModal(true);
   };
 
   const getOptionClasses = (idx: number): string => {
@@ -424,7 +441,7 @@ export default function MillionerLivePreview(): JSX.Element {
     return base + " border-slate-200 bg-white/90 text-slate-900";
   };
 
-  const currentPrizeIndex = Math.min(currentIndex, MONEY_LADDER.length - 1);
+  const currentPrizeIndex = Math.min(currentIndex, moneyLadder.length - 1);
 
   const handleAddQuestion = (e: React.FormEvent) => {
     e.preventDefault();
@@ -458,11 +475,19 @@ export default function MillionerLivePreview(): JSX.Element {
     setTime(ROUND_TIME);
     setUsed5050(false);
     setUsedAudience(false);
+    setUsedFriendCall(false);
+    setShowFriendModal(false);
     setTotalWinnings(0);
     setCorrectCount(0);
   };
 
   const resetToIntro = () => {
+    if (tickRef.current) {
+      try {
+        tickRef.current.pause();
+        tickRef.current.currentTime = 0;
+      } catch {}
+    }
     setPhase("intro");
     setCurrentIndex(0);
     setSelectedIndex(null);
@@ -473,6 +498,8 @@ export default function MillionerLivePreview(): JSX.Element {
     setTime(ROUND_TIME);
     setUsed5050(false);
     setUsedAudience(false);
+    setUsedFriendCall(false);
+    setShowFriendModal(false);
     setTotalWinnings(0);
     setCorrectCount(0);
     setSoundEnabled(false);
@@ -713,7 +740,7 @@ export default function MillionerLivePreview(): JSX.Element {
             <div className="rounded-2xl bg-indigo-50 border border-indigo-100 px-4 py-3">
               <p className="text-xs text-indigo-600 mb-1">Jami yutuq</p>
               <p className="text-xl font-bold text-indigo-700">
-                {totalWinnings} so‘m
+                {formatSom(totalWinnings)}
               </p>
             </div>
           </div>
@@ -744,6 +771,8 @@ export default function MillionerLivePreview(): JSX.Element {
                 setTime(ROUND_TIME);
                 setUsed5050(false);
                 setUsedAudience(false);
+                setUsedFriendCall(false);
+                setShowFriendModal(false);
                 setTotalWinnings(0);
                 setCorrectCount(0);
               }}
@@ -765,6 +794,34 @@ export default function MillionerLivePreview(): JSX.Element {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
     >
+      {showFriendModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4"
+          onClick={() => setShowFriendModal(false)}
+        >
+          <div
+            className="w-full max-w-md rounded-2xl bg-white shadow-2xl border border-slate-200 p-5 text-center space-y-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="mx-auto h-12 w-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xl">
+              📞
+            </div>
+            <h3 className="text-lg font-bold text-slate-900">
+              Do‘stga qo‘ng‘iroq
+            </h3>
+            <p className="text-sm text-slate-600">
+              Darsda istalgan do‘stingizdan so‘rashingiz mumkin
+            </p>
+            <button
+              type="button"
+              onClick={() => setShowFriendModal(false)}
+              className="w-full rounded-xl bg-amber-500 text-white text-sm font-semibold py-2 hover:bg-amber-500/90 transition-all"
+            >
+              Tushunarli, yopish
+            </button>
+          </div>
+        </div>
+      )}
       <motion.div
         className="w-full max-w-6xl flex flex-col lg:flex-row gap-6"
         initial={{ opacity: 0, scale: 0.97 }}
@@ -811,9 +868,19 @@ export default function MillionerLivePreview(): JSX.Element {
                 <Users className="w-4 h-4" />
                 <span>Zal yordami</span>
               </motion.button>
-              <div className="flex items-center justify-center rounded-xl px-3 py-2 border border-slate-200 bg-slate-50 text-slate-400 text-[11px]">
+              <motion.button
+                type="button"
+                onClick={handleFriendCall}
+                disabled={usedFriendCall}
+                whileTap={!usedFriendCall ? { scale: 0.96 } : {}}
+                className={`flex items-center justify-center rounded-xl px-3 py-2 border transition-all text-[11px] ${
+                  usedFriendCall
+                    ? "border-slate-200 bg-slate-100 text-slate-400 cursor-not-allowed"
+                    : "border-amber-400 bg-amber-50 text-amber-700 hover:bg-amber-100 shadow-sm"
+                }`}
+              >
                 Do‘stga qo‘ng‘iroq
-              </div>
+              </motion.button>
             </div>
           </motion.div>
 
@@ -834,7 +901,7 @@ export default function MillionerLivePreview(): JSX.Element {
               </span>
             </div>
             <div className="space-y-1  pr-1 text-xs sm:text-sm">
-              {MONEY_LADDER.map((amount, idx) => ({ amount, idx }))
+              {moneyLadder.map((amount, idx) => ({ amount, idx }))
                 .reverse()
                 .map(({ amount, idx }) => {
                   const originalIndex = idx;
@@ -878,7 +945,7 @@ export default function MillionerLivePreview(): JSX.Element {
                   Savol {currentIndex + 1}/{questions.length}
                 </h1>
                 <p className="text-xs sm:text-sm text-slate-500">
-                  Mukofot: {MONEY_LADDER[currentPrizeIndex]}
+                  Mukofot: {moneyLadder[currentPrizeIndex]}
                 </p>
                 {playerName && (
                   <p className="text-xs text-slate-500 mt-1">
@@ -894,7 +961,9 @@ export default function MillionerLivePreview(): JSX.Element {
               </span>
               <span>
                 Jami:{" "}
-                <span className="font-semibold">{totalWinnings} so‘m</span>
+                <span className="font-semibold">
+                  {formatSom(totalWinnings)}
+                </span>
               </span>
               <span>Sovg‘alar: 0</span>
             </div>
@@ -1003,9 +1072,9 @@ export default function MillionerLivePreview(): JSX.Element {
               <button
                 type="button"
                 onClick={handleNextQuestion}
-                disabled={!locked}
+                disabled={!locked || isCorrect !== true}
                 className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold shadow-md transition-all ${
-                  !locked
+                  !locked || isCorrect !== true
                     ? "bg-slate-200 text-slate-500 cursor-not-allowed"
                     : "bg-edu-blue text-white hover:bg-edu-blue/80"
                 }`}
