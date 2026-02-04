@@ -10,6 +10,7 @@ import { Intro } from "./intro";
 import { Confetti } from "@/components/confetti";
 import { WinModal } from "@/components/win-modal";
 import Image from "next/image";
+import { useExitGuard } from "@/hooks/use-exit-guard";
 
 interface GameProps {
   playerName?: string;
@@ -70,6 +71,8 @@ export default function Game({ playerName: initialPlayerName }: GameProps) {
 
   const [questionCount, setQuestionCount] = useState(0);
   const [showWinModal, setShowWinModal] = useState(false);
+
+  useExitGuard({ enabled: gameStarted });
 
   // Keep latest values for async callbacks (timeouts)
   const mistakesRef = useRef(mistakes);

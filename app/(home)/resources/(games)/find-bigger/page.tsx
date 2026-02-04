@@ -6,6 +6,7 @@ import type { CSSProperties } from "react";
 import { Heart, MoveHorizontal, Play, RotateCcw, Sparkles } from "lucide-react";
 import BackPrev from "@/components/back-prev";
 import { Button } from "@/components/ui/button";
+import { useExitGuard } from "@/hooks/use-exit-guard";
 
 type Side = "left" | "right";
 type Difficulty = "easy" | "medium" | "hard";
@@ -108,6 +109,8 @@ export default function FindBiggerPage() {
 
   const roundTime = DIFFICULTY_CONFIG[difficulty].time;
   const timePercent = Math.max(0, (timeLeft / roundTime) * 100);
+
+  const { back: handleBack } = useExitGuard({ enabled: gameStarted });
 
   const clearPendingTimeout = useCallback(() => {
     if (timeoutRef.current !== null) {
@@ -293,7 +296,7 @@ export default function FindBiggerPage() {
       }
     >
       <main className="relative z-10 flex min-h-screen items-center justify-center px-4 py-10">
-        <BackPrev />
+        <BackPrev onBack={handleBack} />
 
         {!gameStarted ? (
           <div className="w-full max-w-xl">

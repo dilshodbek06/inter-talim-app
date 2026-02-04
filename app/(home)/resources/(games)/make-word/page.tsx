@@ -7,13 +7,22 @@ import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
 import { generateWordScramblePdf } from "../pdf-actions";
 import { downloadBase64File } from "@/utils/download-base64";
+import { useExitGuard } from "@/hooks/use-exit-guard";
+
+const DEFAULT_RAW_WORDS = "davlat\nfutbol\nhayot\nbahor";
 
 export default function WordScrambleGame() {
-  const [rawWords, setRawWords] = useState("davlat\nfutbol\nhayot\nbahor");
+  const [rawWords, setRawWords] = useState(DEFAULT_RAW_WORDS);
   const [words, setWords] = useState<string[]>([]);
   const [scrambled, setScrambled] = useState<string[]>([]);
   const [titleText, setTitleText] = useState("");
   const [isDownloading, setIsDownloading] = useState(false);
+
+  const hasWork =
+    words.length > 0 ||
+    titleText.trim().length > 0 ||
+    rawWords.trim() !== DEFAULT_RAW_WORDS.trim();
+  const { back: handleBack } = useExitGuard({ enabled: hasWork });
 
   const effectiveTitle =
     titleText.trim().length > 0 ? titleText.trim() : "Aralash so'zlar";
@@ -63,7 +72,7 @@ export default function WordScrambleGame() {
   return (
     <div className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-3 px-2">
       <div className="max-w-6xl mx-auto">
-        <BackPrev />
+        <BackPrev onBack={handleBack} />
         <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-8 items-start">
           {/* LEFT – SETTINGS */}
           <Card className="p-6 pt-10 shadow-xl rounded-3xl bg-white/90 border border-white">

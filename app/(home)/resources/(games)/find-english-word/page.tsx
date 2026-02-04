@@ -25,6 +25,7 @@ import { CheckCircle2, ChevronRight, Play, RotateCcw } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
+import { useExitGuard } from "@/hooks/use-exit-guard";
 import { DEMO_WORDS } from "@/mock/english";
 
 type LetterTile = {
@@ -160,6 +161,8 @@ export default function FindEnglishWordPage() {
   const [hintUsedCount, setHintUsedCount] = useState(0);
   const [hintedTileId, setHintedTileId] = useState<string | null>(null);
   const [hintPulse, setHintPulse] = useState(0);
+
+  const { back: handleBack } = useExitGuard({ enabled: gameStarted });
   const hintTimeoutRef = useRef<number | null>(null);
   const maxHints = 3;
 
@@ -311,7 +314,7 @@ export default function FindEnglishWordPage() {
     return (
       <div className="min-h-screen bg-linear-to-br from-sky-50 via-blue-50 to-emerald-50 px-4 py-6 text-slate-900">
         <div className="max-w-6xl mx-auto space-y-6">
-          <BackPrev />
+          <BackPrev onBack={handleBack} />
           <div className="rounded-3xl border border-white/80 bg-white/90 shadow-2xl p-6 sm:p-8">
             <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
               <div className="space-y-4">
@@ -375,7 +378,7 @@ export default function FindEnglishWordPage() {
   return (
     <div className="min-h-screen bg-linear-to-br from-sky-50 via-blue-50 to-emerald-50 px-0 sm:px-4 py-6 text-slate-900">
       <div className="max-w-7xl mx-auto space-y-6 w-full">
-        <BackPrev />
+        <BackPrev onBack={handleBack} />
 
         <header className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 px-3 sm:px-0">
           <div className="space-y-2">

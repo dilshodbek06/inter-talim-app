@@ -15,6 +15,7 @@ import {
 import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
 import toast from "react-hot-toast";
+import { useExitGuard } from "@/hooks/use-exit-guard";
 
 const motion = {
   div: ({
@@ -204,6 +205,8 @@ export default function MillionerLivePreview(): JSX.Element {
   const [newQuestionText, setNewQuestionText] = useState<string>("");
   const [newOptions, setNewOptions] = useState<string[]>(["", "", "", ""]);
   const [newCorrectIndex, setNewCorrectIndex] = useState<number>(0);
+
+  const { back: handleBack } = useExitGuard({ enabled: phase === "game" });
 
   const tickRef = useRef<HTMLAudioElement | null>(null);
   const successRef = useRef<HTMLAudioElement | null>(null);
@@ -510,7 +513,7 @@ export default function MillionerLivePreview(): JSX.Element {
     return (
       <motion.div className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50  px-4 py-8 text-slate-900">
         {/* Global header */}
-        <BackPrev />
+        <BackPrev onBack={handleBack} />
         <motion.div
           className="text-center flex flex-col items-center gap-3"
           initial={{ opacity: 0, y: -10 }}

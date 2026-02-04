@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
 import { generateLinearEquationsPdf } from "../pdf-actions";
 import { downloadBase64File } from "@/utils/download-base64";
+import { useExitGuard } from "@/hooks/use-exit-guard";
 
 type Magnitude = "small" | "medium" | "large";
 
@@ -74,6 +75,9 @@ export default function LinearEquationGenerator() {
     "no-answers" | "answers" | null
   >(null);
 
+  const hasWork = equations.length > 0;
+  const { back: handleBack } = useExitGuard({ enabled: hasWork });
+
   const generate = () => {
     const items = Array.from({ length: count }, () => buildEquation(magnitude));
     setEquations(items);
@@ -100,7 +104,7 @@ export default function LinearEquationGenerator() {
   return (
     <div className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-3 px-2">
       <div className="max-w-6xl mx-auto">
-        <BackPrev />
+        <BackPrev onBack={handleBack} />
         <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-8 items-start">
           <Card className="p-6 shadow-xl rounded-3xl bg-white/90 border border-white">
             <CardHeader className="px-0 pt-5 sm:pt-1 pb-4">

@@ -4,7 +4,11 @@ import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 import { ArrowLeft } from "lucide-react";
 
-const BackPrev = () => {
+type BackPrevProps = {
+  onBack?: () => void;
+};
+
+const BackPrev = ({ onBack }: BackPrevProps) => {
   const router = useRouter();
 
   return (
@@ -13,7 +17,13 @@ const BackPrev = () => {
       variant="outline"
       size="icon"
       className="rounded-full sm:hidden absolute top-4 right-5 shadow-sm bg-white/80 "
-      onClick={() => router.back()}
+      onClick={() => {
+        if (onBack) {
+          onBack();
+          return;
+        }
+        router.back();
+      }}
     >
       <ArrowLeft className="w-4 h-4" />
     </Button>

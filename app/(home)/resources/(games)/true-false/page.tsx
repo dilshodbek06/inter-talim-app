@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
+import { useExitGuard } from "@/hooks/use-exit-guard";
 
 type Question = {
   id: number;
@@ -38,6 +39,8 @@ export default function TrueFalsePreview() {
   const [locked, setLocked] = useState<boolean>(false);
   const [status, setStatus] = useState<ResultStatus>("idle");
   const [gameStarted, setGameStarted] = useState<boolean>(false);
+
+  const { back: handleBack } = useExitGuard({ enabled: gameStarted });
   const [gameFinished, setGameFinished] = useState<boolean>(false);
 
   // Teacher form state
@@ -232,7 +235,7 @@ export default function TrueFalsePreview() {
     <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-8 px-4 sm:px-6">
       <div className="w-full max-w-5xl mx-auto">
         {/* Global header */}
-        <BackPrev />
+        <BackPrev onBack={handleBack} />
         <div className="text-center mb-8 flex flex-col items-center gap-3">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/80 border border-slate-200 px-4 py-1 shadow-sm">
             <Sparkles className="w-4 h-4 text-indigo-500" />

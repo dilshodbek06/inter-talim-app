@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
 import { generateMath23Pdf } from "../pdf-actions";
 import { downloadBase64File } from "@/utils/download-base64";
+import { useExitGuard } from "@/hooks/use-exit-guard";
 
 export default function WorksheetGenerator() {
   const [digit, setDigit] = useState(2);
@@ -16,6 +17,9 @@ export default function WorksheetGenerator() {
   const [downloadMode, setDownloadMode] = useState<
     "no-answers" | "answers" | null
   >(null);
+
+  const hasWork = exercises.length > 0 || titleName.trim().length > 0;
+  const { back: handleBack } = useExitGuard({ enabled: hasWork });
 
   const generateNumber = (digits: number) => {
     const min = Math.pow(10, digits - 1);
@@ -69,7 +73,7 @@ export default function WorksheetGenerator() {
   return (
     <div className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-3 px-2">
       <div className="max-w-6xl mx-auto">
-        <BackPrev />
+        <BackPrev onBack={handleBack} />
         <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-8 items-start">
           {/* LEFT – SETTINGS CARD */}
           <Card className="p-6 shadow-xl rounded-3xl bg-white/90 border border-white">

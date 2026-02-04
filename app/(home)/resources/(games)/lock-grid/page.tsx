@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
+import { useExitGuard } from "@/hooks/use-exit-guard";
 
 type Question = {
   id: number;
@@ -40,6 +41,8 @@ export default function UnlockLocksGame() {
   // UI / form
   const [newQuestionText, setNewQuestionText] = useState("");
   const [gameStarted, setGameStarted] = useState(false);
+
+  const { back: handleBack } = useExitGuard({ enabled: gameStarted });
 
   // sounds
   const successSoundRef = useRef<HTMLAudioElement | null>(null);
@@ -225,7 +228,7 @@ export default function UnlockLocksGame() {
     <div className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-10">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* Header */}
-        <BackPrev />
+        <BackPrev onBack={handleBack} />
         <div className="mb-6 text-center">
           <div className="inline-flex w-fit mx-auto items-center gap-2 rounded-full bg-white/80 border border-slate-200 px-4 py-1 shadow-sm">
             <Sparkles className="w-4 h-4 text-indigo-500" />

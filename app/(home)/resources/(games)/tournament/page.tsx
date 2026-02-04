@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/purity */
+/* eslint-disable react-hooks/static-components */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
@@ -7,6 +7,7 @@ import { JSX, useEffect, useState } from "react";
 import confetti from "canvas-confetti";
 import { Trophy, Shuffle, RotateCcw, FolderTree, Sparkles } from "lucide-react";
 import BackPrev from "@/components/back-prev";
+import { useExitGuard } from "@/hooks/use-exit-guard";
 
 type Match = {
   player1: string | null;
@@ -27,6 +28,8 @@ const TournamentBracket = () => {
   const [inputName, setInputName] = useState<string>("");
   const [bracket, setBracket] = useState<Bracket | null>(null);
   const [started, setStarted] = useState<boolean>(false);
+
+  const { back: handleBack } = useExitGuard({ enabled: started });
 
   const [championName, setChampionName] = useState<string | null>(null);
   const [showChampionBanner, setShowChampionBanner] = useState<boolean>(false);
@@ -239,7 +242,7 @@ const TournamentBracket = () => {
       <div className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-1 px-2 sm:p-10 flex flex-col items-center justify-center">
         <div className="max-w-5xl w-full bg-white/90 rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10 border border-white flex flex-col sm:flex-row gap-6">
           <div className="">
-            <BackPrev />
+            <BackPrev onBack={handleBack} />
           </div>
           {/* LEFT SIDE - INTRO */}
           <div className="sm:w-1/2 flex flex-col justify-center gap-4">
@@ -360,7 +363,7 @@ const TournamentBracket = () => {
 
   const getSideMatchesForRound = (
     round: number,
-    side: "left" | "right"
+    side: "left" | "right",
   ): (Match & { key: string })[] => {
     if (round === bracket.rounds - 1) return [];
     const matches = getMatchesForRound(round);
@@ -529,7 +532,7 @@ const TournamentBracket = () => {
   };
 
   const roundLabels = [...Array(bracket.rounds)].map((_, idx) =>
-    getRoundName(idx, bracket.rounds)
+    getRoundName(idx, bracket.rounds),
   );
 
   return (

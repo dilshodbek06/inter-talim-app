@@ -22,6 +22,7 @@ import {
 
 import { WinModal } from "@/components/win-modal";
 import { Button } from "@/components/ui/button";
+import { useExitGuard } from "@/hooks/use-exit-guard";
 import {
   SUBJECTS,
   loadSubjectQuestions,
@@ -95,6 +96,8 @@ export default function SubjectRopePage() {
   const [imageAspect, setImageAspect] = useState<number | null>(null);
   const [timeLeft, setTimeLeft] = useState(GAME_DURATION_SECONDS);
   const [gameOver, setGameOver] = useState(false);
+
+  useExitGuard({ enabled: !setupMode });
 
   const arenaRef = useRef<HTMLDivElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -625,16 +628,6 @@ export default function SubjectRopePage() {
     : winnerName
       ? `${winnerName} g'olib!`
       : "G'olib aniqlandi!";
-
-  useEffect(() => {
-    if (setupMode) return;
-    const handler = (event: BeforeUnloadEvent) => {
-      event.preventDefault();
-      event.returnValue = "";
-    };
-    window.addEventListener("beforeunload", handler);
-    return () => window.removeEventListener("beforeunload", handler);
-  }, [setupMode]);
 
   useEffect(() => {
     const handler = () => stopAudio();

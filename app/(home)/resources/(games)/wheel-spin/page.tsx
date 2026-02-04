@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { Volume2, VolumeX, Plus, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
+import { useExitGuard } from "@/hooks/use-exit-guard";
 
 type WinnerHistory = string[];
 
@@ -29,6 +30,9 @@ export default function RandomNamePicker() {
   const [newName, setNewName] = useState<string>("");
   const [history, setHistory] = useState<WinnerHistory>([]);
   const [isResultModalOpen, setIsResultModalOpen] = useState<boolean>(false);
+
+  const hasProgress = isSpinning || history.length > 0;
+  const { back: handleBack } = useExitGuard({ enabled: hasProgress });
 
   const audioContextRef = useRef<AudioContext | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -326,7 +330,7 @@ export default function RandomNamePicker() {
   return (
     <div className="min-h-screen bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50 py-8">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
-        <BackPrev />
+        <BackPrev onBack={handleBack} />
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
           <div className="flex items-center gap-3 mb-2 md:mb-0">

@@ -8,6 +8,7 @@ import Image from "next/image";
 import { Divide, Home, Maximize2, Minus, Play, Plus, X } from "lucide-react";
 import { WinModal } from "@/components/win-modal";
 import { Button } from "@/components/ui/button";
+import { useExitGuard } from "@/hooks/use-exit-guard";
 import {
   buildRopeQuestions,
   type DifficultyKey,
@@ -96,6 +97,8 @@ export default function RopeGamePage() {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
   const [timeLeft, setTimeLeft] = useState(GAME_DURATION_SECONDS);
   const [gameOver, setGameOver] = useState(false);
+
+  useExitGuard({ enabled: !setupMode });
 
   const arenaRef = useRef<HTMLDivElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -681,17 +684,6 @@ export default function RopeGamePage() {
     : winnerName
       ? `${winnerName} g'olib!`
       : "G'olib aniqlandi!";
-
-  // Warn before close during game
-  useEffect(() => {
-    if (setupMode) return;
-    const handler = (event: BeforeUnloadEvent) => {
-      event.preventDefault();
-      event.returnValue = "";
-    };
-    window.addEventListener("beforeunload", handler);
-    return () => window.removeEventListener("beforeunload", handler);
-  }, [setupMode]);
 
   // Stop audio when page hidden
   useEffect(() => {

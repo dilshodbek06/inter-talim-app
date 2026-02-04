@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { RefreshCw, Trophy, Plus, Trash2, Play, Sparkles } from "lucide-react";
 import BackPrev from "@/components/back-prev";
+import { useExitGuard } from "@/hooks/use-exit-guard";
 
 const motion = {
   div: ({
@@ -79,6 +80,8 @@ const WordSearchGame: React.FC = () => {
   const [isSelecting, setIsSelecting] = useState<boolean>(false);
   const [gameStarted, setGameStarted] = useState<boolean>(false);
   const [newWord, setNewWord] = useState<string>("");
+
+  const { back: handleBack } = useExitGuard({ enabled: gameStarted });
 
   // Yengil UX uchun: gameStarted bo'lsa sahifa yuqorisiga scroll
   useEffect(() => {
@@ -395,7 +398,7 @@ const WordSearchGame: React.FC = () => {
     >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <BackPrev />
+        <BackPrev onBack={handleBack} />
         <motion.div
           className="text-center mb-8 flex flex-col items-center gap-3"
           initial={{ opacity: 0, y: -10 }}

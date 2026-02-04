@@ -18,6 +18,7 @@ import {
   Trash2,
 } from "lucide-react";
 import BackPrev from "@/components/back-prev";
+import { useExitGuard } from "@/hooks/use-exit-guard";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -342,6 +343,8 @@ export default function CrosswordGamePage() {
   const inputRefs = useRef<Map<string, HTMLInputElement | null>>(new Map());
   const confettiFired = useRef(false);
 
+  const { back: handleBack } = useExitGuard({ enabled: phase === "game" });
+
   const activeWord = useMemo(() => {
     return crossword?.words.find((word) => word.id === activeWordId) ?? null;
   }, [crossword, activeWordId]);
@@ -622,7 +625,7 @@ export default function CrosswordGamePage() {
     return (
       <div className="min-h-screen relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-          <BackPrev />
+          <BackPrev onBack={handleBack} />
 
           <header className="space-y-4">
             <Badge className="bg-emerald-500/10 text-emerald-700 border border-emerald-200">
