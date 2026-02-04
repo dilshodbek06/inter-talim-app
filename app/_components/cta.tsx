@@ -16,7 +16,7 @@ const Cta = () => {
             Ta’limingizni yangi bosqichga olib chiqmoqchimisiz?
           </h2>
           <p className="text-xl opacity-90">
-            Allaqachon minglab o‘quvchilar va ustozlar ta’limni qiziqarli va
+            Allaqachon yuzlab o‘quvchilar va ustozlar ta’limni qiziqarli va
             samarali qilmoqda.
           </p>
         </div>
