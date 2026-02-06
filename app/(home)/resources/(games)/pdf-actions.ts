@@ -41,6 +41,18 @@ type Math23Payload = {
   exercises: Math23Exercise[];
 };
 
+type LinearMathExercise = {
+  terms: number[];
+  ops: ("+" | "-")[];
+  result: number;
+};
+
+type LinearMathPayload = {
+  title: string;
+  withAnswers: boolean;
+  exercises: LinearMathExercise[];
+};
+
 const A4_WIDTH = 595.28;
 const A4_HEIGHT = 841.89;
 const MARGIN = 40;
@@ -444,5 +456,105 @@ export async function generateMath23Pdf(payload: Math23Payload) {
   return {
     base64,
     filename: `${safeFilename(payload.title, "math-worksheet")}${suffix}.pdf`,
+  };
+}
+
+export async function generateLinearMathPdf(payload: LinearMathPayload) {
+  const doc = await PDFDocument.create();
+  const font = await doc.embedFont(StandardFonts.Helvetica);
+  let page = doc.addPage([A4_WIDTH, A4_HEIGHT]);
+  let y = drawTitle(
+    page,
+    font,
+    payload.title || "Qo'shish va ayirish (10 ichida)",
+  );
+
+  const colCount = 3;
+  const gutter = 16;
+  const contentWidth = page.getWidth() - MARGIN * 2;
+  const colWidth = (contentWidth - gutter * (colCount - 1)) / colCount;
+  const rowHeight = 28;
+  const numberSize = 9;
+  const textSize = 12;
+  const boxSize = 16;
+  const boxOffset = 24;
+  const answerColor = rgb(0.82, 0.1, 0.1);
+
+  const formatExpression = (exercise: LinearMathExercise) => {
+    const parts = exercise.terms.map((value, index) => {
+      if (index === 0) return `${value}`;
+      const op = exercise.ops[index - 1];
+      return `${op} ${value}`;
+    });
+    return sanitizeText(parts.join(" "));
+  };
+
+  for (let i = 0; i < payload.exercises.length; i += 1) {
+    const col = i % colCount;
+    if (col === 0 && y - rowHeight < MARGIN) {
+      page = doc.addPage([A4_WIDTH, A4_HEIGHT]);
+      y = drawTitle(
+        page,
+        font,
+        payload.title || "Qo'shish va ayirish (10 ichida)",
+      );
+    }
+
+    const x = MARGIN + col * (colWidth + gutter);
+    const baseY = y;
+    const ex = payload.exercises[i];
+    const expr = formatExpression(ex);
+
+    page.drawText(`${i + 1})`, { x, y: baseY, size: numberSize, font });
+
+    const boxX = x + colWidth - boxSize - boxOffset;
+    const equalsText = "=";
+    const equalsGap = 6;
+    const equalsWidth = font.widthOfTextAtSize(equalsText, textSize);
+    const equalsX = boxX - equalsGap - equalsWidth;
+
+    const exprMinX = x + 18;
+    const exprWidth = font.widthOfTextAtSize(expr, textSize);
+    const exprRightX = equalsX - 9;
+    const exprX = Math.max(exprMinX, exprRightX - exprWidth);
+    page.drawText(expr, { x: exprX, y: baseY, size: textSize, font });
+    page.drawText(equalsText, { x: equalsX, y: baseY, size: textSize, font });
+    const boxY = baseY - boxSize + 13;
+    page.drawRectangle({
+      x: boxX,
+      y: boxY,
+      width: boxSize,
+      height: boxSize,
+      borderWidth: 1,
+      borderColor: rgb(0, 0, 0),
+      color: rgb(1, 1, 1),
+    });
+
+    if (payload.withAnswers) {
+      const answer = sanitizeText(String(ex.result));
+      const answerSize = 10;
+      const answerWidth = font.widthOfTextAtSize(answer, answerSize);
+      const answerX = boxX + (boxSize - answerWidth) / 2;
+      const answerY = boxY + 3;
+      page.drawText(answer, {
+        x: answerX,
+        y: answerY,
+        size: answerSize,
+        font,
+        color: answerColor,
+      });
+    }
+
+    if (col === colCount - 1) {
+      y -= rowHeight;
+    }
+  }
+
+  const pdfBytes = await doc.save();
+  const base64 = Buffer.from(pdfBytes).toString("base64");
+  const suffix = payload.withAnswers ? "-javoblar" : "-javobsiz";
+  return {
+    base64,
+    filename: `${safeFilename(payload.title, "linear-math")}${suffix}.pdf`,
   };
 }
