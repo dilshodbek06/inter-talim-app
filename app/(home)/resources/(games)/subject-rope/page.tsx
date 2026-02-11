@@ -14,6 +14,7 @@ import {
   Globe2,
   Home,
   Landmark,
+  Loader2,
   Languages,
   Leaf,
   Maximize2,
@@ -136,6 +137,7 @@ export default function SubjectRopePage() {
   const subjectLabel =
     SUBJECTS.find((item) => item.key === selectedSubject)?.label ??
     "Fan tanlanmagan";
+  const isStartLoading = Boolean(selectedSubject && isLoadingQuestions);
 
   useEffect(() => {
     let active = true;
@@ -766,10 +768,15 @@ export default function SubjectRopePage() {
                   questions.length === 0 ||
                   isLoadingQuestions
                 }
+                aria-busy={isStartLoading}
                 className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:scale-[1.03] disabled:cursor-not-allowed disabled:opacity-60"
               >
-                <Play className="h-4 w-4" />
-                O'yinni Boshlash
+                {isStartLoading ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  <Play className="h-4 w-4" />
+                )}
+                {isStartLoading ? "Savollar yuklanmoqda..." : "O'yinni Boshlash"}
               </Button>
             </section>
 

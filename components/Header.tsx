@@ -21,7 +21,7 @@ const navLinks: NavLink[] = [
 // ];
 
 const Header = () => {
-  const { data: session } = authClient.useSession();
+  const { data: session, isPending } = authClient.useSession();
   const headerUser = session?.user
     ? {
         name: session.user.name ?? null,
@@ -31,7 +31,7 @@ const Header = () => {
     : null;
 
   return (
-    <nav className="sticky top-0 z-50 relative border-b border-border bg-background/80 backdrop-blur-sm">
+    <nav className=" top-0 z-50 relative border-b border-border bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-0 flex items-center justify-between animate-fade-down">
         {/* Logo */}
         <Logo />
@@ -55,10 +55,14 @@ const Header = () => {
             onChange={setLanguage}
           /> */}
 
-          <HeaderAuthControls user={headerUser} />
+          <HeaderAuthControls user={headerUser} isLoading={isPending} />
         </div>
 
-        <HeaderMobileMenu navLinks={navLinks} user={headerUser} />
+        <HeaderMobileMenu
+          navLinks={navLinks}
+          user={headerUser}
+          isLoading={isPending}
+        />
       </div>
     </nav>
   );

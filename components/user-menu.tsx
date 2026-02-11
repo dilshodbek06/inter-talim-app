@@ -30,7 +30,9 @@ export const UserMenuSkeleton = ({ className }: UserMenuSkeletonProps) => {
     "inline-flex h-10 items-center gap-2 rounded-md border border-gray-200/80 bg-background px-2.5";
 
   return (
-    <div className={className ? `${baseClassName} ${className}` : baseClassName}>
+    <div
+      className={className ? `${baseClassName} ${className}` : baseClassName}
+    >
       <div className="h-8 w-8 rounded-full bg-muted/70 animate-pulse" />
       <div className="h-3.5 w-3.5 rounded-full bg-muted/70 animate-pulse" />
     </div>

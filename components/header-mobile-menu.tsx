@@ -12,11 +12,13 @@ import type { HeaderUser, NavLink } from "./header-types";
 type HeaderMobileMenuProps = {
   navLinks: NavLink[];
   user: HeaderUser | null;
+  isLoading?: boolean;
 };
 
 export default function HeaderMobileMenu({
   navLinks,
   user,
+  isLoading = false,
 }: HeaderMobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
@@ -107,6 +109,17 @@ export default function HeaderMobileMenu({
               >
                 Chiqish
               </Button>
+            </div>
+          ) : isLoading ? (
+            <div className="w-full">
+              <div className="mb-3 flex items-center gap-3 rounded-xl border border-border bg-background/80 px-3 py-2 shadow-sm">
+                <div className="h-10 w-10 rounded-full bg-muted/70 animate-pulse" />
+                <div className="flex-1 space-y-2">
+                  <div className="h-3 w-24 rounded-full bg-muted/70 animate-pulse" />
+                  <div className="h-2.5 w-32 rounded-full bg-muted/70 animate-pulse" />
+                </div>
+              </div>
+              <div className="h-9 w-full rounded-md bg-muted/70 animate-pulse" />
             </div>
           ) : (
             <div className="w-full">
