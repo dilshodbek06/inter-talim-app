@@ -18,8 +18,8 @@ interface GameItemProps {
 
 export default function GameItem({ game }: GameItemProps) {
   return (
-    <Link href={game.webUrl} className="block h-full">
-      <Card className="group cursor-pointer border border-white/70 bg-white/80 backdrop-blur-md shadow-lg hover:shadow-[0_18px_40px_rgba(15,23,42,0.18)] transition-all duration-300 transform hover:-translate-y-2 rounded-2xl overflow-hidden relative">
+    <Link href={game.webUrl} prefetch={false} className="block h-full">
+      <Card className="group cursor-pointer border border-white/70 bg-white/80  shadow-lg hover:shadow-[0_18px_40px_rgba(15,23,42,0.18)] transition-all duration-300 transform hover:-translate-y-2 rounded-2xl overflow-hidden relative">
         <div className={`h-1.5 bg-linear-to-r ${game.color}`} />
 
         <CardHeader className="pb-3">

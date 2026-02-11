@@ -1,5 +1,3 @@
-"use client";
-
 import { eduGames } from "@/mock/mock-data";
 import { Trophy, Users } from "lucide-react";
 

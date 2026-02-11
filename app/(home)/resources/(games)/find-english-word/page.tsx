@@ -27,6 +27,7 @@ import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
 import { useExitGuard } from "@/hooks/use-exit-guard";
 import { DEMO_WORDS } from "@/mock/english";
+import { useFeedbackSounds } from "@/hooks/use-feedback-sounds";
 
 type LetterTile = {
   id: string;
@@ -165,6 +166,7 @@ export default function FindEnglishWordPage() {
   const { back: handleBack } = useExitGuard({ enabled: gameStarted });
   const hintTimeoutRef = useRef<number | null>(null);
   const maxHints = 3;
+  const { playSuccess, playError } = useFeedbackSounds();
 
   const currentIndex = order[index] ?? 0;
   const current = DEMO_WORDS[currentIndex] ?? DEMO_WORDS[0];
@@ -285,6 +287,7 @@ export default function FindEnglishWordPage() {
     const target = current.word.toUpperCase();
 
     if (guess === target) {
+      playSuccess();
       setStatus("correct");
       if (!progress[index]) {
         setScore((prev) => prev + 1);
@@ -297,6 +300,7 @@ export default function FindEnglishWordPage() {
       return;
     }
 
+    playError();
     setStatus("wrong");
   };
 

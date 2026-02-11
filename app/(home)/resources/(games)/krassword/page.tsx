@@ -1,13 +1,13 @@
 "use client";
 
 import {
+  useCallback,
   useEffect,
   useMemo,
   useRef,
   useState,
   type KeyboardEvent,
 } from "react";
-import confetti from "canvas-confetti";
 import {
   Info,
   Play,
@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import BackPrev from "@/components/back-prev";
 import { useExitGuard } from "@/hooks/use-exit-guard";
+import { useFeedbackSounds } from "@/hooks/use-feedback-sounds";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -342,8 +343,20 @@ export default function CrosswordGamePage() {
 
   const inputRefs = useRef<Map<string, HTMLInputElement | null>>(new Map());
   const confettiFired = useRef(false);
+  const solvedWordIdsRef = useRef<Set<string>>(new Set());
+  const confettiRef = useRef<typeof import("canvas-confetti").default | null>(
+    null,
+  );
+
+  const loadConfetti = useCallback(async () => {
+    if (confettiRef.current) return confettiRef.current;
+    const mod = await import("canvas-confetti");
+    confettiRef.current = mod.default;
+    return mod.default;
+  }, []);
 
   const { back: handleBack } = useExitGuard({ enabled: phase === "game" });
+  const { playSuccess, playError } = useFeedbackSounds();
 
   const activeWord = useMemo(() => {
     return crossword?.words.find((word) => word.id === activeWordId) ?? null;
@@ -390,17 +403,42 @@ export default function CrosswordGamePage() {
     if (!crossword || totalWords === 0) return;
     if (solvedCount === totalWords && !confettiFired.current) {
       confettiFired.current = true;
-      confetti({
-        particleCount: 140,
-        spread: 80,
-        startVelocity: 45,
-        ticks: 200,
-        origin: { x: 0.5, y: 0.3 },
-        colors: ["#22c55e", "#38bdf8", "#f97316", "#facc15"],
-        disableForReducedMotion: true,
+      void loadConfetti().then((confetti) => {
+        confetti({
+          particleCount: 140,
+          spread: 80,
+          startVelocity: 45,
+          ticks: 200,
+          origin: { x: 0.5, y: 0.3 },
+          colors: ["#22c55e", "#38bdf8", "#f97316", "#facc15"],
+          disableForReducedMotion: true,
+        });
       });
     }
-  }, [crossword, solvedCount, totalWords]);
+  }, [crossword, loadConfetti, solvedCount, totalWords]);
+
+  useEffect(() => {
+    if (!crossword) {
+      solvedWordIdsRef.current = new Set();
+      return;
+    }
+
+    const nextSolved = new Set<string>();
+    crossword.words.forEach((word) => {
+      const isSolved = getWordCells(word).every((cell, index) => {
+        const key = `${cell.row}-${cell.col}`;
+        return entries[key] === word.answer[index];
+      });
+      if (isSolved) nextSolved.add(word.id);
+    });
+
+    const hasNewSolvedWord = Array.from(nextSolved).some(
+      (id) => !solvedWordIdsRef.current.has(id),
+    );
+    if (hasNewSolvedWord) playSuccess();
+
+    solvedWordIdsRef.current = nextSolved;
+  }, [crossword, entries, playSuccess]);
 
   const handleAddQuestion = () => {
     setFormError(null);
@@ -433,6 +471,7 @@ export default function CrosswordGamePage() {
   const handleStartGame = () => {
     setFormError(null);
     confettiFired.current = false;
+    solvedWordIdsRef.current = new Set();
     setHintedWords({});
 
     const cleaned = questions
@@ -495,6 +534,7 @@ export default function CrosswordGamePage() {
     setEntries(resetEntries);
     setHintedWords({});
     confettiFired.current = false;
+    solvedWordIdsRef.current = new Set();
   };
 
   // ✅ Hint now fixes the first EMPTY or WRONG cell (not only empty)
@@ -567,12 +607,18 @@ export default function CrosswordGamePage() {
   };
 
   const handleInputChange = (row: number, col: number, value: string) => {
+    if (!crossword) return;
+
     const letter = value
       .toUpperCase()
       .replace(/[^A-Z]/g, "")
       .slice(-1);
 
     const key = `${row}-${col}`;
+    const expected = crossword.grid[row][col];
+    if (letter && expected && letter !== expected) {
+      playError();
+    }
     setEntries((prev) => ({ ...prev, [key]: letter }));
 
     if (!activeWord || !letter) return;

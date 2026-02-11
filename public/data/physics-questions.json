@@ -1,0 +1,1216 @@
+{
+  "7": [
+    {
+      "quantity": "Tezlik",
+      "correctUnit": "m/s",
+      "correctFormula": "v = s / t",
+      "options": [
+        "m/s",
+        "m/s^2",
+        "N",
+        "v = s / t",
+        "a = Δv / t",
+        "F = m · a",
+        "p = F / S"
+      ]
+    },
+    {
+      "quantity": "Yo‘l (masofa)",
+      "correctUnit": "m",
+      "correctFormula": "s = v · t",
+      "options": [
+        "m",
+        "s",
+        "kg",
+        "s = v · t",
+        "v = s / t",
+        "t = s / v",
+        "E = m · g · h"
+      ]
+    },
+    {
+      "quantity": "Vaqt",
+      "correctUnit": "s",
+      "correctFormula": "t = s / v",
+      "options": [
+        "s",
+        "min",
+        "Pa",
+        "t = s / v",
+        "s = v · t",
+        "v = s / t",
+        "P = A / t"
+      ]
+    },
+    {
+      "quantity": "Tezlanish",
+      "correctUnit": "m/s^2",
+      "correctFormula": "a = Δv / t",
+      "options": [
+        "m/s^2",
+        "m/s",
+        "J",
+        "a = Δv / t",
+        "v = s / t",
+        "F = m · a",
+        "p = m · v"
+      ]
+    },
+    {
+      "quantity": "Og‘irlik kuchi",
+      "correctUnit": "N",
+      "correctFormula": "F = m · g",
+      "options": [
+        "N",
+        "kg",
+        "Pa",
+        "F = m · g",
+        "F = m · a",
+        "p = m · v",
+        "A = F · s"
+      ]
+    },
+    {
+      "quantity": "Natijaviy kuch (Nyuton II qonuni)",
+      "correctUnit": "N",
+      "correctFormula": "F = m · a",
+      "options": [
+        "N",
+        "J",
+        "W",
+        "F = m · a",
+        "F = m · g",
+        "a = Δv / t",
+        "p = m · v"
+      ]
+    },
+    {
+      "quantity": "Ishqalanish kuchi",
+      "correctUnit": "N",
+      "correctFormula": "F_f = μ · N",
+      "options": [
+        "N",
+        "Pa",
+        "kg/m^3",
+        "F_f = μ · N",
+        "F = m · a",
+        "p = F / S",
+        "A = F · s"
+      ]
+    },
+    {
+      "quantity": "Impuls",
+      "correctUnit": "kg·m/s",
+      "correctFormula": "p = m · v",
+      "options": [
+        "kg·m/s",
+        "N·s",
+        "J",
+        "p = m · v",
+        "F = m · a",
+        "A = F · s",
+        "v = s / t"
+      ]
+    },
+    {
+      "quantity": "Kuch impulsi",
+      "correctUnit": "N·s",
+      "correctFormula": "J = F · Δt",
+      "options": [
+        "N·s",
+        "kg·m/s",
+        "W",
+        "J = F · Δt",
+        "p = m · v",
+        "F = m · a",
+        "P = A / t"
+      ]
+    },
+    {
+      "quantity": "Ish",
+      "correctUnit": "J",
+      "correctFormula": "A = F · s · cos(α)",
+      "options": [
+        "J",
+        "W",
+        "N",
+        "A = F · s · cos(α)",
+        "P = A / t",
+        "F = m · a",
+        "E_k = m · v^2 / 2"
+      ]
+    },
+    {
+      "quantity": "Quvvat",
+      "correctUnit": "W",
+      "correctFormula": "P = A / t",
+      "options": [
+        "W",
+        "J",
+        "N",
+        "P = A / t",
+        "A = F · s",
+        "v = s / t",
+        "η = A_f / A_k · 100%"
+      ]
+    },
+    {
+      "quantity": "Kinetik energiya",
+      "correctUnit": "J",
+      "correctFormula": "E_k = m · v^2 / 2",
+      "options": [
+        "J",
+        "W",
+        "kg",
+        "E_k = m · v^2 / 2",
+        "E_p = m · g · h",
+        "P = A / t",
+        "p = m · v"
+      ]
+    },
+    {
+      "quantity": "Potensial energiya (Yer tortishish)",
+      "correctUnit": "J",
+      "correctFormula": "E_p = m · g · h",
+      "options": [
+        "J",
+        "N",
+        "m",
+        "E_p = m · g · h",
+        "E_k = m · v^2 / 2",
+        "F = G · m1 · m2 / r^2",
+        "p = ρ · g · h"
+      ]
+    },
+    {
+      "quantity": "Markazga intilma tezlanish",
+      "correctUnit": "m/s^2",
+      "correctFormula": "a_c = v^2 / r",
+      "options": [
+        "m/s^2",
+        "m/s",
+        "Hz",
+        "a_c = v^2 / r",
+        "v = s / t",
+        "F = m · a",
+        "T = 2π · r / v"
+      ]
+    },
+    {
+      "quantity": "Markazga intilma kuch",
+      "correctUnit": "N",
+      "correctFormula": "F_c = m · v^2 / r",
+      "options": [
+        "N",
+        "J",
+        "kg·m/s",
+        "F_c = m · v^2 / r",
+        "F = m · a",
+        "p = m · v",
+        "A = F · s"
+      ]
+    },
+    {
+      "quantity": "Gravitatsiya kuchi",
+      "correctUnit": "N",
+      "correctFormula": "F = G · m1 · m2 / r^2",
+      "options": [
+        "N",
+        "Pa",
+        "J",
+        "F = G · m1 · m2 / r^2",
+        "F = m · g",
+        "F = m · a",
+        "p = F / S"
+      ]
+    },
+    {
+      "quantity": "Foydali ish koeffitsiyenti (FIK)",
+      "correctUnit": "%",
+      "correctFormula": "η = A_f / A_k · 100%",
+      "options": [
+        "%",
+        "J",
+        "W",
+        "η = A_f / A_k · 100%",
+        "P = A / t",
+        "A = F · s",
+        "E_p = m · g · h"
+      ]
+    }
+  ],
+  "8": [
+    {
+      "quantity": "Elektr zaryad",
+      "correctUnit": "C",
+      "correctFormula": "q = I · t",
+      "options": [
+        "C",
+        "A",
+        "V",
+        "q = I · t",
+        "I = q / t",
+        "U = I · R",
+        "F = k · q1 · q2 / r^2"
+      ]
+    },
+    {
+      "quantity": "Tok kuchi",
+      "correctUnit": "A",
+      "correctFormula": "I = q / t",
+      "options": [
+        "A",
+        "C",
+        "Om",
+        "I = q / t",
+        "q = I · t",
+        "P = U · I",
+        "R = U / I"
+      ]
+    },
+    {
+      "quantity": "Kulon kuchi",
+      "correctUnit": "N",
+      "correctFormula": "F = k · q1 · q2 / r^2",
+      "options": [
+        "N",
+        "C",
+        "Pa",
+        "F = k · q1 · q2 / r^2",
+        "E = F / q",
+        "U = I · R",
+        "Φ = B · S · cos(α)"
+      ]
+    },
+    {
+      "quantity": "Elektr maydon kuchlanganligi",
+      "correctUnit": "N/C",
+      "correctFormula": "E = F / q",
+      "options": [
+        "N/C",
+        "V",
+        "T",
+        "E = F / q",
+        "F = k · q1 · q2 / r^2",
+        "U = A / q",
+        "P = U · I"
+      ]
+    },
+    {
+      "quantity": "Elektr kuchlanish",
+      "correctUnit": "V",
+      "correctFormula": "U = A / q",
+      "options": [
+        "V",
+        "A",
+        "Om",
+        "U = A / q",
+        "U = I · R",
+        "P = U · I",
+        "C = q / U"
+      ]
+    },
+    {
+      "quantity": "Qarshilik",
+      "correctUnit": "Om",
+      "correctFormula": "R = U / I",
+      "options": [
+        "",
+        "V",
+        "W",
+        "R = U / I",
+        "U = I · R",
+        "I = q / t",
+        "P = U · I"
+      ]
+    },
+    {
+      "quantity": "Elektr quvvati",
+      "correctUnit": "W",
+      "correctFormula": "P = U · I",
+      "options": [
+        "W",
+        "J",
+        "V",
+        "P = U · I",
+        "P = A / t",
+        "A = U · I · t",
+        "Q = I^2 · R · t"
+      ]
+    },
+    {
+      "quantity": "Elektr ishi (energiya)",
+      "correctUnit": "J",
+      "correctFormula": "A = U · I · t",
+      "options": [
+        "J",
+        "W",
+        "C",
+        "A = U · I · t",
+        "P = U · I",
+        "Q = I^2 · R · t",
+        "A = F · s"
+      ]
+    },
+    {
+      "quantity": "Joul–Lenz issiqligi",
+      "correctUnit": "J",
+      "correctFormula": "Q = I^2 · R · t",
+      "options": [
+        "J",
+        "W",
+        "Pa",
+        "Q = I^2 · R · t",
+        "A = U · I · t",
+        "P = U · I",
+        "Q = c · m · ΔT"
+      ]
+    },
+    {
+      "quantity": "Tok zichligi",
+      "correctUnit": "A/m^2",
+      "correctFormula": "j = I / S",
+      "options": [
+        "A/m^2",
+        "A",
+        "C",
+        "j = I / S",
+        "R = ρ · l / S",
+        "I = q / t",
+        "p = F / S"
+      ]
+    },
+    {
+      "quantity": "Kondensator sig‘imi",
+      "correctUnit": "F",
+      "correctFormula": "C = q / U",
+      "options": [
+        "F",
+        "C",
+        "V",
+        "C = q / U",
+        "U = A / q",
+        "W = C · U^2 / 2",
+        "R = U / I"
+      ]
+    },
+    {
+      "quantity": "Kondensator energiyasi",
+      "correctUnit": "J",
+      "correctFormula": "W = C · U^2 / 2",
+      "options": [
+        "J",
+        "F",
+        "W",
+        "W = C · U^2 / 2",
+        "A = U · I · t",
+        "P = U · I",
+        "E = h · f"
+      ]
+    },
+    {
+      "quantity": "Magnit oqimi",
+      "correctUnit": "Wb",
+      "correctFormula": "Φ = B · S · cos(α)",
+      "options": [
+        "Wb",
+        "T",
+        "N",
+        "Φ = B · S · cos(α)",
+        "B = Φ / S",
+        "ε = -ΔΦ / Δt",
+        "F = B · I · l · sin(α)"
+      ]
+    },
+    {
+      "quantity": "Magnit induksiya",
+      "correctUnit": "T",
+      "correctFormula": "B = Φ / S",
+      "options": [
+        "T",
+        "Wb",
+        "A",
+        "B = Φ / S",
+        "Φ = B · S · cos(α)",
+        "F = q · v · B · sin(α)",
+        "R = U / I"
+      ]
+    },
+    {
+      "quantity": "Amper kuchi",
+      "correctUnit": "N",
+      "correctFormula": "F = B · I · l · sin(α)",
+      "options": [
+        "N",
+        "T",
+        "W",
+        "F = B · I · l · sin(α)",
+        "F = k · q1 · q2 / r^2",
+        "F = q · v · B · sin(α)",
+        "ε = -ΔΦ / Δt"
+      ]
+    },
+    {
+      "quantity": "Lorens kuchi",
+      "correctUnit": "N",
+      "correctFormula": "F = q · v · B · sin(α)",
+      "options": [
+        "N",
+        "C",
+        "T",
+        "F = q · v · B · sin(α)",
+        "F = B · I · l · sin(α)",
+        "p = m · v",
+        "E = h · f"
+      ]
+    },
+    {
+      "quantity": "Induksiya EYuK",
+      "correctUnit": "V",
+      "correctFormula": "ε = -ΔΦ / Δt",
+      "options": [
+        "V",
+        "Wb",
+        "Om",
+        "ε = -ΔΦ / Δt",
+        "Φ = B · S · cos(α)",
+        "U = I · R",
+        "P = U · I"
+      ]
+    },
+    {
+      "quantity": "Elektrolizda ajralgan massa",
+      "correctUnit": "kg",
+      "correctFormula": "m = k · I · t",
+      "options": [
+        "kg",
+        "C",
+        "mol",
+        "m = k · I · t",
+        "q = I · t",
+        "Q = I^2 · R · t",
+        "pV = n · R · T"
+      ]
+    }
+  ],
+  "9": [
+    {
+      "quantity": "Modda miqdori",
+      "correctUnit": "mol",
+      "correctFormula": "n = m / M",
+      "options": [
+        "mol",
+        "kg",
+        "J",
+        "n = m / M",
+        "M = m / n",
+        "pV = n · R · T",
+        "N = n · N_A"
+      ]
+    },
+    {
+      "quantity": "Molyar massa",
+      "correctUnit": "kg/mol",
+      "correctFormula": "M = m / n",
+      "options": [
+        "kg/mol",
+        "mol",
+        "kg",
+        "M = m / n",
+        "n = m / M",
+        "pV = n · R · T",
+        "Q = c · m · ΔT"
+      ]
+    },
+    {
+      "quantity": "Ideal gaz holat tenglamasi",
+      "correctUnit": "—",
+      "correctFormula": "p · V = n · R · T",
+      "options": [
+        "—",
+        "Pa",
+        "J",
+        "p · V = n · R · T",
+        "p = F / S",
+        "T = t + 273",
+        "U = I · R"
+      ]
+    },
+    {
+      "quantity": "Absolyut temperatura",
+      "correctUnit": "K",
+      "correctFormula": "T = t + 273",
+      "options": [
+        "K",
+        "°C",
+        "Pa",
+        "T = t + 273",
+        "p · V = n · R · T",
+        "Q = c · m · ΔT",
+        "v = s / t"
+      ]
+    },
+    {
+      "quantity": "Issiqlik miqdori",
+      "correctUnit": "J",
+      "correctFormula": "Q = c · m · ΔT",
+      "options": [
+        "J",
+        "W",
+        "Pa",
+        "Q = c · m · ΔT",
+        "ΔU = Q - A",
+        "A = p · ΔV",
+        "E = h · f"
+      ]
+    },
+    {
+      "quantity": "Gazning izobarik ishi",
+      "correctUnit": "J",
+      "correctFormula": "A = p · ΔV",
+      "options": [
+        "J",
+        "Pa",
+        "N",
+        "A = p · ΔV",
+        "ΔU = Q - A",
+        "Q = c · m · ΔT",
+        "A = F · s"
+      ]
+    },
+    {
+      "quantity": "Ichki energiya o‘zgarishi (1-qonun)",
+      "correctUnit": "J",
+      "correctFormula": "ΔU = Q - A",
+      "options": [
+        "J",
+        "W",
+        "N",
+        "ΔU = Q - A",
+        "Q = c · m · ΔT",
+        "A = p · ΔV",
+        "η = A / Q1 · 100%"
+      ]
+    },
+    {
+      "quantity": "Issiqlik balansi",
+      "correctUnit": "J",
+      "correctFormula": "ΣQ = 0",
+      "options": [
+        "J",
+        "%",
+        "K",
+        "ΣQ = 0",
+        "Q = c · m · ΔT",
+        "ΔU = Q - A",
+        "p · V = n · R · T"
+      ]
+    },
+    {
+      "quantity": "Issiqlik dvigateli FIK",
+      "correctUnit": "%",
+      "correctFormula": "η = A / Q1 · 100%",
+      "options": [
+        "%",
+        "J",
+        "W",
+        "η = A / Q1 · 100%",
+        "ΔU = Q - A",
+        "A = p · ΔV",
+        "P = A / t"
+      ]
+    },
+    {
+      "quantity": "Sirt taranglik kuchi",
+      "correctUnit": "N",
+      "correctFormula": "F = σ · l",
+      "options": [
+        "N",
+        "N/m",
+        "Pa",
+        "F = σ · l",
+        "p = ρ · g · h",
+        "F_A = ρ · g · V",
+        "A = F · s"
+      ]
+    },
+    {
+      "quantity": "Gidrostatik bosim",
+      "correctUnit": "Pa",
+      "correctFormula": "p = ρ · g · h",
+      "options": [
+        "Pa",
+        "N",
+        "kg/m^3",
+        "p = ρ · g · h",
+        "p · V = n · R · T",
+        "F_A = ρ · g · V",
+        "p = F / S"
+      ]
+    },
+    {
+      "quantity": "Arximed kuchi",
+      "correctUnit": "N",
+      "correctFormula": "F_A = ρ · g · V",
+      "options": [
+        "N",
+        "Pa",
+        "m^3",
+        "F_A = ρ · g · V",
+        "p = ρ · g · h",
+        "F = m · g",
+        "F = k · q1 · q2 / r^2"
+      ]
+    },
+    {
+      "quantity": "Sindirish ko‘rsatkichi",
+      "correctUnit": "—",
+      "correctFormula": "n = c / v",
+      "options": [
+        "—",
+        "m/s",
+        "Hz",
+        "n = c / v",
+        "n1 · sin(i) = n2 · sin(r)",
+        "1/f = 1/d + 1/d'",
+        "v = λ · f"
+      ]
+    },
+    {
+      "quantity": "Snell qonuni",
+      "correctUnit": "—",
+      "correctFormula": "n1 · sin(i) = n2 · sin(r)",
+      "options": [
+        "—",
+        "deg",
+        "m",
+        "n1 · sin(i) = n2 · sin(r)",
+        "n = c / v",
+        "1/f = 1/d + 1/d'",
+        "d · sin(θ) = m · λ"
+      ]
+    },
+    {
+      "quantity": "Yupqa linza formulasi",
+      "correctUnit": "1/m",
+      "correctFormula": "1/f = 1/d + 1/d'",
+      "options": [
+        "1/m",
+        "m",
+        "D",
+        "1/f = 1/d + 1/d'",
+        "D = 1/f",
+        "Γ = d' / d",
+        "n = c / v"
+      ]
+    },
+    {
+      "quantity": "Optik kuch (dioptriya)",
+      "correctUnit": "D",
+      "correctFormula": "D = 1/f",
+      "options": [
+        "D",
+        "1/m",
+        "m",
+        "D = 1/f",
+        "1/f = 1/d + 1/d'",
+        "Γ = d' / d",
+        "p · V = n · R · T"
+      ]
+    },
+    {
+      "quantity": "Kattalashtirish",
+      "correctUnit": "—",
+      "correctFormula": "Γ = d' / d",
+      "options": [
+        "—",
+        "m",
+        "D",
+        "Γ = d' / d",
+        "1/f = 1/d + 1/d'",
+        "n = c / v",
+        "v = s / t"
+      ]
+    },
+    {
+      "quantity": "Yung moduli",
+      "correctUnit": "Pa",
+      "correctFormula": "E = (F/S) / (Δl/l)",
+      "options": [
+        "Pa",
+        "N",
+        "J",
+        "E = (F/S) / (Δl/l)",
+        "p = F / S",
+        "p = ρ · g · h",
+        "A = p · ΔV"
+      ]
+    }
+  ],
+  "10": [
+    {
+      "quantity": "Matematik mayatnik davri",
+      "correctUnit": "s",
+      "correctFormula": "T = 2π · √(l / g)",
+      "options": [
+        "s",
+        "Hz",
+        "m",
+        "T = 2π · √(l / g)",
+        "f = 1 / T",
+        "v = λ · f",
+        "T = t + 273"
+      ]
+    },
+    {
+      "quantity": "Prujinali mayatnik davri",
+      "correctUnit": "s",
+      "correctFormula": "T = 2π · √(m / k)",
+      "options": [
+        "s",
+        "N/m",
+        "Hz",
+        "T = 2π · √(m / k)",
+        "F = k · x",
+        "f = 1 / T",
+        "A = p · ΔV"
+      ]
+    },
+    {
+      "quantity": "Chastota",
+      "correctUnit": "Hz",
+      "correctFormula": "f = 1 / T",
+      "options": [
+        "Hz",
+        "s",
+        "m/s",
+        "f = 1 / T",
+        "T = 2π · √(l / g)",
+        "v = λ · f",
+        "ω = 2π · f"
+      ]
+    },
+    {
+      "quantity": "Burchak chastota",
+      "correctUnit": "rad/s",
+      "correctFormula": "ω = 2π · f",
+      "options": [
+        "rad/s",
+        "Hz",
+        "1/m",
+        "ω = 2π · f",
+        "f = 1 / T",
+        "v = λ · f",
+        "ε = -ΔΦ / Δt"
+      ]
+    },
+    {
+      "quantity": "To‘lqin tezligi",
+      "correctUnit": "m/s",
+      "correctFormula": "v = λ · f",
+      "options": [
+        "m/s",
+        "Hz",
+        "m",
+        "v = λ · f",
+        "f = 1 / T",
+        "n = c / v",
+        "p = ρ · g · h"
+      ]
+    },
+    {
+      "quantity": "Oqim sarfi (hajmiy)",
+      "correctUnit": "m^3/s",
+      "correctFormula": "Q = S · v",
+      "options": [
+        "m^3/s",
+        "m/s",
+        "Pa",
+        "Q = S · v",
+        "p = ρ · g · h",
+        "v = λ · f",
+        "I = ε / (R + r)"
+      ]
+    },
+    {
+      "quantity": "Dinamik bosim",
+      "correctUnit": "Pa",
+      "correctFormula": "p_d = ρ · v^2 / 2",
+      "options": [
+        "Pa",
+        "N",
+        "kg/m^3",
+        "p_d = ρ · v^2 / 2",
+        "p = ρ · g · h",
+        "p · V = n · R · T",
+        "A = F · s"
+      ]
+    },
+    {
+      "quantity": "Elektr yurituvchi kuch (EYuK)",
+      "correctUnit": "V",
+      "correctFormula": "ε = A / q",
+      "options": [
+        "V",
+        "C",
+        "Om",
+        "ε = A / q",
+        "U = I · R",
+        "I = q / t",
+        "ε = -ΔΦ / Δt"
+      ]
+    },
+    {
+      "quantity": "To‘liq zanjir uchun Om qonuni",
+      "correctUnit": "A",
+      "correctFormula": "I = ε / (R + r)",
+      "options": [
+        "A",
+        "V",
+        "Om",
+        "I = ε / (R + r)",
+        "U = I · R",
+        "R = U / I",
+        "P = U · I"
+      ]
+    },
+    {
+      "quantity": "Qarshilikning temperaturaga bog‘liqligi",
+      "correctUnit": "Om",
+      "correctFormula": "R = R0 · (1 + α · ΔT)",
+      "options": [
+        "Om",
+        "Om·m",
+        "K",
+        "R = R0 · (1 + α · ΔT)",
+        "R = ρ · l / S",
+        "I = ε / (R + r)",
+        "Q = I^2 · R · t"
+      ]
+    },
+    {
+      "quantity": "Elektrolizda massa",
+      "correctUnit": "kg",
+      "correctFormula": "m = k · I · t",
+      "options": [
+        "kg",
+        "C",
+        "mol",
+        "m = k · I · t",
+        "q = I · t",
+        "A = U · I · t",
+        "N = N0 · e^(−λ · t)"
+      ]
+    },
+    {
+      "quantity": "Magnit oqimi",
+      "correctUnit": "Wb",
+      "correctFormula": "Φ = B · S · cos(α)",
+      "options": [
+        "Wb",
+        "T",
+        "V",
+        "Φ = B · S · cos(α)",
+        "ε = -ΔΦ / Δt",
+        "B = Φ / S",
+        "F = B · I · l · sin(α)"
+      ]
+    },
+    {
+      "quantity": "Elektromagnit induksiya EYuK",
+      "correctUnit": "V",
+      "correctFormula": "ε = -N · ΔΦ / Δt",
+      "options": [
+        "V",
+        "Wb",
+        "A",
+        "ε = -N · ΔΦ / Δt",
+        "Φ = B · S · cos(α)",
+        "ε = -L · ΔI / Δt",
+        "U = I · R"
+      ]
+    },
+    {
+      "quantity": "O‘zinduksiya EYuK",
+      "correctUnit": "V",
+      "correctFormula": "ε = -L · ΔI / Δt",
+      "options": [
+        "V",
+        "H",
+        "Wb",
+        "ε = -L · ΔI / Δt",
+        "ε = -N · ΔΦ / Δt",
+        "L = Φ / I",
+        "W = L · I^2 / 2"
+      ]
+    },
+    {
+      "quantity": "Induktivlik",
+      "correctUnit": "H",
+      "correctFormula": "L = Φ / I",
+      "options": [
+        "H",
+        "Wb",
+        "T",
+        "L = Φ / I",
+        "Φ = B · S · cos(α)",
+        "ε = -L · ΔI / Δt",
+        "W = L · I^2 / 2"
+      ]
+    },
+    {
+      "quantity": "Magnit maydon energiyasi (g‘altak)",
+      "correctUnit": "J",
+      "correctFormula": "W = L · I^2 / 2",
+      "options": [
+        "J",
+        "W",
+        "H",
+        "W = L · I^2 / 2",
+        "W = C · U^2 / 2",
+        "P = U · I",
+        "E = m · c^2"
+      ]
+    }
+  ],
+  "11": [
+    {
+      "quantity": "Tebranish konturi davri (Tomson)",
+      "correctUnit": "s",
+      "correctFormula": "T = 2π · √(L · C)",
+      "options": [
+        "s",
+        "Hz",
+        "H",
+        "T = 2π · √(L · C)",
+        "f = 1 / T",
+        "ω = 2π · f",
+        "ε = -L · ΔI / Δt"
+      ]
+    },
+    {
+      "quantity": "Tebranish konturi chastotasi",
+      "correctUnit": "Hz",
+      "correctFormula": "f = 1 / (2π · √(L · C))",
+      "options": [
+        "Hz",
+        "s",
+        "F",
+        "f = 1 / (2π · √(L · C))",
+        "T = 2π · √(L · C)",
+        "v = λ · f",
+        "E = h · f"
+      ]
+    },
+    {
+      "quantity": "O‘zgaruvchan tokning ta’sir etuvchi qiymati (tok)",
+      "correctUnit": "A",
+      "correctFormula": "I_eff = I0 / √2",
+      "options": [
+        "A",
+        "V",
+        "Om",
+        "I_eff = I0 / √2",
+        "U_eff = U0 / √2",
+        "P = U · I",
+        "I = ε / (R + r)"
+      ]
+    },
+    {
+      "quantity": "O‘zgaruvchan tokning ta’sir etuvchi qiymati (kuchlanish)",
+      "correctUnit": "V",
+      "correctFormula": "U_eff = U0 / √2",
+      "options": [
+        "V",
+        "A",
+        "W",
+        "U_eff = U0 / √2",
+        "I_eff = I0 / √2",
+        "U = I · R",
+        "ε = -ΔΦ / Δt"
+      ]
+    },
+    {
+      "quantity": "Elektromagnit to‘lqin tezligi",
+      "correctUnit": "m/s",
+      "correctFormula": "c = λ · f",
+      "options": [
+        "m/s",
+        "Hz",
+        "m",
+        "c = λ · f",
+        "v = s / t",
+        "n = c / v",
+        "d · sin(θ) = m · λ"
+      ]
+    },
+    {
+      "quantity": "Difraksion panjara tenglamasi",
+      "correctUnit": "—",
+      "correctFormula": "d · sin(θ) = m · λ",
+      "options": [
+        "—",
+        "m",
+        "Hz",
+        "d · sin(θ) = m · λ",
+        "c = λ · f",
+        "n1 · sin(i) = n2 · sin(r)",
+        "λ = h / p"
+      ]
+    },
+    {
+      "quantity": "Foton energiyasi",
+      "correctUnit": "J",
+      "correctFormula": "E = h · f",
+      "options": [
+        "J",
+        "W",
+        "eV",
+        "E = h · f",
+        "E = m · c^2",
+        "p = h / λ",
+        "E_k(max) = h · f - A"
+      ]
+    },
+    {
+      "quantity": "Foton impulsi",
+      "correctUnit": "kg·m/s",
+      "correctFormula": "p = h / λ",
+      "options": [
+        "kg·m/s",
+        "J",
+        "N·s",
+        "p = h / λ",
+        "E = h · f",
+        "λ = h / p",
+        "p = m · v"
+      ]
+    },
+    {
+      "quantity": "Fotoeffekt (Einshteyn tenglamasi)",
+      "correctUnit": "J",
+      "correctFormula": "E_k(max) = h · f - A",
+      "options": [
+        "J",
+        "eV",
+        "W",
+        "E_k(max) = h · f - A",
+        "E = h · f",
+        "A = F · s",
+        "E = m · c^2"
+      ]
+    },
+    {
+      "quantity": "Fotoeffekt qizil chegarasi",
+      "correctUnit": "Hz",
+      "correctFormula": "f0 = A / h",
+      "options": [
+        "Hz",
+        "J",
+        "s",
+        "f0 = A / h",
+        "E_k(max) = h · f - A",
+        "E = h · f",
+        "f = 1 / (2π · √(L · C))"
+      ]
+    },
+    {
+      "quantity": "De Broyl to‘lqin uzunligi",
+      "correctUnit": "m",
+      "correctFormula": "λ = h / p",
+      "options": [
+        "m",
+        "kg·m/s",
+        "Hz",
+        "λ = h / p",
+        "p = h / λ",
+        "E = h · f",
+        "v = λ · f"
+      ]
+    },
+    {
+      "quantity": "Massaning energiyasi",
+      "correctUnit": "J",
+      "correctFormula": "E = m · c^2",
+      "options": [
+        "J",
+        "kg",
+        "W",
+        "E = m · c^2",
+        "E = h · f",
+        "W = L · I^2 / 2",
+        "p · V = n · R · T"
+      ]
+    },
+    {
+      "quantity": "Radioaktiv yemirilish qonuni",
+      "correctUnit": "—",
+      "correctFormula": "N = N0 · e^(−λ · t)",
+      "options": [
+        "—",
+        "Bq",
+        "s",
+        "N = N0 · e^(−λ · t)",
+        "T1/2 = ln2 / λ",
+        "A = λ · N",
+        "E = Δm · c^2"
+      ]
+    },
+    {
+      "quantity": "Yarim yemirilish davri",
+      "correctUnit": "s",
+      "correctFormula": "T1/2 = ln2 / λ",
+      "options": [
+        "s",
+        "1/s",
+        "Bq",
+        "T1/2 = ln2 / λ",
+        "N = N0 · e^(−λ · t)",
+        "A = λ · N",
+        "T = 2π · √(L · C)"
+      ]
+    },
+    {
+      "quantity": "Aktivlik",
+      "correctUnit": "Bq",
+      "correctFormula": "A = λ · N",
+      "options": [
+        "Bq",
+        "J",
+        "Hz",
+        "A = λ · N",
+        "N = N0 · e^(−λ · t)",
+        "T1/2 = ln2 / λ",
+        "A = U · I · t"
+      ]
+    },
+    {
+      "quantity": "Bog‘lanish energiyasi (massa defekti)",
+      "correctUnit": "J",
+      "correctFormula": "E = Δm · c^2",
+      "options": [
+        "J",
+        "kg",
+        "eV",
+        "E = Δm · c^2",
+        "E = m · c^2",
+        "E = h · f",
+        "p = h / λ"
+      ]
+    },
+    {
+      "quantity": "Yorug‘lik bosimi (yutilish)",
+      "correctUnit": "Pa",
+      "correctFormula": "p = I / c",
+      "options": [
+        "Pa",
+        "N",
+        "W",
+        "p = I / c",
+        "p = ρ · g · h",
+        "F = k · q1 · q2 / r^2",
+        "E_k(max) = h · f - A"
+      ]
+    }
+  ]
+}

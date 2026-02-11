@@ -11,6 +11,7 @@ import { Confetti } from "@/components/confetti";
 import { WinModal } from "@/components/win-modal";
 import Image from "next/image";
 import { useExitGuard } from "@/hooks/use-exit-guard";
+import { useFeedbackSounds } from "@/hooks/use-feedback-sounds";
 
 interface GameProps {
   playerName?: string;
@@ -73,6 +74,7 @@ export default function Game({ playerName: initialPlayerName }: GameProps) {
   const [showWinModal, setShowWinModal] = useState(false);
 
   useExitGuard({ enabled: gameStarted });
+  const { playSuccess, playError } = useFeedbackSounds();
 
   // Keep latest values for async callbacks (timeouts)
   const mistakesRef = useRef(mistakes);
@@ -177,8 +179,9 @@ export default function Game({ playerName: initialPlayerName }: GameProps) {
 
     setSelectedAnswer("timeout");
     setIsCorrect(false);
+    playError();
     scheduleNext(false, 50);
-  }, [timeLeft, gameStarted, question, showWinModal, scheduleNext]);
+  }, [timeLeft, gameStarted, question, showWinModal, scheduleNext, playError]);
 
   const handleAnswer = useCallback(
     (countryName: string, event: MouseEvent<HTMLButtonElement>) => {
@@ -195,12 +198,14 @@ export default function Game({ playerName: initialPlayerName }: GameProps) {
         setScore((prev) => prev + 1);
         setButtonRect(event.currentTarget.getBoundingClientRect());
         setShowConfetti(true);
+        playSuccess();
         scheduleNext(true, 2000);
       } else {
+        playError();
         scheduleNext(false, 1500);
       }
     },
-    [question, scheduleNext],
+    [playError, playSuccess, question, scheduleNext],
   );
 
   const handleStartGame = useCallback(

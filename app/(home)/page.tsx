@@ -4,10 +4,12 @@ import Features from "../_components/features";
 import TopGames from "../_components/top-games";
 import HowWorks from "../_components/how-works";
 import Testimonials from "../_components/testimonials";
+import Faq from "../_components/faq";
 import Cta from "../_components/cta";
 import Footer from "@/components/Footer";
 import { buildMetadata } from "@/lib/seo";
 import { AosProvider } from "@/providers/aos-provider";
+import { GamesStructuredData } from "../_components/games-structured-data";
 
 export const metadata = buildMetadata({
   title: "Interaktiv-ta'lim — qiziqarli darslar va o'quv o'yinlari",
@@ -24,6 +26,7 @@ export const metadata = buildMetadata({
 export default function Home() {
   return (
     <>
+      <GamesStructuredData id="ld-json-featured-games" />
       <AosProvider />
       <div className="min-h-screen bg-background">
         {/* Top alert banner */}
@@ -42,6 +45,8 @@ export default function Home() {
         <HowWorks />
         {/* Testimonials */}
         <Testimonials />
+        {/* FAQ */}
+        <Faq />
         {/* Pricing Section */}
         {/* <Pricing /> */}
         {/* CTA Banner */}

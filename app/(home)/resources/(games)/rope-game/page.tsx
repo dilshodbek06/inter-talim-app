@@ -1,9 +1,8 @@
-/* eslint-disable react-hooks/refs */
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import confetti, { type Options as ConfettiOptions } from "canvas-confetti";
+import type { Options as ConfettiOptions } from "canvas-confetti";
 import Image from "next/image";
 import { Divide, Home, Maximize2, Minus, Play, Plus, X } from "lucide-react";
 import { WinModal } from "@/components/win-modal";
@@ -102,6 +101,9 @@ export default function RopeGamePage() {
 
   const arenaRef = useRef<HTMLDivElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const confettiRef = useRef<typeof import("canvas-confetti").default | null>(
+    null,
+  );
 
   // Locks/timers (fix: double scoring, pending timeouts, cleanup)
   const submitLockRef = useRef<{ left: boolean; right: boolean }>({
@@ -119,28 +121,37 @@ export default function RopeGamePage() {
 
   const isInteractionBlocked = !!winner || countdown !== null || gameOver;
 
-  const fireWinConfetti = useCallback((options: ConfettiOptions) => {
-    confetti({
-      particleCount: 160,
-      spread: 75,
-      startVelocity: 45,
-      ticks: 220,
-      gravity: 1,
-      scalar: 1,
-      disableForReducedMotion: true,
-      ...options,
-    });
-    confetti({
-      particleCount: 90,
-      spread: 120,
-      startVelocity: 35,
-      ticks: 250,
-      gravity: 1.1,
-      scalar: 0.9,
-      disableForReducedMotion: true,
-      ...options,
-    });
+  const loadConfetti = useCallback(async () => {
+    if (confettiRef.current) return confettiRef.current;
+    const mod = await import("canvas-confetti");
+    confettiRef.current = mod.default;
+    return mod.default;
   }, []);
+
+  const fireWinConfetti = useCallback((options: ConfettiOptions) => {
+    void loadConfetti().then((confetti) => {
+      confetti({
+        particleCount: 160,
+        spread: 75,
+        startVelocity: 45,
+        ticks: 220,
+        gravity: 1,
+        scalar: 1,
+        disableForReducedMotion: true,
+        ...options,
+      });
+      confetti({
+        particleCount: 90,
+        spread: 120,
+        startVelocity: 35,
+        ticks: 250,
+        gravity: 1.1,
+        scalar: 0.9,
+        disableForReducedMotion: true,
+        ...options,
+      });
+    });
+  }, [loadConfetti]);
 
   const formatTime = useCallback((value: number) => {
     const minutes = Math.floor(value / 60);

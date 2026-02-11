@@ -15,7 +15,7 @@ const Loading = () => {
                   Yuklanmoqda
                 </p>
                 <h1 className="text-2xl font-bold text-slate-900">
-                  O‘yin sahifasi tayyorlanmoqda
+                  Sahifa tayyorlanmoqda
                 </h1>
                 <p className="mt-2 text-sm text-slate-600">
                   Interaktiv kontentlar yuklanmoqda.

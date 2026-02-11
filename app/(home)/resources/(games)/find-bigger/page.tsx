@@ -7,6 +7,7 @@ import { Heart, MoveHorizontal, Play, RotateCcw, Sparkles } from "lucide-react";
 import BackPrev from "@/components/back-prev";
 import { Button } from "@/components/ui/button";
 import { useExitGuard } from "@/hooks/use-exit-guard";
+import { useFeedbackSounds } from "@/hooks/use-feedback-sounds";
 
 type Side = "left" | "right";
 type Difficulty = "easy" | "medium" | "hard";
@@ -102,7 +103,6 @@ export default function FindBiggerPage() {
   const [current, setCurrent] = useState<Round>(() => buildRound("easy"));
 
   const timeoutRef = useRef<number | null>(null);
-  const successSoundRef = useRef<HTMLAudioElement | null>(null);
 
   // Fix: prevent double endRound before state updates (StrictMode/batching)
   const endRoundLockRef = useRef(false);
@@ -111,6 +111,7 @@ export default function FindBiggerPage() {
   const timePercent = Math.max(0, (timeLeft / roundTime) * 100);
 
   const { back: handleBack } = useExitGuard({ enabled: gameStarted });
+  const { playSuccess, playError } = useFeedbackSounds();
 
   const clearPendingTimeout = useCallback(() => {
     if (timeoutRef.current !== null) {
@@ -118,23 +119,6 @@ export default function FindBiggerPage() {
       timeoutRef.current = null;
     }
   }, []);
-
-  const stopSuccessSound = useCallback(() => {
-    if (!successSoundRef.current) return;
-    successSoundRef.current.pause();
-    successSoundRef.current.currentTime = 0;
-  }, []);
-
-  useEffect(() => {
-    successSoundRef.current = new Audio("/sounds/success.wav");
-    successSoundRef.current.load();
-
-    return () => {
-      clearPendingTimeout();
-      stopSuccessSound();
-      successSoundRef.current = null;
-    };
-  }, [clearPendingTimeout, stopSuccessSound]);
 
   const resetGame = useCallback(() => {
     clearPendingTimeout();
@@ -190,10 +174,8 @@ export default function FindBiggerPage() {
       const nextScore = isCorrect ? score + 1 : score;
       const nextStreak = isCorrect ? streak + 1 : 0;
 
-      if (isCorrect && successSoundRef.current) {
-        successSoundRef.current.currentTime = 0;
-        successSoundRef.current.play().catch(() => {});
-      }
+      if (isCorrect) playSuccess();
+      if (!isCorrect) playError();
 
       setSelection(selectedSide);
       setReveal(true);
@@ -233,6 +215,8 @@ export default function FindBiggerPage() {
       score,
       streak,
       summaryOpen,
+      playSuccess,
+      playError,
     ],
   );
 

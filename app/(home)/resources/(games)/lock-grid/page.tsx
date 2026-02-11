@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import confetti from "canvas-confetti";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Lock, LockOpen, Play, Sparkles, Trash2 } from "lucide-react";
 import {
   Dialog,
@@ -49,14 +48,24 @@ export default function UnlockLocksGame() {
   const errorSoundRef = useRef<HTMLAudioElement | null>(null);
 
   const victoryPlayedRef = useRef(false);
+  const confettiRef = useRef<typeof import("canvas-confetti").default | null>(
+    null,
+  );
 
   // add victory sound
   const victorySoundRef = useRef<HTMLAudioElement | null>(null);
 
+  const loadConfetti = useCallback(async () => {
+    if (confettiRef.current) return confettiRef.current;
+    const mod = await import("canvas-confetti");
+    confettiRef.current = mod.default;
+    return mod.default;
+  }, []);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       successSoundRef.current = new Audio("/sounds/unlock.wav");
-      errorSoundRef.current = new Audio("/sounds/error.wav");
+      errorSoundRef.current = new Audio("/sounds/error.mp3");
       victorySoundRef.current = new Audio("/sounds/victory.wav");
       // preload if possible
       successSoundRef.current.load();
@@ -111,27 +120,29 @@ export default function UnlockLocksGame() {
       victoryPlayedRef.current = true;
       const colors = ["#10B981", "#6366F1", "#F97316", "#06B6D4", "#F59E0B"];
       const origin = { x: 0.5, y: 0.3 };
-      confetti({
-        particleCount: 140,
-        spread: 80,
-        startVelocity: 45,
-        ticks: 220,
-        origin,
-        colors,
-        disableForReducedMotion: true,
-      });
-      confetti({
-        particleCount: 80,
-        spread: 120,
-        startVelocity: 35,
-        ticks: 250,
-        origin,
-        colors,
-        disableForReducedMotion: true,
+      void loadConfetti().then((confetti) => {
+        confetti({
+          particleCount: 140,
+          spread: 80,
+          startVelocity: 45,
+          ticks: 220,
+          origin,
+          colors,
+          disableForReducedMotion: true,
+        });
+        confetti({
+          particleCount: 80,
+          spread: 120,
+          startVelocity: 35,
+          ticks: 250,
+          origin,
+          colors,
+          disableForReducedMotion: true,
+        });
       });
       playVictorySound();
     }
-  }, [openedLocks, questions]);
+  }, [loadConfetti, openedLocks, questions]);
 
   // Play success sound when a lock actually transitions to opened.
   // This keeps playback tied to the visual opening (and avoids duplicate plays).

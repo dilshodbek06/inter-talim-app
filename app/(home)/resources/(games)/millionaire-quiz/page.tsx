@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
 import toast from "react-hot-toast";
 import { useExitGuard } from "@/hooks/use-exit-guard";
+import { useFeedbackSounds } from "@/hooks/use-feedback-sounds";
 
 const motion = {
   div: ({
@@ -207,10 +208,9 @@ export default function MillionerLivePreview(): JSX.Element {
   const [newCorrectIndex, setNewCorrectIndex] = useState<number>(0);
 
   const { back: handleBack } = useExitGuard({ enabled: phase === "game" });
+  const { playSuccess, playError } = useFeedbackSounds();
 
   const tickRef = useRef<HTMLAudioElement | null>(null);
-  const successRef = useRef<HTMLAudioElement | null>(null);
-  const errorRef = useRef<HTMLAudioElement | null>(null);
   const timerIdRef = useRef<number | null>(null);
 
   const q = questions[currentIndex];
@@ -225,15 +225,6 @@ export default function MillionerLivePreview(): JSX.Element {
     tick.loop = true;
     tickRef.current = tick;
 
-    const success = new Audio("/sounds/success.wav");
-    success.volume = 0.8;
-    successRef.current = success;
-
-    const error = new Audio(
-      "https://actions.google.com/sounds/v1/cartoon/wood_plate_tap.ogg"
-    );
-    error.volume = 0.8;
-    errorRef.current = error;
   }, []);
 
   // TIMER: runs only in game phase and when not locked
@@ -276,10 +267,7 @@ export default function MillionerLivePreview(): JSX.Element {
             } catch {}
           }
 
-          if (soundEnabled && errorRef.current) {
-            errorRef.current.currentTime = 0;
-            errorRef.current.play().catch(() => {});
-          }
+          if (soundEnabled) playError();
 
           // small delay so user sees "vaqt tugadi" message briefly
           window.setTimeout(() => {
@@ -311,7 +299,7 @@ export default function MillionerLivePreview(): JSX.Element {
         timerIdRef.current = null;
       }
     };
-  }, [locked, soundEnabled, phase]);
+  }, [locked, soundEnabled, phase, playError]);
 
   // Handle answer click
   const handleAnswer = (idx: number) => {
@@ -338,19 +326,13 @@ export default function MillionerLivePreview(): JSX.Element {
       setTotalWinnings(prizeValues[prizeIndex]);
       setCorrectCount((prev) => prev + 1);
 
-      if (successRef.current) {
-        successRef.current.currentTime = 0;
-        successRef.current.play().catch(() => {});
-      }
+      playSuccess();
 
       // IMPORTANT: do NOT auto-advance. Wait for user to press "Keyingi savol".
       // Keep locked = true and show success message; user clicks Next to continue.
     } else {
       // incorrect: play error, then go to results after short delay
-      if (errorRef.current) {
-        errorRef.current.currentTime = 0;
-        errorRef.current.play().catch(() => {});
-      }
+      playError();
 
       window.setTimeout(() => {
         setPhase("results");

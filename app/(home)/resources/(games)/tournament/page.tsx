@@ -1,10 +1,8 @@
-/* eslint-disable react-hooks/static-components */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import { JSX, useEffect, useState } from "react";
-import confetti from "canvas-confetti";
+import { JSX, useCallback, useEffect, useRef, useState } from "react";
 import { Trophy, Shuffle, RotateCcw, FolderTree, Sparkles } from "lucide-react";
 import BackPrev from "@/components/back-prev";
 import { useExitGuard } from "@/hooks/use-exit-guard";
@@ -33,31 +31,43 @@ const TournamentBracket = () => {
 
   const [championName, setChampionName] = useState<string | null>(null);
   const [showChampionBanner, setShowChampionBanner] = useState<boolean>(false);
+  const confettiRef = useRef<typeof import("canvas-confetti").default | null>(
+    null,
+  );
+
+  const loadConfetti = useCallback(async () => {
+    if (confettiRef.current) return confettiRef.current;
+    const mod = await import("canvas-confetti");
+    confettiRef.current = mod.default;
+    return mod.default;
+  }, []);
 
   useEffect(() => {
     if (!showChampionBanner) return;
     const origin = { x: 0.5, y: 0.2 };
     const colors = ["#f59e0b", "#10b981", "#3b82f6", "#a855f7", "#ef4444"];
 
-    confetti({
-      particleCount: 200,
-      spread: 80,
-      startVelocity: 45,
-      ticks: 240,
-      origin,
-      colors,
-      disableForReducedMotion: true,
+    void loadConfetti().then((confetti) => {
+      confetti({
+        particleCount: 200,
+        spread: 80,
+        startVelocity: 45,
+        ticks: 240,
+        origin,
+        colors,
+        disableForReducedMotion: true,
+      });
+      confetti({
+        particleCount: 120,
+        spread: 120,
+        startVelocity: 35,
+        ticks: 260,
+        origin,
+        colors,
+        disableForReducedMotion: true,
+      });
     });
-    confetti({
-      particleCount: 120,
-      spread: 120,
-      startVelocity: 35,
-      ticks: 260,
-      origin,
-      colors,
-      disableForReducedMotion: true,
-    });
-  }, [showChampionBanner]);
+  }, [loadConfetti, showChampionBanner]);
 
   const shuffleArray = (array: string[]): string[] => {
     const newArray = [...array];

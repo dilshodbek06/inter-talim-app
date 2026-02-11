@@ -1,22 +1,13 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { eduGames } from "@/mock/mock-data";
+import { featuredGameIds } from "@/mock/featured-games";
 import { ArrowRight } from "lucide-react";
 import GameItem from "../(home)/resources/_components/game-item";
 import Link from "next/link";
 
 const TopGames = () => {
-  const wantedIds = [
-    "f0bd283c-3c53-4db0-bdb8-2364fefc1246", // So'z qidiruv
-    "a3f91c78-4b2e-4d73-bc77-5b9a6e823f10", // Baraban
-    "21d8ecac-2441-46d4-9a37-5bbc874e2d42", // Chempion o'quvchi
-    "e3678b4d-89e3-4f88-b1d6-6e40753af48b", // Millioner
-    "e0de3c26-e964-483a-8736-3726a14556f4", // So'z yasash
-    "f3b891d3-a389-4963-b59a-c44c5ebdc917", // Matematik misol
-  ];
-
-  const filtered = eduGames.filter((g) => wantedIds.includes(g.id));
+  const featuredIdSet = new Set<string>(featuredGameIds);
+  const filtered = eduGames.filter((g) => featuredIdSet.has(g.id));
 
   return (
     <section

@@ -4,9 +4,10 @@ import CategoriesSection from "./_components/categories-section";
 import Gradients from "./_components/gradients";
 import GamesGrid from "./_components/games-grid";
 import { buildMetadata } from "@/lib/seo";
+import { GamesStructuredData } from "@/app/_components/games-structured-data";
 
 export const metadata = buildMetadata({
-  title: "O'quv o'yinlari va metodlar | Interaktiv-ta'lim",
+  title: "O'quv o'yinlari va metodlar",
   description:
     "Matematika, til va ijodiy fikrlash uchun interaktiv o'yinlar to'plami. Filtrlang, tanlang va darslaringizda qo'llang.",
   path: "/resources",
@@ -16,6 +17,7 @@ export const metadata = buildMetadata({
 export default function EduGamesPage() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-linear-to-br from-sky-50 via-indigo-50 to-emerald-50">
+      <GamesStructuredData id="ld-json-featured-games-resources" />
       {/* Soft gradient blobs background */}
       <Gradients />
 

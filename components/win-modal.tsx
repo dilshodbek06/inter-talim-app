@@ -1,4 +1,4 @@
-import { Trophy, Star, Sparkles, X, Award, PartyPopper } from "lucide-react";
+import { Trophy, X } from "lucide-react";
 
 interface WinModalProps {
   isOpen: boolean;

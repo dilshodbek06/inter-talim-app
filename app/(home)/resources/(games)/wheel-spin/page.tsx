@@ -8,21 +8,21 @@ import { useExitGuard } from "@/hooks/use-exit-guard";
 
 type WinnerHistory = string[];
 
-export default function RandomNamePicker() {
-  const initialNames = [
-    "Nozim",
-    "Sardor",
-    "Karim",
-    "Alisher",
-    "Rustam",
-    "Botir",
-    "Ikrom",
-    "Shaxzod",
-    "Farhod",
-    "Javlon",
-  ];
+const DEFAULT_NAMES = [
+  "Nozim",
+  "Sardor",
+  "Karim",
+  "Alisher",
+  "Rustam",
+  "Botir",
+  "Ikrom",
+  "Shaxzod",
+  "Farhod",
+  "Javlon",
+];
 
-  const [names, setNames] = useState<string[]>(initialNames);
+export default function RandomNamePicker() {
+  const [names, setNames] = useState<string[]>(DEFAULT_NAMES);
   const [rotation, setRotation] = useState<number>(0);
   const [isSpinning, setIsSpinning] = useState<boolean>(false);
   const [selectedName, setSelectedName] = useState<string>("");
@@ -30,6 +30,7 @@ export default function RandomNamePicker() {
   const [newName, setNewName] = useState<string>("");
   const [history, setHistory] = useState<WinnerHistory>([]);
   const [isResultModalOpen, setIsResultModalOpen] = useState<boolean>(false);
+  const hasDefaultNames = names.some((name) => DEFAULT_NAMES.includes(name));
 
   const hasProgress = isSpinning || history.length > 0;
   const { back: handleBack } = useExitGuard({ enabled: hasProgress });
@@ -303,8 +304,18 @@ export default function RandomNamePicker() {
     setNames((prev) => prev.filter((n) => n !== nameToRemove));
   };
 
+  const removeDefaultNames = () => {
+    setNames((prev) => prev.filter((name) => !DEFAULT_NAMES.includes(name)));
+    setHistory((prev) => prev.filter((name) => !DEFAULT_NAMES.includes(name)));
+
+    if (DEFAULT_NAMES.includes(selectedName)) {
+      setSelectedName("");
+      setIsResultModalOpen(false);
+    }
+  };
+
   // const resetNames = () => {
-  //   setNames(initialNames);
+  //   setNames(DEFAULT_NAMES);
   //   setSelectedName("");
   //   setRotation(0);
   //   setHistory([]);
@@ -380,23 +391,6 @@ export default function RandomNamePicker() {
               />
             </div>
 
-            {/* {selectedName && !isSpinning && (
-              <div className="mt-10 mb-4 px-4 py-3 bg-emerald-50 border border-emerald-200 rounded-2xl text-center">
-                <p className="text-lg md:text-xl font-bold text-emerald-700">
-                  🎉 Tanlangan o‘quvchi: {selectedName}! 🎉
-                </p>
-              </div>
-            )} */}
-            {/* 
-            <div className="mt-2 flex flex-wrap gap-3 justify-center">
-              <button
-                onClick={resetNames}
-                className="px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-semibold shadow-md hover:bg-slate-800 transition-colors"
-              >
-                Asl ro‘yxatni tiklash
-              </button>
-            </div> */}
-
             {history.length > 0 && (
               <div className="mt-6 bg-slate-50 border border-slate-100 rounded-2xl p-4">
                 <h3 className="text-sm font-semibold text-slate-700 mb-2">
@@ -451,9 +445,21 @@ export default function RandomNamePicker() {
                 </span>
               </Button>
             </div>
+            {hasDefaultNames && (
+              <div className=" -mt-3">
+                <button
+                  type="button"
+                  onClick={removeDefaultNames}
+                  disabled={isSpinning}
+                  className="text-xs font-medium cursor-pointer text-red-600 hover:text-red-700 hover:underline disabled:cursor-not-allowed disabled:text-slate-400 disabled:no-underline"
+                >
+                  Barcha ismlarni o‘chirish
+                </button>
+              </div>
+            )}
 
             {/* Names list */}
-            <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-2 max-h-[340px] overflow-y-auto pr-1">
+            <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-2 max-h-[340px] overflow-y-auto pr-1">
               {names.map((name) => (
                 <div
                   key={name}

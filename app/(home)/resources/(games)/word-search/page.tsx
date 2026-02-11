@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,6 +8,8 @@ import { Input } from "@/components/ui/input";
 import { RefreshCw, Trophy, Plus, Trash2, Play, Sparkles } from "lucide-react";
 import BackPrev from "@/components/back-prev";
 import { useExitGuard } from "@/hooks/use-exit-guard";
+import { useFeedbackSounds } from "@/hooks/use-feedback-sounds";
+import toast from "react-hot-toast";
 
 const motion = {
   div: ({
@@ -82,6 +84,7 @@ const WordSearchGame: React.FC = () => {
   const [newWord, setNewWord] = useState<string>("");
 
   const { back: handleBack } = useExitGuard({ enabled: gameStarted });
+  const { playSuccess, playError } = useFeedbackSounds();
 
   // Yengil UX uchun: gameStarted bo'lsa sahifa yuqorisiga scroll
   useEffect(() => {
@@ -170,7 +173,7 @@ const WordSearchGame: React.FC = () => {
 
   const initializeGrid = () => {
     if (words.length === 0) {
-      alert("Iltimos, kamida bitta so'z qo'shing!");
+      toast.error("Iltimos, kamida bitta so'z qo'shing!");
       return;
     }
 
@@ -311,16 +314,18 @@ const WordSearchGame: React.FC = () => {
       .map((cell) => grid[cell.row][cell.col])
       .join("");
     const reversedWord = selectedWord.split("").reverse().join("");
+    const matchedWord = words.includes(selectedWord)
+      ? selectedWord
+      : words.includes(reversedWord)
+        ? reversedWord
+        : null;
 
-    if (words.includes(selectedWord) && !foundWords.includes(selectedWord)) {
-      setFoundWords((prev) => [...prev, selectedWord]);
+    if (matchedWord && !foundWords.includes(matchedWord)) {
+      setFoundWords((prev) => [...prev, matchedWord]);
       setFoundWordCells((prev) => [...prev, ...selectedCells]);
-    } else if (
-      words.includes(reversedWord) &&
-      !foundWords.includes(reversedWord)
-    ) {
-      setFoundWords((prev) => [...prev, reversedWord]);
-      setFoundWordCells((prev) => [...prev, ...selectedCells]);
+      playSuccess();
+    } else if (!matchedWord) {
+      playError();
     }
 
     setSelectedCells([]);
@@ -377,12 +382,22 @@ const WordSearchGame: React.FC = () => {
     handleMouseUp();
   };
 
+  const selectedCellSet = useMemo(
+    () => new Set(selectedCells.map((cell) => `${cell.row}-${cell.col}`)),
+    [selectedCells],
+  );
+
+  const foundWordCellSet = useMemo(
+    () => new Set(foundWordCells.map((cell) => `${cell.row}-${cell.col}`)),
+    [foundWordCells],
+  );
+
   const isCellSelected = (row: number, col: number): boolean => {
-    return selectedCells.some((cell) => cell.row === row && cell.col === col);
+    return selectedCellSet.has(`${row}-${col}`);
   };
 
   const isCellInFoundWord = (row: number, col: number): boolean => {
-    return foundWordCells.some((cell) => cell.row === row && cell.col === col);
+    return foundWordCellSet.has(`${row}-${col}`);
   };
 
   const progress = words.length

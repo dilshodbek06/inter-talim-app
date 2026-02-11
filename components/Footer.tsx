@@ -109,22 +109,26 @@ const Footer = () => {
           <p className="text-muted-foreground text-sm">
             © 2026 Interaktiv-ta&apos;lim. Barcha huquqlar himoyalangan.
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <Link
               target="_blank"
               href="https://t.me/intertalim_uz"
-              className="text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300"
+              className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-sm font-medium text-sky-700 transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2"
               aria-label="Telegram"
+              rel="noopener noreferrer"
             >
-              <FaTelegram className="size-6 text-sky-500" />
+              <FaTelegram className="size-5 text-sky-600" />
+              <span>Telegram kanalimiz</span>
             </Link>
             <Link
               target="_blank"
               href="https://www.instagram.com/interaktiv_talim"
-              className="text-muted-foreground hover:scale-110 transition-all duration-300 hover:text-primary "
+              className="inline-flex items-center gap-2 rounded-full border border-pink-200 bg-pink-50 px-4 py-2 text-sm font-medium text-pink-700 transition-all duration-300 hover:-translate-y-0.5 hover:bg-pink-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-400 focus-visible:ring-offset-2"
               aria-label="Instagram"
+              rel="noopener noreferrer"
             >
-              <FaInstagram className="size-6  text-pink-500" />
+              <FaInstagram className="size-5 text-pink-600" />
+              <span>Instagram sahifamiz</span>
             </Link>
           </div>
         </div>

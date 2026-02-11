@@ -15,6 +15,8 @@ import {
 import { Button } from "@/components/ui/button";
 import BackPrev from "@/components/back-prev";
 import { useExitGuard } from "@/hooks/use-exit-guard";
+import { useFeedbackSounds } from "@/hooks/use-feedback-sounds";
+import toast from "react-hot-toast";
 
 type Question = {
   id: number;
@@ -50,8 +52,7 @@ export default function TrueFalsePreview() {
   // Audio refs
   const tickRef = useRef<HTMLAudioElement | null>(null);
   const beepRef = useRef<HTMLAudioElement | null>(null);
-  const successRef = useRef<HTMLAudioElement | null>(null);
-  const errorRef = useRef<HTMLAudioElement | null>(null);
+  const { playSuccess, playError } = useFeedbackSounds();
 
   // Timer uchun indexni refda ushlab turamiz (closure muammosiz bo‘lsin)
   const indexRef = useRef<number>(index);
@@ -76,9 +77,6 @@ export default function TrueFalsePreview() {
     beepRef.current = new Audio(
       "https://actions.google.com/sounds/v1/alarms/beep_short.ogg",
     );
-
-    successRef.current = new Audio("/sounds/success.wav");
-    errorRef.current = new Audio("/sounds/error.wav");
   }, []);
 
   /* ---------------- RESULT HANDLER ---------------- */
@@ -88,14 +86,8 @@ export default function TrueFalsePreview() {
       if (questions.length === 0) return;
 
       // ovozlar
-      if (correct && successRef.current) {
-        successRef.current.currentTime = 0;
-        successRef.current.play().catch(() => {});
-      }
-      if (!correct && errorRef.current) {
-        errorRef.current.currentTime = 0.5;
-        errorRef.current.play().catch(() => {});
-      }
+      if (correct) playSuccess();
+      if (!correct) playError();
 
       setLocked(true);
       setStatus(correct ? "correct" : "wrong");
@@ -116,7 +108,7 @@ export default function TrueFalsePreview() {
         }
       }, 900);
     },
-    [questions.length],
+    [playError, playSuccess, questions.length],
   );
 
   /* ---------------- TIMER EFFECT (faqat interval) ---------------- */
@@ -182,7 +174,9 @@ export default function TrueFalsePreview() {
   const addQuestion = () => {
     const text = newText.trim();
     if (text.length < 3) {
-      alert("Savol matni juda qisqa. Kamida 3 ta belgidan iborat bo‘lsin.");
+      toast.error(
+        "Savol matni juda qisqa. Kamida 3 ta belgidan iborat bo‘lsin.",
+      );
       return;
     }
 
