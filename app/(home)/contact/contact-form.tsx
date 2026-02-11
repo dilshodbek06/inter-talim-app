@@ -34,6 +34,7 @@ import {
 } from "lucide-react";
 import { FaInstagram, FaTelegram } from "react-icons/fa";
 import { eduGames } from "@/mock/mock-data";
+import { cn } from "@/lib/utils";
 import axios from "axios";
 import toast from "react-hot-toast";
 import Link from "next/link";
@@ -69,6 +70,23 @@ const GAME_OPTIONS = eduGames;
 
 const BOT_TOKEN = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN!;
 const CHAT_ID = process.env.NEXT_PUBLIC_CHAT_ID!;
+
+const CONTACT_CARD_COLOR_STYLES = {
+  accent: {
+    bg: "bg-accent/10",
+    text: "text-accent",
+  },
+  primary: {
+    bg: "bg-primary/10",
+    text: "text-primary",
+  },
+  secondary: {
+    bg: "bg-secondary/10",
+    text: "text-secondary",
+  },
+} as const;
+
+type ContactCardColor = keyof typeof CONTACT_CARD_COLOR_STYLES;
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -276,7 +294,7 @@ export default function ContactForm() {
                 icon: FaInstagram,
                 title: "Instagram",
                 description: "@interaktiv_talim",
-                color: "accent",
+                color: "accent" as ContactCardColor,
                 href: "https://www.instagram.com/interaktiv_talim/",
               },
 
@@ -284,16 +302,17 @@ export default function ContactForm() {
                 icon: FaTelegram,
                 title: "Telegram",
                 description: "@intertalim_uz",
-                color: "primary",
+                color: "primary" as ContactCardColor,
                 href: "https://t.me/intertalim_uz",
               },
               {
                 icon: MessageSquare,
                 title: "Aloqa vaqti",
                 description: "har kun 24/7",
-                color: "secondary",
+                color: "secondary" as ContactCardColor,
               },
             ].map((item) => {
+              const style = CONTACT_CARD_COLOR_STYLES[item.color];
               const card = (
                 <Card
                   key={item.title}
@@ -301,9 +320,12 @@ export default function ContactForm() {
                 >
                   <CardContent className="p-6 text-center space-y-3">
                     <div
-                      className={`w-12 h-12 rounded-lg bg-${item.color}/10 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform`}
+                      className={cn(
+                        "w-12 h-12 rounded-lg flex items-center justify-center mx-auto group-hover:scale-110 transition-transform",
+                        style.bg,
+                      )}
                     >
-                      <item.icon className={`w-6 h-6 text-${item.color}`} />
+                      <item.icon className={cn("w-6 h-6", style.text)} />
                     </div>
                     <h3 className="font-bold">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">

@@ -121,7 +121,7 @@ function GradientItems() {
         <BookOpen className="w-8 h-8 text-edu-blue" />
       </div>
       <div className="absolute top-32 right-16 w-14 h-14 bg-edu-yellow/20 dark:bg-edu-yellow/10 rounded-full flex items-center justify-center animate-float-slow backdrop-blur-sm">
-        <GraduationCap className="w-7 h-7 text-edu-yellow-dark" />
+        <GraduationCap className="w-7 h-7 text-edu-dark" />
       </div>
       <div className="absolute bottom-32 left-20 w-12 h-12 bg-edu-coral/20 dark:bg-edu-coral/10 rounded-full flex items-center justify-center animate-float backdrop-blur-sm">
         <Brain className="w-6 h-6 text-edu-coral" />

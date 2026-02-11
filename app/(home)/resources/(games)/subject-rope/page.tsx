@@ -60,6 +60,19 @@ const SUBJECT_ICONS: Record<SubjectKey, typeof Cpu> = {
   geografiya: Globe2,
 };
 
+const SUBJECT_ACCENT_CLASSES: Record<SubjectKey, string> = {
+  informatika: "from-sky-500 to-blue-600",
+  "rus-tili": "from-rose-500 to-red-600",
+  "ona-tili": "from-amber-500 to-orange-500",
+  adabiyot: "from-fuchsia-500 to-pink-600",
+  "ingliz-tili": "from-emerald-500 to-green-600",
+  fizika: "from-indigo-500 to-blue-700",
+  kimyo: "from-lime-500 to-emerald-600",
+  biologiya: "from-teal-500 to-cyan-600",
+  tarix: "from-stone-500 to-amber-700",
+  geografiya: "from-cyan-500 to-sky-600",
+};
+
 const SHIFT_STEP = 14;
 const MIN_SHIFT_STEPS = 8;
 const GAME_DURATION_SECONDS = 5 * 60;
@@ -774,6 +787,7 @@ export default function SubjectRopePage() {
                 {SUBJECTS.map((subject) => {
                   const active = selectedSubject === subject.key;
                   const Icon = SUBJECT_ICONS[subject.key];
+                  const accentClass = SUBJECT_ACCENT_CLASSES[subject.key];
                   return (
                     <button
                       key={subject.key}
@@ -786,12 +800,12 @@ export default function SubjectRopePage() {
                       }`}
                     >
                       <div
-                        className={`absolute -right-6 -top-6 h-16 w-16 rounded-full bg-linear-to-br ${subject.accent} opacity-15`}
+                        className={`absolute -right-6 -top-6 h-16 w-16 rounded-full bg-linear-to-br ${accentClass} opacity-[0.15]`}
                       />
                       <div className="relative z-10 flex items-start gap-4">
                         <span
                           className={`flex h-12 w-12 items-center justify-center rounded-2xl bg-linear-to-br ${
-                            subject.accent
+                            accentClass
                           } text-white shadow-[0_8px_20px_rgba(15,23,42,0.2)]`}
                         >
                           <Icon className="h-6 w-6" />
@@ -1023,8 +1037,15 @@ export default function SubjectRopePage() {
 
         .subject-rope-question-text {
           line-height: 1.3;
-          text-wrap: balance;
+          overflow-wrap: anywhere;
           word-break: break-word;
+        }
+
+        @supports (text-wrap: balance) {
+          .subject-rope-question-text {
+            text-wrap: balance;
+            overflow-wrap: normal;
+          }
         }
 
         @media (max-width: 640px) {

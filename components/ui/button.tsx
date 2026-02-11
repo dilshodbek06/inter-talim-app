@@ -10,20 +10,20 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 shadow-md hover:shadow-lg",
+          "bg-primary text-primary-foreground hover:brightness-95 hover:scale-105 shadow-md hover:shadow-lg",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+          "bg-destructive text-destructive-foreground hover:brightness-95",
         outline:
           "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/90 hover:scale-105 shadow-md hover:shadow-lg",
+          "bg-secondary text-secondary-foreground hover:brightness-95 hover:scale-105 shadow-md hover:shadow-lg",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 shadow-lg hover:shadow-xl text-base",
+        hero: "bg-primary text-primary-foreground hover:brightness-95 hover:scale-105 shadow-lg hover:shadow-xl text-base",
         "hero-outline":
-          "border-2 border-primary bg-transparent text-primary hover:bg-primary/10 hover:scale-105 text-base",
+          "border-2 border-primary bg-transparent text-primary hover:bg-[rgba(var(--primary-rgb),0.1)] hover:scale-105 text-base",
         accent:
-          "bg-accent text-accent-foreground hover:bg-accent/90 hover:scale-105 shadow-md hover:shadow-lg",
+          "bg-accent text-accent-foreground hover:brightness-95 hover:scale-105 shadow-md hover:shadow-lg",
       },
       size: {
         default: "h-10 px-4 py-2",

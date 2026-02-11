@@ -123,6 +123,8 @@ const TournamentBracket = () => {
   const selectWinner = (matchKey: string, winner: string) => {
     if (!bracket) return;
     const match = bracket.matches[matchKey];
+    if (!match?.player1 || !match?.player2) return;
+    if (winner !== match.player1 && winner !== match.player2) return;
 
     const newBracket: Bracket = {
       ...bracket,
@@ -392,7 +394,9 @@ const TournamentBracket = () => {
     align: "left" | "right";
   }) => {
     const isWinner = !!match.winner && match.winner === player;
-    const isClickable = !!player && (!match.winner || isWinner);
+    const canSelectWinner = !!player && !!match.player1 && !!match.player2 && !match.winner;
+    const canClearWinner = isWinner;
+    const isClickable = canSelectWinner || canClearWinner;
 
     return (
       <div className="relative inline-block">
@@ -400,9 +404,9 @@ const TournamentBracket = () => {
           disabled={!isClickable}
           onClick={() =>
             player &&
-            (!match.winner
+            (canSelectWinner
               ? selectWinner(match.key, player)
-              : isWinner && clearWinner(match.key))
+              : canClearWinner && clearWinner(match.key))
           }
           className={`min-w-[140px] sm:min-w-40 text-xs sm:text-sm leading-tight px-2 py-1.5 rounded border-2 transition-all
             ${align === "right" ? "text-right" : "text-left"}
