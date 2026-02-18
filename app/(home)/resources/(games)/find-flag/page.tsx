@@ -23,11 +23,13 @@ const MAX_QUESTIONS = 20;
 
 const FlagDisplay = ({ country }: { country: Country }) => {
   const [imageFailed, setImageFailed] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const countryCode = country.code.toLowerCase();
   const flagSrc = `/flags/${countryCode}.svg`;
 
   useEffect(() => {
     setImageFailed(false);
+    setIsLoading(true);
   }, [countryCode]);
 
   if (imageFailed) {
@@ -42,17 +44,32 @@ const FlagDisplay = ({ country }: { country: Country }) => {
   }
 
   return (
-    <Image
-      src={flagSrc}
-      alt={`${country.name} bayrog'i`}
-      className="h-20 sm:h-24 md:h-28 w-auto drop-shadow-lg"
-      width={160}
-      height={120}
-      sizes="(min-width: 768px) 112px, 96px"
-      priority
-      unoptimized
-      onError={() => setImageFailed(true)}
-    />
+    <div
+      className="relative flex items-center justify-center h-20 sm:h-24 md:h-28 w-32 sm:w-36 md:w-40"
+      aria-busy={isLoading}
+    >
+      {isLoading && (
+        <div
+          className="absolute inset-0 rounded-xl bg-gray-200/80 animate-pulse"
+          aria-hidden="true"
+        />
+      )}
+      <Image
+        src={flagSrc}
+        alt={`${country.name} bayrog'i`}
+        className="h-full w-full object-contain drop-shadow-lg"
+        width={160}
+        height={120}
+        sizes="(min-width: 768px) 112px, 96px"
+        priority
+        unoptimized
+        onLoadingComplete={() => setIsLoading(false)}
+        onError={() => {
+          setIsLoading(false);
+          setImageFailed(true);
+        }}
+      />
+    </div>
   );
 };
 

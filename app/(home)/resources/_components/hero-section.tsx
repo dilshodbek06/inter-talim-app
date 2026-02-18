@@ -59,7 +59,7 @@ const HeroSection = () => {
                 <p className="text-[11px] uppercase tracking-wide text-slate-500">
                   Ustozlar
                 </p>
-                <p className="text-sm font-semibold text-slate-900">50+</p>
+                <p className="text-sm font-semibold text-slate-900">100+</p>
               </div>
             </div>
           </div>
